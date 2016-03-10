@@ -6,6 +6,11 @@
  * Time: 1:43
  */
 
+/**
+ * Class Utils
+ *
+ * Use this class for functions that don't fit inside classes (yet).
+ */
 class Utils {
 	public static function getNavigationMenu() {
 		return '<ul>'.
