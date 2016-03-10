@@ -6,12 +6,15 @@
  * Time: 1:03
  */
 
+include_once('Utils.class.php');
+
 class Main {
 	private $type; //manager|operator|provider
 
 	function __construct($_type) {
 		$this->setName($_type);
-		echo "{$this->type} instantiated.";
+		echo "{$this->type} instantiated.".Utils::getNavigationMenu();
+
 	}
 
 	function getName() {
