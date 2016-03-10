@@ -19,4 +19,15 @@ class Utils {
 				'<li><a href="/provider">provider</a></li>'.
 				'</ul>';
 	}
+
+}
+
+class Database {
+	public $db_host = "COMP370.db.10405771.hostedresource.com";
+	public $db_user = "COMP370";
+	public $db_password;
+
+	function __construct() {
+		$this->db_password = $_ENV["CDP"]; // Password is set on server so GitHub can host code.
+	}
 }
