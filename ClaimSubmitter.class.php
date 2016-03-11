@@ -17,4 +17,4 @@ class ClaimSubmitter
 		
 	}
 }
-echo "HELLO WORLD!";
+echo "ClaimSubmitter.class.php";
