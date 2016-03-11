@@ -1,40 +1,41 @@
-<?php
-/**
- * ProviderInterface
- * 
- * @date 10-3-2016
- * @desc I don't know.
- */
-class ProviderInterface
-{
-	public theProvider; #Provider
-	public theMember; #Member
-	public ui; #ui
-	
-	function __construct ()
+
+<?php 
+
+	class Provider
 	{
-		#$this->theProvider = new Provider();#TODO: add declarations
-		#$this->theMember = new Member();#TODO: add declarations
-		#$this->ui = new UI();#TODO: implement
-	}
-	
-	public function providerReport ()
-	{
+		private $type;
 		
+		const PROVIDER_TYPES = "string";
+		const PROVIDER_TYPE_HELP = "string";
+		
+		public function __construct()
+		{
+			
+		}
+		
+		public function getType()
+		{
+			return $this->type;
+		}
+		
+		public function setType($type)
+		{
+			$this->type = $type;
+		}
+		
+		public function fromString()
+		{
+			
+		}
+		
+		public function __toString()
+		{
+			
+		}
+		
+		toFormattedString()
+		{
+			
+		}
 	}
 	
-	public function memberReport ()
-	{
-		
-	}
-	
-	public function accountsPayableReport ()
-	{
-		
-	}
-	
-	public function main ()
-	{
-		
-	}
-}
