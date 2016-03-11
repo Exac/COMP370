@@ -17,3 +17,4 @@ class ClaimSubmitter
 		
 	}
 }
+echo "HELLO WORLD!";
