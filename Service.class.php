@@ -16,7 +16,7 @@ class Service
 	const NAME_LENGTH = 20;
 	const MAX_FEE = 999999;
 	const SEPERATOR = '.';
-	public NumberFormatter; # ToDo
+	public $NumberFormatter; # ToDo
 	
 	public function __construct()
 	{
@@ -48,6 +48,7 @@ class Service
 	
 	public function __toString()
 	{
+		return "Service:";
 	}
 	
 	public function fromString()

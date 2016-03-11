@@ -15,14 +15,14 @@ class Person
 	private $state;
 	private $zip;
 	private $email;
-	
-	const $nextNumber = 0;#TODO CHANGE. This can't be const
-	const $SEPARATOR = '-';
-	const $NAME_LENGTH = 25;
-	const $STREET_LENGTH = 25;
-	const $CITY_LENGTH = 14;
-	const $STATE_LENGTH = 2;
-	const $ZIP_LENGTH = 5;
+
+	const nextNumber = 0;#TODO CHANGE. This can't be const
+	const SEPARATOR = '-';
+	const NAME_LENGTH = 25;
+	const STREET_LENGTH = 25;
+	const CITY_LENGTH = 14;
+	const STATE_LENGTH = 2;
+	const ZIP_LENGTH = 5;
 	
 	function __construct ()
 	{

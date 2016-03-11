@@ -38,13 +38,8 @@ class Report
 	{
 		
 	}
-	
-	public function print()
-	{
-		
-	}
-	
-	public function print()
+
+	public function printReport()//"Print" is a reserved word in PHP
 	{
 		
 	}

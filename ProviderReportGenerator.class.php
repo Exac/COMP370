@@ -7,7 +7,7 @@
  */
 class ProviderReportGenerator
 {
-	private report;
+	private $report;
 	
 	function __construct ()
 	{

@@ -7,13 +7,13 @@
  */
 class Persons
 {
-	private personList = Array();
+	private $personList;
 	
 	const FILE_NAMES = "filename";
 	
 	function __construct() 
 	{
-		
+		$this->personList = Array();
 	}
 	
 	public function open()
@@ -55,7 +55,7 @@ class Persons
 		
 	}
 }
-?>
+
 	
 	
 	

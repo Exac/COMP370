@@ -9,7 +9,8 @@ class AccountsPayableReport extends DateRangeReport
 {
 	function __construct ()
 	{
-		
+		//parent::__construct();#call parent
+
 	}
 	
 	public function addDetail ()

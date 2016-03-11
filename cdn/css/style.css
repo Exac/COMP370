@@ -25,7 +25,7 @@ body {
     font-family: "Nunito", sans-serif;
     font-weight: 300;
     font-size: 17px;
-    margin: 0px;
+    margin: 0;
 }
 
 p {
@@ -56,7 +56,7 @@ h1.logo {
     font-size:0.75em;
     display: block;
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     text-align: center;
     background:#dddddd;

@@ -18,6 +18,9 @@
 		<li class="flex-item"><a href="/operator/">Operator</a></li>
 		<li class="flex-item"><a href="/provider/">Provider</a></li>
 	</ul>
-	<p id="footer">&copy; <script>document.write(new Date().getFullYear());</script> Farzin Dhanji, Navi Gill  &amp; Thomas McLennan</p>
+	<p id="footer">&copy;
+		<script>document.write(new Date().getFullYear().toString());</script>
+		Farzin Dhanji, Navi Gill &amp; Thomas McLennan
+	</p>
 </body>
 </html>

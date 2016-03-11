@@ -6,9 +6,9 @@
  * @date 10-3-2016
  *
  */
- class UserInterface()
+class UserInterface
  {
-	public in = "";
+	public $in = "";
 	
 	const dateFormatter = "String";
 	const currencyFormatter = "String";
@@ -54,20 +54,8 @@
 		
 	}
 	
-	public function promptForDouble()
-	{
-		
-	}
-	
 	public function formatAsCurrency()
 	{
 		
 	}
-	
-	
-	
-	
-	
-	
-	
  }

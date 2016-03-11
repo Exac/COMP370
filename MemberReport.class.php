@@ -7,7 +7,7 @@
  */
 class MemberReport extends DateRangeReport
 {
-	private detailCount = 0;
+	private $detailCount = 0;
 	
 	function __construct()
 	{

@@ -2,8 +2,8 @@
 
 class ProviderMaintainer extends PersonMaintainer
 {
-	private ui;
-	private providers;
+	private $ui;
+	private $providers;
 	
 	public function _construct()
 	{

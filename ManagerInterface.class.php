@@ -7,7 +7,7 @@
  */
 class ManagerInterface
 {
-	public ui = "UserInterface";
+	public $ui = "UserInterface";
 	
 	function __construct ()
 	{

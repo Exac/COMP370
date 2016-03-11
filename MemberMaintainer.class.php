@@ -2,8 +2,8 @@
 
 class MemberMaintainer extends PersonMaintainer
 {
-	private ui;
-	private members;
+	private $ui;
+	private $members;
 	
 	public function __construct()
 	{

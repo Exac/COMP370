@@ -7,7 +7,7 @@
  */
 class MemberReportGenerator
 {
-	private report;
+	private $report;
 	
 	function __construct ()
 	{

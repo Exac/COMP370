@@ -10,9 +10,9 @@
 class Member
 {
 	private $status;
-	
-	const MEMBER_STATUS_VALUES =
-	const MEMBER_STATUS_HELP = 
+
+	const MEMBER_STATUS_VALUES = "STATUSX";
+	const MEMBER_STATUS_HELP = "STATUSY";
 	
 	public function __construct()
 	{
@@ -43,7 +43,4 @@ class Member
 	{
 		
 	}
-	
-	
-	
 }

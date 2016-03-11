@@ -8,6 +8,7 @@
 	 */
 	// The commands
 	$commands = array(
+		'git reset --hard HEAD',
 		'echo $PWD',
 		'whoami',
 		'git pull',

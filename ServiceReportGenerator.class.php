@@ -7,12 +7,12 @@
  */
 class ServiceReportGenerator
 {
-	private report;
-	private ui; #UserInterface
+	private $report;
+	private $ui; #UserInterface
 	
 	function __construct ()
 	{
-		$this->report = new ServiceReport();
+		//$this->report = new ServiceReport();//TODO: Create class ServiceReport
 		$this->ui = new UserInterface();#TODO: implement
 	}
 	

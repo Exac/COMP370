@@ -12,11 +12,11 @@ class Claim
 	private $providerNumber;
 	private $memberNumber;
 	private $serviceDate; #YYYY-MM-DD
-	
-	const $CODE_LENGTH = 9;
-	const $DATE_FORMAT = "YYY-MM-DD";
-	const $DATE_TIME_FOTMAT = "YYYY-MM-DD HH:MM:SS";
-	const $SEPARATOR = '-';
+
+	const CODE_LENGTH = 9;
+	const DATE_FORMAT = "YYY-MM-DD";
+	const DATE_TIME_FORMAT = "YYYY-MM-DD HH:MM:SS";
+	const SEPARATOR = '-';
 	
 	public $dateFormatter; #TODO implement this.
 	
@@ -67,7 +67,7 @@ class Claim
 	
 	public function __toString()
 	{
-	
+		return "Claim:";
 	}
 	
 	public function fromString()

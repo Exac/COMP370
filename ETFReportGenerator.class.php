@@ -7,7 +7,7 @@
  */
 class ETFReportGenerator
 {
-	private report;
+	private $report;
 	
 	function __construct ()
 	{

@@ -30,10 +30,10 @@
 		
 		public function __toString()
 		{
-			
+			return "Provider:";
 		}
-		
-		toFormattedString()
+
+		public function toFormattedString()
 		{
 			
 		}
