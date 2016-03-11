@@ -17,6 +17,7 @@
 		<li class="flex-item"><a href="/manager/">Manager</a></li>
 		<li class="flex-item"><a href="/operator/">Operator</a></li>
 		<li class="flex-item"><a href="/provider/">Provider</a></li>
+		<li class="flex-item"><a href="/scheduler/">Scheduler</a></li>
 	</ul>
 	<p id="footer">&copy;
 		<script>document.write(new Date().getFullYear().toString());</script>

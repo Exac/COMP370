@@ -8,4 +8,4 @@
 
 require_once(dirname(dirname(__FILE__)) . '/ChocAnSystem.class.php');
 
-new ChocAnSystem("operator");
+new ChocAnSystem("scheduler");

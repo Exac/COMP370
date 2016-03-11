@@ -14,6 +14,6 @@ class OperatorInterface
 	
 	public function main ()
 	{
-		
+		echo Utils::getNavigationMenu();
 	}
 }

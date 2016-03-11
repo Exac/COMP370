@@ -6,6 +6,6 @@
  * Time: 15:00
  */
 
-require_once(dirname(dirname(__FILE__)).'/Main.class.php');
+require_once(dirname(dirname(__FILE__)) . '/ChocAnSystem.class.php');
 
-new Main("provider");
+new ChocAnSystem("provider");

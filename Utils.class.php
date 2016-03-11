@@ -17,6 +17,7 @@ class Utils {
 				'<li><a href="/manager">manager</a></li>'.
 				'<li><a href="/operator">operator</a></li>'.
 				'<li><a href="/provider">provider</a></li>'.
+		'<li><a href="/scheduler">scheduler</a></li>' .
 				'</ul>';
 	}
 

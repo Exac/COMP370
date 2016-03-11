@@ -31,6 +31,6 @@ class ManagerInterface
 	
 	public function main ()
 	{
-		
+		echo Utils::getNavigationMenu();
 	}
 }
