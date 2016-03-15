@@ -8,7 +8,7 @@
     <title>Interface Selection | Chocoholics Anonymous</title>
     <meta name="description" content="Chocoholics Anonymous">
     <meta name="author" content="Chocoholics Anonymous interface selection.">
-    <link rel="stylesheet" href="/cdn/css/style.css">
+	<link rel="stylesheet" href="/cdn/css/interface.css">
 </head>
 
 <body id="interfacepicker">
