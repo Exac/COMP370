@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Switch to Unix line-endings.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AccountsPayableReport.class.php" afterPath="$PROJECT_DIR$/AccountsPayableReport.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AccountsPayableReportGenerator.class.php" afterPath="$PROJECT_DIR$/AccountsPayableReportGenerator.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChocAnSystem.class.php" afterPath="$PROJECT_DIR$/ChocAnSystem.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Claim.class.php" afterPath="$PROJECT_DIR$/Claim.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClaimSubmitter.class.php" afterPath="$PROJECT_DIR$/ClaimSubmitter.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Claims.class.php" afterPath="$PROJECT_DIR$/Claims.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateRangeReport.class.php" afterPath="$PROJECT_DIR$/DateRangeReport.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ETFReport.class.php" afterPath="$PROJECT_DIR$/ETFReport.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ETFReportGenerator.class.php" afterPath="$PROJECT_DIR$/ETFReportGenerator.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ManagerInterface.class.php" afterPath="$PROJECT_DIR$/ManagerInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Member.class.php" afterPath="$PROJECT_DIR$/Member.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MemberMaintainer.class.php" afterPath="$PROJECT_DIR$/MemberMaintainer.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MemberReport.class.php" afterPath="$PROJECT_DIR$/MemberReport.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MemberReportGenerator.class.php" afterPath="$PROJECT_DIR$/MemberReportGenerator.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Members.class.php" afterPath="$PROJECT_DIR$/Members.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperatorInterface.class.php" afterPath="$PROJECT_DIR$/OperatorInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Person.class.php" afterPath="$PROJECT_DIR$/Person.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersonMaintainer.class.php" afterPath="$PROJECT_DIR$/PersonMaintainer.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Persons.class.php" afterPath="$PROJECT_DIR$/Persons.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Provider.class.php" afterPath="$PROJECT_DIR$/Provider.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderDirectory.class.php" afterPath="$PROJECT_DIR$/ProviderDirectory.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderInterface.class.php" afterPath="$PROJECT_DIR$/ProviderInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderMaintainer.class.php" afterPath="$PROJECT_DIR$/ProviderMaintainer.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderReport.class.php" afterPath="$PROJECT_DIR$/ProviderReport.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderReportGenerator.class.php" afterPath="$PROJECT_DIR$/ProviderReportGenerator.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers.class.php" afterPath="$PROJECT_DIR$/Providers.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Report.class.php" afterPath="$PROJECT_DIR$/Report.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SchedulerInterface.class.php" afterPath="$PROJECT_DIR$/SchedulerInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Service.class.php" afterPath="$PROJECT_DIR$/Service.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServiceMaintainer.class.php" afterPath="$PROJECT_DIR$/ServiceMaintainer.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServiceReportGenerator.class.php" afterPath="$PROJECT_DIR$/ServiceReportGenerator.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Services.class.php" afterPath="$PROJECT_DIR$/Services.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.php" afterPath="$PROJECT_DIR$/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserInterface.class.php" afterPath="$PROJECT_DIR$/UserInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils.class.php" afterPath="$PROJECT_DIR$/Utils.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.php" afterPath="$PROJECT_DIR$/deploy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/index.php" afterPath="$PROJECT_DIR$/manager/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operator/index.php" afterPath="$PROJECT_DIR$/operator/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/provider/index.php" afterPath="$PROJECT_DIR$/provider/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheduler/index.php" afterPath="$PROJECT_DIR$/scheduler/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/css/interface.css" afterPath="$PROJECT_DIR$/cdn/css/interface.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/js/scripts.js" afterPath="$PROJECT_DIR$/cdn/js/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="COMP370.iws" />
@@ -95,13 +50,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ChocAnSystem.class.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ChocAnSystem.class.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ChocAnSystem.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33216783" vertical-offset="898" max-vertical-offset="1751">
+                <state vertical-scroll-proportion="-7.3076925" vertical-offset="898" max-vertical-offset="1751">
                   <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
                   <folding>
                     <element signature="e#6#84#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="deploy.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/deploy.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6121673" vertical-offset="273" max-vertical-offset="799">
+                  <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+                  <folding>
+                    <marker date="1458087814711" expanded="false" signature="550:565" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -227,7 +194,6 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/deploy.php" />
         <option value="$PROJECT_DIR$/DateRangeReport.class.php" />
         <option value="$PROJECT_DIR$/AccountsPayableReportGenerator.class.php" />
         <option value="$PROJECT_DIR$/Person.class.php" />
@@ -262,6 +228,7 @@
         <option value="$PROJECT_DIR$/cdn/js/scripts.js" />
         <option value="$PROJECT_DIR$/cdn/css/interface.css" />
         <option value="$PROJECT_DIR$/scheduler/index.php" />
+        <option value="$PROJECT_DIR$/deploy.php" />
       </list>
     </option>
   </component>
@@ -550,14 +517,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458086668463</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Switch to Unix line-endings.">
+      <created>1458087138096</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1458087138096</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -741,13 +714,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
           <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="799">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -997,10 +963,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChocAnSystem.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33216783" vertical-offset="898" max-vertical-offset="1751">
+        <state vertical-scroll-proportion="-7.3076925" vertical-offset="898" max-vertical-offset="1751">
           <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6121673" vertical-offset="273" max-vertical-offset="799">
+          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding>
+            <marker date="1458087814711" expanded="false" signature="550:565" placeholder="..." />
           </folding>
         </state>
       </provider>

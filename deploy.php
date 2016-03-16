@@ -8,7 +8,7 @@
 	 */
 	// The commands
 	$commands = array(
-		'git reset --hard HEAD',
+		'git reset --hard HEAD FETCH_HEAD',
 		'echo $PWD',
 		'whoami',
 		'git pull',
@@ -39,7 +39,7 @@
  .  ____  .    ____________________________
  |/      \|   |                            |
 [| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Git Deployment Script v0.1 |
- |___==___|  /              &copy; oodavid 2012 |
+ |___==___|  /                            |
               |____________________________|
 
 <?php echo $output; ?>
