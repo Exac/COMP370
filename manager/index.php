@@ -19,10 +19,29 @@
 		<button type="button" id="generate_Member_report">generate_Member_report</button>
 		<label for="generate_Member_report">send member_Report_request</label>
 	</fieldset>
+	<fieldset>
+		<legend>Request Accounts Payable Report</legend>
+		<button type="button" id="generate_AccountsPayable_report">generate_AccountsPayable_report
+		</button>
+		<label for="generate_AccountsPayable_report">send generate_AccountsPayable_report</label>
+	</fieldset>
+	<fieldset>
+		<legend>Request Provider Report</legend>
+		<button type="button" id="generate_Provider_report">generate_Provider_report</button>
+		<label for="generate_Provider_report">send generate_Provider_report</label>
+	</fieldset>
 	<hr>
 	<fieldset>
 		<legend>Member Report</legend>
 		<p>View Member Report [generate_Member_report]</p>
+	</fieldset>
+	<fieldset>
+		<legend>Accounts Payable Report</legend>
+		<p>View Accounts Payable [generate_AccountsPayable_report]</p>
+	</fieldset>
+	<fieldset>
+		<legend>Provider Report</legend>
+		<p>View Provider Report [generate_Provider_report]</p>
 	</fieldset>
 </form>
 
