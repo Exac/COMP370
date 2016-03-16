@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Switch to Unix line-endings.">
+    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Fix Deploy script">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.php" afterPath="$PROJECT_DIR$/deploy.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,10 +65,10 @@
           <file leaf-file-name="deploy.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deploy.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6121673" vertical-offset="273" max-vertical-offset="799">
-                  <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+                <state vertical-scroll-proportion="0.12927757" vertical-offset="0" max-vertical-offset="799">
+                  <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
                   <folding>
-                    <marker date="1458087814711" expanded="false" signature="550:565" placeholder="..." />
+                    <marker date="1458088079308" expanded="false" signature="545:560" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -523,7 +523,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458087138096</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix Deploy script">
+      <created>1458087840434</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1458087840434</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -573,7 +579,8 @@
     <MESSAGE value="Class skeletons now compile. Reformated all code. Fixed all syntax errors." />
     <MESSAGE value="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file." />
     <MESSAGE value="Switch to Unix line-endings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Switch to Unix line-endings." />
+    <MESSAGE value="Fix Deploy script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Deploy script" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -973,10 +980,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6121673" vertical-offset="273" max-vertical-offset="799">
-          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.12927757" vertical-offset="0" max-vertical-offset="799">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <marker date="1458087814711" expanded="false" signature="550:565" placeholder="..." />
+            <marker date="1458088079308" expanded="false" signature="545:560" placeholder="..." />
           </folding>
         </state>
       </provider>
