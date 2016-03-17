@@ -96,4 +96,4 @@ class ChocAnSystem
 	}
 }
 
-echo (new Database())->select("select * from member");
+phpinfo();
