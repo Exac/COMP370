@@ -9,5 +9,6 @@ class SchedulerInterface
 	public function main()
 	{
 		echo Utils::getNavigationMenu();
+		var_dump($_POST);
 	}
 }
