@@ -15,19 +15,26 @@ class UserInterface
 	const currencyFormatter = null;
 	const DATE_FORMAT = "YYYY-MM-DD"; //YYYY-MM-DD
 
+	public $title = "Chocoholics Anonymous";
+	public $description = null;
+	public $author = "Farzin, Navi and Thomas";
+	public $stylesheets = array("cdn/css/interface.css");
+	public $bodyId = null;
+	public $bodyClasses = array("interface");
+	public $body = "";
+	public $scripts = array("/cdn/js/scripts.js");
+	public $foot = "\n</body>\n</html>";
+
 	public function  __construct()
 	{
 		echo "UserInterface::__construct();";
 		$this->in = $_POST;
-		$this->out = new Html();
 		$this->menu();
-		$this->out->body .= "wew";
-		echo $this->out->__toString();
 	}
 	
 	public function menu()
 	{
-		$this->out->body .= Utils::getNavigationMenu();
+		$this->body .= Utils::getNavigationMenu();
 	}
 	
 	public function errorMessage()
@@ -65,4 +72,31 @@ class UserInterface
 		
 	}
 
+	public function __toString()
+	{
+		$o = "<!doctype html>\n\n<html lang='en'>\n\n<head>\n\t<meta charset='utf-8'>\n" .
+			"\t<title>" . $this->title . "</title>";
+		if (isset($this->description)) {
+			$o .= "\n\t<meta name='description' content='" . $this->description . "'>";
+		}
+		$o .= "\n\t<meta name='author' content='" . $this->author . "'>";
+		foreach ($this->stylesheets as &$css) {
+			$o .= "\n\t<link rel='stylesheet' href='" . $css . "'>";
+		}
+		$o .= "\n</head>\n<body id='" . $this->bodyId . "' class='";
+		foreach ($this->bodyClasses as &$bClass) {
+			$o .= $bClass . " ";
+		}
+		$o .= "'>";
+
+		$o .= "\n" . str_replace("\n", "\n\t", $this->body); //add body, indent all lines once.
+
+		foreach ($this->scripts as &$script) {
+			$o .= "\n\t<script src='" . $script . "' defer></script>";
+		}
+		$o .= $this->foot;
+
+
+		return $o;
+	}
 }

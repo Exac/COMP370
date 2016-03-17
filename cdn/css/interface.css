@@ -40,6 +40,16 @@ hr {
     border: 0; /*remove dotted outlines*/
 }
 
+/**
+ * PHP RESET
+ */
+.xdebug-error * {
+    color: #292944 !important;
+}
+
+/**
+ * FORMS
+ */
 /* hide the checkboxes and radios */
 input[type="checkbox"],
 input[type="radio"] {

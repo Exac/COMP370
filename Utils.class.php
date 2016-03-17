@@ -22,58 +22,107 @@ class Utils {
 				'</ul>';
 	}
 
-}
-
-class Database {
-	public $db_host = "COMP370.db.10405771.hostedresource.com";
-	public $db_user = "COMP370";
-	public $db_password;
-
-	function __construct() {
-		$this->db_password = $_ENV["CDP"]; // Password is set on server so GitHub can host code.
-		echo $this->db_password;
-	}
-}
-
-class Html
-{
-	public $title = "Chocoholics Anonymous";
-	public $description = null;
-	public $author = "Farzin, Navi and Thomas";
-	public $stylesheets = array("cdn/css/interface.css");
-	public $bodyId = null;
-	public $bodyClasses = array("interface");
-	public $body = "";
-	public $scripts = array("/cdn/js/scripts.js");
-	public $foot = "\n</body>\n</html>";
-
-	public function __toString()
+	public function testDB()
 	{
-		$o = "<!doctype html>\n\n<html lang='en'>\n\n<head>\n\t<meta charset='utf-8'>\n" .
-			"\t<title>" . $this->title . "</title>";
-		if (isset($this->description)) {
-			$o .= "\n\t<meta name='description' content='" . $this->description . "'>";
+		$d = new Database();
+		$a = $d->select("SELECT * FROM `member` ORDER BY `member_number`");
+		foreach ($a as $row) {
+			echo $row["member_number"];
+			echo $row["member_name"];
+			echo $row["member_email_address"];
 		}
-		$o .= "\n\t<meta name='author' content='" . $this->author . "'>";
-		foreach ($this->stylesheets as &$css) {
-			$o .= "\n\t<link rel='stylesheet' href='" . $css . "'>";
-		}
-		$o .= "\n</head>\n<body id='" . $this->bodyId . "' class='";
-		foreach ($this->bodyClasses as &$bClass) {
-			$o .= $bClass . " ";
-		}
-		$o .= "'>";
-
-		$o .= "\n" . str_replace("\n", "\n\t", $this->body); //add body, indent all lines once.
-
-		foreach ($this->scripts as &$script) {
-			$o .= "\n\t<script src='" . $script . "' defer></script>";
-		}
-		$o .= $this->foot;
-
-
-		return $o;
 	}
+}
+
+class Database
+{
+	public $host = "COMP370.db.10405771.hostedresource.com";
+	public $user = "COMP370"; //Also name of database.
+	public $password;
+
+	protected static $connection;
+
+	/*
+	 * Password is set on server so GitHub can host code.
+	 * On linux machines, add go to /etc/environment and add
+	 * CDP=ThisIsMyPassword
+	 *
+	 * On Windows machines running WAMP, go to C:\wamp\bin\apache\Apache2.4.4\conf and add
+	 * SetEnv CDP ThisIsMyPassword
+	 */
+	function __construct()
+	{
+		$this->password = getenv("CDP");
+	}
+
+	/**
+	 * Connect to the database
+	 *
+	 * @return bool|mysqli False on Failure, mysqli object when it works.
+	 */
+	public function connect()
+	{
+		if (!isset(self::$connection)) //only connect if not already connected.
+		{
+			self::$connection = new mysqli($this->host, $this->user, $this->password, $this->user);
+		}
+		if (self::$connection === false) //error
+		{
+			echo "Database::connect() connection failed";
+
+			return false;
+		}
+
+		return self::$connection;
+	}
+
+	/**
+	 * Query the database
+	 *
+	 * @param $query string MySQL query.
+	 * @return bool|mysqli_result mysqli::query() result.
+	 */
+	public function query($query)
+	{
+		$connection = $this->connect(); //connect to db
+		$result = $connection->query($query);
+
+		return $result;
+	}
+
+	/**
+	 * Select query (get rows) from database
+	 *
+	 * @param $query string MySQL query
+	 * @return array|bool Array of database rows.
+	 */
+	public function select($query)
+	{
+		$rows = array();
+		$result = $this->query($query);
+		if ($result === false) {
+			return false;
+		}
+		while ($row = $result->fetch_assoc()) {
+			$rows[] = $row;
+		}
+
+		return $rows;
+	}
+
+	/**
+	 * Clean up value (so someone does not just enter SQL into inputs).
+	 *
+	 * @param $value String to be escaped.
+	 * @return string Clean string for use in database.
+	 */
+	public function secure($value)
+	{
+		$connection = $this->connect();
+
+		return "'" . $connection->real_escape_string($value) . "'";
+	}
+
 }
 
 class Button
@@ -96,7 +145,10 @@ class Button
 	}
 
 	/**
-	 * @desc creates a html-id-safe name for variable. "nice Button" becomes "nice_Button"
+	 * Creates a html-id-safe name for variable. "nice Button" becomes "nice_Button"
+	 *
+	 * @param $_name string value to be cleaned.
+	 * @return string name
 	 */
 	private function cleanName($_name)
 	{
@@ -110,7 +162,7 @@ class Input
 	public $name = null;
 	public $label = null;
 	public $type = null;
-	public $radiogroup = "default";
+	public $radio_group = "default";
 
 	/**
 	 * @param $_type string (button|checkbox|radio|text|password)
@@ -125,7 +177,7 @@ class Input
 
 		//If an optional 4th parameter is passed, use it to determine a radio button's group.
 		if (func_num_args() === 4) {
-			$this->radiogroup = func_get_args()[3];
+			$this->radio_group = func_get_args()[3];
 		}
 	}
 
@@ -134,9 +186,9 @@ class Input
 		if ($this->type === "button" || $this->type === "submit") {
 			$o = '<button type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
 				. $this->getId($this->name) . '">' . $this->name . '</button>';
-		} else if ($this->radiogroup !== "radio") {
+		} else if ($this->radio_group !== "radio") {
 			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
-				. $this->radiogroup . '"/>';
+				. $this->radio_group . '"/>';
 		} else {
 			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
 				. $this->getId($this->name) . '"/>';
@@ -153,7 +205,10 @@ class Input
 	}
 
 	/**
-	 * @desc creates a html-id-safe name for variable. "nice Button" becomes "nice_Button"
+	 * Creates a html-id-safe name for variable. "nice Button" becomes "nice_Button"
+	 *
+	 * @param $_name
+	 * @return string ID
 	 */
 	public function getId($_name)
 	{
@@ -162,19 +217,4 @@ class Input
 
 }
 
-/*
- * Form Example
- */
-/*
-$h = new Html();
-$h->body .= "<form action='' method='get'>";
-$h->body .= (new Input("button", "lad", "Click for lad"))->br();
-$h->body .= (new Input("text", "wew", "Enter name lad"))->br();
-$h->body .= (new Input("checkbox", "amaze", "amaze wew"))->br();
-$h->body .= (new Input("radio", "so", "doge amaze", "ohvey"))->br();
-$h->body .= (new Input("radio", "doge", "wow", "ohvey"))->br();
-$h->body .= (new Input("submit", "oh", "vey"))->br();
-$h->body .= "</form>";
-new Input("radio", "test", "this is a test", "wew");
-echo $h;*/
 

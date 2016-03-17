@@ -17,14 +17,14 @@ class IndexInterface
 
 	public function main()
 	{
-		echo $this->ui->out;
-		$this->ui->out->bodyId = "interfacepicker";
-		$this->ui->out->body .= "<h1 class='logo' onclick='document.location = \'/\''>Chocoholics Anonymous</h1>";
-		$this->ui->out->body .= '<ul class="flex-container">'
+		$this->ui->bodyId = "interfacepicker";
+		$this->ui->body .= "<h1 class='logo' onclick='document.location = \'/\''>Chocoholics Anonymous</h1>";
+		$this->ui->body .= '<ul class="flex-container">'
 			. '<li class="flex-item"><a href="/manager/">Manager</a></li>'
 			. '<li class="flex-item"><a href="/operator/">Operator</a></li>'
 			. '<li class="flex-item"><a href="/provider/">Provider</a></li>'
 			. '<li class="flex-item"><a href="/scheduler/">Scheduler</a></li>' . '</ul>';
 
+		echo $this->ui;
 	}
 }
