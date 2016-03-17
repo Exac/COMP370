@@ -7,7 +7,7 @@
  */
 class OperatorInterface
 {
-private ui;
+	private $ui;
 
 	function __construct()
 	{
