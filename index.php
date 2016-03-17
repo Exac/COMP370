@@ -25,3 +25,9 @@
 	</p>
 </body>
 </html>
+<?php/*
+
+//require_once(dirname(dirname(__FILE__)) . '/ChocAnSystem.class.php');
+include "ChocAnSystem.class.php";
+
+new ChocAnSystem("index");

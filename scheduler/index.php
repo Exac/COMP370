@@ -13,7 +13,7 @@
 </head>
 
 <body id="scheduler" class="interface">
-<form id="schedulerinterface" action="/SchedulerInterface.class.php">
+<form id="schedulerinterface" action="" method="post">
 	<fieldset>
 		<legend>Time: Midnight Fridays</legend>
 		<ul>

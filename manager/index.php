@@ -13,7 +13,7 @@
 </head>
 
 <body id="manager" class="interface">
-<form id="managerinterface" action="/ManagerInterface.class.php">
+<form id="managerinterface" action="" method="post">
 	<fieldset>
 		<legend>Request Member Report</legend>
 		<button type="button" id="generate_Member_report">generate_Member_report</button>

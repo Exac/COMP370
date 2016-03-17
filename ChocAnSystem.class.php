@@ -10,7 +10,7 @@ include_once('Utils.class.php');
 
 //Load all classes that will be needed (after project is done, we can spread these out).
 spl_autoload_register(function ($class_name) {
-	include $class_name . '.class.php';
+	include_once $class_name . '.class.php';
 });
 
 /*
@@ -22,6 +22,7 @@ include_once('ClaimSubmitter.class.php');
 include_once('DateRangeReport.class.php');
 include_once('ETFReport.class.php');
 include_once('ETFReportGenerator.class.php');
+include_once('IndexInterface.class.php');
 include_once('ManagerInterface.class.php');
 include_once('Member.class.php');
 include_once('MemberMaintainer.class.php');
@@ -64,7 +65,7 @@ class ChocAnSystem
 	/**
 	 * @param $_type    Takes either manager|operator|provider|scheduler as strings.
 	 */
-	function __construct($_type)
+	public function __construct($_type)
 	{
 		$this->setName($_type);
 
@@ -75,24 +76,22 @@ class ChocAnSystem
 			$this->myInterface = new OperatorInterface();
 		} else if ($this->type === "provider") {
 			$this->myInterface = new ProviderInterface();
-		} else {
+		} else if ($this->type === "scheduler") {
 			$this->myInterface = new SchedulerInterface();
+		} else {
+			$this->myInterface = new IndexInterface();
 		}
+
 		$this->myInterface->main();
 	}
 
-	function getName()
+	private function setName($_type)
 	{
-		return $this->type;
+		$this->type = $_type;
 	}
 
-	function setName($_type)
+	private function index()
 	{
-		if ($_type != "manager" && $_type != "operator" && $_type != "provider" && $_type != "scheduler") {
-			$this->type = "manager";
-		} else {
-			$this->type = $_type;
-		}
 
 	}
 }

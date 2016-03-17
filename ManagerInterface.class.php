@@ -7,11 +7,13 @@
  */
 class ManagerInterface
 {
-	public $ui = "UserInterface";
+	public $ui;
 	
 	function __construct ()
 	{
-		
+		$this->ui = new UserInterface();
+
+		//Check if $_POST request for any reports.
 	}
 	
 	public function providerReport ()

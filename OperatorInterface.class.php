@@ -9,7 +9,8 @@ class OperatorInterface
 {
 	function __construct()
 	{
-		
+		//process input on members
+
 	}
 	
 	public function main ()

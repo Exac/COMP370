@@ -13,7 +13,7 @@
 </head>
 
 <body id="provider" class="interface">
-<form id="providerinterface" action="/ProviderInterface.class.php">
+<form id="providerinterface" action="" method="post">
 	<fieldset>
 		<legend>Provider Report</legend>
 		<p>View Provider Report [generate_Provider_report]</p>
