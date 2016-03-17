@@ -90,9 +90,12 @@ class ChocAnSystem
 		$this->type = $_type;
 	}
 
+	// Hello
 	private function index()
 	{
 
 	}
 }
+
+echo "Hello";
 
