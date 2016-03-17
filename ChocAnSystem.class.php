@@ -97,5 +97,5 @@ class ChocAnSystem
 	}
 }
 
-echo "Hello";
+echo "Hello World";
 
