@@ -7,14 +7,16 @@
  */
 class OperatorInterface
 {
+public ui;
 	function __construct()
 	{
 		//process input on members
+		$this->ui = new UserInterface();
 
 	}
 	
 	public function main ()
 	{
-		echo Utils::getNavigationMenu();
+		$this->ui->body .= Utils::getNavigationMenu();
 	}
 }
