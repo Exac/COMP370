@@ -447,7 +447,7 @@ body.interface label:before {
     left: auto;
     z-index: 0;
     color: #6fadcb;
-    background-color: none;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 body.interface .button + label:before,
