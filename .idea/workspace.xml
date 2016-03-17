@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Remove phpinfo() call">
+    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Correction var name">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperatorInterface.class.php" afterPath="$PROJECT_DIR$/OperatorInterface.class.php" />
     </list>
@@ -84,10 +84,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Utils.class.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Utils.class.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Utils.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.166667">
+                <state vertical-scroll-proportion="2.2411346">
                   <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
                   <folding>
                     <marker date="1458254560000" expanded="true" signature="583:630" placeholder="SELECT * FRO... member" />
@@ -96,10 +96,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IndexInterface.class.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="IndexInterface.class.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/IndexInterface.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4326241">
+                <state vertical-scroll-proportion="-7.625">
                   <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="46" />
                   <folding>
                     <element signature="e#7#85#0#PHP" expanded="false" />
@@ -199,9 +199,11 @@
           <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31914893">
-                  <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-                  <folding />
+                <state vertical-scroll-proportion="0.78723407">
+                  <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+                  <folding>
+                    <marker date="1458258458000" expanded="true" signature="378:512" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -738,7 +740,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458258232201</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Correction var name">
+      <created>1458258265994</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1458258265994</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -814,7 +822,8 @@
     <MESSAGE value="Make all code begin in ChocAnSystem's main()" />
     <MESSAGE value="Fixed broken Interfaces." />
     <MESSAGE value="Remove phpinfo() call" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove phpinfo() call" />
+    <MESSAGE value="Correction var name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction var name" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1134,16 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.166667">
-          <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
-          <folding>
-            <marker date="1458254560000" expanded="true" signature="583:630" placeholder="SELECT * FRO... member" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChocAnSystem.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.1568627">
@@ -1190,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IndexInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4326241">
+        <state vertical-scroll-proportion="-7.625">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="e#7#85#0#PHP" expanded="false" />
@@ -1198,11 +1197,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Utils.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2411346">
+          <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
+          <folding>
+            <marker date="1458254560000" expanded="true" signature="583:630" placeholder="SELECT * FRO... member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31914893">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="0.78723407">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <marker date="1458258458000" expanded="true" signature="378:512" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
