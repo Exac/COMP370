@@ -18,5 +18,7 @@ public ui;
 	public function main ()
 	{
 		$this->ui->body .= Utils::getNavigationMenu();
+
+		echo $this->ui;
 	}
 }
