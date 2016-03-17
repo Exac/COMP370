@@ -63,7 +63,7 @@ class ChocAnSystem
 	private $myInterface; //ManagerInterface|OperatorInterface|ProviderInterface|SchedulerInterface
 
 	/**
-	 * @param $_type    Takes either manager|operator|provider|scheduler as strings.
+	 * @param $_type     Takes either manager|operator|provider|scheduler as strings.
 	 */
 	public function __construct($_type)
 	{
@@ -95,3 +95,5 @@ class ChocAnSystem
 
 	}
 }
+
+echo (new Database())->select("select * from member");
