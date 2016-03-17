@@ -7,7 +7,8 @@
  */
 class OperatorInterface
 {
-public ui;
+private ui;
+
 	function __construct()
 	{
 		//process input on members
@@ -17,6 +18,7 @@ public ui;
 	
 	public function main ()
 	{
+		$this->ui->bodyId = "operatorinterface";
 		$this->ui->body .= Utils::getNavigationMenu();
 
 		echo $this->ui;
