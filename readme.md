@@ -17,8 +17,15 @@ c.	An arbitrary computing device to connect to the web server.
 
 ##Mapping of Analysis Classes to Design Classes
 Analysis classes map to design classes.
+
 The **ChocAnSystem** class creates the provider (terminal?), operator and, manager interfaces.
+
 The **UserInterface** class handles the four user interfaces (**ProviderInterface**, **OperatorInterface**, **ManagerInterface** and, **SchedulerInterface**. They are used for all output.
+
 The entity classes have their information stored in the database. Each entry holds the data for one entity class (**Members**, **Providers**, **Persons**, **Services** and **Claims**).
 **ProviderMaintainer** and **MemberMaintainer** inherit **PersonMaintainer**.
+
+**Report** is the superclass behind all the report classes. **DateRangeReport** is a subclass of report that limits the date-range of reports.
+
+**MemberReportGenerator** saves all reports.
 

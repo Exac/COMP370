@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Added Button class (in UserInterface.class.php). Its basically an inner-class.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserInterface.class.php" afterPath="$PROJECT_DIR$/UserInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/css/interface.css" afterPath="$PROJECT_DIR$/cdn/css/interface.css" />
+    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Update Readme.md. Example form in UserInterface.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -19,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Users\Thomas\Dropbox\COMP370" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -48,8 +46,8 @@
                 <state />
               </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.037117902" vertical-offset="0" max-vertical-offset="916">
-                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5382096" vertical-offset="0" max-vertical-offset="916">
+                  <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
                   <folding />
                 </state>
               </provider>
@@ -92,10 +90,10 @@
           <file leaf-file-name="UserInterface.class.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.74916387" vertical-offset="2711" max-vertical-offset="3672">
-                  <caret line="199" column="2" selection-start-line="199" selection-start-column="2" selection-end-line="199" selection-end-column="2" />
+                <state vertical-scroll-proportion="0.74916387" vertical-offset="2609" max-vertical-offset="3570">
+                  <caret line="193" column="2" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
                   <folding>
-                    <marker date="1458200302083" expanded="true" signature="3930:3956" placeholder="..." />
+                    <marker date="1458200327003" expanded="true" signature="3934:3960" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -192,8 +190,8 @@
         <option value="$PROJECT_DIR$/deploy.php" />
         <option value="$PROJECT_DIR$/manager/index.php" />
         <option value="$PROJECT_DIR$/cdn/css/interface.css" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/UserInterface.class.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -506,13 +504,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458114818315</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update Readme.md. Example form in UserInterface.">
+      <created>1458200360294</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1458200360294</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -528,7 +533,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13171226" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -580,7 +584,8 @@
     <MESSAGE value="Switch to Unix line-endings." />
     <MESSAGE value="Fix Deploy script" />
     <MESSAGE value="Added Button class (in UserInterface.class.php). Its basically an inner-class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Button class (in UserInterface.class.php). Its basically an inner-class." />
+    <MESSAGE value="Update Readme.md. Example form in UserInterface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Readme.md. Example form in UserInterface." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -948,24 +953,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74916387" vertical-offset="2609" max-vertical-offset="3570">
+          <caret line="193" column="2" selection-start-line="193" selection-start-column="2" selection-end-line="193" selection-end-column="2" />
+          <folding>
+            <marker date="1458200327003" expanded="true" signature="3934:3960" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037117902" vertical-offset="0" max-vertical-offset="916">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5382096" vertical-offset="0" max-vertical-offset="916">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74916387" vertical-offset="2711" max-vertical-offset="3672">
-          <caret line="199" column="2" selection-start-line="199" selection-start-column="2" selection-end-line="199" selection-end-column="2" />
-          <folding>
-            <marker date="1458200302083" expanded="true" signature="3930:3956" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
