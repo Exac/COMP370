@@ -26,12 +26,12 @@ class Person
 	private $email;
 
 	//const nextNumber 		 = 0;#TODO CHANGE. This can't be const
-	const NUMBER_LENGTH 	 = 6;
-	const SEPARATOR 		 = '-';
-	const NAME_LENGTH 		 = 25;
-	const STREET_LENGTH 	 = 25;
-	const CITY_LENGTH 		 = 14;
-	const PROVINCE_LENGTH 	 = 2;
+	const NUMBER_LENGTH      = 6;
+	const SEPARATOR          = '-';
+	const NAME_LENGTH        = 25;
+	const STREET_LENGTH      = 25;
+	const CITY_LENGTH        = 14;
+	const PROVINCE_LENGTH    = 2;
 	const POSTAL_CODE_LENGTH = 6;
 
 	/**
