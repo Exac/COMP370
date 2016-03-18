@@ -97,5 +97,5 @@ class ChocAnSystem
 	}
 }
 
-echo "Hello World";
+var_dump((new Database())->select("select * from member"));
 
