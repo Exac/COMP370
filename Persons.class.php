@@ -36,9 +36,9 @@ class Persons
 		
 	}
 	
-	public function add ()
+	public function add ($person)
 	{
-		
+		$person = new Person();
 	}
 	
 	public function update()

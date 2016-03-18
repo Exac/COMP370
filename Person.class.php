@@ -223,7 +223,7 @@ class Person
 			return;
 		}
 
-		// Make sure the length of the postal code is not greater than than POSTAL_CODE_LENGTH.
+		// Make sure the length of the postal code is not greater than POSTAL_CODE_LENGTH.
 		if ($this->getLength($postalCode) > self::POSTAL_CODE_LENGTH)
 		{
 			echo "Please make sure the length of the postal code is not greater than 2 characters.";

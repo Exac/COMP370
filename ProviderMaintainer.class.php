@@ -3,7 +3,7 @@
 class ProviderMaintainer extends PersonMaintainer
 {
 	private $ui;
-	private $providers;
+	private $provider;
 	
 	public function _construct()
 	{
@@ -12,7 +12,7 @@ class ProviderMaintainer extends PersonMaintainer
 	
 	public function addProvider()
 	{
-		
+
 	}
 	
 	public function editProvider()
