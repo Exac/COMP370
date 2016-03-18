@@ -262,3 +262,5 @@ class Person
 		return strlen((string)$object);
 	}
 }
+
+echo "Testing ";
