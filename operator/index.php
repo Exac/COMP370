@@ -10,27 +10,27 @@
 <body id="operator" class="interface">
 
 </body>
-    <form id="memberControls" action="" method="post">
-        <fieldset>
-            <legend>View Members</legend>
-            <button type="button" id="viewMembers">view_members</button>
-        </fieldset>
+<form id="memberControls" action="" method="post">
+    <fieldset>
+        <legend>View Members</legend>
+        <button type="button" id="viewMembers">view_members</button>
+    </fieldset>
 
-        <fieldset>
-            <legend>Add Member</legend>
-            Name:           <br><input type="text"  name="name"><br>
-            Street address: <br><input type="text"  name="street_address"><br>
-            City:           <br><input type="text"  name="city"><br>
-            Province:       <br><input type="text"  name="province"><br>
-            Postal code:    <br><input type="text"  name="postalCode"><br>
-            E-mail:         <br><input type="email" name="email"><br>
-            Status:         <br><input type="radio" name="status" value="ACTIVE"> Active
-                            <br><input type="radio" name="status" value="SUSPENDED"> Suspended
-                            <br><br>
+    <fieldset>
+        <legend>Add Member</legend>
+        Name:           <br><input type="text"  name="name"><br>
+        Street address: <br><input type="text"  name="street_address"><br>
+        City:           <br><input type="text"  name="city"><br>
+        Province:       <br><input type="text"  name="province"><br>
+        Postal code:    <br><input type="text"  name="postalCode"><br>
+        E-mail:         <br><input type="email" name="email"><br>
+        Status:         <br><input type="radio" name="status" value="ACTIVE"> Active
+                        <br><input type="radio" name="status" value="SUSPENDED"> Suspended
+                        <br><br>
 
-            <button type="submit" id="addMembers">add_member</button>
-        </fieldset>
-    </form>
+        <button type="submit" id="addMembers">add_member</button>
+    </fieldset>
+</form>
 
 <form id="providerControls" action="" method="post">
     <fieldset>

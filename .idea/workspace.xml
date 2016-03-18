@@ -45,10 +45,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50402576">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.8760064">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="e#2273#2351#0#PHP" expanded="true" />
+                <element signature="e#2197#2275#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -507,7 +507,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458338376567</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="operator interface, something like this??">
+      <created>1458338477390</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1458338477390</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -587,7 +593,8 @@
     <MESSAGE value="Service.class.php done, navi" />
     <MESSAGE value="Claim.class.php done, Service.class.php and Person.class.php edited, navi" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="operator interface, something like this??" />
+    <option name="LAST_COMMIT_MESSAGE" value="operator interface, something like this??" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -961,10 +968,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50402576">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.8760064">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#2273#2351#0#PHP" expanded="true" />
+            <element signature="e#2197#2275#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
