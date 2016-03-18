@@ -10,8 +10,17 @@ class ProviderMaintainer extends PersonMaintainer
 		
 	}
 	
-	public function addProvider()
+	public function addProvider($name, $streetAddress, $city, $province, $postalCode, $email, $type)
 	{
+		$this->provider = new Provider();
+
+		$this->provider->setName($name);
+		$this->provider->setStreet($streetAddress);
+		$this->provider->setCity($city);
+		$this->provider->setProvince($province);
+		$this->provider->setPostalCode($postalCode);
+		$this->provider->setEmail($email);
+		$this->provider->setType($type);
 
 	}
 	
@@ -35,3 +44,5 @@ class ProviderMaintainer extends PersonMaintainer
 		
 	}
 }
+
+echo $_POST["name"] . " " . $_POST["street_address"];
