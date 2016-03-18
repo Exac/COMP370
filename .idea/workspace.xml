@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operator/index.php" afterPath="$PROJECT_DIR$/operator/index.php" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,10 +45,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72624797">
-              <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.6988728">
+              <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
               <folding>
-                <element signature="e#1129#1207#0#PHP" expanded="true" />
+                <element signature="e#1119#1197#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -472,7 +473,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458337849655</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="test">
+      <created>1458337864393</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1458337864393</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -926,10 +933,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72624797">
-          <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.6988728">
+          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
           <folding>
-            <element signature="e#1129#1207#0#PHP" expanded="true" />
+            <element signature="e#1119#1197#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

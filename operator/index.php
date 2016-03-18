@@ -24,8 +24,8 @@
             Province: <br><input type="text" name="province"><br>
             Postal code: <br><input type="text" name="postalCode"><br>
             E-mail: <br><input type="email" name="email"><br>
-            Status: <br><input type="checkbox" name="status" value="ACTIVE"> Active<br>
-                    <br><input type="checkbox" name="status" value="SUSPENDED"> Suspended<br>
+            Status: <br><input type="radio" name="status" value="ACTIVE"> Active
+                    <br><input type="radio" name="status" value="SUSPENDED"> Suspended<br>
             <button type="submit" id="addMembers">add_member</button>
         </fieldset>
     </form>
