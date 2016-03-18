@@ -90,12 +90,9 @@ class ChocAnSystem
 		$this->type = $_type;
 	}
 
-	// Hello
 	private function index()
 	{
 
 	}
 }
-
-var_dump((new Database())->select("select * from member"));
 
