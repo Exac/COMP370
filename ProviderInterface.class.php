@@ -36,6 +36,7 @@ class ProviderInterface
 
 	public function main()
 	{
+		$this->
 		$this->ui->body .= Utils::getNavigationMenu();
 
 		echo $this->ui;
