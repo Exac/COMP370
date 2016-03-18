@@ -18,9 +18,9 @@
 
         <fieldset>
             <legend>Add Member</legend>
-            Name: <input type="text" name="member_name"><br>
-            Street address: <input type="text" name="member_street_address"><br>
-            E-mail: <input type="text" name="email"><br>
+            Name: <br><input type="text" name="member_name"><br>
+            Street address: <br><input type="text" name="member_street_address"><br>
+            E-mail: <br><input type="text" name="email"><br>
             <button type="submit" id="addMembers">add_members</button>
         </fieldset>
     </form>
