@@ -18,13 +18,13 @@
 
     <fieldset>
         <legend>Add Member</legend>
-        Name:           <br><input type="text"  name="name"><br>
-        Street address: <br><input type="text"  name="street_address"><br>
-        City:           <br><input type="text"  name="city"><br>
-        Province:       <br><input type="text"  name="province"><br>
-        Postal code:    <br><input type="text"  name="postalCode"><br>
-        E-mail:         <br><input type="email" name="email"><br>
-        Status:         <br><input type="radio" name="status" value="ACTIVE"> Active
+Name:           <br><input type="text"  name="name"><br>
+Street address: <br><input type="text"  name="street_address"><br>
+City:           <br><input type="text"  name="city"><br>
+Province:       <br><input type="text"  name="province"><br>
+Postal code:    <br><input type="text"  name="postalCode"><br>
+E-mail:         <br><input type="email" name="email"><br>
+Status:         <br><input type="radio" name="status" value="ACTIVE"> Active
                         <br><input type="radio" name="status" value="SUSPENDED"> Suspended
                         <br><br>
 
@@ -40,16 +40,16 @@
 
     <fieldset>
         <legend>Add Provider</legend>
-        Name:           <br><input type="text"  name="name"><br>
-        Street address: <br><input type="text"  name="street_address"><br>
-        City:           <br><input type="text"  name="city"><br>
-        Province:       <br><input type="text"  name="province"><br>
-        Postal code:    <br><input type="text"  name="postalCode"><br>
-        E-mail:         <br><input type="email" name="email"><br>
-        Type:           <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
+Name:           <br><input type="text"  name="name"><br>
+Street address: <br><input type="text"  name="street_address"><br>
+City:           <br><input type="text"  name="city"><br>
+Province:       <br><input type="text"  name="province"><br>
+Postal code:    <br><input type="text"  name="postalCode"><br>
+E-mail:         <br><input type="email" name="email"><br>
+Type:           <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
                         <br><input type="radio" name="type" value="INTERNIST"> Internist
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
-                        <br><br>
+<br><br>
 
         <button type="submit" id="addProvider">add_member</button>
     </fieldset>
@@ -63,7 +63,5 @@
  * Date: 3/4/16
  * Time: 15:00
  */
-
 require_once(dirname(dirname(__FILE__)) . '/ChocAnSystem.class.php');
-
 new ChocAnSystem("operator");
