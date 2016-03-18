@@ -6,9 +6,9 @@
  * @date 18-03-2016
  *
  * A service is provided by the provider and received by the member. It has following attributes:
- * 	code	Fixed length of 6 digits
- * 	name	Max length of 20
- * 	fee		Max value of 999999
+ * 	code    Fixed length of 6 digits
+ * 	name    Max length of 20
+ * 	fee     Max value of 999999
  * Each of the attributes has a getter and setter associated with them.
  */
  

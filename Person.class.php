@@ -5,7 +5,7 @@
  * @date 10-3-2016
  *
  * A Person consists of either a Member or a Provider. A person has following attributes:
- * 		Number				Max length is 6
+ * 		Number				Max length is 9
  * 		Name				Max length is 25
  * 		Street				Max length is 25
  * 		City				Max length is 14
@@ -25,9 +25,8 @@ class Person
 	private $postalCode;
 	private $email;
 
-	//const nextNumber 		 = 0;#TODO CHANGE. This can't be const
-	const NUMBER_LENGTH      = 6;
-	const SEPARATOR          = '-';
+	//const nextNumber       = 0;#TODO CHANGE. This can't be const
+	const NUMBER_LENGTH      = 9;
 	const NAME_LENGTH        = 25;
 	const STREET_LENGTH      = 25;
 	const CITY_LENGTH        = 14;
@@ -60,7 +59,7 @@ class Person
 		// Make sure the length is equal to NUMBER_LENGTH.
 		if ($this->getLength($number) != self::NUMBER_LENGTH)
 		{
-			echo "ERROR: Please enter a 6 digit number.";
+			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH;
 			return;
 		}
 
@@ -93,7 +92,7 @@ class Person
 		// Make sure the length of the name is less than NAME_LENGTH.
 		if ($this->getLength($name) > self::NAME_LENGTH)
 		{
-			echo "Please make sure the length of the name is between 1 and 25 characters.";
+			echo "Length of name must not be greater than " . self::NAME_LENGTH;
 			return;
 		}
 
@@ -126,7 +125,7 @@ class Person
 		// Make sure the length of the street is less than STREET_LENGTH.
 		if ($this->getLength($street) > self::STREET_LENGTH)
 		{
-			echo "Please make sure the length of the name is not greater than 25 characters.";
+			echo "Length of street name must not be greater than " . self::STREET_LENGTH;
 			return;
 		}
 
@@ -159,7 +158,7 @@ class Person
 		// Make sure the length of the city is less than CITY_LENGTH.
 		if ($this->getLength($city) > self::CITY_LENGTH)
 		{
-			echo "Please make sure the length of the city is not greater than 14 characters.";
+			echo "Length of city name must not be greater than " . self::CITY_LENGTH;
 			return;
 		}
 
@@ -193,7 +192,7 @@ class Person
 		// Make sure the length of the province is less than PROVINCE_LENGTH.
 		if ($this->getLength($province) > self::PROVINCE_LENGTH)
 		{
-			echo "Please make sure the length of the province is not greater than 2 characters.";
+			echo "Length of province must not be greater than " . self::PROVINCE_LENGTH;
 			return;
 		}
 
@@ -226,7 +225,7 @@ class Person
 		// Make sure the length of the postal code is not greater than POSTAL_CODE_LENGTH.
 		if ($this->getLength($postalCode) > self::POSTAL_CODE_LENGTH)
 		{
-			echo "Please make sure the length of the postal code is not greater than 2 characters.";
+			echo "Length of postal code must not be greater than " . self::POSTAL_CODE_LENGTH;
 			return;
 		}
 
