@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Claim.class.php done, Service.class.php and Person.class.php edited, navi">
+    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operator/index.php" afterPath="$PROJECT_DIR$/operator/index.php" />
     </list>
@@ -45,10 +45,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52012885">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.49275362">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
-                <element signature="e#822#900#0#PHP" expanded="true" />
+                <element signature="e#821#899#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -433,7 +433,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458329659970</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="test">
+      <created>1458336698073</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1458336698073</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -510,10 +516,10 @@
     <MESSAGE value="Fixed broken Interfaces." />
     <MESSAGE value="Hello from Navi" />
     <MESSAGE value="Person, Member and Provider classes implemented." />
-    <MESSAGE value="test" />
     <MESSAGE value="Service.class.php done, navi" />
     <MESSAGE value="Claim.class.php done, Service.class.php and Person.class.php edited, navi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Claim.class.php done, Service.class.php and Person.class.php edited, navi" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -887,10 +893,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52012885">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.49275362">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
-            <element signature="e#822#900#0#PHP" expanded="true" />
+            <element signature="e#821#899#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

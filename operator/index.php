@@ -18,7 +18,7 @@
 
         <fieldset>
             <fieldset>
-                <legend>Add Members</legend>
+                <legend>Add Member</legend>
                 Name: <input type="text" name="member_name"><br>
                 Street address: <input type="text" name="member_street_address"><br>
                 E-mail: <input type="text" name="email"><br>
