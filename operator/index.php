@@ -18,10 +18,15 @@
 
         <fieldset>
             <legend>Add Member</legend>
-            Name: <br><input type="text" name="member_name"><br>
-            Street address: <br><input type="text" name="member_street_address"><br>
-            E-mail: <br><input type="text" name="email"><br>
-            <button type="submit" id="addMembers">add_members</button>
+            Name: <br><input type="text" name="name"><br>
+            Street address: <br><input type="text" name="street_address"><br>
+            City: <br><input type="text" name="city"><br>
+            Province: <br><input type="text" name="province"><br>
+            Postal code: <br><input type="text" name="postalCode"><br>
+            E-mail: <br><input type="email" name="email"><br>
+            Status: <br><input type="checkbox" name="status" value="ACTIVE"> Active<br>
+                    <br><input type="checkbox" name="status" value="SUSPENDED"> Suspended<br>
+            <button type="submit" id="addMembers">add_member</button>
         </fieldset>
     </form>
 </html>
