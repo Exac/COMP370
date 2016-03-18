@@ -46,7 +46,7 @@
         Province:       <br><input type="text"  name="province"><br>
         Postal code:    <br><input type="text"  name="postalCode"><br>
         E-mail:         <br><input type="email" name="email"><br>
-        Status:         <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
+        Type:           <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
                         <br><input type="radio" name="type" value="INTERNIST"> Internist
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
                         <br><br>
