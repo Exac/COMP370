@@ -50,8 +50,8 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3558776">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.60225445">
+              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -287,12 +287,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00047" summary="operator interface, something like this??">
-      <created>1458347278682</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1458347278682</updated>
     </task>
     <task id="LOCAL-00048" summary="operator interface, something like this??">
       <created>1458347389313</created>
@@ -582,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458356318544</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="operator interface, something like this??">
+      <created>1458356413435</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1458356413435</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1057,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3558776">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.60225445">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding>
             <element signature="e#6#67#0#PHP" expanded="true" />
           </folding>
