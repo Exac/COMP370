@@ -10,7 +10,7 @@
 <body id="operator" class="interface">
 
 </body>
-<form id="memberControls" action="" method="post">
+<form id="memberControls" action="../ProviderMaintainer.class.php" method="post">
     <fieldset>
         <legend>View Members</legend>
         <button type="button" id="viewMembers">view_members</button>
@@ -32,7 +32,7 @@
     </fieldset>
 </form>
 
-<form id="providerControls" action="" method="post">
+<form id="providerControls" action="../ProviderMaintainer.class.php" method="post">
     <fieldset>
         <legend>View Providers</legend>
         <button type="button" id="viewMembers">view_members</button>
