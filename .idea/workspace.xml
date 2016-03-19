@@ -35,8 +35,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.547504">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.31561998">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -283,12 +283,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file.">
-      <created>1458086148015</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1458086148015</updated>
     </task>
     <task id="LOCAL-00011" summary="Switch to Unix line-endings.">
       <created>1458086668463</created>
@@ -578,7 +572,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458350133042</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="operator interface, something like this??">
+      <created>1458350374616</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1458350374616</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1049,8 +1049,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.547504">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.31561998">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>

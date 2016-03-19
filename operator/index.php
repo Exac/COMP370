@@ -15,7 +15,7 @@
         <legend>View Members</legend>
         <label>click_to_view_members</label>
         <button type="button" id="viewMembers">view_members</button>
-    </fieldset>
+    </fieldset><br>
 
     <fieldset>
         <legend>New Person</legend>
@@ -35,14 +35,14 @@
         Member Status:  <br><input type="radio" name="status" value="ACTIVE"> Active
                         <br><input type="radio" name="status" value="SUSPENDED"> Suspended
                         <br><br>
-        </fieldset>
+        </fieldset><br>
 
         <fieldset><legend>Fill only for provider</legend>
         Provider Type:  <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
                         <br><input type="radio" name="type" value="INTERNIST"> Internist
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
                         <br><br>
-        </fieldset>
+        </fieldset><br>
 
         <button type="submit" id="addPerson">add_person</button>
     </fieldset>
