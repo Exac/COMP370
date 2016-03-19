@@ -6,6 +6,10 @@
  * @desc 
  */
 
+$provider = new ProviderMaintainer();
+$provider->addProvider($_POST["name"], $_POST["street_address"],
+	$_POST["city"], $_POST["postal_code"], $_POST["email"], $_POST["type"]);
+
 class OperatorInterface
 {
 	private $ui;
