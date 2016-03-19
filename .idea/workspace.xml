@@ -45,8 +45,8 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5748792">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.73913044">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -273,12 +273,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Created Utils class for functions.">
-      <created>1457605425881</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1457605425881</updated>
     </task>
     <task id="LOCAL-00007" summary="Move passwords into environmental variables.">
       <created>1457619300884</created>
@@ -568,7 +562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458348382029</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="operator interface, something like this??">
+      <created>1458348487074</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1458348487074</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1037,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5748792">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.73913044">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
           <folding>
             <element signature="e#6#67#0#PHP" expanded="true" />
           </folding>

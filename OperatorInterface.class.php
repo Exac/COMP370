@@ -25,7 +25,7 @@ class OperatorInterface
 		$this->ui->body .= Utils::getNavigationMenu();
 
 		$this->ui->body .= "<form method='post' action=''>";
-		$this->ui->body .= (new Button("test button", "This is the test button"));
+		//$this->ui->body .= (new Button("test button", "This is the test button"));
 		$this->ui->body .= "</form>";
 		echo $this->ui;
 	}
