@@ -6,9 +6,14 @@
  * @desc 
  */
 
-$provider = new ProviderMaintainer();
-$provider->addProvider($_POST["name"], $_POST["street_address"],
-	$_POST["city"], $_POST["postal_code"], $_POST["email"], $_POST["type"]);
+$name           = $_POST["name"];
+$street_address = $_POST["street_address"];
+$city           = $_POST["city"];
+$postalCode     = $_POST["postal_code"];
+$email          = $_POST["email"];
+$type           = $_POST["type"];
+$member_status  = $_POST["status"];
+$provider_type  = $_POST["type"];
 
 class OperatorInterface
 {
