@@ -35,10 +35,13 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3558776">
-              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.49275362">
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
                 <element signature="e#263#284#0#HTML" expanded="true" />
+                <element signature="e#473#494#0#HTML" expanded="true" />
+                <element signature="e#1108#1129#0#HTML" expanded="true" />
+                <element signature="e#1421#1442#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -285,12 +288,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Switch to Unix line-endings.">
-      <created>1458087138096</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1458087138096</updated>
     </task>
     <task id="LOCAL-00013" summary="Fix Deploy script">
       <created>1458087840434</created>
@@ -580,7 +577,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458350428455</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="operator interface, something like this??">
+      <created>1458350646471</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1458350646472</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1051,10 +1054,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3558776">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.49275362">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="e#263#284#0#HTML" expanded="true" />
+            <element signature="e#473#494#0#HTML" expanded="true" />
+            <element signature="e#1108#1129#0#HTML" expanded="true" />
+            <element signature="e#1421#1442#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
