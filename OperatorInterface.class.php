@@ -28,6 +28,9 @@ if (isset($_POST["add_person"]))
 
 	$type = $_POST["type"];
 
+	$member = new MemberMaintainer;
+	$member->addMember($name, $street, $city, $province, $postal, $email, $status);
+
 	if ($person == "member")
 	{
 		echo "member selected";

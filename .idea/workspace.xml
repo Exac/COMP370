@@ -35,8 +35,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.846153">
-              <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
               <folding>
                 <element signature="e#264#285#0#HTML" expanded="true" />
                 <element signature="e#476#497#0#HTML" expanded="true" />
@@ -50,8 +50,8 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60225445">
-              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.56199676">
+              <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -62,8 +62,8 @@
       <file leaf-file-name="MemberMaintainer.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state vertical-scroll-proportion="1.6153846">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -287,12 +287,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00048" summary="operator interface, something like this??">
-      <created>1458347389313</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1458347389313</updated>
     </task>
     <task id="LOCAL-00049" summary="operator interface, something like this??">
       <created>1458347566615</created>
@@ -582,14 +576,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458356413435</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="operator interface, something like this??">
+      <created>1458356493634</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1458356493634</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24158126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27525622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -1036,16 +1036,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state vertical-scroll-proportion="1.6153846">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.846153">
-          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
           <folding>
             <element signature="e#264#285#0#HTML" expanded="true" />
             <element signature="e#476#497#0#HTML" expanded="true" />
@@ -1057,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60225445">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.56199676">
+          <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
           <folding>
             <element signature="e#6#67#0#PHP" expanded="true" />
           </folding>
