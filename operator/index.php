@@ -29,14 +29,20 @@
         Province:       <br><input type="text"  name="province"><br>
         Postal code:    <br><input type="text"  name="postalCode"><br>
         E-mail:         <br><input type="email" name="email"><br><br>
+
+        <fieldset><legend>Fill only for member</legend>
+
         Member Status:  <br><input type="radio" name="status" value="ACTIVE"> Active
                         <br><input type="radio" name="status" value="SUSPENDED"> Suspended
                         <br><br>
+        </fieldset>
 
+        <fieldset><legend>Fill only for provider</legend>
         Provider Type:  <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
                         <br><input type="radio" name="type" value="INTERNIST"> Internist
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
                         <br><br>
+        </fieldset>
 
         <button type="submit" id="addPerson">add_person</button>
     </fieldset>

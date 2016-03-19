@@ -35,8 +35,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.095008">
-              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.547504">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -283,12 +283,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file.">
-      <created>1457698933991</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1457698933991</updated>
     </task>
     <task id="LOCAL-00010" summary="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file.">
       <created>1458086148015</created>
@@ -578,7 +572,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458350054837</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="operator interface, something like this??">
+      <created>1458350133042</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1458350133042</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1049,8 +1049,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.095008">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.547504">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding />
         </state>
       </provider>
