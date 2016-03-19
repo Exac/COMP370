@@ -6,7 +6,7 @@
  * @desc 
  */
 
-if (isset($POST["view_members"]))
+if (isset($_POST["view_members"]))
 {
 	echo "view_members selected";
 }
