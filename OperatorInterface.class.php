@@ -33,9 +33,9 @@ if (isset($_POST["add_person"]))
 		echo "member selected";
 		$member = new MemberMaintainer();
 		$member->addMember($name, $street, $city, $province, $postal, $email, $status);
-
 	}
-	else if ($person == 'provider')
+
+	else if ($person == "provider")
 	{
 		echo "provider selected";
 		$provider = new ProviderMaintainer();
