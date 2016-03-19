@@ -13,12 +13,12 @@ class ProviderMaintainer extends PersonMaintainer
 		
 	}
 	
-	public function addProvider($name, $streetAddress, $city, $province, $postalCode, $email, $type)
+	public function addProvider($name, $street, $city, $province, $postalCode, $email, $type)
 	{
 		$this->provider = new Provider();
 
 		$this->provider->setName($name);
-		$this->provider->setStreet($streetAddress);
+		$this->provider->setStreet($street);
 		$this->provider->setCity($city);
 		$this->provider->setProvince($province);
 		$this->provider->setPostalCode($postalCode);

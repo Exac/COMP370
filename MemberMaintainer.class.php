@@ -12,7 +12,7 @@ class MemberMaintainer extends PersonMaintainer
 		
 	}
 	
-	public function addMember()
+	public function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
 		
 	}
