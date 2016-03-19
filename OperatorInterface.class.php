@@ -8,6 +8,8 @@
 
 if (isset($_POST["add_person"]))
 {
+	echo "add_person pressed";
+
 	$person = $_POST["person"];
 	$name = $_POST["name"];
 	$street_address = $_POST["street_address"];
@@ -21,10 +23,10 @@ if (isset($_POST["add_person"]))
 
 	if (strcmp($person, "member") == 0) {
 		$member = new MemberMaintainer();
-		echo "yoyo";
+		echo "member selected";
 	} else if (strcmp($person, "provider") == 0) {
 		$member = new ProviderMaintainer();
-		echo "hehe";
+		echo "provider selected";
 	}
 }
 class OperatorInterface
