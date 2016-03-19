@@ -11,13 +11,13 @@
 
 </body>
 <form id="memberControls" action="../OperatorInterface.class.php" method="POST">
-    <fieldset style="width: 500px;">
+    <fieldset style="width: 600px;">
         <legend>View Members</legend>
         <label>click_to_view_members</label>
         <button type="button" id="viewMembers">view_members</button>
     </fieldset><br>
 
-    <fieldset style="width: 500px;">
+    <fieldset style="width: 600px;">
         <legend>New Person</legend>
 
         <input type="radio" name="person" value="member">Member
