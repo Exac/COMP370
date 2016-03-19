@@ -23,7 +23,7 @@ if (isset($_POST["add_person"]))
 
 	echo "person" . $person;
 
-	if (strcmp($person, "member")=== 0 )
+	if ($person === "member")
 	{
 		$member = new MemberMaintainer();
 		echo "member selected";
