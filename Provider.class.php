@@ -11,11 +11,16 @@ class Provider extends Person
 {
 	private $type;
 		
-	const PROVIDER_TYPES = array("DIETITIAN", "INTERNIST", "EXERCISE_EXPERT");
+	//const PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
 	const PROVIDER_TYPE_HELP = "A provider belongs to one of the following types\n
 								\tDIETITIAN\n
 								\tINTERNIST\n
 								\tEXERCISE_EXPERT";
+
+	public function __construct()
+	{
+		phpinfo();
+	}
 
 	/**
 	 * Gets the type for this provider.
