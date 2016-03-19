@@ -33,26 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9871175">
-              <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+            <state vertical-scroll-proportion="-9.846154">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="e#264#285#0#HTML" expanded="true" />
-                <element signature="e#474#495#0#HTML" expanded="true" />
-                <element signature="e#1110#1131#0#HTML" expanded="true" />
-                <element signature="e#1423#1444#0#HTML" expanded="true" />
+                <element signature="e#476#497#0#HTML" expanded="true" />
+                <element signature="e#1112#1133#0#HTML" expanded="true" />
+                <element signature="e#1425#1446#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.7117552">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -104,8 +104,8 @@
         <option value="$PROJECT_DIR$/ProviderInterface.class.php" />
         <option value="$PROJECT_DIR$/ProviderMaintainer.class.php" />
         <option value="$PROJECT_DIR$/MemberMaintainer.class.php" />
-        <option value="$PROJECT_DIR$/OperatorInterface.class.php" />
         <option value="$PROJECT_DIR$/operator/index.php" />
+        <option value="$PROJECT_DIR$/OperatorInterface.class.php" />
       </list>
     </option>
   </component>
@@ -288,12 +288,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Make all code begin in ChocAnSystem's main()">
-      <created>1458208029200</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1458208029200</updated>
     </task>
     <task id="LOCAL-00019" summary="Fixed broken Interfaces.">
       <created>1458254783079</created>
@@ -583,7 +577,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458351958573</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="operator interface, something like this??">
+      <created>1458352472274</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1458352472274</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1035,16 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#6#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
@@ -1055,13 +1045,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9871175">
-          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+        <state vertical-scroll-proportion="-9.846154">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
             <element signature="e#264#285#0#HTML" expanded="true" />
-            <element signature="e#474#495#0#HTML" expanded="true" />
-            <element signature="e#1110#1131#0#HTML" expanded="true" />
-            <element signature="e#1423#1444#0#HTML" expanded="true" />
+            <element signature="e#476#497#0#HTML" expanded="true" />
+            <element signature="e#1112#1133#0#HTML" expanded="true" />
+            <element signature="e#1425#1446#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7117552">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#67#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

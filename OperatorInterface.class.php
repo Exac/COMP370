@@ -6,27 +6,25 @@
  * @desc 
  */
 
-if (isset($_POST))
-$person         = $_POST["person"];
-$name           = $_POST["name"];
-$street_address = $_POST["street_address"];
-$city           = $_POST["city"];
-$province       = $_POST["province"];
-$postalCode     = $_POST["postal_code"];
-$email          = $_POST["email"];
-$type           = $_POST["type"];
-$member_status  = $_POST["status"];
-$provider_type  = $_POST["type"];
-
-if (strcmp($person, "member") === 0)
+if (isset($_POST["add_person"]))
 {
-	$member = new MemberMaintainer();
-}
-else if (strcmp($person, "provider") === 0)
-{
-	$member = new ProviderMaintainer();
-}
+	$person = $_POST["person"];
+	$name = $_POST["name"];
+	$street_address = $_POST["street_address"];
+	$city = $_POST["city"];
+	$province = $_POST["province"];
+	$postalCode = $_POST["postal_code"];
+	$email = $_POST["email"];
+	$type = $_POST["type"];
+	$member_status = $_POST["status"];
+	$provider_type = $_POST["type"];
 
+	if (strcmp($person, "member") === 0) {
+		$member = new MemberMaintainer();
+	} else if (strcmp($person, "provider") === 0) {
+		$member = new ProviderMaintainer();
+	}
+}
 class OperatorInterface
 {
 	private $ui;

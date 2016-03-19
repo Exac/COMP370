@@ -15,7 +15,7 @@
     <fieldset style="width: 600px;">
         <legend>View Members</legend>
         <label>click_to_view_members</label>
-        <button type="button" id="viewMembers">view_members</button>
+        <input type="submit" name="view_members" value="view_members">
     </fieldset><br>
 
     <fieldset style="width: 600px;">
