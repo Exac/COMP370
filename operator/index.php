@@ -45,7 +45,7 @@
                         <br><br>
         </fieldset><br>
 
-        <input type="submit" name="add_member" value="add_member">
+        <input type="submit" name="add_person" value="add_person">
     </fieldset>
 
 </form>
