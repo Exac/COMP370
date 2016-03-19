@@ -50,9 +50,11 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46537843">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.16425121">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -285,12 +287,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00051" summary="operator interface, something like this??">
-      <created>1458347934539</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1458347934539</updated>
     </task>
     <task id="LOCAL-00052" summary="operator interface, something like this??">
       <created>1458347989596</created>
@@ -580,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458358434631</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="operator interface, something like this??">
+      <created>1458358765647</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1458358765647</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1055,9 +1057,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46537843">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.16425121">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#67#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

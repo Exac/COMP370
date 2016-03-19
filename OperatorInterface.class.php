@@ -5,7 +5,6 @@
  * @date 10-3-2016
  * @desc 
  */
-$member = new MemberMaintainer();
 
 if (isset($_POST["view_members"]))
 {
@@ -34,7 +33,7 @@ if (isset($_POST["add_person"]))
 	if ($person == "member")
 	{
 		echo "member selected";
-		//$member = new MemberMaintainer;
+		$member = new MemberMaintainer;
 		$member->addMember($name, $street, $city, $province, $postal, $email, $status);
 	}
 
