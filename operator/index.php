@@ -28,7 +28,7 @@
         Street address: <br><input type="text"  name="street_address"><br>
         City:           <br><input type="text"  name="city"><br>
         Province:       <br><input type="text"  name="province"><br>
-        Postal code:    <br><input type="text"  name="postalCode"><br>
+        Postal code:    <br><input type="text"  name="postal_code"><br>
         E-mail:         <br><input type="email" name="email"><br><br>
 
         <fieldset style="width: 550px;"><legend>Fill only for member</legend>
@@ -45,7 +45,7 @@
                         <br><br>
         </fieldset><br>
 
-        <button type="submit" id="addPerson">add_person</button>
+        <input type="submit" name="add_member" value="add_member">
     </fieldset>
 
 </form>

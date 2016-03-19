@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MemberMaintainer.class.php" afterPath="$PROJECT_DIR$/MemberMaintainer.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperatorInterface.class.php" afterPath="$PROJECT_DIR$/OperatorInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderMaintainer.class.php" afterPath="$PROJECT_DIR$/ProviderMaintainer.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operator/index.php" afterPath="$PROJECT_DIR$/operator/index.php" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,16 +33,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.03846">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9871175">
+              <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
               <folding>
                 <element signature="e#264#285#0#HTML" expanded="true" />
                 <element signature="e#474#495#0#HTML" expanded="true" />
-                <element signature="e#1109#1130#0#HTML" expanded="true" />
-                <element signature="e#1422#1443#0#HTML" expanded="true" />
+                <element signature="e#1110#1131#0#HTML" expanded="true" />
+                <element signature="e#1423#1444#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,8 +51,8 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -61,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberMaintainer.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemberMaintainer.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0547504">
+            <state vertical-scroll-proportion="-1.3076923">
               <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
@@ -103,10 +102,10 @@
         <option value="$PROJECT_DIR$/ManagerInterface.class.php" />
         <option value="$PROJECT_DIR$/operator/test.php" />
         <option value="$PROJECT_DIR$/ProviderInterface.class.php" />
-        <option value="$PROJECT_DIR$/operator/index.php" />
-        <option value="$PROJECT_DIR$/OperatorInterface.class.php" />
         <option value="$PROJECT_DIR$/ProviderMaintainer.class.php" />
         <option value="$PROJECT_DIR$/MemberMaintainer.class.php" />
+        <option value="$PROJECT_DIR$/OperatorInterface.class.php" />
+        <option value="$PROJECT_DIR$/operator/index.php" />
       </list>
     </option>
   </component>
@@ -289,12 +288,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update Readme.md.">
-      <created>1458200557298</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1458200557298</updated>
     </task>
     <task id="LOCAL-00018" summary="Make all code begin in ChocAnSystem's main()">
       <created>1458208029200</created>
@@ -584,7 +577,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458351501481</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="operator interface, something like this??">
+      <created>1458351958573</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1458351958573</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1028,29 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/operator/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.03846">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#264#285#0#HTML" expanded="true" />
-            <element signature="e#474#495#0#HTML" expanded="true" />
-            <element signature="e#1109#1130#0#HTML" expanded="true" />
-            <element signature="e#1422#1443#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="e#6#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProviderMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
@@ -1059,11 +1035,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0547504">
+        <state vertical-scroll-proportion="-1.3076923">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operator/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9871175">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+          <folding>
+            <element signature="e#264#285#0#HTML" expanded="true" />
+            <element signature="e#474#495#0#HTML" expanded="true" />
+            <element signature="e#1110#1131#0#HTML" expanded="true" />
+            <element signature="e#1423#1444#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

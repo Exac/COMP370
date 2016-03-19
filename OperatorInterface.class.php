@@ -6,10 +6,12 @@
  * @desc 
  */
 
+if (isset($_POST))
 $person         = $_POST["person"];
 $name           = $_POST["name"];
 $street_address = $_POST["street_address"];
 $city           = $_POST["city"];
+$province       = $_POST["province"];
 $postalCode     = $_POST["postal_code"];
 $email          = $_POST["email"];
 $type           = $_POST["type"];
