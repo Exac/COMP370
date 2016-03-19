@@ -11,13 +11,16 @@ if (isset($_POST["add_person"]))
 	echo "add_person pressed";
 
 	$person = $_POST["person"];
+
 	$name = $_POST["name"];
 	$street_address = $_POST["street_address"];
 	$city = $_POST["city"];
 	$province = $_POST["province"];
 	$postalCode = $_POST["postal_code"];
 	$email = $_POST["email"];
+
 	$member_status = $_POST["status"];
+
 	$provider_type = $_POST["type"];
 
 	if (!isset($person)) return;
