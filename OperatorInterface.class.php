@@ -21,6 +21,8 @@ if (isset($_POST["add_person"]))
 	$member_status = $_POST["status"];
 	$provider_type = $_POST["type"];
 
+	echo $person;
+
 	if (strcmp($person, "member")=== 0 )
 	{
 		$member = new MemberMaintainer();
