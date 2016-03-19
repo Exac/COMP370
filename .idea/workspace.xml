@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderMaintainer.class.php" afterPath="$PROJECT_DIR$/ProviderMaintainer.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperatorInterface.class.php" afterPath="$PROJECT_DIR$/OperatorInterface.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operator/index.php" afterPath="$PROJECT_DIR$/operator/index.php" />
     </list>
     <ignored path="COMP370.iws" />
@@ -36,19 +36,21 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3558776">
-              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.32850242">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProviderMaintainer.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProviderMaintainer.class.php">
+      <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.653847">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+              <folding>
+                <element signature="e#6#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/operator/test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
               </folding>
@@ -84,10 +86,11 @@
         <option value="$PROJECT_DIR$/Service.class.php" />
         <option value="$PROJECT_DIR$/Person.class.php" />
         <option value="$PROJECT_DIR$/Claim.class.php" />
-        <option value="$PROJECT_DIR$/ProviderInterface.class.php" />
         <option value="$PROJECT_DIR$/ManagerInterface.class.php" />
         <option value="$PROJECT_DIR$/ProviderMaintainer.class.php" />
         <option value="$PROJECT_DIR$/operator/test.php" />
+        <option value="$PROJECT_DIR$/ProviderInterface.class.php" />
+        <option value="$PROJECT_DIR$/OperatorInterface.class.php" />
         <option value="$PROJECT_DIR$/operator/index.php" />
       </list>
     </option>
@@ -271,24 +274,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Created Utils class for functions.">
-      <created>1457603777733</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1457603777733</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Created Utils class for functions.">
-      <created>1457605072828</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1457605072828</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Created Utils class for functions.">
-      <created>1457605087755</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1457605087755</updated>
     </task>
     <task id="LOCAL-00005" summary="Created Utils class for functions.">
       <created>1457605095216</created>
@@ -566,7 +551,25 @@
       <option name="project" value="LOCAL" />
       <updated>1458347755801</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="operator interface, something like this??">
+      <created>1458347934539</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1458347934539</updated>
+    </task>
+    <task id="LOCAL-00052" summary="operator interface, something like this??">
+      <created>1458347989596</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1458347989596</updated>
+    </task>
+    <task id="LOCAL-00053" summary="operator interface, something like this??">
+      <created>1458348187849</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1458348187849</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -815,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IndexInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -988,22 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.5094337">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagerInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.641509">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1095008">
@@ -1014,7 +994,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProviderMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.653847">
+        <state vertical-scroll-proportion="1.2334944">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
@@ -1023,17 +1003,45 @@
     <entry file="file://$PROJECT_DIR$/operator/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
           <folding>
             <element signature="e#6#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.98550725">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8904992">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+          <folding>
+            <element signature="e#6#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3558776">
-          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.32850242">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding />
         </state>
       </provider>

@@ -5,6 +5,7 @@
  * @date 10-3-2016
  * @desc 
  */
+
 class OperatorInterface
 {
 	private $ui;
@@ -18,6 +19,8 @@ class OperatorInterface
 	
 	public function main ()
 	{
+		echo $_POST["name"] . " " . $_POST["street_address"];
+
 		$this->ui->bodyId = "operatorinterface";
 		$this->ui->body .= Utils::getNavigationMenu();
 
