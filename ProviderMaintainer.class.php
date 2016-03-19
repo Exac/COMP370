@@ -4,9 +4,7 @@ class ProviderMaintainer extends PersonMaintainer
 {
 	private $ui;
 	private $provider;
-	
 
-	
 	public function addProvider($name, $street, $city, $province, $postal, $email, $type)
 	{
 		echo "in addProvider()";

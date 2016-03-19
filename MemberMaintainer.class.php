@@ -4,9 +4,7 @@ class MemberMaintainer extends PersonMaintainer
 {
 	private $ui;
 	private $member;
-	
 
-	
 	public function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
 		echo "In addMember()";

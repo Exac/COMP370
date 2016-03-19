@@ -17,6 +17,7 @@ if (isset($_POST["add_person"]))
 
 	$person = $_POST["person"];
 
+	/*
 	$name     = $_POST["name"];
 	$street   = $_POST["street_address"];
 	$city     = $_POST["city"];
@@ -26,7 +27,7 @@ if (isset($_POST["add_person"]))
 
 	$status = $_POST["status"];
 
-	$type = $_POST["type"];
+	$type = $_POST["type"]; */
 
 
 
@@ -34,14 +35,16 @@ if (isset($_POST["add_person"]))
 	{
 		echo "member selected";
 		$member = new MemberMaintainer();
-		$member->addMember($name, $street, $city, $province, $postal, $email, $status);
+		$member->addMember($_POST["name"], $_POST["street_address"], $_POST["city"],
+			$_POST["province"], $_POST["postal_code"], $_POST["email"], $_POST["status"]);
 	}
 
 	else if ($person == "provider")
 	{
 		echo "provider selected";
 		$provider = new ProviderMaintainer();
-		$provider->addProvider($name, $street, $city, $province, $postal, $email, $type);
+		$provider->addProvider($_POST["name"], $_POST["street_address"], $_POST["city"],
+			$_POST["province"], $_POST["postal_code"], $_POST["email"], $_POST["type"]);
 	}
 }
 class OperatorInterface
