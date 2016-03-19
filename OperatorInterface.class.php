@@ -21,8 +21,10 @@ if (isset($_POST["add_person"]))
 
 	if (strcmp($person, "member") === 0) {
 		$member = new MemberMaintainer();
+		echo "yoyo";
 	} else if (strcmp($person, "provider") === 0) {
 		$member = new ProviderMaintainer();
+		echo "hehe";
 	}
 }
 class OperatorInterface
