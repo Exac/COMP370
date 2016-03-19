@@ -11,7 +11,7 @@
 
 </body>
 <form id="memberControls" action="../OperatorInterface.class.php" method="POST">
-    <fieldset>
+    <fieldset style="width: 250px;">
         <legend>View Members</legend>
         <label>click_to_view_members</label>
         <button type="button" id="viewMembers">view_members</button>
