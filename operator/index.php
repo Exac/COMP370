@@ -28,7 +28,7 @@
                         <br><input type="radio" name="status" value="SUSPENDED"> Suspended
                         <br><br>
 
-        <input type="submit" id="addMember">add_member</input>
+        <button type="submit" id="addMember">add_member</button>
     </fieldset>
 </form>
 
@@ -51,7 +51,7 @@
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
                         <br><br>
 
-        <input type="submit" id="addProvider">add_member</input>
+        <button type="submit" id="addProvider">add_member</button>
     </fieldset>
 </form>
 </html>
