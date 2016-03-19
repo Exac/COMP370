@@ -23,12 +23,12 @@ if (isset($_POST["add_person"]))
 
 	echo "person " . $person;
 
-	if ($person === "member")
+	if ($person == 'member')
 	{
 		$member = new MemberMaintainer();
 		echo "member selected";
 	}
-	else if (strcmp($person, "provider") === 0)
+	else if ($person == 'provider')
 	{
 		$member = new ProviderMaintainer();
 		echo "provider selected";
