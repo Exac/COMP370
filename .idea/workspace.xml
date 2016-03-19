@@ -62,8 +62,8 @@
       <file leaf-file-name="MemberMaintainer.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6296296">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.38325283">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -287,12 +287,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00044" summary="operator interface, something like this??">
-      <created>1458345301339</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1458345301339</updated>
     </task>
     <task id="LOCAL-00045" summary="operator interface, something like this??">
       <created>1458345386540</created>
@@ -582,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458355854664</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="operator interface, something like this??">
+      <created>1458356152373</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1458356152373</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1059,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.38325283">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding />
         </state>
       </provider>
