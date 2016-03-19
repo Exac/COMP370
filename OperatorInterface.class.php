@@ -19,10 +19,10 @@ if (isset($_POST["add_person"]))
 	$member_status = $_POST["status"];
 	$provider_type = $_POST["type"];
 
-	if (strcmp($person, "member") === 0) {
+	if (strcmp($person, "member") == 0) {
 		$member = new MemberMaintainer();
 		echo "yoyo";
-	} else if (strcmp($person, "provider") === 0) {
+	} else if (strcmp($person, "provider") == 0) {
 		$member = new ProviderMaintainer();
 		echo "hehe";
 	}

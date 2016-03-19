@@ -50,8 +50,8 @@
       <file leaf-file-name="OperatorInterface.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7117552">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.65700483">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding>
                 <element signature="e#6#67#0#PHP" expanded="true" />
               </folding>
@@ -287,12 +287,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fixed broken Interfaces.">
-      <created>1458254844538</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1458254844539</updated>
     </task>
     <task id="LOCAL-00021" summary="Hello from Navi">
       <created>1458257046139</created>
@@ -582,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458352597758</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="operator interface, something like this??">
+      <created>1458352689924</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1458352689924</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1057,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7117552">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.65700483">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
             <element signature="e#6#67#0#PHP" expanded="true" />
           </folding>
