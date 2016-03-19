@@ -10,7 +10,7 @@ if (isset($_POST["add_person"]))
 {
 	echo "add_person pressed";
 
-	$person = $_GET["person"];
+	$person = $_POST["person"];
 	$name = $_POST["name"];
 	$street_address = $_POST["street_address"];
 	$city = $_POST["city"];
