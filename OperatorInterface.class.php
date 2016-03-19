@@ -25,12 +25,12 @@ if (isset($_POST["add_person"]))
 
 	if ($person == "member")
 	{
-		$member = new MemberMaintainer();
+		//$member = new MemberMaintainer();
 		echo "member selected";
 	}
 	else if ($person == 'provider')
 	{
-		$member = new ProviderMaintainer();
+		//$member = new ProviderMaintainer();
 		echo "provider selected";
 	}
 }
