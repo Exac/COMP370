@@ -21,7 +21,7 @@ if (isset($_POST["add_person"]))
 	$member_status = $_POST["status"];
 	$provider_type = $_POST["type"];
 
-	echo $person;
+	echo "person" . $person;
 
 	if (strcmp($person, "member")=== 0 )
 	{
