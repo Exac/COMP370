@@ -10,7 +10,7 @@
 <body id="operator" class="interface">
 
 </body>
-<form id="memberControls" action="../ProviderMaintainer.class.php" method="post">
+<form id="memberControls" action="../ProviderMaintainer.class.php" method="POST">
     <fieldset>
         <legend>View Members</legend>
         <label>click_to_view_members</label>
