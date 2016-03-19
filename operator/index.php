@@ -30,14 +30,14 @@
         Postal code:    <br><input type="text"  name="postalCode"><br>
         E-mail:         <br><input type="email" name="email"><br><br>
 
-        <fieldset style="width: 500px;"><legend>Fill only for member</legend>
+        <fieldset style="width: 550px;"><legend>Fill only for member</legend>
 
         Member Status:  <br><input type="radio" name="status" value="ACTIVE"> Active
                         <br><input type="radio" name="status" value="SUSPENDED"> Suspended
                         <br><br>
         </fieldset><br>
 
-        <fieldset style="width: 500px;"><legend>Fill only for provider</legend>
+        <fieldset style="width: 550px;"><legend>Fill only for provider</legend>
         Provider Type:  <br><input type="radio" name="type" value="DIETITIAN"> Dietitian
                         <br><input type="radio" name="type" value="INTERNIST"> Internist
                         <br><input type="radio" name="type" value="EXERCISE_EXPERT"> Exercise expert
