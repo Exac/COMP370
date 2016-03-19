@@ -12,12 +12,12 @@ if (isset($_POST["add_person"]))
 
 	$person = $_POST["person"];
 
-	$name = $_POST["name"];
-	$street = $_POST["street_address"];
-	$city = $_POST["city"];
+	$name     = $_POST["name"];
+	$street   = $_POST["street_address"];
+	$city     = $_POST["city"];
 	$province = $_POST["province"];
-	$postal = $_POST["postal_code"];
-	$email = $_POST["email"];
+	$postal   = $_POST["postal_code"];
+	$email    = $_POST["email"];
 
 	$member_status = $_POST["status"];
 
