@@ -13,6 +13,7 @@
 <form id="memberControls" action="../ProviderMaintainer.class.php" method="post">
     <fieldset>
         <legend>View Members</legend>
+        <label>click_to_view_members</label>
         <button type="button" id="viewMembers">view_members</button>
     </fieldset>
 
