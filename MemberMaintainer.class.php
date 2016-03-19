@@ -1,5 +1,7 @@
 <?php
 
+echo "In member Maintainer";
+
 class MemberMaintainer extends PersonMaintainer
 {
 	private $ui;

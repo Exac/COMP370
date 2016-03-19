@@ -6,6 +6,7 @@
  * @desc 
  */
 
+$person         = $_POST["person"];
 $name           = $_POST["name"];
 $street_address = $_POST["street_address"];
 $city           = $_POST["city"];
@@ -14,6 +15,15 @@ $email          = $_POST["email"];
 $type           = $_POST["type"];
 $member_status  = $_POST["status"];
 $provider_type  = $_POST["type"];
+
+if (strcmp($person, "member") === 0)
+{
+	$member = new MemberMaintainer();
+}
+else if (strcmp($person, "provider") === 0)
+{
+	$member = new ProviderMaintainer();
+}
 
 class OperatorInterface
 {

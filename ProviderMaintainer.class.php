@@ -1,5 +1,8 @@
 <?php
 
+echo "In provider maintainer";
+
+
 class ProviderMaintainer extends PersonMaintainer
 {
 	private $ui;
