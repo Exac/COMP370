@@ -6,6 +6,11 @@
  * @desc 
  */
 
+if (isset($POST["view_members"]))
+{
+	echo "view_members selected";
+}
+
 if (isset($_POST["add_person"]))
 {
 	echo "add_person pressed";
