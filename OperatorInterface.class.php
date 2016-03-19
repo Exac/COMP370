@@ -23,8 +23,6 @@ if (isset($_POST["add_person"]))
 
 	$type = $_POST["type"];
 
-	if (!isset($person)) return;
-
 	if ($person == "member")
 	{
 		echo "member selected";
