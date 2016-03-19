@@ -10,7 +10,7 @@ if (isset($_POST["add_person"]))
 {
 	echo "add_person pressed";
 
-	$person = $_POST["person"];
+	$person = $_GET["person"];
 	$name = $_POST["name"];
 	$street_address = $_POST["street_address"];
 	$city = $_POST["city"];
@@ -21,10 +21,13 @@ if (isset($_POST["add_person"]))
 	$member_status = $_POST["status"];
 	$provider_type = $_POST["type"];
 
-	if (strcmp($person, "member") == 0) {
+	if (strcmp($person, "member")=== 0 )
+	{
 		$member = new MemberMaintainer();
 		echo "member selected";
-	} else if (strcmp($person, "provider") == 0) {
+	}
+	else if (strcmp($person, "provider") === 0)
+	{
 		$member = new ProviderMaintainer();
 		echo "provider selected";
 	}
