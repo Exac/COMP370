@@ -5,10 +5,7 @@ class ProviderMaintainer extends PersonMaintainer
 	private $ui;
 	private $provider;
 	
-	public function _construct()
-	{
-		
-	}
+
 	
 	public function addProvider($name, $street, $city, $province, $postal, $email, $type)
 	{

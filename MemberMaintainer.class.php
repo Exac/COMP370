@@ -5,10 +5,7 @@ class MemberMaintainer extends PersonMaintainer
 	private $ui;
 	private $member;
 	
-	public function __construct()
-	{
-		
-	}
+
 	
 	public function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
