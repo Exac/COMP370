@@ -19,7 +19,7 @@ class OperatorInterface
 	
 	public function main ()
 	{
-		echo $_POST["name"] . " " . $_POST["street_address"];
+		$this->ui->body .= $_POST["name"] . " " . $_POST["street_address"];
 
 		$this->ui->bodyId = "operatorinterface";
 		$this->ui->body .= Utils::getNavigationMenu();
