@@ -6,6 +6,9 @@
  * Date: 3/11/16
  * Time: 4:13
  */
+
+echo $_POST["name"] . " " . $_POST["street_address"];
+
 class ProviderInterface
 {
 	private $theProvider;#Provider
@@ -29,7 +32,7 @@ class ProviderInterface
 
 	}
 
-	public function recieveDirectory()
+	public function receiveDirectory()
 	{
 
 	}
@@ -41,5 +44,4 @@ class ProviderInterface
 
 		echo $this->ui;
 	}
-
 } 
