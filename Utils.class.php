@@ -92,7 +92,7 @@ class Input
 			$this->label = current($_label);
 			if (count($_label > 1))
 			{
-				$this->attributes .= next($_label) . " ";
+				$this->attributes .= " " . next($_label) . " ";
 			}
 		}
 
@@ -111,6 +111,9 @@ class Input
 		} else if ($this->type === "input")
 		{
 			$o = '<button type="input" id="' . $this->getId($this->name) . '" name="' . $this->getId($this->name) . '"' . $this->attributes . '>' . $this->name . '</button>';
+		} else if ($this->type === "submit")
+		{
+			$o = '<button type="submit" id="' . $this->getId($this->name) . '" name="' . $this->getId($this->name) . '"' . $this->attributes . '>' . $this->name . '</button>';
 		} else if ($this->radio_group === "radio")
 		{
 			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="' . $this->radio_group . '"/' . $this->attributes . '>';
@@ -121,7 +124,7 @@ class Input
 
 		$o .= '<label for="' . $this->getId($this->name) . '">' . $this->label . '</label>';
 
-		return $o;
+		return "\n" . $o;
 	}
 
 	public function br()
@@ -137,7 +140,7 @@ class Input
 	 */
 	public function getId($_name)
 	{
-		return str_replace(" ", "_", $_name);
+		return strtolower(str_replace(" ", "_", $_name));
 	}
 
 }

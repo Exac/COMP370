@@ -113,7 +113,8 @@ input[type="radio"] + label::before {
 }
 
 input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
+input[type="radio"]:disabled + label,
+.disabled {
     opacity: 0.5;
     cursor: default; /* or cursor: no-drop */
 }
@@ -214,6 +215,14 @@ input[type="checkbox"],
 input[type="radio"] {
     display: block;
     cursor: pointer;
+}
+
+/**
+ * SMALL STYLES
+ */
+input[type="text"].small {
+    max-width: 8em;
+
 }
 
 /**
@@ -503,6 +512,10 @@ button:hover,
 /**
  * SELECT & OPTIONS
  */
+select,
+option {
+    cursor: pointer;
+}
 body.interface select {
     background: #6fadcb;
     color: white;
@@ -521,6 +534,7 @@ body.interface select {
 body.interface select:hover {
     filter: saturate(1.5);
     -webkit-filter: saturate(1.5);
+    cursor: pointer;
 
 }
 

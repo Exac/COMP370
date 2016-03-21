@@ -1,4 +1,5 @@
 <?php
+include_once('Persons.class.php');
 /**
  * Members
  * 

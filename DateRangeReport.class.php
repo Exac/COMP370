@@ -1,5 +1,6 @@
-<?php 
+<?php
 
+include_once('Report.class.php');
 /**
  * Report
  *

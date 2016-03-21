@@ -10,16 +10,14 @@
 class Provider extends Person
 {
 	private $type;
-		
-	//const PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
-	const PROVIDER_TYPE_HELP = "A provider belongs to one of the following types\n
-								\tDIETITIAN\n
-								\tINTERNIST\n
-								\tEXERCISE_EXPERT";
+
+	public $PROVIDER_TYPES = null;
+	const PROVIDER_TYPE_HELP = "A provider belongs to one of the following types <br>DIETITIAN <br>INTERNIST <br>EXERCISE_EXPERT";
+
 
 	public function __construct()
 	{
-		phpinfo();
+		$this->PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
 	}
 
 	/**
@@ -39,7 +37,7 @@ class Provider extends Person
 	public function setType($type)
 	{
 		// Check if the value of 'type' is valid.
-		if (!in_array($type, self::PROVIDER_TYPES))
+		if (!in_array($type, $this->PROVIDER_TYPES))
 		{
 			echo self::PROVIDER_TYPE_HELP;
 			return;
