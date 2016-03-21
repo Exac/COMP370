@@ -89,8 +89,6 @@ class ChocAnSystem
 			$this->myInterface = new IndexInterface();
 		}
 
-		echo $_SERVER['REMOTE_ADDR'];
-
 		$this->myInterface->main();
 	}
 

@@ -31,7 +31,7 @@ class Database
 
 	function __construct()
 	{
-
+		$this->detectDeveloperMode();
 		$this->password = getenv("CDP");
 	}
 
