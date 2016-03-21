@@ -17,4 +17,3 @@ class ClaimSubmitter
 		
 	}
 }
-echo "ClaimSubmitter.class.php";

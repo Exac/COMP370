@@ -1,4 +1,6 @@
 <?php
+include_once('DateRangeReport.class.php');
+
 /**
  * AccountsPayableReport
  * 

@@ -72,6 +72,11 @@ class UserInterface
 		
 	}
 
+	public function add($string)
+	{
+		$this->body .= "\n" . $string;
+	}
+
 	public function __toString()
 	{
 		$o = "<!doctype html>\n\n<html lang='en'>\n\n<head>\n\t<meta charset='utf-8'>\n" .
@@ -81,7 +86,7 @@ class UserInterface
 		}
 		$o .= "\n\t<meta name='author' content='" . $this->author . "'>";
 		foreach ($this->stylesheets as &$css) {
-			$o .= "\n\t<link rel='stylesheet' href='" . $css . "'>";
+			$o .= "\n\t<link rel='stylesheet' href='/" . $css . "'>";
 		}
 		$o .= "\n</head>\n<body id='" . $this->bodyId . "' class='";
 		foreach ($this->bodyClasses as &$bClass) {

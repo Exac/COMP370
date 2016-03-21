@@ -7,10 +7,6 @@
  * Time: 4:13
  */
 
-//echo $_POST["name"] . " " . $_POST["street_address"];
-echo "ProviderInterface: var_dump(\$_POST): ";
-var_dump($_POST);
-
 class ProviderInterface
 {
 	private $theProvider;#Provider
@@ -41,7 +37,7 @@ class ProviderInterface
 
 	public function main()
 	{
-		$this->
+
 		$this->ui->body .= Utils::getNavigationMenu();
 
 		echo $this->ui;

@@ -1,4 +1,5 @@
 <?php
+include_once('Person.class.php');
 /**
  * Class Member
  *
@@ -11,10 +12,15 @@ class Member extends Person
 {
 	private $status;
 
-	const MEMBER_STATUS_VALUES = array("SUSPENDED", "ACTIVE");
-	const MEMBER_STATUS_HELP   = "The status has one of following values:\n
+	public $MEMBER_STATUS_VALUES = null;
+	public $MEMBER_STATUS_HELP = "The status has one of following values:\n
 	 							  \tACTIVE\n
 	 							  \tSUSPENDED";
+
+	public function __construct()
+	{
+		$this->MEMBER_STATUS_VALUES = array("SUSPENDED", "ACTIVE");
+	}
 
 	/**
 	 * Gets the status of the member.
@@ -32,9 +38,9 @@ class Member extends Person
 	public function setStatus($status)
 	{
 		// Make sure the value of status is valid.
-		if (!in_array($status, self::MEMBER_STATUS_VALUES))
+		if (!in_array($status, $this->MEMBER_STATUS_VALUES))
 		{
-			echo self::MEMBER_STATUS_HELP;
+			echo $this->MEMBER_STATUS_HELP;
 			return;
 		}
 

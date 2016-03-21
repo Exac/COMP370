@@ -9,17 +9,22 @@
 include_once('Utils.class.php');
 
 //Load all classes that will be needed (after project is done, we can spread these out).
-spl_autoload_register(function ($class_name) {
-	include_once $class_name . '.class.php';
-});
+//spl_autoload_register(function ($class_name) {
+//	include_once $class_name . '.class.php';
+//});
 
-/*
+global $startTime;
+$startTime = round(microtime(true) * 1000);
+
+
 include_once('AccountsPayableReport.class.php');
 include_once('AccountsPayableReportGenerator.class.php');
 include_once('Claim.class.php');
 include_once('Claims.class.php');
 include_once('ClaimSubmitter.class.php');
 include_once('DateRangeReport.class.php');
+include_once('Database.class.php');
+include_once('DatabaseController.class.php');
 include_once('ETFReport.class.php');
 include_once('ETFReportGenerator.class.php');
 include_once('IndexInterface.class.php');
@@ -50,7 +55,7 @@ include_once('ServiceMaintainer.class.php');
 include_once('ServiceReportGenerator.class.php');
 include_once('Services.class.php');
 include_once('UserInterface.class.php');
-*/
+
 
 /**
  * Class ChocAnSystem
@@ -67,6 +72,7 @@ class ChocAnSystem
 	 */
 	public function __construct($_type)
 	{
+
 		$this->setName($_type);
 
 		//instantiate the correct Interface and call it's main method.
@@ -83,6 +89,7 @@ class ChocAnSystem
 		}
 
 		$this->myInterface->main();
+		echo "\n<!--" . ($GLOBALS['startTime'] - round(microtime(true) * 1000)) . "ms load time-->";
 	}
 
 	private function setName($_type)
