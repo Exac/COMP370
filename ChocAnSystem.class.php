@@ -56,6 +56,7 @@ include_once('ServiceReportGenerator.class.php');
 include_once('Services.class.php');
 include_once('UserInterface.class.php');
 
+new DatabaseController();
 
 /**
  * Class ChocAnSystem

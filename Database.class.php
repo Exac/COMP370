@@ -22,7 +22,8 @@
  */
 class Database
 {
-	public $host = "COMP370.db.10405771.hostedresource.com";
+	//public $host = "COMP370.db.10405771.hostedresource.com";
+	public $host = "localhost";
 	public $user = "COMP370"; //Also name of database.
 	public $password;
 
