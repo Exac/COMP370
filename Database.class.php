@@ -23,7 +23,7 @@
 class Database
 {
 	//public $host = "COMP370.db.10405771.hostedresource.com";
-	public $host = "localhost";
+	public $host = "127.0.0.1";
 	public $user = "COMP370"; //Also name of database.
 	public $password;
 
@@ -32,6 +32,7 @@ class Database
 	function __construct()
 	{
 		$this->password = getenv("CDP");
+		$this->password = null;
 	}
 
 	/**
