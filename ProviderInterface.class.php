@@ -15,24 +15,76 @@ class ProviderInterface
 
 	function __construct()
 	{
-		$this->theProvider = new Provider();
-		$this->theMember = new Member();
+		//$this->theProvider = new Provider(1);
+		//$this->theMember = new Member(1);
 		$this->ui = new UserInterface();
+
+		if (sizeof($_POST) === 0)
+		{
+			//display login screen
+			$this->logon();
+		}
+		if (isset($_POST["provider_password"]))
+		{
+			//provider has logged in, time to verify the user
+			$this->verifyMember();
+		}
+		if (isset($_POST["provider_verify_member"]))
+		{
+			//check if good or bad login
+			$m = new Member($_POST["provider_verify_member"]);
+
+			if ($m->getNumber() < 0)
+			{
+				//Invalid Number
+				$this->error("Invalid Number");
+			} else if (strtoupper($m->getStatus()[0]) == "S")
+			{
+				//Suspended membership
+				$this->error("Member Suspended");
+			} else
+			{
+				//Validated //TODO:Double-check this logic
+			}
+		}
 	}
 
 	public function logon()
 	{
-
+		$this->ui->add('<form id="providerinterface" action="" method="post">');
+		$this->ui->add('<fieldset>');
+		$this->ui->add('<legend>Provider Login</legend>');
+		$this->ui->body .= (new Input("text", "provider_password", "Enter your provider #"));
+		$this->ui->add('<br>');
+		$this->ui->add('<button id="provider_password_submit" name="provider_password_submit" type="submit"/>Login</button>');
+		$this->ui->add('</fieldset>');
+		$this->ui->add('</form>');
 	}
 
 	public function verifyMember()
 	{
+		$provider = new Provider($_POST["provider_password"]);
 
+		$this->ui->body .= '<div id="providerID"><span class="name">' . $provider->getName() . '</span>' . '<br><span class="city">' . $provider->getCity() . '</span>, <span class="province">' . $provider->getProvince() . '</span></div>';
+		$this->ui->add('<form id="providerinterface" action="" method="post">');
+		$this->ui->add('<fieldset>');
+		$this->ui->add('<legend>Verify your current Member</legend>');
+		$this->ui->body .= (new Input("text", "provider_verify_member", "Enter the member's number, or have them swipe the card-reader."));
+		$this->ui->add('<br><button id="provider_verify_member_submit" name="provider_verify_member_submit" type="submit"/>Verify Member</button>');
+		$this->ui->add('</fieldset>');
+		$this->ui->add('<input type="hidden" name="provider_theProvider" value="' . $provider->getNumber() . '"/>');
+		$this->ui->add('</form>');
 	}
 
 	public function receiveDirectory()
 	{
 
+	}
+
+	private function error($message)
+	{
+		$this->ui->add("<div id='errorScreen'><span class='message'>${message}</span></div>");
+		$this->ui->body . add("<script defer>function relo () {location.reload();};window.setTimeout(relo, 2500);</script>");
 	}
 
 	public function main()

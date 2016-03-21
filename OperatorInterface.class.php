@@ -6,45 +6,6 @@
  * @desc 
  */
 
-if (isset($_POST["view_members"]))
-{
-	echo "view_members selected";
-}
-
-if (isset($_POST["add_person"]))
-{
-	echo "add_person pressed";
-
-	$person = $_POST["person"];
-
-	/*
-	$name     = $_POST["name"];
-	$street   = $_POST["street_address"];
-	$city     = $_POST["city"];
-	$province = $_POST["province"];
-	$postal   = $_POST["postal_code"];
-	$email    = $_POST["email"];
-
-	$status = $_POST["status"];
-
-	$type = $_POST["type"]; */
-
-	if ($person == "member")
-	{
-		echo "member selected";
-		$member = new MemberMaintainer();
-		$member->addMember($_POST["name"], $_POST["street_address"], $_POST["city"],
-			$_POST["province"], $_POST["postal_code"], $_POST["email"], $_POST["status"]);
-	}
-
-	else if ($person == "provider")
-	{
-		echo "provider selected";
-		$provider = new ProviderMaintainer();
-		$provider->addProvider($_POST["name"], $_POST["street_address"], $_POST["city"],
-			$_POST["province"], $_POST["postal_code"], $_POST["email"], $_POST["type"]);
-	}
-}
 class OperatorInterface
 {
 	private $ui;
@@ -60,7 +21,6 @@ class OperatorInterface
 	{
 		$this->ui->bodyId = "operatorinterface";
 		array_push($this->ui->stylesheets, "cdn/css/operator.css");
-		$this->ui->body .= Utils::getNavigationMenu();
 		$this->ui->add("<form method='get' action=''>");
 
 		//MEMBER's fieldset
@@ -112,6 +72,8 @@ class OperatorInterface
 		$this->ui->body .= $this->membersAutoFillScript();
 		$this->ui->body .= $this->providersAutoFillScript();
 		$this->ui->body .= $this->onload();
+
+		$this->ui->body .= Utils::getNavigationMenu();
 
 		echo $this->ui;
 	}

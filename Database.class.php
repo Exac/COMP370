@@ -85,6 +85,7 @@ class Database
 		{
 			die("<br><pre>" . $this->connect()->error . "</pre>" . "Query attempted: <pre>${query}</pre>");
 		}
+
 		while ($row = $result->fetch_assoc())
 		{
 			$rows[] = $row;
@@ -106,6 +107,11 @@ class Database
 		return "'" . $connection->real_escape_string($value) . "'";
 	}
 
+	/**
+	 * The server has a MySQL running; however, for development we have been using a cloud-hosted
+	 * MySQL server. Unfortunately it takes 0.25 seconds to connect to it and run queries, so this
+	 * method uses the development server when it is run on a developer computer.
+	 */
 	private function detectDeveloperMode()
 	{
 		$localhostAddresses = array('127.0.0.1', '::1');

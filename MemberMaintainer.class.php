@@ -6,13 +6,16 @@ class MemberMaintainer extends PersonMaintainer
 	private $ui;
 	private $member;
 
-
+	public function __construct()
+	{
+		$this->ui = new UserInterface();
+	}
 
 	public function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
 		echo "In addMember()";
 
-		$this->member = new Member();
+		$this->member = new Member(DatabaseController::getNextIndex('provider'));
 
 		$this->member->setName($name);
 		$this->member->setStreet($street);
@@ -21,7 +24,6 @@ class MemberMaintainer extends PersonMaintainer
 		$this->member->setPostalCode($postal);
 		$this->member->setEmail($email);
 		$this->member->setStatus($status);
-		
 	}
 	
 	public function editMember()

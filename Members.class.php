@@ -12,10 +12,20 @@ class Members extends Persons
 	{
 		
 	}
-	
-	public function find ()
+
+	public function find($string)
 	{
-		
+		$ms = DatabaseController::findMember($string);
+		$member_array = array();
+
+		foreach ($ms as &$m)
+		{
+			$mem = new Member(1);
+			$mem->fromArray($m);
+			array_push($member_array, $mem);
+		}
+
+		return $member_array;
 	}
 	
 	public function open ()
