@@ -31,10 +31,7 @@ class Database
 
 	function __construct()
 	{
-		if (isset($_GET["dev"]))
-		{
-			$this->host = "COMP370.db.10405771.hostedresource.com";
-		}
+
 		$this->password = getenv("CDP");
 	}
 
@@ -107,6 +104,16 @@ class Database
 		$connection = $this->connect();
 
 		return "'" . $connection->real_escape_string($value) . "'";
+	}
+
+	private function detectDeveloperMode()
+	{
+		$localhostAddresses = array('127.0.0.1', '::1');
+
+		if (in_array($_SERVER['REMOTE_ADDR'], $localhostAddresses))
+		{
+			$this->host = "COMP370.db.10405771.hostedresource.com";
+		}
 	}
 
 }

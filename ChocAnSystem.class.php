@@ -89,8 +89,9 @@ class ChocAnSystem
 			$this->myInterface = new IndexInterface();
 		}
 
+		echo $_SERVER['REMOTE_ADDR'];
+
 		$this->myInterface->main();
-		echo "\n<!--" . ($GLOBALS['startTime'] - round(microtime(true) * 1000)) . "ms load time-->";
 	}
 
 	private function setName($_type)
