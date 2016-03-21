@@ -31,8 +31,11 @@ class Database
 
 	function __construct()
 	{
+		if (isset($_GET["dev"]))
+		{
+			$this->host = "COMP370.db.10405771.hostedresource.com";
+		}
 		$this->password = getenv("CDP");
-		$this->password = null;
 	}
 
 	/**
