@@ -24,7 +24,6 @@ class DatabaseController
 			return; //exit if already initialized.
 		}
 		self::$db = new Database();
-		echo "<h1>creating new database connection</h1>";
 
 		self::$initialized = true;
 	}
@@ -69,6 +68,34 @@ class DatabaseController
 		self::initialize();
 
 		return self::$db->select("select * from member where member_province = '${member_province}'");
+	}
+
+	public static function selectMemberNames()
+	{
+		self::initialize();
+
+		return self::$db->select("SELECT member_name, member_number FROM member");
+	}
+
+	public static function selectMembers()
+	{
+		self::initialize();
+
+		return self::$db->select("SELECT * FROM member ORDER BY member_number");
+	}
+
+	public static function selectProviderNames()
+	{
+		self::initialize();
+
+		return self::$db->select("SELECT provider_name, provider_number FROM provider");
+	}
+
+	public static function selectProviders()
+	{
+		self::initialize();
+
+		return self::$db->select("SELECT * FROM provider ORDER BY provider_number");
 	}
 
 }

@@ -1,0 +1,23 @@
+fieldset {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media only screen and (min-width: 1367px) {
+    fieldset {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 929px) {
+    fieldset {
+        max-width: 48%;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    fieldset {
+        max-width: 31%;
+    }
+}

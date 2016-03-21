@@ -72,17 +72,30 @@ class Input
 	public $label = null;
 	public $type = null;
 	public $radio_group = "default";
+	public $attributes = "";
 
 	/**
 	 * @param $_type string (button|checkbox|radio|text|password)
 	 * @param $_name string
-	 * @param $_label string
+	 * @param $_label string|array ["label string"]["attr='value'"]
 	 */
 	public function __construct($_type, $_name, $_label)
 	{
 		$this->type = $_type;
 		$this->name = $_name;
-		$this->label = $_label;
+		if (is_string($_label))
+		{
+			$this->label = $_label;
+		} else if (is_array($_label))
+		{
+			reset($_label);
+			$this->label = current($_label);
+			if (count($_label > 1))
+			{
+				$this->attributes .= next($_label) . " ";
+			}
+		}
+
 
 		//If an optional 4th parameter is passed, use it to determine a radio button's group.
 		if (func_num_args() === 4) {
@@ -92,15 +105,18 @@ class Input
 
 	public function __toString()
 	{
-		if ($this->type === "button" || $this->type === "submit") {
-			$o = '<button type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
-				. $this->getId($this->name) . '">' . $this->name . '</button>';
-		} else if ($this->radio_group !== "radio") {
-			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
-				. $this->radio_group . '"/>';
-		} else {
-			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="'
-				. $this->getId($this->name) . '"/>';
+		if ($this->type === "button" || $this->type === "submit")
+		{
+			$o = '<button type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="' . $this->getId($this->name) . '"' . $this->attributes . '>' . $this->name . '</button>';
+		} else if ($this->type === "input")
+		{
+			$o = '<button type="input" id="' . $this->getId($this->name) . '" name="' . $this->getId($this->name) . '"' . $this->attributes . '>' . $this->name . '</button>';
+		} else if ($this->radio_group === "radio")
+		{
+			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="' . $this->radio_group . '"/' . $this->attributes . '>';
+		} else
+		{
+			$o = '<input type="' . $this->type . '" id="' . $this->getId($this->name) . '" name="' . $this->getId($this->name) . '"' . $this->attributes . '/>';
 		}
 
 		$o .= '<label for="' . $this->getId($this->name) . '">' . $this->label . '</label>';
