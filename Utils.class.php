@@ -14,7 +14,7 @@
  */
 class Utils {
 	public static function getNavigationMenu() {
-		return '<ul>'.
+		return '<ul id="navigation">' .
 				'<li><a href="/manager">manager</a></li>'.
 				'<li><a href="/operator">operator</a></li>'.
 				'<li><a href="/provider">provider</a></li>'.

@@ -18,6 +18,9 @@ class ProviderInterface
 		//$this->theProvider = new Provider(1);
 		//$this->theMember = new Member(1);
 		$this->ui = new UserInterface();
+		$this->ui->bodyId = "provider";
+		array_push($this->ui->stylesheets, "cdn/css/provider.css");
+		$this->ui->add('<script src="/cdn/js/provider.js" defer="defer"></script>');
 
 		if (sizeof($_POST) === 0)
 		{
@@ -31,22 +34,39 @@ class ProviderInterface
 		}
 		if (isset($_POST["provider_verify_member"]))
 		{
-			//check if good or bad login
-			$m = new Member($_POST["provider_verify_member"]);
+			$this->manipulate($_POST["provider_verify_member"]);
+		}
+	}
 
-			if ($m->getNumber() < 0)
+	/**
+	 * Call after provider and member have been selected
+	 */
+	public function manipulate($memberID)
+	{
+		//check if good or bad login
+		//query database with member number.
+		$member_exists = DatabaseController::memberExists($memberID);
+		if (!$member_exists)
+		{
+			//Invalid Number
+			$this->ui->add("<span id='provider_member_validator' class='invalid'>Invalid Member Number</span>");
+		} else
+		{
+			$member = new Member($memberID);
+			if ($member->getStatus() === "SUSPENDED")
 			{
-				//Invalid Number
-				$this->error("Invalid Number");
-			} else if (strtoupper($m->getStatus()[0]) == "S")
-			{
-				//Suspended membership
-				$this->error("Member Suspended");
+				//Suspended Member
+				$this->ui->add("<span id='provider_member_validator' class='invalid'>Invalid Member Number</span>");
+				$this->ui->add("<span id='provider_member_validator'>Invalid Member Number</span>");
 			} else
 			{
-				//Validated //TODO:Double-check this logic
+				//Validated
+				echo "VALIDATED";
+				$this->ui->add('<input name="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
+				$this->ui->add('<input name="provider_theMember" value="' . $member->getNumber() . '" type="hidden">');
 			}
 		}
+
 	}
 
 	public function logon()
@@ -64,12 +84,12 @@ class ProviderInterface
 	public function verifyMember()
 	{
 		$provider = new Provider($_POST["provider_password"]);
-
 		$this->ui->body .= '<div id="providerID"><span class="name">' . $provider->getName() . '</span>' . '<br><span class="city">' . $provider->getCity() . '</span>, <span class="province">' . $provider->getProvince() . '</span></div>';
 		$this->ui->add('<form id="providerinterface" action="" method="post">');
 		$this->ui->add('<fieldset>');
 		$this->ui->add('<legend>Verify your current Member</legend>');
-		$this->ui->body .= (new Input("text", "provider_verify_member", "Enter the member's number, or have them swipe the card-reader."));
+		$this->ui->add("<p id='cardreader'>Enter the member's number, <br>or have them swipe the card-reader.</p>");
+		$this->ui->body .= (new Input("text", "provider_verify_member", "Member #"));
 		$this->ui->add('<br><button id="provider_verify_member_submit" name="provider_verify_member_submit" type="submit"/>Verify Member</button>');
 		$this->ui->add('</fieldset>');
 		$this->ui->add('<input type="hidden" name="provider_theProvider" value="' . $provider->getNumber() . '"/>');
