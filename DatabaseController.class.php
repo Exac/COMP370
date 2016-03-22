@@ -98,4 +98,55 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM provider ORDER BY provider_number");
 	}
 
+	/**
+	 * @param $member_number int member_number
+	 * @return mixed Array
+	 */
+	public static function selectMember($member_number)
+	{
+//		self::initialize();
+//
+//		$member_number = mysql_real_escape_string($member_number);
+//		$rows = self::$db->select("SELECT * FROM member where member_number = ${member_number}");
+//
+//		foreach($rows as &$r){
+//			return $r;
+//		}
+		self::initialize();
+
+		$member_number = mysql_real_escape_string($member_number);
+
+		return self::$db->select("SELECT * FROM member where member_number = ${member_number}")[0];
+	}
+
+	public static function selectProvider($provider_number)
+	{
+		self::initialize();
+
+		$provider_number = mysql_real_escape_string($provider_number);
+
+		return self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
+	}
+
+	public static function findProvider($term)
+	{
+		self::initialize();
+
+		return self::$db->select("Select * from provider where `provider_number` LIKE '%${term}%' OR `provider_name` LIKE '%${term}%' OR `provider_street_address` LIKE '%${term}%' OR `provider_city` LIKE '%${term}%' OR `provider_province` LIKE '%${term}%' OR `provider_postal_code` LIKE '%${term}%' OR `provider_email_address` LIKE '%${term}%' OR `provider_type` LIKE '%${term}%'");
+	}
+
+	public static function findMember($term)
+	{
+		self::initialize();
+
+		return self::$db->select("Select * from member where `member_number` LIKE '%${term}%' OR `member_name` LIKE '%${term}%' OR `member_street_address` LIKE '%${term}%' OR `member_city` LIKE '%${term}%' OR `member_province` LIKE '%${term}%' OR `member_postal_code` LIKE '%${term}%' OR `member_email_address` LIKE '%${term}%' OR `member_status` LIKE '%${term}%'");
+	}
+
+	public static function getNextIndex($table)
+	{
+		self::initialize();
+
+		return self::$db->select("select Auto_increment FROM information_schema.tables where table_name='${table}'")[0]["Auto_increment"];
+	}
+
 }

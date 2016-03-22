@@ -31,7 +31,7 @@ class Person
 	const STREET_LENGTH      = 25;
 	const CITY_LENGTH        = 14;
 	const PROVINCE_LENGTH    = 2;
-	const POSTAL_CODE_LENGTH = 6;
+	const POSTAL_CODE_LENGTH = 7;
 
 	/**
 	 * Gets the number for this person.
@@ -50,17 +50,24 @@ class Person
 	public function setNumber($number)
 	{
 		// Make sure the number is an integer and is not empty.
-		if (!is_int($number) || empty($number))
+		if (!is_numeric($number) || !isset($number))
 		{
-			echo "ERROR: Please make sure the number is an integer and is not empty.";
+			var_dump($number);
+			echo "ERROR: Please make sure the number is an integer and is not empty (${number}).";
 			return;
 		}
 
 		// Make sure the length is equal to NUMBER_LENGTH.
-		if ($this->getLength($number) != self::NUMBER_LENGTH)
+		if (!($this->getLength($number) <= self::NUMBER_LENGTH))
 		{
-			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH;
+			echo "ERROR: Length of number(${number}, " . $this->getLength($number) . ") must be equal to or less than " . self::NUMBER_LENGTH;
 			return;
+		}
+
+		//Make sure number is > 0
+		if ($number < 1)
+		{
+			$number = abs($number) + 1;
 		}
 
 		$this->number = $number;
@@ -216,16 +223,16 @@ class Person
 	public function setPostalCode($postalCode)
 	{
 		// Make sure the postal code is not empty.
-		if (empty($name))
+		if (!isset($postalCode))
 		{
-			echo "ERROR: The postal code can not be empty";
+			echo "ERROR: The postal code can not be empty (${postalCode}).";
 			return;
 		}
 
 		// Make sure the length of the postal code is not greater than POSTAL_CODE_LENGTH.
 		if ($this->getLength($postalCode) > self::POSTAL_CODE_LENGTH)
 		{
-			echo "Length of postal code must not be greater than " . self::POSTAL_CODE_LENGTH;
+			echo "Length of postal code(${postalCode}) must not be greater than " . self::POSTAL_CODE_LENGTH;
 			return;
 		}
 
@@ -260,4 +267,26 @@ class Person
 	{
 		return strlen((string)$object);
 	}
+
+	public function __toString()
+	{
+		$f = '{"number":' . $this->getNumber() . ', ' . '"name":"' . $this->getName() . '", ' . '"street_address":"' . $this->getStreet() . '", ' . '"city":"' . $this->getCity() . '", ' . '"province":"' . $this->getProvince() . '", ' . '"postal_code":"' . $this->getPostalCode() . '", ' . '"email_address":"' . $this->getEmail() . '", ' . '"status":"' . null . '", ';
+		$f .= '}, ';
+
+		return $f;
+	}
+
+	public function fromString($json)
+	{
+		$d = json_decode($json, true);
+
+		$this->setNumber($d["number"]);
+		$this->setName($d["name"]);
+		$this->setStreet($d["street_address"]);
+		$this->setCity($d["city"]);
+		$this->setProvince(($d["province"]));
+		$this->setPostalCode($d["postal_code"]);
+		$this->setEmail($d["email_address"]);
+	}
+
 }
