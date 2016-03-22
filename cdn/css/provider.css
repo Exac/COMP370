@@ -1,0 +1,156 @@
+/**
+ * PROVIDER ID
+ */
+/**
+ * provider_member_validator
+ */
+#provider_member_validator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    text-shadow: rgba(255, 255, 255, 0.50) 0 0 30px;
+    z-index: 100;
+}
+
+#provider_member_validator.invalid,
+#provider_member_validator.valid {
+    background-image: linear-gradient(to bottom, rgba(233, 162, 162, 1), rgba(233, 132, 132, 1));
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    line-height: 100vh;
+}
+
+#provider_member_validator.valid {
+    background-image: linear-gradient(to bottom, rgba(162, 233, 165, 1), rgba(132, 233, 122, 1));
+}
+
+#provider_member_validator .loading,
+.loading {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 0.5em;
+    left: 0;
+    width: 1%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
+    content: "";
+    color: black;
+    line-height: 1em;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 2px;
+    transition: linear all 100ms;
+}
+
+/**
+ * center fieldset
+ */
+body#provider {
+    width: 100%;
+}
+
+#provider fieldset {
+    display: block;
+    margin: 1em auto !important;
+    text-align: center;
+    max-width: 450px;
+}
+
+/**
+ * Cardreader infobox
+ */
+body.interface #providerID {
+    position: relative;
+    background-color: #6fadcb;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    padding: 0.25em 0.5em;
+    margin-bottom: 5px;
+}
+
+#providerID:after {
+
+}
+
+@media only screen and (max-width: 900px) {
+    #providerID:after {
+        display: none;
+    }
+}
+
+#providerID:before {
+    content: "Verified Provider \2713";
+    position: absolute;
+    right: 40%;
+    left: 40%;
+    top: 0;
+    height: 100%;
+    background: rgba(200, 255, 200, 0.00);
+    color: rgba(230, 255, 230, 0.65);
+    line-height: 100%;
+    text-align: center;
+    padding: 1.5em;
+}
+
+@media only screen and (max-width: 560px) {
+    #providerID:before {
+        padding: 1.5em 0.5em;
+        left: auto;
+        right: 0;
+    }
+}
+
+#providerID .name {
+    font-size: 2em;
+}
+
+/**
+ * PROVIDER ERROR
+ */
+#errorScreen {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #6fadcb;
+    color: white;
+}
+
+#errorScreen .message {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#cardreader:before {
+    position: relative;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 128px;
+    background-image: url('data:image/png;base64,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');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    filter: sepia(100%) hue-rotate(175deg);
+}
+
+#cardreader {
+    background: #cbcbcb;
+    color: #1d2a2a;
+    border-radius: 8px;
+    padding: 0 6px;
+    font-weight: 400;
+    font-size: 0.875em;
+    text-transform: uppercase;
+}
