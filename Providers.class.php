@@ -9,64 +9,46 @@ class Providers
 {
 
 	private $providers;	// Array of providers.
-	private $size;		// Size of providers array.
+	private $size = 0;	// Size of providers array.
 
 
 	// Displayed when a provider is not found.
-	const NOT_FOUND_MESSAGE = "ERROR: No providers found<br>";
+	const NOT_FOUND_MESSAGE = "ERROR: No provider found<br>";
 
 	public function findByNumber($number)
 	{
 		$this->providers = DatabaseController::selectProvider($number);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function findByName($name)
 	{
 		$this->providers = DatabaseController::findProvider($name);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function findByCity($city)
 	{
 		$this->providers = DatabaseController::findProvider($city);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function findByType($type)
 	{
 		$this->providers = DatabaseController::findProvider($type);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function findByProvince($province)
 	{
 		$this->providers = DatabaseController::findProvider($province);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function getAll()
 	{
 		$this->providers = DatabaseController::selectProviders();
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	public function add($provider)
@@ -101,6 +83,8 @@ class Providers
 
 	public function __toString()
 	{
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
 		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
 				. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Type</th></tr>";
 		for ($i = 0; $i < $this->size; $i++)

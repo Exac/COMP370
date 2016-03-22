@@ -10,7 +10,7 @@ class Members extends Persons
 {
 
 	private $members;	// Members array
-	private $size;		// Size of members array.
+	private $size = 0;	// Size of members array.
 
 	// Displayed when a provider is not found.
 	const NOT_FOUND_MESSAGE = "ERROR: No member found<br>";
@@ -18,55 +18,39 @@ class Members extends Persons
 	public function findByNumber($number)
 	{
 		$this->members = DatabaseController::selectMember($number);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function findByName($memberName)
 	{
 		$this->members = DatabaseController::findMember($memberName);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function findByCity($city)
 	{
 		$this->members = DatabaseController::findMember($city);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function findByType($status)
 	{
 		$this->members = DatabaseController::findMember($status);
-
 		$this->setSize();
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function findByProvince($province)
 	{
 		$this->members = DatabaseController::findMember($province);
-
 		$this->setSize();
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function getAll()
 	{
 		$this->members = DatabaseController::selectMembers();
-
 		$this->setSize();
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function add($member)
@@ -101,6 +85,8 @@ class Members extends Persons
 
 	public function __toString()
 	{
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
 		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
 				. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Type</th></tr>";
 		for ($i = 0; $i < $this->size; $i++)

@@ -7,77 +7,68 @@
  */
 class Persons
 {
-	private $persons;
-	private $size;
+	private $members;
+	private $providers;
+	private $size = 0;
 
-	const MEMBER = "Member";
+	const MEMBER   = "Member";
 	const PROVIDER = "Provider";
 
 	const NOT_FOUND_MESSAGE = "ERROR: No person found<br>";
 
 	public function findByNumber($number)
 	{
-		$this->persons = DatabaseController::selectProvider($number);
-		$this->setSize();
-		$this->addType(self::PROVIDER, $this->size);
+		$this->providers = DatabaseController::selectProvider($number);
+		$this->members   = DatabaseController::selectMember($number);
 
-		$this->persons .= DatabaseController::selectMember($number);
-		$this->setSize();
-		$this->addType(self::MEMBER, $this->size);
+		$this->addProviderLabel(self::PROVIDER, count($this->providers));
+		$this->addMemberLabel(self::MEMBER, count($this->members));
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
+		$this->setSize();
 	}
 
 	public function findByName($name)
 	{
-		$this->persons = DatabaseController::findProvider($name);
-		$this->setSize();
-		$this->addType(self::PROVIDER, $this->size);
+		$this->providers = DatabaseController::findProvider($name);
+		$this->members   = DatabaseController::findMember($name);
 
-		$this->persons .= DatabaseController::findMember($name);
-		$this->setSize();
-		$this->addType(self::MEMBER, $this->size);
+		$this->addProviderLabel(self::PROVIDER, count($this->providers));
+		$this->addMemberLabel(self::MEMBER, count($this->members));
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
+		$this->setSize();
 	}
 
 	public function findByCity($city)
 	{
-		$this->persons = DatabaseController::findProvider($city);
-		$this->setSize();
-		$this->addType(self::PROVIDER, $this->size);
+		$this->providers = DatabaseController::findProvider($city);
+		$this->members   = DatabaseController::findMember($city);
 
-		$this->persons .= DatabaseController::findMember($city);
-		$this->setSize();
-		$this->addType(self::MEMBER, $this->size);
+		$this->addProviderLabel(self::PROVIDER, count($this->providers));
+		$this->addMemberLabel(self::MEMBER, count($this->members));
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
+		$this->setSize();
 	}
 
 	public function findByProvince($province)
 	{
-		$this->persons = DatabaseController::findProvider($province);
-		$this->setSize();
-		$this->addType(self::PROVIDER, $this->size);
+		$this->providers = DatabaseController::findProvider($province);
+		$this->members   = DatabaseController::findMember($province);
 
-		$this->persons .= DatabaseController::findMember($province);
-		$this->setSize();
-		$this->addType(self::MEMBER, $this->size);
+		$this->addProviderLabel(self::PROVIDER, count($this->providers));
+		$this->addMemberLabel(self::MEMBER, count($this->members));
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
+		$this->setSize();
 	}
 
 	public function getAll()
 	{
-		$this->persons = DatabaseController::selectProviders();
-		$this->setSize();
-		$this->addType(self::PROVIDER, $this->size);
+		$this->providers = DatabaseController::selectProviders();
+		$this->members   = DatabaseController::selectMembers();
 
-		$this->persons .= DatabaseController::selectMembers();
-		$this->setSize();
-		$this->addType(self::MEMBER, $this->size);
+		$this->addProviderLabel(self::PROVIDER, count($this->providers));
+		$this->addMemberLabel(self::MEMBER, count($this->members));
 
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
+		$this->setSize();
 	}
 
 	public function add($person, $type)
@@ -102,7 +93,7 @@ class Persons
 
 	private function setSize()
 	{
-		$this->size = count($this->persons);
+		$this->size = count($this->providers) + count($this->providers);
 	}
 
 	public function isEmpty()
@@ -110,30 +101,50 @@ class Persons
 		return ($this->size == 0) ? true : false;
 	}
 
-	private function addType($type, $size)
+	private function addProviderLabel($type, $size)
 	{
-		if ($this->isEmpty()) return;
+		if ($size == 0) return;
 
-		for ($i = 0; $i < $size; $i++) array_push($this->persons[$i], $type);
+		for ($i = 0; $i < $size; $i++) array_push($this->providers[$i], $type);
+	}
+
+	private function addMemberLabel($type, $size)
+	{
+		if ($size == 0) return;
+
+		for ($i = 0; $i < $size; $i++) array_push($this->members[$i], $type);
 	}
 
 	public function __toString()
 	{
-		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
-				. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Type</th></tr>";
-		for ($i = 0; $i < $this->size; $i++)
-		{
-			$person = $this->persons[$i];
-			$type   = $this->persons[$i][0];
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
-			$result .= "<tr><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_NUMBER]   : $person[DatabaseController::PROVIDER_NUMBER]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_NAME]     : $person[DatabaseController::PROVIDER_NAME]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_STREET]   : $person[DatabaseController::PROVIDER_STREET]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_CITY]     : $person[DatabaseController::PROVIDER_CITY]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_PROVINCE] : $person[DatabaseController::PROVIDER_PROVINCE]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_POSTAL]   : $person[DatabaseController::PROVIDER_POSTAL]
-					. "</td><td>" . ($type == "member") ? $person[DatabaseController::MEMBER_EMAIL]    : $person[DatabaseController::PROVIDER_EMAIL]
-					. "</td><td>" . $person[0] . "</tr>";
+		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
+			. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Type</th></tr>";
+		for ($i = 0; $i < count($this->providers); $i++)
+		{
+			$provider = $this->providers[$i];
+			$result .= "<tr><td>" . $provider[DatabaseController::PROVIDER_NUMBER]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_NAME]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_STREET]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_CITY]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_PROVINCE]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_POSTAL]
+				. "</td><td>" . $provider[DatabaseController::PROVIDER_EMAIL]
+				. "</td><td>" . $provider[0] . "</tr>";
+		}
+
+		for ($i = 0; $i < count($this->members); $i++)
+		{
+			$provider = $this->members[$i];
+			$result .= "<tr><td>" . $provider[DatabaseController::MEMBER_NUMBER]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_NAME]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_STREET]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_CITY]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_PROVINCE]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_POSTAL]
+				. "</td><td>" . $provider[DatabaseController::MEMBER_EMAIL]
+				. "</td><td>" . $provider[0] . "</tr>";
 		}
 		$result .= "</Table>";
 

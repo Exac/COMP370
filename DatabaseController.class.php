@@ -30,14 +30,14 @@ class DatabaseController
 
 	// Member field names as stored in database.
 	const MEMBER          = "member";
-	const MEMBER_NUMBER   = "Member_number";
-	const MEMBER_NAME     = "Member_name";
-	const MEMBER_STREET   = "Member_street_address";
-	const MEMBER_CITY     = "Member_city";
-	const MEMBER_PROVINCE = "Member_province";
-	const MEMBER_POSTAL   = "Member_postal_code";
-	const MEMBER_EMAIL    = "Member_email_address";
-	const MEMBER_STATUS   = "Member_status";
+	const MEMBER_NUMBER   = "member_number";
+	const MEMBER_NAME     = "member_name";
+	const MEMBER_STREET   = "member_street_address";
+	const MEMBER_CITY     = "member_city";
+	const MEMBER_PROVINCE = "member_province";
+	const MEMBER_POSTAL   = "member_postal_code";
+	const MEMBER_EMAIL    = "member_email_address";
+	const MEMBER_STATUS   = "member_status";
 
 	private static function initialize()
 	{
