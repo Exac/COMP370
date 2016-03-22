@@ -17,6 +17,28 @@ class DatabaseController
 	private static $initialized = false;
 	private static $db;
 
+	// Provider field names as stored in database.
+	const PROVIDER          = "provider";
+	const PROVIDER_NUMBER   = "provider_number";
+	const PROVIDER_NAME     = "provider_name";
+	const PROVIDER_STREET   = "provider_street_address";
+	const PROVIDER_CITY     = "provider_city";
+	const PROVIDER_PROVINCE = "provider_province";
+	const PROVIDER_POSTAL   = "provider_postal_code";
+	const PROVIDER_EMAIL    = "provider_email_address";
+	const PROVIDER_TYPE     = "provider_type";
+
+	// Member field names as stored in database.
+	const MEMBER          = "member";
+	const MEMBER_NUMBER   = "Member_number";
+	const MEMBER_NAME     = "Member_name";
+	const MEMBER_STREET   = "Member_street_address";
+	const MEMBER_CITY     = "Member_city";
+	const MEMBER_PROVINCE = "Member_province";
+	const MEMBER_POSTAL   = "Member_postal_code";
+	const MEMBER_EMAIL    = "Member_email_address";
+	const MEMBER_STATUS   = "Member_status";
+
 	private static function initialize()
 	{
 		if (self::$initialized)

@@ -60,14 +60,14 @@ class Service
 		// Make sure the code is not empty and is an integer.
 		if (empty($code) || !is_int($code))
 		{
-			echo "ERROR: Code must be an integer and not empty.";
+			echo "ERROR: Code must be an integer and not empty.\n";
 			return;
 		}
 
 		// Make sure the length of code is no greater than CODE_LENGTH.
 		if ($this->getLength($code) != self::CODE_LENGTH)
 		{
-			echo "ERROR: Code length must be 6 digit long.";
+			echo "ERROR: Code length must be 6 digit long.\n";
 			return;
 		}
 
@@ -84,14 +84,14 @@ class Service
 		// Make sure the name is not empty.
 		if (empty($name))
 		{
-			echo "ERROR: Service name can not be empty.";
+			echo "ERROR: Service name can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of name is not greater than NAME_LENGTH.
 		if ($this->getLength($name) > self::NAME_LENGTH)
 		{
-			echo "ERROR: Length of service name can not be greater than 20 characters.";
+			echo "ERROR: Length of service name can not be greater than 20 characters.\n";
 			return;
 		}
 
@@ -108,7 +108,7 @@ class Service
 		// Make sure the fee is not empty and is numeric.
 		if (empty($fee) || !is_numeric($fee))
 		{
-			echo "ERROR: Fee value can not be empty and must be numeric";
+			echo "ERROR: Fee value can not be empty and must be numeric.\n";
 			return;
 		}
 
@@ -118,7 +118,7 @@ class Service
 		// Make sure the value of fee is no greater than MAX_FEE.
 		if ($fee > self::MAX_FEE)
 		{
-			echo "ERROR: Fee can not be greater than 999999.";
+			echo "ERROR: Fee can not be greater than 999999.\n";
 			return;
 		}
 

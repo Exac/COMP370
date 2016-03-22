@@ -10,7 +10,7 @@
  *  providerNumber        Provider associated with the service.
  *  memberNumber          Member associated with the service.
  *  serviceDate           Date the service was provided.
- * Comments               Any comments associated with the claim. Can be empty.
+ *  Comments              Any comments associated with the claim. Can be empty.
  */
 class Claim 
 {
@@ -105,7 +105,7 @@ class Claim
         // Make sure the submission date is not empty.
         if (empty($submissionDateTime))
         {
-            echo "ERROR: Submission date must not be empty.";
+            echo "ERROR: Submission date must not be empty.\n";
             return;
         }
 
@@ -122,7 +122,7 @@ class Claim
         // Make sure the service date is not empty.
         if (empty($serviceDate))
         {
-            echo "ERROR: Service date must not be empty.";
+            echo "ERROR: Service date must not be empty.\n";
             return;
         }
 
@@ -139,7 +139,7 @@ class Claim
         // Make sure the provider field is not empty
         if (empty($provider))
         {
-            echo "ERROR: Provider must be provided for this claim.";
+            echo "ERROR: Provider must be provided for this claim.\n";
             return;
         }
 
@@ -156,7 +156,7 @@ class Claim
         // Make sure a provider is provided.
         if (empty($member))
         {
-            echo "ERROR: Member must be provided for this claim.";
+            echo "ERROR: Member must be provided for this claim.\n";
             return;
         }
 
@@ -173,14 +173,14 @@ class Claim
         // Service code must not be empty and must be an integer.
         if (empty($serviceCode) || !is_int($serviceCode))
         {
-            echo "ERROR: Service code must not be empty and must be an integer.";
+            echo "ERROR: Service code must not be empty and must be an integer.\n";
             return;
         }
 
         // Length of service code must be of CODE_LENGTH.
         if ($this->getLength($serviceCode) != self::CODE_LENGTH)
         {
-            echo "ERROR: Length of service code must be equal to " . self::CODE_LENGTH;
+            echo "ERROR: Length of service code must be equal to " . self::CODE_LENGTH . "\n";
             return;
         }
 
@@ -194,6 +194,7 @@ class Claim
      */
     public function setComments($comments)
     {
+        // Catch empty variable.
         if (empty($comments))
         {
             $this->comments = "";
@@ -203,7 +204,8 @@ class Claim
         // Length of comments must not exceed COMMENT_LENGTH.
         if ($this->getLength($comments) > self::COMMENT_LENGTH)
         {
-            echo "ERROR: Length of comments must not exceed " . self::COMMENT_LENGTH;
+            echo "ERROR: Length of comments must not exceed " . self::COMMENT_LENGTH . "\n";
+            return;
         }
 
         $this->comments = $comments;
