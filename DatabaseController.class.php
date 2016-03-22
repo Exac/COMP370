@@ -179,4 +179,3 @@ class DatabaseController
 		return false;
 	}
 }
-}
