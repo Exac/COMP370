@@ -18,7 +18,6 @@ class Provider extends Person
 	public function __construct($provider_number)
 	{
 		$this->PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
-
 		$this->setNumber($provider_number);
 		//$this->fromDatabase($this->getNumber());
 	}
@@ -52,16 +51,21 @@ class Provider extends Person
 
 	public function fromDatabase($provider_number)
 	{
-		$md = DatabaseController::selectProvider($provider_number);
-
-		$this->setNumber($md["provider_number"]);
-		$this->setName($md["provider_name"]);
-		$this->setStreet($md["provider_street_address"]);
-		$this->setCity($md["provider_city"]);
-		$this->setProvince($md["provider_province"]);
-		$this->setPostalCode($md["provider_postal_code"]);
-		$this->setEmail($md["provider_email_address"]);
-		$this->setType($this->convertTypeLong($md["provider_type"]));
+		if (DatabaseController::providerExists($provider_number))
+		{
+			$md = DatabaseController::selectProvider($provider_number);
+			//$this->setNumber($md["provider_number"]); //mysql_real_escape_string strips leading 0's
+			$this->setName($md["provider_name"]);
+			$this->setStreet($md["provider_street_address"]);
+			$this->setCity($md["provider_city"]);
+			$this->setProvince($md["provider_province"]);
+			$this->setPostalCode($md["provider_postal_code"]);
+			$this->setEmail($md["provider_email_address"]);
+			$this->setType($this->convertTypeLong($md["provider_type"]));
+		} else
+		{
+			die("Fatal Error: There is no provider with number " . $provider_number . "<script>setTimeout(function(){ window.location = window.location.href; }, 550);</script>");
+		}
 	}
 
 	private function convertTypeLong($type)

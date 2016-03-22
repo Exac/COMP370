@@ -50,19 +50,20 @@ class Person
 	public function setNumber($number)
 	{
 		// Make sure the number is an integer and is not empty.
-		if (empty($number))
+		// We MUST use is_numeric instead of is_int because they are stored in the database like
+		// "000000001". is_int(000000001) fails, is_numeric(000000001) passes.
+		if (!is_numeric($number) || empty($number))
 		{
-			echo "ERROR: Please make sure the number is not empty.\n";
+			echo "ERROR: Please make sure the number is an integer and is not empty.\n";
 			return;
 		}
 
-		#TODO: Change length in the database. Leave for now.
 		// Make sure the length is equal to NUMBER_LENGTH.
-//		if ($this->getLength($number) != self::NUMBER_LENGTH)
-//		{
-//			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . "\n";
-//			return;
-//		}
+		if (!($this->getLength($number) === self::NUMBER_LENGTH))
+		{
+			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . " (getLength:" . $this->getLength($number) . ")\n(number:" . $number . ")";
+			return;
+		}
 
 		$this->number = $number;
 	}
@@ -217,9 +218,10 @@ class Person
 	public function setPostalCode($postalCode)
 	{
 		// Make sure the postal code is not empty.
-		if (empty($postalCode))
+		// We must use isset instead of empty because $x=123456;empty($x);//false
+		if (!isset($postalCode))
 		{
-			echo "ERROR: The postal code can not be empty.\n";
+			echo "ERROR: The postal code can not be empty (${postalCode}).\n";
 			return;
 		}
 

@@ -126,14 +126,6 @@ class DatabaseController
 	 */
 	public static function selectMember($member_number)
 	{
-//		self::initialize();
-//
-//		$member_number = mysql_real_escape_string($member_number);
-//		$rows = self::$db->select("SELECT * FROM member where member_number = ${member_number}");
-//
-//		foreach($rows as &$r){
-//			return $r;
-//		}
 		self::initialize();
 
 		$member_number = mysql_real_escape_string($member_number);
@@ -146,8 +138,9 @@ class DatabaseController
 		self::initialize();
 
 		$provider_number = mysql_real_escape_string($provider_number);
+		$rows = self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
 
-		return self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
+		return $rows;
 	}
 
 	public static function findProvider($term)
@@ -171,4 +164,35 @@ class DatabaseController
 		return self::$db->select("select Auto_increment FROM information_schema.tables where table_name='${table}'")[0]["Auto_increment"];
 	}
 
+	public static function memberExists($member_number)
+	{
+		self::initialize();
+
+		$rows = self::$db->select("SELECT member_number FROM member WHERE member_number = " . $member_number);
+		foreach ($rows as &$row)
+		{
+			if (isset($row["member_number"]))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static function providerExists($provider_number)
+	{
+		self::initialize();
+
+		$rows = self::$db->select("SELECT provider_number FROM provider WHERE provider_number = " . $provider_number);
+		foreach ($rows as &$row)
+		{
+			if (isset($row["provider_number"]))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
 }
