@@ -9,8 +9,52 @@
 require_once("Database.class.php");
 require_once("DatabaseController.class.php");
 require_once("Utils.class.php");
+require_once("Member.class.php");
+require_once("Person.class.php");
 
-function membersHtml()
+function getLength($object)
+{
+	return strlen((string)$object);
+}
+
+$md = DatabaseController::selectMember(1);
+echo $md["member_postal_code"] . "<br>";
+$num = $md["member_number"];
+echo $num . "<br>";
+echo getLength($num) . "<br>";;
+if (is_int($num))
+{
+	echo "INT<br>";
+} else
+{
+	echo "NOT INT<br>";
+}
+if (is_numeric($num))
+{
+	echo "NUMERIC<br>";
+} else
+{
+	echo "NOT NUMERIC<br>";
+}
+
+$p = new Person();
+$p->setNumber($num);
+echo "Person Created.<br>";
+$a = 123456;
+if (isset($a))
+{
+	echo "123456";
+}
+$b = 789012;
+if (empty($b))
+{
+	echo "789012";
+}
+
+$m = new Member("000000001");
+echo "<br>" . $m->getNumber() . "<br>";
+
+/*function membersHtml()
 {
 	$o = "<select name='member_select' id='member_select'>";
 	$members = DatabaseController::selectMemberNames();
@@ -130,21 +174,6 @@ function providersJS()
 		<legend>Operator</legend>
 		<p>The operator interface is not yet implemented. Question: Did we mix-up Provider and
 			Operator (Service and Provider)?</p>
-		<?php /*
-		<?php echo operatorsHtml(); ?>
-		<hr>
-		<?php echo (new Input("text", "operator_name", "Name")); ?>
-		<?php echo (new Input("text", "operator_street_address", "Address")); ?>
-		<?php echo (new Input("text", "operator_city", "City")); ?>
-		<?php echo (new Input("text", "operator_province", "Province")); ?>
-		<?php echo (new Input("text", "operator_postal_code", "Postal Code")); ?>
-		<?php echo (new Input("text", "operator_email_address", "Email")); ?>
-		<?php echo (new Input("text", "operator_type", "Status")); ?>
-		<hr>
-		<button type="submit" id="new" name="new" style="filter:hue-rotate(250deg)">New Operator</button>
-		<button type="submit" id="delete" name="delete" style="filter:hue-rotate(150deg)">Delete Operator</button>
-		<button type="submit" id="update" name="update">Update Operator</button>
- 		*/
 		?>
 	</fieldset>
 </form>
@@ -186,4 +215,4 @@ function providersJS()
 </script>
 <script src='/cdn/js/scripts.js' defer></script>
 </body>
-</html>
+</html>*/
