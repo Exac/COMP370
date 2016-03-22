@@ -25,54 +25,174 @@ class Members extends Persons
 	// Displayed when a provider is not found.
 	const NOT_FOUND_MESSAGE = "ERROR: No member found<br>";
 
+	public function __construct()
+	{
+		$this->members = new SplObjectStorage();
+	}
+
 	/**
 	 * Find member by member number.
 	 * @param $number
+	 * @return SplObjectStorage|string|void
 	 */
 	public function findByNumber($number)
 	{
-		$this->members = DatabaseController::selectMember($number);
-		$this->setSize();
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
+		$this->size = 0;
+
+		$temp = new SplObjectStorage();
+
+		$this->members->rewind();
+		while ($this->members->valid())
+		{
+			$provider = $this->members->current();
+
+			if ($provider->getNumber() == $number)
+			{
+				$temp->attach($provider);
+				$this->size++;
+			}
+
+			$this->members->next();
+		}
+
+		$this->members = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	/**
 	 * Find member by name.
 	 * @param $memberName
+	 * @return SplObjectStorage|string|void
 	 */
 	public function findByName($memberName)
 	{
-		$this->members = DatabaseController::findMember($memberName);
-		$this->setSize();
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
+		$this->size = 0;
+
+		$temp = new SplObjectStorage();
+
+		$this->members->rewind();
+		while ($this->members->valid())
+		{
+			$provider = $this->members->current();
+
+			if ($provider->getName() == $memberName)
+			{
+				$temp->attach($provider);
+				$this->size++;
+			}
+
+			$this->members->next();
+		}
+
+		$this->members = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	/**
 	 * Find members in a city.
 	 * @param $city
+	 * @return SplObjectStorage|string|void
 	 */
 	public function findByCity($city)
 	{
-		$this->members = DatabaseController::findMember($city);
-		$this->setSize();
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
+		$this->size = 0;
+
+		$temp = new SplObjectStorage();
+
+		$this->members->rewind();
+		while ($this->members->valid())
+		{
+			$provider = $this->members->current();
+
+			if ($provider->getCity() == $city)
+			{
+				$temp->attach($provider);
+				$this->size++;
+			}
+
+			$this->members->next();
+		}
+
+		$this->members = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	/**
 	 * Find members by their status.
 	 * @param $status
+	 * @return SplObjectStorage|string
 	 */
 	public function findByStatus($status)
 	{
-		$this->members = DatabaseController::findMember($status);
-		$this->setSize();
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
+		$this->size = 0;
+
+		$temp = new SplObjectStorage();
+
+		$this->members->rewind();
+		while ($this->members->valid())
+		{
+			$provider = $this->members->current();
+
+			if ($provider->getStatus() == $status)
+			{
+				$temp->attach($provider);
+				$this->size++;
+			}
+
+			$this->members->next();
+		}
+
+		$this->members = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	/**
 	 * Find members in a province.
 	 * @param $province
+	 * @return SplObjectStorage|string|void
 	 */
 	public function findByProvince($province)
 	{
-		$this->members = DatabaseController::findMember($province);
-		$this->setSize();
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+
+		$this->size = 0;
+
+		$temp = new SplObjectStorage();
+
+		$this->members->rewind();
+		while ($this->members->valid())
+		{
+			$provider = $this->members->current();
+
+			if ($provider->getProvince() == $province)
+			{
+				$temp->attach($provider);
+				$this->size++;
+			}
+
+			$this->members->next();
+		}
+
+		$this->members = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 
 	}
 
@@ -81,9 +201,30 @@ class Members extends Persons
 	 */
 	public function getAll()
 	{
-		$this->members = DatabaseController::selectMembers();
-		$this->setSize();
+		$databaseMembers = DatabaseController::selectProviders();
 
+		$size = count($databaseMembers);
+
+		for ($i = 0; $i < $size; $i++)
+		{
+			$databaseProvider = $databaseMembers[$i];
+
+			$provider = new Member($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+
+			$provider->setName($databaseProvider[DatabaseController::MEMBER_NAME]);
+			$provider->setStreet($databaseProvider[DatabaseController::MEMBER_STREET]);
+			$provider->setCity($databaseProvider[DatabaseController::MEMBER_CITY]);
+			$provider->setProvince($databaseProvider[DatabaseController::MEMBER_PROVINCE]);
+			$provider->setPostalCode($databaseProvider[DatabaseController::MEMBER_POSTAL]);
+			$provider->setEmail($databaseProvider[DatabaseController::MEMBER_EMAIL]);
+			$provider->setStatus($databaseProvider[DatabaseController::MEMBER_STATUS]);
+
+			$this->members->attach($provider);
+
+			$this->size++;
+		}
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
 	public function add($member)
@@ -111,14 +252,6 @@ class Members extends Persons
 	}
 
 	/**
-	 * Sets the size of members array.
-	 */
-	private function setSize()
-	{
-		$this->size = count($this->members);
-	}
-
-	/**
 	 * Checks if members array is empty.
 	 * @return bool
 	 */
@@ -136,19 +269,20 @@ class Members extends Persons
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
 		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
-				. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Status</th></tr>";
-		for ($i = 0; $i < $this->size; $i++)
+			. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Status</th></tr>";
+
+		$this->members->rewind();
+		while ($this->members->valid())
 		{
-			$member = $this->members[$i];
-			$result .= "<tr><td>" . $member[DatabaseController::MEMBER_NUMBER]
-					. "</td><td>" . $member[DatabaseController::MEMBER_NAME]
-					. "</td><td>" . $member[DatabaseController::MEMBER_STREET]
-					. "</td><td>" . $member[DatabaseController::MEMBER_CITY]
-					. "</td><td>" . $member[DatabaseController::MEMBER_PROVINCE]
-					. "</td><td>" . $member[DatabaseController::MEMBER_POSTAL]
-					. "</td><td>" . $member[DatabaseController::MEMBER_EMAIL]
-					. "</td><td>" . $member[DatabaseController::MEMBER_STATUS]
-					. "</td></tr>";
+			$member = $this->members->current();
+
+			$result .= "<tr><td>" . $member->getNumber()  . "</td><td>" . $member->getName()
+				. "</td><td>" . $member->getStreet()  . "</td><td>" . $member->getCity()
+				. "</td><td>" . $member->getProvince(). "</td><td>" . $member->getPostalCode()
+				. "</td><td>" . $member->getEmail()   . "</td><td>" . $member->getType()
+				. "</td></tr>";
+
+			$this->members->next();
 		}
 		$result .= "</Table>";
 

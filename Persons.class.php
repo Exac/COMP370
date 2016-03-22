@@ -18,8 +18,7 @@
  */
 class Persons
 {
-	private $members;		// Members array.
-	private $providers;		// Providers array.
+	private $persons;
 	private $size = 0;		// Size of members and providers combined.
 
 	const MEMBER   = "Member";
@@ -28,64 +27,141 @@ class Persons
 	// Displayed if there is no record.
 	const NOT_FOUND_MESSAGE = "ERROR: No person found<br>";
 
+	public function __construct()
+	{
+		$this->persons = new SplObjectStorage();
+	}
+
 	/**
 	 * Finds a member or a provider with a specific number.
 	 * @param $number
+	 * @return SplObjectStorage|string
 	 */
 	public function findByNumber($number)
 	{
-		$this->providers = DatabaseController::selectProvider($number);
-		$this->members   = DatabaseController::selectMember($number);
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
-		$this->addProviderLabel(self::PROVIDER, count($this->providers));
-		$this->addMemberLabel(self::MEMBER, count($this->members));
+		$this->size = 0;
 
-		$this->setSize();
+		$temp = new SplObjectStorage();
+
+		$this->persons->rewind();
+		while ($this->persons->valid())
+		{
+			$person = $this->persons->current();
+
+			if ($person->getNumber() == $number)
+			{
+				$temp->attach($person);
+				$this->size++;
+			}
+
+			$this->persons->next();
+		}
+
+		$this->persons = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	/**
 	 * Finds a member or a provider with a specific name.
 	 * @param $name
+	 * @return SplObjectStorage|string
 	 */
 	public function findByName($name)
 	{
-		$this->providers = DatabaseController::findProvider($name);
-		$this->members   = DatabaseController::findMember($name);
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
-		$this->addProviderLabel(self::PROVIDER, count($this->providers));
-		$this->addMemberLabel(self::MEMBER, count($this->members));
+		$this->size = 0;
 
-		$this->setSize();
+		$temp = new SplObjectStorage();
+
+		$this->persons->rewind();
+		while ($this->persons->valid())
+		{
+			$person = $this->persons->current();
+
+			if ($person->getName() == $name)
+			{
+				$temp->attach($person);
+				$this->size++;
+			}
+
+			$this->persons->next();
+		}
+
+		$this->persons = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	/**
 	 * Finds all members or a providers in a specific city.
 	 * @param $city
+	 * @return SplObjectStorage|string
 	 */
 	public function findByCity($city)
 	{
-		$this->providers = DatabaseController::findProvider($city);
-		$this->members   = DatabaseController::findMember($city);
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
-		$this->addProviderLabel(self::PROVIDER, count($this->providers));
-		$this->addMemberLabel(self::MEMBER, count($this->members));
+		$this->size = 0;
 
-		$this->setSize();
+		$temp = new SplObjectStorage();
+
+		$this->persons->rewind();
+		while ($this->persons->valid())
+		{
+			$person = $this->persons->current();
+
+			if ($person->getCity() == $city)
+			{
+				$temp->attach($person);
+				$this->size++;
+			}
+
+			$this->persons->next();
+		}
+
+		$this->persons = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	/**
 	 * Finds all member or a provider in a specific province.
 	 * @param $province
+	 * @return SplObjectStorage|string
 	 */
 	public function findByProvince($province)
 	{
-		$this->providers = DatabaseController::findProvider($province);
-		$this->members   = DatabaseController::findMember($province);
+		$this->getAll();
+		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
-		$this->addProviderLabel(self::PROVIDER, count($this->providers));
-		$this->addMemberLabel(self::MEMBER, count($this->members));
+		$this->size = 0;
 
-		$this->setSize();
+		$temp = new SplObjectStorage();
+
+		$this->persons->rewind();
+		while ($this->persons->valid())
+		{
+			$person = $this->persons->current();
+
+			if ($person->getProvince() == $province)
+			{
+				$temp->attach($person);
+				$this->size++;
+			}
+
+			$this->persons->next();
+		}
+
+		$this->persons = $temp;
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	/**
@@ -93,13 +169,49 @@ class Persons
 	 */
 	public function getAll()
 	{
-		$this->providers = DatabaseController::selectProviders();
-		$this->members   = DatabaseController::selectMembers();
+		$databaseProviders = DatabaseController::selectProviders();
+		$databaseMembers   = DatabaseController::selectMembers();
 
-		$this->addProviderLabel(self::PROVIDER, count($this->providers));
-		$this->addMemberLabel(self::MEMBER, count($this->members));
+		$providerSize = count($databaseProviders);
+		$memberSize = count($databaseMembers);
 
-		$this->setSize();
+		for ($i = 0; $i < $providerSize; $i++)
+		{
+			$databaseProvider = $databaseProviders[$i];
+
+			$provider = new Provider($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+
+			$provider->setName($databaseProvider[DatabaseController::PROVIDER_NAME]);
+			$provider->setStreet($databaseProvider[DatabaseController::PROVIDER_STREET]);
+			$provider->setCity($databaseProvider[DatabaseController::PROVIDER_CITY]);
+			$provider->setProvince($databaseProvider[DatabaseController::PROVIDER_PROVINCE]);
+			$provider->setPostalCode($databaseProvider[DatabaseController::PROVIDER_POSTAL]);
+			$provider->setEmail($databaseProvider[DatabaseController::PROVIDER_EMAIL]);
+
+			$this->persons->attach($provider);
+
+			$this->size++;
+		}
+
+		for ($i = 0; $i < $memberSize; $i++)
+		{
+			$databaseProvider = $databaseMembers[$i];
+
+			$provider = new Member($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+
+			$provider->setName($databaseProvider[DatabaseController::MEMBER_NAME]);
+			$provider->setStreet($databaseProvider[DatabaseController::MEMBER_STREET]);
+			$provider->setCity($databaseProvider[DatabaseController::MEMBER_CITY]);
+			$provider->setProvince($databaseProvider[DatabaseController::MEMBER_PROVINCE]);
+			$provider->setPostalCode($databaseProvider[DatabaseController::MEMBER_POSTAL]);
+			$provider->setEmail($databaseProvider[DatabaseController::MEMBER_EMAIL]);
+
+			$this->persons->attach($provider);
+
+			$this->size++;
+		}
+
+		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	public function add($person, $type)
@@ -127,14 +239,6 @@ class Persons
 	}
 
 	/**
-	 * An internal function to set the size of members and providers combined.
-	 */
-	private function setSize()
-	{
-		$this->size = count($this->providers) + count($this->providers);
-	}
-
-	/**
 	 * True if no members or providers exist.
 	 * @return bool
 	 */
@@ -144,64 +248,27 @@ class Persons
 	}
 
 	/**
-	 * An internal function to flag the type of person.
-	 * addProviderLabel() labels all the providers with a 'Provider' label.
-	 * @param $type
-	 * @param $size
-	 */
-	private function addProviderLabel($type, $size)
-	{
-		if ($size == 0) return;
-		for ($i = 0; $i < $size; $i++) array_push($this->providers[$i], $type);
-	}
-
-	/**
-	 * An internal function used to flag the type of person.
-	 * addMemberLabel() labels all the members with a 'Member' label.
-	 * @param $type
-	 * @param $size
-	 */
-	private function addMemberLabel($type, $size)
-	{
-		if ($size == 0) return;
-		for ($i = 0; $i < $size; $i++) array_push($this->members[$i], $type);
-	}
-
-	/**
 	 * Returns a table of all the elements in member and provider array.
 	 * @return string
 	 */
 	public function __toString()
 	{
-		// If no person exists, return.
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
 		$result = "<Table border=\"1\"><tr><th>Number</th><th>Name</th><th>Street</th><th>City</th>"
-				. "<th>Province</th><th>Postal Code</th><th>Email</th><th>Type</th></tr>";
-		for ($i = 0; $i < count($this->providers); $i++)
-		{
-			$provider = $this->providers[$i];
-			$result .= "<tr><td>" . $provider[DatabaseController::PROVIDER_NUMBER]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_NAME]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_STREET]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_CITY]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_PROVINCE]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_POSTAL]
-					. "</td><td>" . $provider[DatabaseController::PROVIDER_EMAIL]
-					. "</td><td>" . $provider[0] . "</td></tr>";
-		}
+			. "<th>Province</th><th>Postal Code</th><th>Email</th></tr>";
 
-		for ($i = 0; $i < $this->size; $i++)
+		$this->persons->rewind();
+		while ($this->persons->valid())
 		{
-			$member = $this->members[$i];
-			$result .= "<tr><td>" . $member[DatabaseController::MEMBER_NUMBER]
-					. "</td><td>" . $member[DatabaseController::MEMBER_NAME]
-					. "</td><td>" . $member[DatabaseController::MEMBER_STREET]
-					. "</td><td>" . $member[DatabaseController::MEMBER_CITY]
-					. "</td><td>" . $member[DatabaseController::MEMBER_PROVINCE]
-					. "</td><td>" . $member[DatabaseController::MEMBER_POSTAL]
-					. "</td><td>" . $member[DatabaseController::MEMBER_EMAIL]
-					. "</td><td>" . $member[0] . "</td></tr>";
+			$person = $this->persons->current();
+
+			$result .= "<tr><td>" . $person->getNumber()  . "</td><td>" . $person->getName()
+				. "</td><td>" . $person->getStreet()  . "</td><td>" . $person->getCity()
+				. "</td><td>" . $person->getProvince(). "</td><td>" . $person->getPostalCode()
+				. "</td><td>" . $person->getEmail()   . "</td></tr>";
+
+			$this->persons->next();
 		}
 		$result .= "</Table>";
 

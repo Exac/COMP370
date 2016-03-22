@@ -20,7 +20,7 @@ class Provider extends Person
 		$this->PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
 
 		$this->setNumber($provider_number);
-		$this->fromDatabase($this->getNumber());
+		//$this->fromDatabase($this->getNumber());
 	}
 
 	/**

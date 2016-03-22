@@ -11,47 +11,40 @@ class Services
 	private $serviceList;
 	
 	const FILE_NAME = "String";
-	
-	public function __Services()
+
+	public function findByCode($serviceCode)
+	{
+
+	}
+
+	public function findByName($serviceName)
 	{
 		
 	}
 	
-	public function open()
+	public function add(Service $service)
 	{
 		
 	}
 	
-	public function close()
+	public function update(Service $service)
 	{
 		
 	}
 	
-	public function find()
+	public function delete(Service $service)
 	{
 		
 	}
 	
-	public function add()
+	public function getAll()
 	{
 		
 	}
 	
-	public function update()
+	public function __toString()
 	{
-		
+		// TODO: Implement __toString() method.
 	}
-	
-	public function delete()
-	{
-		
-	}
-	
-	public function getAllOrderedByName()
-	{
-		
-	}
-	
-	
-	
+
 }

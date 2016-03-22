@@ -31,7 +31,7 @@ class Person
 	const STREET_LENGTH      = 25;
 	const CITY_LENGTH        = 14;
 	const PROVINCE_LENGTH    = 2;
-	const POSTAL_CODE_LENGTH = 6;
+	const POSTAL_CODE_LENGTH = 7;
 
 	/**
 	 * Gets the number for this person.
@@ -50,18 +50,19 @@ class Person
 	public function setNumber($number)
 	{
 		// Make sure the number is an integer and is not empty.
-		if (!is_int($number) || empty($number))
+		if (empty($number))
 		{
-			echo "ERROR: Please make sure the number is an integer and is not empty.\n";
+			echo "ERROR: Please make sure the number is not empty.\n";
 			return;
 		}
 
+		#TODO: Change length in the database. Leave for now.
 		// Make sure the length is equal to NUMBER_LENGTH.
-		if ($this->getLength($number) != self::NUMBER_LENGTH)
-		{
-			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . "\n";
-			return;
-		}
+//		if ($this->getLength($number) != self::NUMBER_LENGTH)
+//		{
+//			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . "\n";
+//			return;
+//		}
 
 		$this->number = $number;
 	}
@@ -216,7 +217,7 @@ class Person
 	public function setPostalCode($postalCode)
 	{
 		// Make sure the postal code is not empty.
-		if (empty($name))
+		if (empty($postalCode))
 		{
 			echo "ERROR: The postal code can not be empty.\n";
 			return;

@@ -24,6 +24,13 @@ class Service
 	const MAX_FEE     = 999999;
 	const SEPARATOR   = '.';
 
+	public function __construct($code, $name, $fee)
+	{
+		$this->setCode($code);
+		$this->setName($name);
+		$this->setFee($fee);
+	}
+
 	/**
 	 * Gets the code for this service.
 	 * @return mixed Service
