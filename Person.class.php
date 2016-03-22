@@ -31,7 +31,7 @@ class Person
 	const STREET_LENGTH      = 25;
 	const CITY_LENGTH        = 14;
 	const PROVINCE_LENGTH    = 2;
-	const POSTAL_CODE_LENGTH = 7;
+	const POSTAL_CODE_LENGTH = 6;
 
 	/**
 	 * Gets the number for this person.
@@ -50,24 +50,17 @@ class Person
 	public function setNumber($number)
 	{
 		// Make sure the number is an integer and is not empty.
-		if (!is_numeric($number) || !isset($number))
+		if (!is_int($number) || empty($number))
 		{
-			var_dump($number);
-			echo "ERROR: Please make sure the number is an integer and is not empty (${number}).";
+			echo "ERROR: Please make sure the number is an integer and is not empty.\n";
 			return;
 		}
 
 		// Make sure the length is equal to NUMBER_LENGTH.
-		if (!($this->getLength($number) <= self::NUMBER_LENGTH))
+		if ($this->getLength($number) != self::NUMBER_LENGTH)
 		{
-			echo "ERROR: Length of number(${number}, " . $this->getLength($number) . ") must be equal to or less than " . self::NUMBER_LENGTH;
+			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . "\n";
 			return;
-		}
-
-		//Make sure number is > 0
-		if ($number < 1)
-		{
-			$number = abs($number) + 1;
 		}
 
 		$this->number = $number;
@@ -92,14 +85,14 @@ class Person
 		// Make sure the name is not empty.
 		if (empty($name))
 		{
-			echo "ERROR: The name can not be empty";
+			echo "ERROR: The name can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of the name is less than NAME_LENGTH.
 		if ($this->getLength($name) > self::NAME_LENGTH)
 		{
-			echo "Length of name must not be greater than " . self::NAME_LENGTH;
+			echo "Length of name must not be greater than " . self::NAME_LENGTH . "\n";
 			return;
 		}
 
@@ -125,14 +118,14 @@ class Person
 		// Make sure the street is not empty.
 		if (empty($street))
 		{
-			echo "ERROR: The street can not be empty";
+			echo "ERROR: The street can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of the street is less than STREET_LENGTH.
 		if ($this->getLength($street) > self::STREET_LENGTH)
 		{
-			echo "Length of street name must not be greater than " . self::STREET_LENGTH;
+			echo "Length of street name must not be greater than " . self::STREET_LENGTH . "\n";
 			return;
 		}
 
@@ -158,14 +151,14 @@ class Person
 		// Make sure the city is not empty.
 		if (empty($city))
 		{
-			echo "ERROR: The city can not be empty";
+			echo "ERROR: The city can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of the city is less than CITY_LENGTH.
 		if ($this->getLength($city) > self::CITY_LENGTH)
 		{
-			echo "Length of city name must not be greater than " . self::CITY_LENGTH;
+			echo "Length of city name must not be greater than " . self::CITY_LENGTH . "\n";
 			return;
 		}
 
@@ -192,14 +185,14 @@ class Person
 		// Make sure the province is not empty.
 		if (empty($province))
 		{
-			echo "ERROR: The province can not be empty";
+			echo "ERROR: The province can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of the province is less than PROVINCE_LENGTH.
 		if ($this->getLength($province) > self::PROVINCE_LENGTH)
 		{
-			echo "Length of province must not be greater than " . self::PROVINCE_LENGTH;
+			echo "Length of province must not be greater than " . self::PROVINCE_LENGTH . "\n";
 			return;
 		}
 
@@ -223,16 +216,16 @@ class Person
 	public function setPostalCode($postalCode)
 	{
 		// Make sure the postal code is not empty.
-		if (!isset($postalCode))
+		if (empty($name))
 		{
-			echo "ERROR: The postal code can not be empty (${postalCode}).";
+			echo "ERROR: The postal code can not be empty.\n";
 			return;
 		}
 
 		// Make sure the length of the postal code is not greater than POSTAL_CODE_LENGTH.
 		if ($this->getLength($postalCode) > self::POSTAL_CODE_LENGTH)
 		{
-			echo "Length of postal code(${postalCode}) must not be greater than " . self::POSTAL_CODE_LENGTH;
+			echo "Length of postal code must not be greater than " . self::POSTAL_CODE_LENGTH . "\n";
 			return;
 		}
 
@@ -267,26 +260,4 @@ class Person
 	{
 		return strlen((string)$object);
 	}
-
-	public function __toString()
-	{
-		$f = '{"number":' . $this->getNumber() . ', ' . '"name":"' . $this->getName() . '", ' . '"street_address":"' . $this->getStreet() . '", ' . '"city":"' . $this->getCity() . '", ' . '"province":"' . $this->getProvince() . '", ' . '"postal_code":"' . $this->getPostalCode() . '", ' . '"email_address":"' . $this->getEmail() . '", ' . '"status":"' . null . '", ';
-		$f .= '}, ';
-
-		return $f;
-	}
-
-	public function fromString($json)
-	{
-		$d = json_decode($json, true);
-
-		$this->setNumber($d["number"]);
-		$this->setName($d["name"]);
-		$this->setStreet($d["street_address"]);
-		$this->setCity($d["city"]);
-		$this->setProvince(($d["province"]));
-		$this->setPostalCode($d["postal_code"]);
-		$this->setEmail($d["email_address"]);
-	}
-
 }

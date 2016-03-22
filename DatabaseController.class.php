@@ -17,6 +17,28 @@ class DatabaseController
 	private static $initialized = false;
 	private static $db;
 
+	// Provider field names as stored in database.
+	const PROVIDER          = "provider";
+	const PROVIDER_NUMBER   = "provider_number";
+	const PROVIDER_NAME     = "provider_name";
+	const PROVIDER_STREET   = "provider_street_address";
+	const PROVIDER_CITY     = "provider_city";
+	const PROVIDER_PROVINCE = "provider_province";
+	const PROVIDER_POSTAL   = "provider_postal_code";
+	const PROVIDER_EMAIL    = "provider_email_address";
+	const PROVIDER_TYPE     = "provider_type";
+
+	// Member field names as stored in database.
+	const MEMBER          = "member";
+	const MEMBER_NUMBER   = "member_number";
+	const MEMBER_NAME     = "member_name";
+	const MEMBER_STREET   = "member_street_address";
+	const MEMBER_CITY     = "member_city";
+	const MEMBER_PROVINCE = "member_province";
+	const MEMBER_POSTAL   = "member_postal_code";
+	const MEMBER_EMAIL    = "member_email_address";
+	const MEMBER_STATUS   = "member_status";
+
 	private static function initialize()
 	{
 		if (self::$initialized)
@@ -156,4 +178,5 @@ class DatabaseController
 
 		return false;
 	}
+}
 }

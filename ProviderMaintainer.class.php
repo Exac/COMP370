@@ -21,9 +21,12 @@ class ProviderMaintainer extends PersonMaintainer
 
 	}
 	
-	public function editProvider()
+	public function editProvider($number)
 	{
-		
+		$providers = new Providers();
+
+		$providers->find($number);
+
 	}
 	
 	public function getValidType()
@@ -31,7 +34,7 @@ class ProviderMaintainer extends PersonMaintainer
 		
 	}
 	
-	public function deleteProvider()
+	public function deleteProvider($number)
 	{
 		
 	}
