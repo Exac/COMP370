@@ -103,6 +103,7 @@ body.interface #providerID {
         padding: 1.5em 0.5em;
         left: auto;
         right: 0;
+        display: none;
     }
 }
 
@@ -153,4 +154,29 @@ body.interface #providerID {
     font-weight: 400;
     font-size: 0.875em;
     text-transform: uppercase;
+}
+
+/**
+ * PROVIDER BAR
+ */
+#lookup_provider_directory {
+    position: fixed;
+    background-color: rgba(203, 203, 203, 0.5);
+    /*color:rgba(230, 255, 230, 0.65);*/
+    color: rgba(29, 42, 42, 0.5);
+    border-radius: 2px;
+    right: 0.5em;
+    top: 1em;
+    line-height: 2em;
+    cursor: pointer;
+    /*font-weight:700;*/
+    font-family: "Lato", sans-serif;
+    font-size: 0.875em;
+    /*text-transform: uppercase;*/
+    padding: 0 0.25em;
+}
+
+#lookup_provider_directory:hover {
+    background-color: rgba(103, 103, 103, 0.6);
+    color: black;
 }

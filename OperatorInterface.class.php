@@ -21,6 +21,8 @@ class OperatorInterface
 	{
 		$this->ui->bodyId = "operatorinterface";
 		array_push($this->ui->stylesheets, "cdn/css/operator.css");
+
+		$this->ui->add("<h1>ChocAn Data Center Interactive Mode</h1>");
 		$this->ui->add("<form method='get' action=''>");
 
 		//MEMBER's fieldset

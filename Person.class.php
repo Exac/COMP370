@@ -61,7 +61,7 @@ class Person
 		// Make sure the length is equal to NUMBER_LENGTH.
 		if (!($this->getLength($number) === self::NUMBER_LENGTH))
 		{
-			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . "(" . $this->getLength($number) . ")\n";
+			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . " (getLength:" . $this->getLength($number) . ")\n(number:" . $number . ")";
 			return;
 		}
 

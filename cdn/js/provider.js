@@ -8,7 +8,11 @@
  */
 function removePMV(pmv_element) {
     if (/invalid/.test(pmv_element.className)) {
-        reload();
+        emergency_reload();
+        setTimeout(function () {
+            alert("failed, reloading.");
+            reload();
+        }, 1640);
     } else {
         pmv_element.remove();
     }
@@ -40,6 +44,23 @@ function reload() {
     window.location = window.location.href;
 }
 /**
+ * If we can reload to same page we will.
+ */
+function emergency_reload() {
+    var ptp = document.getElementById("provider_theProvider");
+    if (ptp) {
+        ptp.id = "provider_password";
+        ptp.name = "provider_password";
+
+        var pin = document.getElementById("provider_invalid");
+
+        pin.submit();
+    } else {
+        console.log(ptp);
+        console.log("failed to select ptp or pmv");
+    }
+}
+/**
  * Entry point for error display.
  */
 function initProvider() {
@@ -68,4 +89,40 @@ function initProvider() {
 }
 
 initProvider();
+
+/**
+ *
+ * @param nu number
+ * @param width Number of chars to pad until.
+ * @param z char to pad with (default 0)
+ * @returns {string}
+ */
+function pad(nu, width, z) {
+    if (nu.toString().length <= width) {
+        z = z || '0';
+        nu = nu + '';
+        return nu.length >= width ? nu : new Array(width - nu.length + 1).join(z) + nu;
+    } else {
+        return pad(parseInt(nu, 10).toString().substr(0, width), width, z);
+    }
+}
+function personEnter(key) {
+    if (key.keyCode == 13) {
+        key.target.value = pad(key.target.value, 9, 0);
+    }
+}
+function personBlurred(blur) {
+    blur.target.value = pad(blur.target.value, 9, 0);
+}
+function padPersonNumbers(element, index, array) {
+    if (element) {
+        element.addEventListener("blur", personBlurred);
+        element.form.addEventListener("submit", personBlurred);
+        element.addEventListener("keydown", personEnter);
+    }
+}
+
+[document.getElementById("provider_password"),
+    document.getElementById("provider_verify_member")].forEach(padPersonNumbers);
+
 

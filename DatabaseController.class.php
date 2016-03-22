@@ -138,8 +138,9 @@ class DatabaseController
 		self::initialize();
 
 		$provider_number = mysql_real_escape_string($provider_number);
+		$rows = self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
 
-		return self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
+		return $rows;
 	}
 
 	public static function findProvider($term)
@@ -171,6 +172,22 @@ class DatabaseController
 		foreach ($rows as &$row)
 		{
 			if (isset($row["member_number"]))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static function providerExists($provider_number)
+	{
+		self::initialize();
+
+		$rows = self::$db->select("SELECT provider_number FROM provider WHERE provider_number = " . $provider_number);
+		foreach ($rows as &$row)
+		{
+			if (isset($row["provider_number"]))
 			{
 				return true;
 			}
