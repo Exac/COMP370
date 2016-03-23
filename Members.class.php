@@ -242,17 +242,17 @@ class Members extends Persons
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->members;
 	}
 
-	public function add($member)
+	public function add(Member $member)
 	{
 		#TODO: Add functionality to DatabaseController first
 	}
 
-	public function update()
+	public function update(Member $member)
 	{
 		#TODO: Add functionality to Database controller first
 	}
 
-	public function delete()
+	public function delete(Member $member)
 	{
 		#TODO: Add functionality to Database controller first
 	}
