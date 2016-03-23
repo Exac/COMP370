@@ -26,6 +26,11 @@ class Members extends Persons
 
 	// Displayed when a provider is not found.
 	const NOT_FOUND_MESSAGE = "ERROR: No member found<br>";
+	const ADD_SUCCESSFUL    = "Member added<br>";
+	const UPDATE_SUCCESSFUL = "Member updated<br>";
+	const ADD_FAIL          = "Member can not be added<br>";
+	const UPDATE_FAIL       = "Member can not be updated<br>";
+
 
 	public function __construct()
 	{
@@ -244,13 +249,13 @@ class Members extends Persons
 
 	public function add(Member $member)
 	{
-		/*$result =*/ DatabaseController::addProvider(
-					$member->getNumber(),   $member->getName(),
-					$member->getStreet(),   $member->getCity(),
-					$member->getProvince(), $member->getPostalCode(),
-					$member->getEmail(),    $member->getStatus());
+		$result = DatabaseController::addMember(
+			$member->getNumber(),   $member->getName(),
+			$member->getStreet(),   $member->getCity(),
+			$member->getProvince(), $member->getPostalCode(),
+			$member->getEmail(),    $member->getStatus());
 
-		//return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
+		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
 
 		#TODO: Implement DatabaseController
 	}
@@ -260,25 +265,25 @@ class Members extends Persons
 		// Check if the member exists in the database first.
 		if (!$this->MemberExists($member->getNumber())) return self::NOT_FOUND_MESSAGE;
 
-		/*$result =*/ DatabaseController::updateMember(
-		$member->getNumber(),   $member->getName(),
-		$member->getStreet(),   $member->getCity(),
-		$member->getProvince(), $member->getPostalCode(),
-		$member->getEmail(),    $member->getStatus());
+		$result = DatabaseController::updateMember(
+			$member->getNumber(),   $member->getName(),
+			$member->getStreet(),   $member->getCity(),
+			$member->getProvince(), $member->getPostalCode(),
+			$member->getEmail(),    $member->getStatus());
 
-		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
 
 		#TODO: Implement DatabaseController
 	}
 
-	public function delete(Member $memberNumber)
+	public function delete($memberNumber)
 	{
 		// Check if the member exists in the database first.
 		if (!$this->MemberExists($memberNumber)) return self::NOT_FOUND_MESSAGE;
 
-		/*$result =*/ DatabaseController::deleteProvider($memberNumber);
+		$result = DatabaseController::deleteMember($memberNumber);
 
-		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
 
 		#TODO: Implement DatabaseController
 	}

@@ -35,143 +35,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Providers.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Providers.class.php">
+      <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="13.269231">
-              <caret line="276" column="35" selection-start-line="276" selection-start-column="35" selection-end-line="276" selection-end-column="35" />
+            <state vertical-scroll-proportion="-12.961538">
+              <caret line="248" column="40" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
               <folding>
-                <marker date="1458704096841" expanded="true" signature="7929:8066" placeholder="..." />
-                <marker date="1458704096841" expanded="true" signature="7933:8066" placeholder="..." />
+                <element signature="e#6#85#0#PHP" expanded="true" />
+                <marker date="1458714881365" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
+                <marker date="1458714881365" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
+                <marker date="1458714881365" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
+                <marker date="1458714881365" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
+                <marker date="1458714881365" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
+                <marker date="1458714881365" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
+                <marker date="1458714881365" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
+                <marker date="1458714881365" expanded="true" signature="3876:3919" placeholder="SELECT * FRO... member" />
+                <marker date="1458714881365" expanded="true" signature="4123:4170" placeholder="SELECT * FRO... provider" />
+                <marker date="1458714881365" expanded="true" signature="4314:4659" placeholder="Select * fro... provider" />
+                <marker date="1458714881365" expanded="true" signature="4763:5092" placeholder="Select * fro... member" />
+                <marker date="1458714881365" expanded="true" signature="5199:5279" placeholder="select Auto_... tables" />
+                <marker date="1458714881365" expanded="true" signature="5416:5471" placeholder="SELECT membe... member" />
+                <marker date="1458714881365" expanded="true" signature="5724:5785" placeholder="SELECT provi... provider" />
+                <marker date="1458714881365" expanded="true" signature="6071:6526" placeholder="INSERT INTO ${self::PROVIDER}... " />
+                <marker date="1458714881365" expanded="true" signature="6713:7150" placeholder="INSERT INTO ${self::MEMBER}... " />
+                <marker date="1458714881365" expanded="true" signature="7256:7343" placeholder="DELETE FROM " />
+                <marker date="1458714881365" expanded="true" signature="7449:7540" placeholder="DELETE FROM " />
+                <marker date="1458714881365" expanded="true" signature="8843:8888" placeholder="SELECT * FRO... ${self::SERVICE}" />
+                <marker date="1458714881365" expanded="true" signature="9002:9097" placeholder="INSERT INTO ${self::SERVICE}... " />
+                <marker date="1458714881365" expanded="true" signature="9180:9250" placeholder="DELETE FROM " />
+                <marker date="1458714881365" expanded="true" signature="9337:9380" placeholder="SELECT * FRO... ${self::CLAIM}" />
+                <marker date="1458714881365" expanded="true" signature="9549:9740" placeholder="INSERT INTO ${self::SERVICE}... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Members.class.php">
+      <file leaf-file-name="Providers.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Providers.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.884615">
-              <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.9615386">
+              <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+      <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Members.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.747182">
-              <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
-              <folding>
-                <marker date="1458707432016" expanded="true" signature="2050:2104" placeholder="SELECT membe... member" />
-                <marker date="1458707432016" expanded="true" signature="2421:2464" placeholder="select * fro... member" />
-                <marker date="1458707432016" expanded="true" signature="2915:2980" placeholder="select * fro... member" />
-                <marker date="1458707432016" expanded="true" signature="3086:3131" placeholder="SELECT membe... member" />
-                <marker date="1458707432016" expanded="true" signature="3233:3276" placeholder="SELECT * FRO... member" />
-                <marker date="1458707432016" expanded="true" signature="3384:3435" placeholder="SELECT provi... provider" />
-                <marker date="1458707432016" expanded="true" signature="3539:3586" placeholder="SELECT * FRO... provider" />
-                <marker date="1458707432016" expanded="true" signature="3841:3884" placeholder="SELECT * FRO... member" />
-                <marker date="1458707432016" expanded="true" signature="4077:4120" placeholder="SELECT * FRO... member" />
-                <marker date="1458707432016" expanded="true" signature="4279:4624" placeholder="Select * fro... provider" />
-                <marker date="1458707432016" expanded="true" signature="4324:4371" placeholder="SELECT * FRO... provider" />
-                <marker date="1458707432016" expanded="true" signature="4728:5057" placeholder="Select * fro... member" />
-                <marker date="1458707432016" expanded="true" signature="5164:5244" placeholder="select Auto_... tables" />
-                <marker date="1458707432016" expanded="true" signature="5381:5436" placeholder="SELECT membe... member" />
-                <marker date="1458707432016" expanded="true" signature="5689:5750" placeholder="SELECT provi... provider" />
-                <marker date="1458707432016" expanded="true" signature="6051:6063" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6090" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6097" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6098" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6113" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6115" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6120" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6125" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6130" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6131" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6132" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6147" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6148" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6149" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6165" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6166" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6167" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6184" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6185" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6193" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6198" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6199" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6200" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6214" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6215" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6216" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6229" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6051:6230" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6394:6574" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458707432016" expanded="true" signature="6658:6670" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6658:6698" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6658:6699" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6658:6700" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6658:6727" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6658:6728" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="6823:6894" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8278:8291" placeholder="SELECT * FRO... " />
-                <marker date="1458707432016" expanded="true" signature="8278:8292" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8278:8316" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8278:8319" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8278:8322" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8278:8323" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8278:8324" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458707432016" expanded="true" signature="8437:8449" placeholder="INSERT INTO ${selfS}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8480" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8481" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8482" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8483" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8496" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8497" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8498" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8526" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8528" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8549" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8550" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8437:8551" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="8633:8645" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8633:8675" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8633:8676" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8633:8677" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8633:8703" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8633:8704" placeholder="DELETE FROM " />
-                <marker date="1458707432016" expanded="true" signature="8790:8833" placeholder="SELECT * FRO... ${self::CLAIM}" />
-                <marker date="1458707432016" expanded="true" signature="9002:9014" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9047" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9048" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9068" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9069" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9070" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9105" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9106" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9107" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9145" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9146" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9147" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9173" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9174" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9175" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9201" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9202" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9203" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9229" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458707432016" expanded="true" signature="9002:9231" placeholder="INSERT INTO ${self::SERVICE}... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.461538">
-              <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.5072464">
+              <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -208,9 +121,9 @@
         <option value="$PROJECT_DIR$/Provider.class.php" />
         <option value="$PROJECT_DIR$/Member.class.php" />
         <option value="$PROJECT_DIR$/Persons.class.php" />
-        <option value="$PROJECT_DIR$/Members.class.php" />
-        <option value="$PROJECT_DIR$/Providers.class.php" />
         <option value="$PROJECT_DIR$/DatabaseController.class.php" />
+        <option value="$PROJECT_DIR$/Providers.class.php" />
+        <option value="$PROJECT_DIR$/Members.class.php" />
       </list>
     </option>
   </component>
@@ -282,7 +195,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,6 +229,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,12 +306,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00062" summary="operator interface, something like this??">
-      <created>1458350704344</created>
-      <option name="number" value="00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1458350704344</updated>
     </task>
     <task id="LOCAL-00063" summary="operator interface, something like this??">
       <created>1458350797407</created>
@@ -688,7 +595,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458699571045</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Added editing functionality to DatabaseController class">
+      <created>1458707468434</created>
+      <option name="number" value="00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1458707468434</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -697,7 +610,6 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -706,6 +618,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -772,7 +685,8 @@
     <MESSAGE value="Persons, Providers and Members implemented; Comments still needed" />
     <MESSAGE value="Persons, Providers and Members implemented; Comments added" />
     <MESSAGE value="DatabaseController class completely hidden now. Access database through Persons, Members and Providers classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="DatabaseController class completely hidden now. Access database through Persons, Members and Providers classes." />
+    <MESSAGE value="Added editing functionality to DatabaseController class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added editing functionality to DatabaseController class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1072,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46537843">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,19 +1004,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Persons.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-171.3077">
-          <caret line="262" column="83" selection-start-line="262" selection-start-column="83" selection-end-line="262" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Claim.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-68.0">
           <caret line="107" column="61" selection-start-line="107" selection-start-column="61" selection-end-line="107" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,141 +1015,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153">
           <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Database.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.461538">
+        <state vertical-scroll-proportion="1.9436393">
           <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Persons.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.961538">
+          <caret line="248" column="40" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <marker date="1458714881365" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
+            <marker date="1458714881365" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
+            <marker date="1458714881365" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
+            <marker date="1458714881365" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
+            <marker date="1458714881365" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
+            <marker date="1458714881365" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
+            <marker date="1458714881365" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
+            <marker date="1458714881365" expanded="true" signature="3876:3919" placeholder="SELECT * FRO... member" />
+            <marker date="1458714881365" expanded="true" signature="4123:4170" placeholder="SELECT * FRO... provider" />
+            <marker date="1458714881365" expanded="true" signature="4314:4659" placeholder="Select * fro... provider" />
+            <marker date="1458714881365" expanded="true" signature="4763:5092" placeholder="Select * fro... member" />
+            <marker date="1458714881365" expanded="true" signature="5199:5279" placeholder="select Auto_... tables" />
+            <marker date="1458714881365" expanded="true" signature="5416:5471" placeholder="SELECT membe... member" />
+            <marker date="1458714881365" expanded="true" signature="5724:5785" placeholder="SELECT provi... provider" />
+            <marker date="1458714881365" expanded="true" signature="6071:6526" placeholder="INSERT INTO ${self::PROVIDER}... " />
+            <marker date="1458714881365" expanded="true" signature="6713:7150" placeholder="INSERT INTO ${self::MEMBER}... " />
+            <marker date="1458714881365" expanded="true" signature="7256:7343" placeholder="DELETE FROM " />
+            <marker date="1458714881365" expanded="true" signature="7449:7540" placeholder="DELETE FROM " />
+            <marker date="1458714881365" expanded="true" signature="8843:8888" placeholder="SELECT * FRO... ${self::SERVICE}" />
+            <marker date="1458714881365" expanded="true" signature="9002:9097" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458714881365" expanded="true" signature="9180:9250" placeholder="DELETE FROM " />
+            <marker date="1458714881365" expanded="true" signature="9337:9380" placeholder="SELECT * FRO... ${self::CLAIM}" />
+            <marker date="1458714881365" expanded="true" signature="9549:9740" placeholder="INSERT INTO ${self::SERVICE}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Providers.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9615386">
+          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Members.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.884615">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5072464">
+          <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Providers.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.269231">
-          <caret line="276" column="35" selection-start-line="276" selection-start-column="35" selection-end-line="276" selection-end-column="35" />
-          <folding>
-            <marker date="1458704096841" expanded="true" signature="7929:8066" placeholder="..." />
-            <marker date="1458704096841" expanded="true" signature="7933:8066" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.747182">
-          <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
-          <folding>
-            <marker date="1458707432016" expanded="true" signature="2050:2104" placeholder="SELECT membe... member" />
-            <marker date="1458707432016" expanded="true" signature="2421:2464" placeholder="select * fro... member" />
-            <marker date="1458707432016" expanded="true" signature="2915:2980" placeholder="select * fro... member" />
-            <marker date="1458707432016" expanded="true" signature="3086:3131" placeholder="SELECT membe... member" />
-            <marker date="1458707432016" expanded="true" signature="3233:3276" placeholder="SELECT * FRO... member" />
-            <marker date="1458707432016" expanded="true" signature="3384:3435" placeholder="SELECT provi... provider" />
-            <marker date="1458707432016" expanded="true" signature="3539:3586" placeholder="SELECT * FRO... provider" />
-            <marker date="1458707432016" expanded="true" signature="3841:3884" placeholder="SELECT * FRO... member" />
-            <marker date="1458707432016" expanded="true" signature="4077:4120" placeholder="SELECT * FRO... member" />
-            <marker date="1458707432016" expanded="true" signature="4279:4624" placeholder="Select * fro... provider" />
-            <marker date="1458707432016" expanded="true" signature="4324:4371" placeholder="SELECT * FRO... provider" />
-            <marker date="1458707432016" expanded="true" signature="4728:5057" placeholder="Select * fro... member" />
-            <marker date="1458707432016" expanded="true" signature="5164:5244" placeholder="select Auto_... tables" />
-            <marker date="1458707432016" expanded="true" signature="5381:5436" placeholder="SELECT membe... member" />
-            <marker date="1458707432016" expanded="true" signature="5689:5750" placeholder="SELECT provi... provider" />
-            <marker date="1458707432016" expanded="true" signature="6051:6063" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6090" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6097" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6098" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6113" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6115" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6120" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6125" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6130" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6131" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6132" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6147" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6148" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6149" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6165" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6166" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6167" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6184" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6185" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6193" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6198" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6199" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6200" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6214" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6215" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6216" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6229" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6051:6230" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6394:6574" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458707432016" expanded="true" signature="6658:6670" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6658:6698" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6658:6699" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6658:6700" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6658:6727" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6658:6728" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="6823:6894" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8278:8291" placeholder="SELECT * FRO... " />
-            <marker date="1458707432016" expanded="true" signature="8278:8292" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8278:8316" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8278:8319" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8278:8322" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8278:8323" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8278:8324" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458707432016" expanded="true" signature="8437:8449" placeholder="INSERT INTO ${selfS}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8480" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8481" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8482" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8483" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8496" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8497" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8498" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8526" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8528" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8549" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8550" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8437:8551" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="8633:8645" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8633:8675" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8633:8676" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8633:8677" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8633:8703" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8633:8704" placeholder="DELETE FROM " />
-            <marker date="1458707432016" expanded="true" signature="8790:8833" placeholder="SELECT * FRO... ${self::CLAIM}" />
-            <marker date="1458707432016" expanded="true" signature="9002:9014" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9047" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9048" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9068" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9069" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9070" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9105" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9106" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9107" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9145" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9146" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9147" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9173" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9174" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9175" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9201" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9202" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9203" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9229" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458707432016" expanded="true" signature="9002:9231" placeholder="INSERT INTO ${self::SERVICE}... " />
-          </folding>
         </state>
       </provider>
     </entry>

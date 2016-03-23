@@ -245,10 +245,10 @@ class Providers extends Persons
 	public function add(Provider $provider)
 	{
 		/*$result =*/ DatabaseController::addProvider(
-					$provider->getNumber(),   $provider->getName(),
-					$provider->getStreet(),   $provider->getCity(),
-					$provider->getProvince(), $provider->getPostalCode(),
-					$provider->getEmail(),    $provider->getType());
+		$provider->getNumber(),   $provider->getName(),
+		$provider->getStreet(),   $provider->getCity(),
+		$provider->getProvince(), $provider->getPostalCode(),
+		$provider->getEmail(),    $provider->getType());
 
 		//return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
 
@@ -260,13 +260,13 @@ class Providers extends Persons
 		// Check if the provider exists in the database first.
 		if (!$this->providerExists($provider->getNumber())) return self::NOT_FOUND_MESSAGE;
 
-		/*$result =*/ DatabaseController::updateProvider(
-					$provider->getNumber(),   $provider->getName(),
-					$provider->getStreet(),   $provider->getCity(),
-					$provider->getProvince(), $provider->getPostalCode(),
-					$provider->getEmail(),    $provider->getType());
+		$result = DatabaseController::updateProvider(
+			$provider->getNumber(),   $provider->getName(),
+			$provider->getStreet(),   $provider->getCity(),
+			$provider->getProvince(), $provider->getPostalCode(),
+			$provider->getEmail(),    $provider->getType());
 
-		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
 
 		#TODO: Implement DatabaseController
 	}
@@ -276,9 +276,9 @@ class Providers extends Persons
 		// Check if the provider exists in the database first.
 		if (!$this->providerExists($providerNumber)) return self::NOT_FOUND_MESSAGE;
 
-		/*$result =*/ DatabaseController::deleteProvider($providerNumber);
+		$result = DatabaseController::deleteProvider($providerNumber);
 
-		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
 
 		#TODO: Add functionality to Database controller first
 	}

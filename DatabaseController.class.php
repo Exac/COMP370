@@ -17,6 +17,8 @@ class DatabaseController
 	private static $initialized = false;
 	private static $db;
 
+	const DATABASE_NAME = "COMP370";
+
 	// Database names
 	const PROVIDER = "provider";
 	const MEMBER   = "member";
@@ -214,9 +216,18 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->query("INSERT INTO " . self::PROVIDER .
-			" Values (" . $number . ", " . "$name" . ", " . $street . ", " . $city
-			. ", " . $province . ", $postal" . ", " . $email . ", " . $type . ")");
+		$query = "INSERT INTO ". self::PROVIDER ." (".
+			self::PROVIDER_NUMBER   .", ". self::PROVIDER_NAME   .", ".
+			self::PROVIDER_STREET   .", ". self::PROVIDER_CITY   .", ".
+			self::PROVIDER_PROVINCE .", ". self::PROVIDER_POSTAL .", ".
+			self::PROVIDER_EMAIL    .", ". self::PROVIDER_TYPE   .") ".
+
+			"VALUES ('" . $number   ."', '". $name   ."', '".
+			$street   ."', '". $city   ."', '".
+			$province ."', '". $postal ."', '".
+			$email    ."', '". $type   ."')  ";
+
+		return self::$db->query($query);
 
 	}
 
@@ -224,33 +235,46 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->query("INSERT INTO " . self::PROVIDER .
-			" Values (" . $number . ", " . "$name" . ", " . $street . ", " . $city
-			. ", " . $province . ", $postal" . ", " . $email . ", " . $status . ")");
+		$query = "INSERT INTO ". self::MEMBER ." (".
+			self::MEMBER_NUMBER   .", ". self::MEMBER_NAME   .", ".
+			self::MEMBER_STREET   .", ". self::MEMBER_CITY   .", ".
+			self::MEMBER_PROVINCE .", ". self::MEMBER_POSTAL .", ".
+			self::MEMBER_EMAIL    .", ". self::MEMBER_STATUS .") ".
+
+			"VALUES ('" . $number   ."', '". $name   ."', '".
+			$street   ."', '". $city   ."', '".
+			$province ."', '". $postal ."', '".
+			$email    ."', '". $status ."')  ";
+
+		return self::$db->query($query);
 	}
 
 	public static function deleteMember($number)
 	{
-		return self::$db->query("DELETE FROM " . self::MEMBER .
-			"WHERE " . self::MEMBER_NUMBER . "=" . $number);
+		$query = "DELETE FROM ". self::MEMBER .
+			" WHERE " 	   . self::MEMBER_NUMBER ."='". $number ."'";
+
+		return self::$db->query($query);
 	}
 
 	public static function deleteProvider($number)
 	{
-		return self::$db->query("DELETE FROM " . self::MEMBER .
-			"WHERE " . self::PROVIDER_NUMBER . "=" . $number);
+		$query = "DELETE FROM ". self::PROVIDER .
+			" WHERE " 	   . self::PROVIDER_NUMBER ."='". $number ."'";
+
+		return self::$db->query($query);
 	}
 
 	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
 		return self::$db->query("UPDATE " . self::PROVIDER .
 			" SET " . self::PROVIDER_NAME     . "=" . $name     . ", "
-		            . self::PROVIDER_STREET   . "=" . $street   . ", "
-		            . self::PROVIDER_CITY     . "=" . $city     . ", "
-		            . self::PROVIDER_PROVINCE . "=" . $province . ", "
-			        . self::PROVIDER_POSTAL   . "=" . $postal   . ", "
-			        . self::PROVIDER_EMAIL    . "=" . $email    . ", "
-			        . self::PROVIDER_TYPE     . "=" . $type     .
+			. self::PROVIDER_STREET   . "=" . $street   . ", "
+			. self::PROVIDER_CITY     . "=" . $city     . ", "
+			. self::PROVIDER_PROVINCE . "=" . $province . ", "
+			. self::PROVIDER_POSTAL   . "=" . $postal   . ", "
+			. self::PROVIDER_EMAIL    . "=" . $email    . ", "
+			. self::PROVIDER_TYPE     . "=" . $type     .
 			" WHERE " . self::PROVIDER_NUMBER . "=" . $number);
 	}
 
@@ -258,12 +282,12 @@ class DatabaseController
 	{
 		return self::$db->query("UPDATE " . self::MEMBER .
 			" SET " . self::MEMBER_NAME     . "=" . $name     . ", "
-			        . self::MEMBER_STREET   . "=" . $street   . ", "
-			        . self::MEMBER_CITY     . "=" . $city     . ", "
-		 	        . self::MEMBER_PROVINCE . "=" . $province . ", "
-			        . self::MEMBER_POSTAL   . "=" . $postal   . ", "
-			        . self::MEMBER_EMAIL    . "=" . $email    . ", "
-			        . self::MEMBER_STATUS   . "=" . $type     .
+			. self::MEMBER_STREET   . "=" . $street   . ", "
+			. self::MEMBER_CITY     . "=" . $city     . ", "
+			. self::MEMBER_PROVINCE . "=" . $province . ", "
+			. self::MEMBER_POSTAL   . "=" . $postal   . ", "
+			. self::MEMBER_EMAIL    . "=" . $email    . ", "
+			. self::MEMBER_STATUS   . "=" . $type     .
 			" WHERE " . self::MEMBER_NUMBER . "=" . $number);
 	}
 
@@ -276,8 +300,8 @@ class DatabaseController
 	{
 		return self::$db->query("INSERT INTO " . self::SERVICE .
 			" VALUES (" . $code . ", "
-			            . $name . ", "
-					    . $fee  . ")");
+			. $name . ", "
+			. $fee  . ")");
 	}
 
 	public static function deleteService($code)
@@ -296,11 +320,11 @@ class DatabaseController
 	{
 		return self::$db->query("INSERT INTO " . self::SERVICE .
 			" VALUES (" . $subDate     . ", "
-			            . $servCode    . ", "
-		                . $providerNum . ", "
-						. $memberNum   . ", "
-						. $servDate    . ", "
-						. $comments    . ", ");
+			. $servCode    . ", "
+			. $providerNum . ", "
+			. $memberNum   . ", "
+			. $servDate    . ", "
+			. $comments    . ", ");
 	}
 
 	public static function deleteClaim($submissionDate, $member, $provider)
