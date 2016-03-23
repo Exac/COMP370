@@ -238,8 +238,16 @@ class Providers extends Persons
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
-	public function add($member)
+	public function add(Provider $provider)
 	{
+		$provider->getNumber();
+		$provider->getName();
+		$provider->getStreet();
+		$provider->getCity();
+		$provider->getProvince();
+		$provider->getPostalCode();
+		$provider->getType();
+
 		#TODO: Add functionality to DatabaseController first
 	}
 

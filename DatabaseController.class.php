@@ -17,8 +17,13 @@ class DatabaseController
 	private static $initialized = false;
 	private static $db;
 
+	// Database names
+	const PROVIDER = "provider";
+	const MEMBER   = "member";
+	const CLAIM    = "claim";
+	const SERVICE  = "service";
+
 	// Provider field names as stored in database.
-	const PROVIDER          = "provider";
 	const PROVIDER_NUMBER   = "provider_number";
 	const PROVIDER_NAME     = "provider_name";
 	const PROVIDER_STREET   = "provider_street_address";
@@ -29,7 +34,6 @@ class DatabaseController
 	const PROVIDER_TYPE     = "provider_type";
 
 	// Member field names as stored in database.
-	const MEMBER          = "member";
 	const MEMBER_NUMBER   = "member_number";
 	const MEMBER_NAME     = "member_name";
 	const MEMBER_STREET   = "member_street_address";
@@ -38,6 +42,16 @@ class DatabaseController
 	const MEMBER_POSTAL   = "member_postal_code";
 	const MEMBER_EMAIL    = "member_email_address";
 	const MEMBER_STATUS   = "member_status";
+
+	// Service field names as stored in database.
+	const SERVICE_CODE = "service_code";
+	const SERVICE_NAME = "service_name";
+	const SERVICE_FEE  = "service_fee";
+
+	// Claim field names as stored in database.
+	const SUBMISSION_DATE_TIME = "submission_date_and_time";
+	const SERVICE_DATE         = "service_date";
+	const COMMENTS             = "comments";
 
 	private static function initialize()
 	{
@@ -195,4 +209,58 @@ class DatabaseController
 
 		return false;
 	}
+
+
+	##### TODO: Navi working on the following #####
+
+	public static function addProvider($number, $name, $street, $city, $province, $postal, $email, $type)
+	{
+
+	}
+
+	public static function addMember($number, $name, $street, $city, $province, $postal, $email, $type)
+	{
+
+	}
+
+	public static function deleteMember($number)
+	{
+
+	}
+
+	public static function deleteProvider($number)
+	{
+
+	}
+
+	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
+	{
+
+	}
+
+	public static function updateMember($number, $name, $street, $city, $province, $postal, $email, $type)
+	{
+
+	}
+
+	public static function getAllClaims()
+	{
+
+	}
+
+	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
+	{
+
+	}
+
+	public static function getAllServices()
+	{
+
+	}
+
+	public static function addService($code, $name, $fee)
+	{
+
+	}
+
 }
