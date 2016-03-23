@@ -1,5 +1,7 @@
 <?php
 /**
+ *  ************************  USE THIS CLASS TO GET TO DATABASE ************************
+ *
  * Class Providers
  * @date 10-3-2016
  *
@@ -16,7 +18,7 @@
  *	getSize()						Number of providers.
  *	isEmpty() 						True if no elements exist, false otherwise.
  */
-class Providers
+class Providers extends Persons
 {
 	private $providers;	// Array of providers.
 	private $size = 0;	// Size of providers array.
@@ -26,16 +28,14 @@ class Providers
 
 	public function __construct()
 	{
+		parent::__construct();
 		$this->providers = new SplObjectStorage();
 	}
 
-	/**
-	 * Find a provider by number.
-	 * @param $number
-	 * @return string
-	 */
+
 	public function findByNumber($number)
 	{
+		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
@@ -56,19 +56,20 @@ class Providers
 
 			$this->providers->next();
 		}
-
 		$this->providers = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
 	/**
-	 * Find providers with their name.
+	 * Get all the provider in a specific city.
 	 * @param $name
 	 * @return string
+	 * @internal param $city
 	 */
 	public function findByName($name)
 	{
+		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
@@ -89,7 +90,6 @@ class Providers
 
 			$this->providers->next();
 		}
-
 		$this->providers = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
@@ -102,6 +102,7 @@ class Providers
 	 */
 	public function findByCity($city)
 	{
+		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
@@ -122,7 +123,6 @@ class Providers
 
 			$this->providers->next();
 		}
-
 		$this->providers = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
@@ -135,6 +135,7 @@ class Providers
 	 */
 	public function findByType($type)
 	{
+		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
@@ -155,7 +156,6 @@ class Providers
 
 			$this->providers->next();
 		}
-
 		$this->providers = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
@@ -168,6 +168,7 @@ class Providers
 	 */
 	public function findByProvince($province)
 	{
+		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
 
@@ -188,7 +189,6 @@ class Providers
 
 			$this->providers->next();
 		}
-
 		$this->providers = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
@@ -196,9 +196,22 @@ class Providers
 
 	/**
 	 * Get all the providers and store them in '$this->providers' SplObjectStorage.
+	 * Call 'Person.class' functions on the returned object to get all the fields.
+	 *
+	 * Example 	$persons = new Members();
+	 * 			$members = $persons->getAll();
+	 *
+	 * 			$members->rewind();
+	 * 			while ($members->valid())
+	 * 			{
+	 * 				echo $members->current()->getName();
+	 * 				$members->next()
+	 * 			}
 	 */
 	public function getAll()
 	{
+		$this->providers = new SplObjectStorage();
+
 		$databaseProviders = DatabaseController::selectProviders();
 
 		$size = count($databaseProviders);
@@ -225,48 +238,28 @@ class Providers
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
-	/**
-	 * Add a new provider.
-	 * @param $provider
-	 */
-	public function add(Provider $provider)
+	public function add($member)
 	{
 		#TODO: Add functionality to DatabaseController first
 	}
 
-	/**
-	 * Update an existing provider.
-	 * @param $provider
-	 */
-	public function update(Provider $provider)
+	public function update()
+	{
+		#TODO: Add functionality to Database controller first
+	}
+
+	public function delete()
 	{
 		#TODO: Add functionality to Database controller first
 	}
 
 	/**
-	 * Delete an existing provider.
-	 * @param $provider
-	 */
-	public function delete(Provider $provider)
-	{
-		#TODO: Add functionality to Database controller first
-	}
-
-	/**
-	 * The size of providers array.
+	 * Size of members array.
 	 * @return int
 	 */
 	public function getSize()
 	{
 		return $this->size;
-	}
-
-	/**
-	 * Set the size of providers array.
-	 */
-	private function setSize()
-	{
-		$this->size = count($this->providers);
 	}
 
 	/**

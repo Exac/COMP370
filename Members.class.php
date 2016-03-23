@@ -1,6 +1,8 @@
 <?php
 include_once('Persons.class.php');
 /**
+ ************************  USE THIS CLASS TO GET TO DATABASE ************************
+ *
  * Members
  * @date 10-3-2016
  *
@@ -17,9 +19,9 @@ include_once('Persons.class.php');
  *	getSize()						Number of members.
  *	isEmpty() 						True if no elements exist, false otherwise.
  */
-class Members extends Persons 
+class Members extends Persons
 {
-	private $members;	// Members array
+	private $members; 	// Members array
 	private $size = 0;	// Size of members array.
 
 	// Displayed when a provider is not found.
@@ -27,6 +29,7 @@ class Members extends Persons
 
 	public function __construct()
 	{
+		parent::__construct();
 		$this->members = new SplObjectStorage();
 	}
 
@@ -197,29 +200,41 @@ class Members extends Persons
 	}
 
 	/**
-	 * Get all the members in database.
+	 * Get all the members in database. Stores them into a SplObjectStorage.
+	 * Call 'Person.class' functions to access all the fields.
+	 *
+	 * Example 	$persons = new Members();
+	 * 			$members = $persons->getAll();
+	 *
+	 * 			$members->rewind();
+	 * 			while ($members->valid())
+	 * 			{
+	 * 				echo $members->current()->getName();
+	 * 				$members->next()
+	 * 			}
 	 */
 	public function getAll()
 	{
-		$databaseMembers = DatabaseController::selectProviders();
+		$this->members = new SplObjectStorage();
+		$databaseMembers = DatabaseController::selectMembers();
 
 		$size = count($databaseMembers);
 
 		for ($i = 0; $i < $size; $i++)
 		{
-			$databaseProvider = $databaseMembers[$i];
+			$databaseMember = $databaseMembers[$i];
 
-			$provider = new Member($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+			$member = new Member($databaseMember[DatabaseController::MEMBER_NUMBER]);
 
-			$provider->setName($databaseProvider[DatabaseController::MEMBER_NAME]);
-			$provider->setStreet($databaseProvider[DatabaseController::MEMBER_STREET]);
-			$provider->setCity($databaseProvider[DatabaseController::MEMBER_CITY]);
-			$provider->setProvince($databaseProvider[DatabaseController::MEMBER_PROVINCE]);
-			$provider->setPostalCode($databaseProvider[DatabaseController::MEMBER_POSTAL]);
-			$provider->setEmail($databaseProvider[DatabaseController::MEMBER_EMAIL]);
-			$provider->setStatus($databaseProvider[DatabaseController::MEMBER_STATUS]);
+			$member->setName($databaseMember[DatabaseController::MEMBER_NAME]);
+			$member->setStreet($databaseMember[DatabaseController::MEMBER_STREET]);
+			$member->setCity($databaseMember[DatabaseController::MEMBER_CITY]);
+			$member->setProvince($databaseMember[DatabaseController::MEMBER_PROVINCE]);
+			$member->setPostalCode($databaseMember[DatabaseController::MEMBER_POSTAL]);
+			$member->setEmail($databaseMember[DatabaseController::MEMBER_EMAIL]);
+			$member->setStatus($databaseMember[DatabaseController::MEMBER_STATUS]);
 
-			$this->members->attach($provider);
+			$this->members->attach($member);
 
 			$this->size++;
 		}
@@ -279,7 +294,7 @@ class Members extends Persons
 			$result .= "<tr><td>" . $member->getNumber()  . "</td><td>" . $member->getName()
 				. "</td><td>" . $member->getStreet()  . "</td><td>" . $member->getCity()
 				. "</td><td>" . $member->getProvince(). "</td><td>" . $member->getPostalCode()
-				. "</td><td>" . $member->getEmail()   . "</td><td>" . $member->getType()
+				. "</td><td>" . $member->getEmail()   . "</td><td>" . $member->getStatus()
 				. "</td></tr>";
 
 			$this->members->next();

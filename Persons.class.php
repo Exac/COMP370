@@ -1,10 +1,12 @@
 <?php
 /**
+ ************************  USE THIS CLASS TO GET TO DATABASE ************************
+ *
  * Class Persons
  * @date 10-3-2016
  *
- * Persons include the members and the providers. This class uses 'DatabaseController' class to
- * query the database. Following functions are supported:
+ * Persons include the members and the providers. This class uses 'DatabaseController'
+ * class to query the database. Following functions are supported:
  * 	findByNumber($number)			Finds a person by ID number.
  * 	findByName($name)				Finds a person by name.
  * 	findByCity($city)				Finds a person by city.
@@ -18,7 +20,7 @@
  */
 class Persons
 {
-	private $persons;
+	private $persons;		// 'SplObjectStorage' for persons
 	private $size = 0;		// Size of members and providers combined.
 
 	const MEMBER   = "Member";
@@ -59,7 +61,6 @@ class Persons
 
 			$this->persons->next();
 		}
-
 		$this->persons = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
@@ -92,7 +93,6 @@ class Persons
 
 			$this->persons->next();
 		}
-
 		$this->persons = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
@@ -158,17 +158,29 @@ class Persons
 
 			$this->persons->next();
 		}
-
 		$this->persons = $temp;
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
 	}
 
 	/**
-	 * Gets all the members and providers.
+	 * Gets all the members and providers. *Stores them in a 'SplObjectStorage()'.
+	 * This object is returned from the class. Call 'Person.class' functions to
+	 * access all the fields.
+	 *
+	 * Example 	$persons = new Members();
+	 * 			$members = $persons->getAll();
+	 *
+	 * 			$members->rewind();
+	 * 			while ($members->valid())
+	 * 			{
+	 * 				echo $members->current()->getName();
+	 * 				$members->next()
+	 * 			}
 	 */
 	public function getAll()
 	{
+		$this->persons = new SplObjectStorage();
 		$databaseProviders = DatabaseController::selectProviders();
 		$databaseMembers   = DatabaseController::selectMembers();
 
@@ -195,38 +207,23 @@ class Persons
 
 		for ($i = 0; $i < $memberSize; $i++)
 		{
-			$databaseProvider = $databaseMembers[$i];
+			$databaseMember = $databaseMembers[$i];
 
-			$provider = new Member($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+			$member = new Member($databaseMember[DatabaseController::MEMBER_NUMBER]);
 
-			$provider->setName($databaseProvider[DatabaseController::MEMBER_NAME]);
-			$provider->setStreet($databaseProvider[DatabaseController::MEMBER_STREET]);
-			$provider->setCity($databaseProvider[DatabaseController::MEMBER_CITY]);
-			$provider->setProvince($databaseProvider[DatabaseController::MEMBER_PROVINCE]);
-			$provider->setPostalCode($databaseProvider[DatabaseController::MEMBER_POSTAL]);
-			$provider->setEmail($databaseProvider[DatabaseController::MEMBER_EMAIL]);
+			$member->setName($databaseMember[DatabaseController::MEMBER_NAME]);
+			$member->setStreet($databaseMember[DatabaseController::MEMBER_STREET]);
+			$member->setCity($databaseMember[DatabaseController::MEMBER_CITY]);
+			$member->setProvince($databaseMember[DatabaseController::MEMBER_PROVINCE]);
+			$member->setPostalCode($databaseMember[DatabaseController::MEMBER_POSTAL]);
+			$member->setEmail($databaseMember[DatabaseController::MEMBER_EMAIL]);
 
-			$this->persons->attach($provider);
+			$this->persons->attach($member);
 
 			$this->size++;
 		}
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->persons;
-	}
-
-	public function add($person, $type)
-	{
-		#TODO: Add functionality to DatabaseController first
-	}
-
-	public function update($person, $type)
-	{
-		#TODO: Add functionality to Database controller first
-	}
-
-	public function delete()
-	{
-		#TODO: Add functionality to Database controller first
 	}
 
 	/**
