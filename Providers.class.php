@@ -23,8 +23,12 @@ class Providers extends Persons
 	private $providers;	// Array of providers.
 	private $size = 0;	// Size of providers array.
 
-	// Displayed when a provider is not found.
+	// Displayed after use.
 	const NOT_FOUND_MESSAGE = "ERROR: No provider found<br>";
+	const ADD_SUCCESSFUL    = "Provider added<br>";
+	const UPDATE_SUCCESSFUL = "Provider updated<br>";
+	const ADD_FAIL          = "Provider can not be added<br>";
+	const UPDATE_FAIL       = "Provider can not be updated<br>";
 
 	public function __construct()
 	{
@@ -240,24 +244,42 @@ class Providers extends Persons
 
 	public function add(Provider $provider)
 	{
-		$provider->getNumber();
-		$provider->getName();
-		$provider->getStreet();
-		$provider->getCity();
-		$provider->getProvince();
-		$provider->getPostalCode();
-		$provider->getType();
+		/*$result =*/ DatabaseController::addProvider(
+					$provider->getNumber(),   $provider->getName(),
+					$provider->getStreet(),   $provider->getCity(),
+					$provider->getProvince(), $provider->getPostalCode(),
+					$provider->getEmail(),    $provider->getType());
 
-		#TODO: Add functionality to DatabaseController first
+		//return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
+
+		#TODO: Implement DatabaseController
 	}
 
-	public function update()
+	public function update(Provider $provider)
 	{
-		#TODO: Add functionality to Database controller first
+		// Check if the provider exists in the database first.
+		if (!$this->providerExists($provider->getNumber())) return self::NOT_FOUND_MESSAGE;
+
+		/*$result =*/ DatabaseController::updateProvider(
+					$provider->getNumber(),   $provider->getName(),
+					$provider->getStreet(),   $provider->getCity(),
+					$provider->getProvince(), $provider->getPostalCode(),
+					$provider->getEmail(),    $provider->getType());
+
+		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+
+		#TODO: Implement DatabaseController
 	}
 
-	public function delete()
+	public function delete($providerNumber)
 	{
+		// Check if the provider exists in the database first.
+		if (!$this->providerExists($providerNumber)) return self::NOT_FOUND_MESSAGE;
+
+		/*$result =*/ DatabaseController::deleteProvider($providerNumber);
+
+		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+
 		#TODO: Add functionality to Database controller first
 	}
 
@@ -277,6 +299,11 @@ class Providers extends Persons
 	public function isEmpty()
 	{
 		return ($this->size == 0) ? true : false;
+	}
+
+	public function providerExists($providerNumber)
+	{
+		return DatabaseController::providerExists($providerNumber);
 	}
 
 	/**

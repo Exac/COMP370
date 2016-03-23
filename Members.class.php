@@ -244,17 +244,43 @@ class Members extends Persons
 
 	public function add(Member $member)
 	{
-		#TODO: Add functionality to DatabaseController first
+		/*$result =*/ DatabaseController::addProvider(
+					$member->getNumber(),   $member->getName(),
+					$member->getStreet(),   $member->getCity(),
+					$member->getProvince(), $member->getPostalCode(),
+					$member->getEmail(),    $member->getStatus());
+
+		//return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
+
+		#TODO: Implement DatabaseController
 	}
 
 	public function update(Member $member)
 	{
-		#TODO: Add functionality to Database controller first
+		// Check if the member exists in the database first.
+		if (!$this->MemberExists($member->getNumber())) return self::NOT_FOUND_MESSAGE;
+
+		/*$result =*/ DatabaseController::updateMember(
+		$member->getNumber(),   $member->getName(),
+		$member->getStreet(),   $member->getCity(),
+		$member->getProvince(), $member->getPostalCode(),
+		$member->getEmail(),    $member->getStatus());
+
+		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+
+		#TODO: Implement DatabaseController
 	}
 
-	public function delete(Member $member)
+	public function delete(Member $memberNumber)
 	{
-		#TODO: Add functionality to Database controller first
+		// Check if the member exists in the database first.
+		if (!$this->MemberExists($memberNumber)) return self::NOT_FOUND_MESSAGE;
+
+		/*$result =*/ DatabaseController::deleteProvider($memberNumber);
+
+		//return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
+
+		#TODO: Implement DatabaseController
 	}
 
 	/**
@@ -273,6 +299,11 @@ class Members extends Persons
 	public function isEmpty()
 	{
 		return ($this->size == 0) ? true : false;
+	}
+
+	private function memberExists($memberNumber)
+	{
+		return DatabaseController::memberExists($memberNumber);
 	}
 
 	/**

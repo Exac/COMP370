@@ -210,55 +210,100 @@ class DatabaseController
 		return false;
 	}
 
-
-	##### TODO: Navi working on the following #####
-
 	public static function addProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
+		self::initialize();
+
+		return self::$db->query("INSERT INTO " . self::PROVIDER .
+			" Values (" . $number . ", " . "$name" . ", " . $street . ", " . $city
+			. ", " . $province . ", $postal" . ", " . $email . ", " . $type . ")");
 
 	}
 
-	public static function addMember($number, $name, $street, $city, $province, $postal, $email, $type)
+	public static function addMember($number, $name, $street, $city, $province, $postal, $email, $status)
 	{
+		self::initialize();
 
+		return self::$db->query("INSERT INTO " . self::PROVIDER .
+			" Values (" . $number . ", " . "$name" . ", " . $street . ", " . $city
+			. ", " . $province . ", $postal" . ", " . $email . ", " . $status . ")");
 	}
 
 	public static function deleteMember($number)
 	{
-
+		return self::$db->query("DELETE FROM " . self::MEMBER .
+			"WHERE " . self::MEMBER_NUMBER . "=" . $number);
 	}
 
 	public static function deleteProvider($number)
 	{
-
+		return self::$db->query("DELETE FROM " . self::MEMBER .
+			"WHERE " . self::PROVIDER_NUMBER . "=" . $number);
 	}
 
 	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
-
+		return self::$db->query("UPDATE " . self::PROVIDER .
+			" SET " . self::PROVIDER_NAME     . "=" . $name     . ", "
+		            . self::PROVIDER_STREET   . "=" . $street   . ", "
+		            . self::PROVIDER_CITY     . "=" . $city     . ", "
+		            . self::PROVIDER_PROVINCE . "=" . $province . ", "
+			        . self::PROVIDER_POSTAL   . "=" . $postal   . ", "
+			        . self::PROVIDER_EMAIL    . "=" . $email    . ", "
+			        . self::PROVIDER_TYPE     . "=" . $type     .
+			" WHERE " . self::PROVIDER_NUMBER . "=" . $number);
 	}
 
 	public static function updateMember($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
+		return self::$db->query("UPDATE " . self::MEMBER .
+			" SET " . self::MEMBER_NAME     . "=" . $name     . ", "
+			        . self::MEMBER_STREET   . "=" . $street   . ", "
+			        . self::MEMBER_CITY     . "=" . $city     . ", "
+		 	        . self::MEMBER_PROVINCE . "=" . $province . ", "
+			        . self::MEMBER_POSTAL   . "=" . $postal   . ", "
+			        . self::MEMBER_EMAIL    . "=" . $email    . ", "
+			        . self::MEMBER_STATUS   . "=" . $type     .
+			" WHERE " . self::MEMBER_NUMBER . "=" . $number);
+	}
+
+	public static function getAllServices()
+	{
+		return self::$db->select("SELECT * FROM " . self::SERVICE . " ORDER BY " . self::SERVICE_CODE);
+	}
+
+	public static function addService($code, $name, $fee)
+	{
+		return self::$db->query("INSERT INTO " . self::SERVICE .
+			" VALUES (" . $code . ", "
+			            . $name . ", "
+					    . $fee  . ")");
+	}
+
+	public static function deleteService($code)
+	{
+		return self::$db->query("DELETE FROM " . self::SERVICE .
+			" WHERE " . self::SERVICE_CODE . "=" . $code);
 
 	}
 
 	public static function getAllClaims()
 	{
-
+		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
 	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
 	{
-
+		return self::$db->query("INSERT INTO " . self::SERVICE .
+			" VALUES (" . $subDate     . ", "
+			            . $servCode    . ", "
+		                . $providerNum . ", "
+						. $memberNum   . ", "
+						. $servDate    . ", "
+						. $comments    . ", ");
 	}
 
-	public static function getAllServices()
-	{
-
-	}
-
-	public static function addService($code, $name, $fee)
+	public static function deleteClaim($submissionDate, $member, $provider)
 	{
 
 	}
