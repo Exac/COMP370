@@ -4,8 +4,7 @@
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseController.class.php" afterPath="$PROJECT_DIR$/DatabaseController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Members.class.php" afterPath="$PROJECT_DIR$/Members.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers.class.php" afterPath="$PROJECT_DIR$/Providers.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Services.class.php" afterPath="$PROJECT_DIR$/Services.class.php" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,57 +34,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+      <file leaf-file-name="Services.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Services.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.961538">
-              <caret line="248" column="40" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+            <state vertical-scroll-proportion="3.832528">
+              <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
               <folding>
-                <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1458714881365" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-                <marker date="1458714881365" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-                <marker date="1458714881365" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-                <marker date="1458714881365" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-                <marker date="1458714881365" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-                <marker date="1458714881365" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-                <marker date="1458714881365" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-                <marker date="1458714881365" expanded="true" signature="3876:3919" placeholder="SELECT * FRO... member" />
-                <marker date="1458714881365" expanded="true" signature="4123:4170" placeholder="SELECT * FRO... provider" />
-                <marker date="1458714881365" expanded="true" signature="4314:4659" placeholder="Select * fro... provider" />
-                <marker date="1458714881365" expanded="true" signature="4763:5092" placeholder="Select * fro... member" />
-                <marker date="1458714881365" expanded="true" signature="5199:5279" placeholder="select Auto_... tables" />
-                <marker date="1458714881365" expanded="true" signature="5416:5471" placeholder="SELECT membe... member" />
-                <marker date="1458714881365" expanded="true" signature="5724:5785" placeholder="SELECT provi... provider" />
-                <marker date="1458714881365" expanded="true" signature="6071:6526" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458714881365" expanded="true" signature="6713:7150" placeholder="INSERT INTO ${self::MEMBER}... " />
-                <marker date="1458714881365" expanded="true" signature="7256:7343" placeholder="DELETE FROM " />
-                <marker date="1458714881365" expanded="true" signature="7449:7540" placeholder="DELETE FROM " />
-                <marker date="1458714881365" expanded="true" signature="8843:8888" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458714881365" expanded="true" signature="9002:9097" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458714881365" expanded="true" signature="9180:9250" placeholder="DELETE FROM " />
-                <marker date="1458714881365" expanded="true" signature="9337:9380" placeholder="SELECT * FRO... ${self::CLAIM}" />
-                <marker date="1458714881365" expanded="true" signature="9549:9740" placeholder="INSERT INTO ${self::SERVICE}... " />
+                <marker date="1458734355897" expanded="true" signature="2937:3113" placeholder="..." />
+                <marker date="1458734355897" expanded="true" signature="2941:3113" placeholder="..." />
+                <marker date="1458734355897" expanded="true" signature="2980:3113" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Providers.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Providers.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9615386">
-              <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Members.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5072464">
-              <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,14 +74,14 @@
         <option value="$PROJECT_DIR$/Database.class.php" />
         <option value="$PROJECT_DIR$/Claims.class.php" />
         <option value="$PROJECT_DIR$/Service.class.php" />
-        <option value="$PROJECT_DIR$/Services.class.php" />
         <option value="$PROJECT_DIR$/Person.class.php" />
         <option value="$PROJECT_DIR$/Provider.class.php" />
         <option value="$PROJECT_DIR$/Member.class.php" />
         <option value="$PROJECT_DIR$/Persons.class.php" />
-        <option value="$PROJECT_DIR$/DatabaseController.class.php" />
         <option value="$PROJECT_DIR$/Providers.class.php" />
         <option value="$PROJECT_DIR$/Members.class.php" />
+        <option value="$PROJECT_DIR$/DatabaseController.class.php" />
+        <option value="$PROJECT_DIR$/Services.class.php" />
       </list>
     </option>
   </component>
@@ -195,6 +153,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -229,7 +188,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,12 +264,6 @@
       <created>1457304640687</created>
       <option name="number" value="Default" />
       <updated>1457304640687</updated>
-    </task>
-    <task id="LOCAL-00063" summary="operator interface, something like this??">
-      <created>1458350797407</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1458350797407</updated>
     </task>
     <task id="LOCAL-00064" summary="operator interface, something like this??">
       <created>1458350874779</created>
@@ -601,14 +553,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458707468434</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Tested add and delete to database; update still need testing.">
+      <created>1458715038290</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1458715038292</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22767204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -686,7 +644,8 @@
     <MESSAGE value="Persons, Providers and Members implemented; Comments added" />
     <MESSAGE value="DatabaseController class completely hidden now. Access database through Persons, Members and Providers classes." />
     <MESSAGE value="Added editing functionality to DatabaseController class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added editing functionality to DatabaseController class" />
+    <MESSAGE value="Tested add and delete to database; update still need testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested add and delete to database; update still need testing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -959,18 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Member.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41062802">
           <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,13 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Service.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9436393">
@@ -1033,52 +977,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Members.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39774558">
+          <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.961538">
-          <caret line="248" column="40" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.921095">
+          <caret line="322" column="5" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1458714881365" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-            <marker date="1458714881365" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-            <marker date="1458714881365" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-            <marker date="1458714881365" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-            <marker date="1458714881365" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-            <marker date="1458714881365" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-            <marker date="1458714881365" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-            <marker date="1458714881365" expanded="true" signature="3876:3919" placeholder="SELECT * FRO... member" />
-            <marker date="1458714881365" expanded="true" signature="4123:4170" placeholder="SELECT * FRO... provider" />
-            <marker date="1458714881365" expanded="true" signature="4314:4659" placeholder="Select * fro... provider" />
-            <marker date="1458714881365" expanded="true" signature="4763:5092" placeholder="Select * fro... member" />
-            <marker date="1458714881365" expanded="true" signature="5199:5279" placeholder="select Auto_... tables" />
-            <marker date="1458714881365" expanded="true" signature="5416:5471" placeholder="SELECT membe... member" />
-            <marker date="1458714881365" expanded="true" signature="5724:5785" placeholder="SELECT provi... provider" />
-            <marker date="1458714881365" expanded="true" signature="6071:6526" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458714881365" expanded="true" signature="6713:7150" placeholder="INSERT INTO ${self::MEMBER}... " />
-            <marker date="1458714881365" expanded="true" signature="7256:7343" placeholder="DELETE FROM " />
-            <marker date="1458714881365" expanded="true" signature="7449:7540" placeholder="DELETE FROM " />
-            <marker date="1458714881365" expanded="true" signature="8843:8888" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458714881365" expanded="true" signature="9002:9097" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458714881365" expanded="true" signature="9180:9250" placeholder="DELETE FROM " />
-            <marker date="1458714881365" expanded="true" signature="9337:9380" placeholder="SELECT * FRO... ${self::CLAIM}" />
-            <marker date="1458714881365" expanded="true" signature="9549:9740" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458731880254" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
+            <marker date="1458731880254" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
+            <marker date="1458731880254" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
+            <marker date="1458731880254" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
+            <marker date="1458731880254" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
+            <marker date="1458731880254" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
+            <marker date="1458731880254" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
+            <marker date="1458731880254" expanded="true" signature="3876:3919" placeholder="SELECT * FRO... member" />
+            <marker date="1458731880254" expanded="true" signature="4123:4170" placeholder="SELECT * FRO... provider" />
+            <marker date="1458731880254" expanded="true" signature="4314:4659" placeholder="Select * fro... provider" />
+            <marker date="1458731880254" expanded="true" signature="4763:5092" placeholder="Select * fro... member" />
+            <marker date="1458731880254" expanded="true" signature="5199:5279" placeholder="select Auto_... tables" />
+            <marker date="1458731880254" expanded="true" signature="5416:5471" placeholder="SELECT membe... member" />
+            <marker date="1458731880254" expanded="true" signature="5724:5785" placeholder="SELECT provi... provider" />
+            <marker date="1458731880254" expanded="true" signature="6071:6526" placeholder="INSERT INTO ${self::PROVIDER}... " />
+            <marker date="1458731880254" expanded="true" signature="6712:7149" placeholder="INSERT INTO ${self::MEMBER}... " />
+            <marker date="1458731880254" expanded="true" signature="7255:7342" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="7448:7539" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="8858:8903" placeholder="SELECT * FRO... ${self::SERVICE}" />
+            <marker date="1458731880254" expanded="true" signature="9003:9060" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458731880254" expanded="true" signature="9003:9096" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458731880254" expanded="true" signature="9201:9271" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="9201:9272" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="9201:9286" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="9201:9287" placeholder="DELETE FROM " />
+            <marker date="1458731880254" expanded="true" signature="9399:9442" placeholder="SELECT * FRO... ${self::CLAIM}" />
+            <marker date="1458731880254" expanded="true" signature="9611:9814" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458731880254" expanded="true" signature="9611:9816" placeholder="INSERT INTO ${self::SERVICE}... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Providers.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9615386">
-          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.923077">
+          <caret line="314" column="47" selection-start-line="314" selection-start-column="47" selection-end-line="314" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Members.class.php">
+    <entry file="file://$PROJECT_DIR$/Service.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5072464">
-          <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
+        <state vertical-scroll-proportion="-2.1207728">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.832528">
+          <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
+          <folding>
+            <marker date="1458734355897" expanded="true" signature="2937:3113" placeholder="..." />
+            <marker date="1458734355897" expanded="true" signature="2941:3113" placeholder="..." />
+            <marker date="1458734355897" expanded="true" signature="2980:3113" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

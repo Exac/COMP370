@@ -228,7 +228,6 @@ class DatabaseController
 			$email    ."', '". $type   ."')  ";
 
 		return self::$db->query($query);
-
 	}
 
 	public static function addMember($number, $name, $street, $city, $province, $postal, $email, $status)
@@ -267,28 +266,32 @@ class DatabaseController
 
 	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
-		return self::$db->query("UPDATE " . self::PROVIDER .
-			" SET " . self::PROVIDER_NAME     . "=" . $name     . ", "
-			. self::PROVIDER_STREET   . "=" . $street   . ", "
-			. self::PROVIDER_CITY     . "=" . $city     . ", "
-			. self::PROVIDER_PROVINCE . "=" . $province . ", "
-			. self::PROVIDER_POSTAL   . "=" . $postal   . ", "
-			. self::PROVIDER_EMAIL    . "=" . $email    . ", "
-			. self::PROVIDER_TYPE     . "=" . $type     .
-			" WHERE " . self::PROVIDER_NUMBER . "=" . $number);
+		$query = "UPDATE " . self::PROVIDER
+			." SET ". self::PROVIDER_NAME ."='". $name ."', ".
+			self::PROVIDER_STREET   ."='". $street   ."', ".
+			self::PROVIDER_CITY     ."='". $city     ."', ".
+			self::PROVIDER_PROVINCE ."='". $province ."', ".
+			self::PROVIDER_POSTAL   ."='". $postal   ."', ".
+			self::PROVIDER_EMAIL    ."='". $email    ."', ".
+			self::PROVIDER_TYPE     ."='". $type     ."'  ".
+			" WHERE " . self::PROVIDER_NUMBER ."='". $number ."' ";
+
+		return self::$db->query($query);
 	}
 
 	public static function updateMember($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
-		return self::$db->query("UPDATE " . self::MEMBER .
-			" SET " . self::MEMBER_NAME     . "=" . $name     . ", "
-			. self::MEMBER_STREET   . "=" . $street   . ", "
-			. self::MEMBER_CITY     . "=" . $city     . ", "
-			. self::MEMBER_PROVINCE . "=" . $province . ", "
-			. self::MEMBER_POSTAL   . "=" . $postal   . ", "
-			. self::MEMBER_EMAIL    . "=" . $email    . ", "
-			. self::MEMBER_STATUS   . "=" . $type     .
-			" WHERE " . self::MEMBER_NUMBER . "=" . $number);
+		$query = "UPDATE " . self::MEMBER
+			." SET ". self::MEMBER_NAME ."='". $name ."', ".
+			self::MEMBER_STREET   ."='". $street   ."', ".
+			self::MEMBER_CITY     ."='". $city     ."', ".
+			self::MEMBER_PROVINCE ."='". $province ."', ".
+			self::MEMBER_POSTAL   ."='". $postal   ."', ".
+			self::MEMBER_EMAIL    ."='". $email    ."', ".
+			self::MEMBER_STATUS   ."='". $type     ."'  ".
+			" WHERE " . self::MEMBER_NUMBER ."='". $number ."' ";
+
+		return self::$db->query($query);
 	}
 
 	public static function getAllServices()
@@ -298,17 +301,20 @@ class DatabaseController
 
 	public static function addService($code, $name, $fee)
 	{
-		return self::$db->query("INSERT INTO " . self::SERVICE .
-			" VALUES (" . $code . ", "
-			. $name . ", "
-			. $fee  . ")");
+		$query =  "INSERT INTO ". self::SERVICE ." VALUES ('".
+			$code ."', '".
+			$name ."', '".
+			$fee  ."')  ";
+
+		return self::$db->query($query);
 	}
 
 	public static function deleteService($code)
 	{
-		return self::$db->query("DELETE FROM " . self::SERVICE .
-			" WHERE " . self::SERVICE_CODE . "=" . $code);
+		$query = "DELETE FROM " . self::SERVICE .
+			" WHERE " . self::SERVICE_CODE . "='" . $code . "'";
 
+		return self::$db->query($query);
 	}
 
 	public static function getAllClaims()
@@ -319,12 +325,12 @@ class DatabaseController
 	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
 	{
 		return self::$db->query("INSERT INTO " . self::SERVICE .
-			" VALUES (" . $subDate     . ", "
-			. $servCode    . ", "
-			. $providerNum . ", "
-			. $memberNum   . ", "
-			. $servDate    . ", "
-			. $comments    . ", ");
+			" VALUES ('" . $subDate     . "', '"
+			. $servCode    . "', '"
+			. $providerNum . "', '"
+			. $memberNum   . "', '"
+			. $servDate    . "', '"
+			. $comments    . "', '");
 	}
 
 	public static function deleteClaim($submissionDate, $member, $provider)
