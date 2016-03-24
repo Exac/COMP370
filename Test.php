@@ -1,6 +1,6 @@
 <?php
-echo __DIR__;
-$aaa = new mysqli("COMP370.db.10405771.hostedresource.com", "COMP370", "SoftwareEngineering370!", "COMP370");
+echo __DIR__ . "<br>";
+$aaa = new mysqli("caxe.thomasmclennan.ca", "COMP370", "SoftwareEngineering370!", "COMP370");
 
 
 echo extension_loaded('mysqli') ? "LOADED" : "NOT LOADED";

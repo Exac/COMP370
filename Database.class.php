@@ -23,7 +23,8 @@
 class Database
 {
 	//public $host = "COMP370.db.10405771.hostedresource.com";
-	public $host = "127.0.0.1";
+	//public $host = "127.0.0.1";
+	public $host = "caxe.thomasmclennan.ca";
 	public $user = "COMP370"; //Also name of database.
 	public $password;
 
@@ -114,12 +115,14 @@ class Database
 	 */
 	private function detectDeveloperMode()
 	{
+		/*
 		$localhostAddresses = array('127.0.0.1', '::1');
 
 		if (in_array($_SERVER['REMOTE_ADDR'], $localhostAddresses))
 		{
 			$this->host = "COMP370.db.10405771.hostedresource.com";
 		}
+		*/
 	}
 
 }

@@ -71,7 +71,7 @@ class MemberTest extends PHPUnit_Framework_TestCase
 		$_SERVER['REMOTE_ADDR'] = '::1';
 
 		//assert
-		assertJson($this->member->toJSON());
+		$this->assertJson($this->member->toJSON());
 		echo "passed";
 	}
 
