@@ -53,6 +53,12 @@ include_once(__DIR__ . '/../Member.class.php');
 
 class MemberTest extends PHPUnit_Framework_TestCase
 {
+	/**
+	 * Remove errors on the server.
+	 */
+	protected $preserveGlobalState = false;
+	protected $runTestInSeparateProcess = true;
+
 	/** @var Database */
 	protected $db;
 	/**@var Member */
@@ -67,6 +73,8 @@ class MemberTest extends PHPUnit_Framework_TestCase
 
 	public function testMySQLConnectionCredentials()
 	{
+#		new mysqli("127.0.0.1", "COMP370", "SoftwareEngineering370!", "COMP370");
+
 		//arrange
 		$_SERVER['REMOTE_ADDR'] = '::1';
 

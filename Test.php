@@ -1,5 +1,5 @@
 <?php
-echo __DIR__ . "<br>";
+echo __DIR__ . "<br>" . $_SERVER["SERVER_ADDR"] . "<br>";
 $aaa = new mysqli("caxe.thomasmclennan.ca", "COMP370", "SoftwareEngineering370!", "COMP370");
 
 

@@ -24,7 +24,8 @@ class Database
 {
 	//public $host = "COMP370.db.10405771.hostedresource.com";
 	//public $host = "127.0.0.1";
-	public $host = "caxe.thomasmclennan.ca";
+	//public $host = "caxe.thomasmclennan.ca";#works on server
+	public $host = "S0106c8fb267823ad.vf.shawcable.net";
 	public $user = "COMP370"; //Also name of database.
 	public $password;
 
@@ -38,12 +39,16 @@ class Database
 
 	/**
 	 * Connect to the database
-	 *
-	 * If you cannot connect for running PhpUnit, get your server address and run the following:
-	 * mysql> grant all privileges on COMP370.* to  'COMP370'@'S0106c8fb267823ad.vf.shawcable.net' with grant option;
-	 * mysql> grant all privileges on COMP370 to  'COMP370'@'S0106c8fb267823ad.vf.shawcable.net' with grant option;
-	 * mysql> FLUSH PRIVILEGES;
- *
+	 * #SERVER:
+	 * mysql> grant all privileges on COMP370.* to  'COMP370'@'S0106c8fb267823ad.vf.shawcable.net' identified by 'Database Password' with grant option;
+	 * mysql> flush privilegess
+	 * #PHPSTORM:
+	 *    Run configuration:
+	 *        Directory -> \COMP370\tests
+	 *        Environmental Variables -> CDP:'Database Password'
+	 *    Settings:
+	 *        Languages & Frameworks -> PHP -> PHPUnit -> Path to PHPUnit -> \COMP370\phpunit-5.2.12.phar
+	 * 
 	 * @return bool|mysqli False on Failure, mysqli object when it works.
 	 */
 	public function connect()
