@@ -244,15 +244,13 @@ class Providers extends Persons
 
 	public function add(Provider $provider)
 	{
-		/*$result =*/ DatabaseController::addProvider(
+		$result = DatabaseController::addProvider(
 		$provider->getNumber(),   $provider->getName(),
 		$provider->getStreet(),   $provider->getCity(),
 		$provider->getProvince(), $provider->getPostalCode(),
 		$provider->getEmail(),    $provider->getType());
 
-		//return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
-
-		#TODO: Implement DatabaseController
+		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
 	}
 
 	public function update(Provider $provider)
@@ -267,8 +265,6 @@ class Providers extends Persons
 			$provider->getEmail(),    $provider->getType());
 
 		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
-
-		#TODO: Implement DatabaseController
 	}
 
 	public function delete($providerNumber)
@@ -279,8 +275,6 @@ class Providers extends Persons
 		$result = DatabaseController::deleteProvider($providerNumber);
 
 		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
-
-		#TODO: Add functionality to Database controller first
 	}
 
 	/**
