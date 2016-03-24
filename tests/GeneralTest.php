@@ -51,7 +51,7 @@ include_once(__DIR__ . '/../Services.class.php');
 include_once(__DIR__ . '/../UserInterface.class.php');
 
 
-class MemberTest extends PHPUnit_Framework_TestCase
+class GeneralTest extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * Remove errors on the server.
@@ -61,56 +61,67 @@ class MemberTest extends PHPUnit_Framework_TestCase
 
 	/** @var Database */
 	protected $db;
-	/**@var Member */
-	protected $member;
 
 	protected function setUp()
 	{
 		$_SERVER['REMOTE_ADDR'] = '::1';#'COMP370.db.10405771.hostedresource.com';
-		$this->member = new Member();
 		$this->db = $db = new Database();
 	}
 
 	/**
-	 * @desc Ensures members can be created.
+	 * @desc Ensures __DIR__ global is set properly.
 	 */
-	public function testCanBeCreated()
+	public function testDirGlobalIsSet()
 	{
 		//arrange
-		$num = 1;
-		//$_SERVER['REMOTE_ADDR'] = "::1";
-		$a = new Member($num);
+		$dir = __DIR__;
 
 		//act
-		$b = $a->__toString();
 
 		//assert
-		$this->assertStringStartsWith("{", $b, "Member->__toString() should return valid JSON.");
+		$this->assertTrue(isset($dir));
+		$this->assertStringEndsWith("tests", $dir);
 	}
 
 	/**
-	 * @desc Ensures members can be found in the database.
+	 * @desc Ensures _SERVER[REMOTE_ADDR] is set, it's needed for testing and Database connectivity.
 	 */
-	public function testMySQLConnectionCredentials()
+	public function testServerRemoteAddressSet()
 	{
-		//arrange
-		$_SERVER['REMOTE_ADDR'] = '::1';
-
-		//assert
-		$this->assertJson($this->member->toJSON(), "Member->__toString() should return valid JSON.");
-		echo "passed";
+		$this->assertTrue(isset($_SERVER["REMOTE_ADDR"]), "Didn't find a value for \$_SERVER[REMOTE_ADDR]");
 	}
 
 	/**
-	 * @desc Ensures postal codes are in correct Canadian format.
+	 * @desc Mysqli is needed for the database, so we test if it is included
+	 *        (as it isn't installed by default on some platforms)
 	 */
-	public function testPostalCodeCanadianFormat()
+	public function testMysqliLoaded()
 	{
-		$members = $this->db->select("SELECT member_postal_code FROM member");
-		foreach ($members as &$pc)
-		{
-			$this->assertStringMatchesFormat("%c%c%c%w%c%c%c", $pc["member_postal_code"]);
-		}
+		$mysqli_extension_loaded = extension_loaded("mysqli");
 
+		$this->assertTrue($mysqli_extension_loaded, "The PHP extension 'mysqli' is not loaded.");
 	}
+
+	/**
+	 * Checks if mysqli exists, but hasn't been started.
+	 */
+	public function testMysqliInti()
+	{
+		//create a new database object to ensure mysqli's creation
+		$database_test = new Database();
+
+		$this->assertTrue(function_exists('mysqli_init'), "mysqli_init() not loaded.");
+	}
+
+	/**
+	 * Test that the login in private function Person()->getLength() is correct
+	 */
+	public function testGetLength()
+	{
+		#$person = new Person();
+		$testString = "123456789";
+		$this->assertEquals(9, strlen((string)$testString));
+	}
+
+
 }

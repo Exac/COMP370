@@ -251,6 +251,8 @@ class DatabaseController
 
 	public static function deleteMember($number)
 	{
+		self::initialize();
+
 		$query = "DELETE FROM ". self::MEMBER .
 			" WHERE " 	   . self::MEMBER_NUMBER ."='". $number ."'";
 
@@ -259,6 +261,8 @@ class DatabaseController
 
 	public static function deleteProvider($number)
 	{
+		self::initialize();
+
 		$query = "DELETE FROM ". self::PROVIDER .
 			" WHERE " 	   . self::PROVIDER_NUMBER ."='". $number ."'";
 
@@ -267,6 +271,8 @@ class DatabaseController
 
 	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
+		self::initialize();
+
 		$query = "UPDATE " . self::PROVIDER
 			." SET ". self::PROVIDER_NAME ."='". $name ."', ".
 			self::PROVIDER_STREET   ."='". $street   ."', ".
@@ -282,6 +288,8 @@ class DatabaseController
 
 	public static function updateMember($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
+		self::initialize();
+
 		$query = "UPDATE " . self::MEMBER
 			." SET ". self::MEMBER_NAME ."='". $name ."', ".
 			self::MEMBER_STREET   ."='". $street   ."', ".
@@ -297,11 +305,15 @@ class DatabaseController
 
 	public static function getAllServices()
 	{
+		self::initialize();
+
 		return self::$db->select("SELECT * FROM " . self::SERVICE . " ORDER BY " . self::SERVICE_CODE);
 	}
 
 	public static function addService($code, $name, $fee)
 	{
+		self::initialize();
+
 		$query =  "INSERT INTO ". self::SERVICE ." VALUES ('".
 			$code ."', '".
 			$name ."', '".
@@ -312,6 +324,8 @@ class DatabaseController
 
 	public static function deleteService($code)
 	{
+		self::initialize();
+
 		$query = "DELETE FROM " . self::SERVICE .
 			" WHERE " . self::SERVICE_CODE . "='" . $code . "'";
 
@@ -320,22 +334,31 @@ class DatabaseController
 
 	public static function getAllClaims()
 	{
+		self::initialize();
+
 		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
 	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
 	{
-		return self::$db->query("INSERT INTO " . self::SERVICE .
+		self::initialize();
+
+		$comments = self::$db->escape($comments);
+
+		return self::$db->query("INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')");
+		/*return self::$db->query("INSERT INTO " . self::SERVICE .
 			" VALUES ('" . $subDate     . "', '"
 			. $servCode    . "', '"
 			. $providerNum . "', '"
 			. $memberNum   . "', '"
 			. $servDate    . "', '"
-			. $comments    . "', '");
+			. $comments    . "')");*/
 	}
 
 	public static function deleteClaim($submissionDate, $member, $provider)
 	{
+		self::initialize();
+
 
 	}
 

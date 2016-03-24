@@ -51,7 +51,7 @@ include_once(__DIR__ . '/../Services.class.php');
 include_once(__DIR__ . '/../UserInterface.class.php');
 
 
-class MemberTest extends PHPUnit_Framework_TestCase
+class ProviderTest extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * Remove errors on the server.
@@ -62,43 +62,13 @@ class MemberTest extends PHPUnit_Framework_TestCase
 	/** @var Database */
 	protected $db;
 	/**@var Member */
-	protected $member;
+	protected $provider;
 
 	protected function setUp()
 	{
 		$_SERVER['REMOTE_ADDR'] = '::1';#'COMP370.db.10405771.hostedresource.com';
-		$this->member = new Member();
+		$this->provider = new Provider();
 		$this->db = $db = new Database();
-	}
-
-	/**
-	 * @desc Ensures members can be created.
-	 */
-	public function testCanBeCreated()
-	{
-		//arrange
-		$num = 1;
-		//$_SERVER['REMOTE_ADDR'] = "::1";
-		$a = new Member($num);
-
-		//act
-		$b = $a->__toString();
-
-		//assert
-		$this->assertStringStartsWith("{", $b, "Member->__toString() should return valid JSON.");
-	}
-
-	/**
-	 * @desc Ensures members can be found in the database.
-	 */
-	public function testMySQLConnectionCredentials()
-	{
-		//arrange
-		$_SERVER['REMOTE_ADDR'] = '::1';
-
-		//assert
-		$this->assertJson($this->member->toJSON(), "Member->__toString() should return valid JSON.");
-		echo "passed";
 	}
 
 	/**
@@ -106,10 +76,10 @@ class MemberTest extends PHPUnit_Framework_TestCase
 	 */
 	public function testPostalCodeCanadianFormat()
 	{
-		$members = $this->db->select("SELECT member_postal_code FROM member");
-		foreach ($members as &$pc)
+		$providers = $this->db->select("SELECT provider_postal_code FROM provider");
+		foreach ($providers as &$pc)
 		{
-			$this->assertStringMatchesFormat("%c%c%c%w%c%c%c", $pc["member_postal_code"]);
+			$this->assertStringMatchesFormat("%c%c%c%w%c%c%c", $pc["provider_postal_code"]);
 		}
 
 	}

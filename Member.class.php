@@ -52,7 +52,7 @@ class Member extends Person
 
 	public function fromDatabase($member_number)
 	{
-		if (DatabaseController::providerExists($member_number))
+		if (DatabaseController::memberExists($member_number))
 		{
 			$md = DatabaseController::selectMember($member_number);
 			//$this->setNumber($md["member_number"]); //mysql_real_escape_string strips leading 0's

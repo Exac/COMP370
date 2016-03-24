@@ -52,10 +52,23 @@ class Person
 		// Make sure the number is an integer and is not empty.
 		// We MUST use is_numeric instead of is_int because they are stored in the database like
 		// "000000001". is_int(000000001) fails, is_numeric(000000001) passes.
-		if (!is_numeric($number) || empty($number))
+		if (!is_numeric($number) || !isset($number))
 		{
-			echo "ERROR: Please make sure the number is an integer and is not empty.\n";
+			echo "ERROR: Please make sure the number is an integer and is not empty (${number}).\n";
 			return;
+		}
+
+		//Make sure number is not 0.
+		try
+		{
+			if ($number === 0)
+			{
+				throw new Exception("Error: Zero is an invalid member number.");
+			}
+		} catch (Exception $e)
+		{
+			echo $e->getMessage(), "\n";
+			$number = 1;
 		}
 
 		// Make sure the length is equal to NUMBER_LENGTH.
