@@ -35,10 +35,10 @@ class Claim
      * @param Provider $provider
      * @param Member $member
      */
-	public function __construct(Provider $provider, Member $member)
+    public function __construct($provider, $member)
 	{
-        $this->providerNumber = $provider->getNumber();
-        $this->memberNumber   = $member->getNumber();
+        $this->providerNumber = $provider;
+        $this->memberNumber = $member;
 	}
 
     /**
