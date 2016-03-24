@@ -2,28 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="Fixed instances of provider_numbers losing zero-fill.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/phpunit-5.2.12.phar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Tests.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/MemberTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/phpunit.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/Tests.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/phpunit-5.2.12.phar" afterPath="$PROJECT_DIR$/phpunit-5.2.12.phar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database.class.php" afterPath="$PROJECT_DIR$/Database.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseController.class.php" afterPath="$PROJECT_DIR$/DatabaseController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Member.class.php" afterPath="$PROJECT_DIR$/Member.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Person.class.php" afterPath="$PROJECT_DIR$/Person.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Provider.class.php" afterPath="$PROJECT_DIR$/Provider.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProviderInterface.class.php" afterPath="$PROJECT_DIR$/ProviderInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.php" afterPath="$PROJECT_DIR$/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserInterface.class.php" afterPath="$PROJECT_DIR$/UserInterface.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/css/provider.css" afterPath="$PROJECT_DIR$/cdn/css/provider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/js/provider.js" afterPath="$PROJECT_DIR$/cdn/js/provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdn/js/scripts.js" afterPath="$PROJECT_DIR$/cdn/js/scripts.js" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
-    <manually-removed-from-ignored>
-      <directory path=".idea/" />
-    </manually-removed-from-ignored>
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,103 +45,27 @@
     <favorites_list name="COMP370" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4651163">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Person.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Person.class.php">
+          <file leaf-file-name="MemberTest.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Provider.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Provider.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1071">
-                  <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Test.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-                  <folding>
-                    <marker date="1458796101880" expanded="true" signature="3402:3707" placeholder="..." />
-                    <marker date="1458796101880" expanded="true" signature="3410:3643" placeholder="..." />
-                    <marker date="1458796101880" expanded="true" signature="3692:3707" placeholder="..." />
-                    <marker date="1458796101880" expanded="true" signature="5767:5890" placeholder="..." />
-                    <marker date="1458796101880" expanded="true" signature="5931:5956" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ChocAnSystem.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ChocAnSystem.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tests.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/Tests.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1140">
-                  <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+                <state relative-caret-position="438">
+                  <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
                   <folding>
                     <element signature="e#6#85#0#PHP" expanded="true" />
-                    <marker date="1458796512118" expanded="true" signature="2213:2240" placeholder="..." />
+                    <marker date="1458801112074" expanded="true" signature="2366:2393" placeholder="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ide-phpunit.php" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/AppData/Local/Temp/ide-phpunit.php">
+          <file leaf-file-name="phpunit.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/phpunit.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="816">
-                  <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Members.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="9" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="provider.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/cdn/js/provider.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1632">
-                  <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -161,52 +74,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Member.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Member.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf>
           <file leaf-file-name="Database.class.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Database.class.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1747">
-                  <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProviderInterface.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1938">
-                  <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="provider.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/cdn/css/provider.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2159">
-                  <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserInterface.class.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1853">
-                  <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
+                <state relative-caret-position="731">
+                  <caret line="120" column="65" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -233,9 +106,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Database.class.php" />
-        <option value="$PROJECT_DIR$/tests/MemberTest.php" />
         <option value="$PROJECT_DIR$/Test.php" />
+        <option value="$PROJECT_DIR$/tests/phpunit.xml" />
         <option value="$PROJECT_DIR$/tests/Tests.php" />
+        <option value="$PROJECT_DIR$/tests/MemberTest.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -246,7 +121,7 @@
   </component>
   <component name="PhpServers">
     <servers>
-      <server deployment_server="69e79d52-34a8-4b4e-ac3a-b4a8885ff56a" host="localhost" name="wamp" validation_dir="C:\Users\Thomas\Dropbox\COMP370\PHP" />
+      <server deployment_server="69e79d52-34a8-4b4e-ac3a-b4a8885ff56a" host="localhost" id="2e8f1300-fa84-414c-9a70-6df644e560a4" name="wamp" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
@@ -351,12 +226,11 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="C:/wamp64/bin/php/php5.6.16" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.phpunit" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -368,9 +242,9 @@
       <recent name="C:\Users\Thomas\Dropbox\COMP370\PHP" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas\Dropbox\COMP370" />
       <recent name="C:\Users\Thomas\Dropbox\COMP370\tests" />
       <recent name="C:\Users\Thomas\Dropbox\COMP370\test" />
-      <recent name="C:\Users\Thomas\Dropbox\COMP370" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Run Tests">
@@ -408,21 +282,11 @@
       <method />
     </configuration>
     <configuration default="false" name="Run Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner class="MemberTest" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/Tests.php" />
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <TestRunner class="MemberTest" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/MemberTest.php" method="testMySQLConnectionCredentials" />
       <method />
     </configuration>
-    <configuration default="false" name="COMP370 on WAMP" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" debug_server_name="wamp" scope="Directory" path="$PROJECT_DIR$/PHP/tests/" server_id="69e79d52-34a8-4b4e-ac3a-b4a8885ff56a" server_name="WAMP">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <RunnerSettings RunnerId="PhpUnitRemoteDebugRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpUnitRemoteDebugRunner" />
-      <method />
-    </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit.Run Tests" />
-      <item index="1" class="java.lang.String" itemvalue="PHPUnit by HTTP.COMP370 on WAMP" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -438,7 +302,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1457304640687</updated>
-      <workItem from="1458793935966" duration="2584000" />
+      <workItem from="1458793935966" duration="5733000" />
+      <workItem from="1458799710518" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="Folder structure and a simple class to start off.">
       <created>1457602406705</created>
@@ -699,43 +564,50 @@
       <option name="project" value="LOCAL" />
       <updated>1458651678864</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fixed instances of provider_numbers losing zero-fill.">
+      <created>1458796557156</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1458796557156</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_Tests - 2016.03.23 at 21h 58m 51s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 18m 03s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 01m 31s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 18m 24s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 01m 49s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 19m 16s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 02m 43s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 19m 57s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 03m 17s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 20m 51s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 03m 42s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 22m 10s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 06m 39s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 23m 16s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 08m 04s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 23m 46s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 13m 24s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 25m 40s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.23 at 22h 13m 41s.xml">
+    <history-entry file="Run_Tests - 2016.03.23 at 23h 26m 26s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2584000" />
+    <option name="totallyTimeSpent" value="7168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -743,22 +615,22 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286004" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15096252" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19756839" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19675456" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2502533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -811,13 +683,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Service.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServiceReportGenerator.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -843,13 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="61" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ManagerInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -904,13 +762,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="41" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="41" />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AccountsPayableReport.class.php">
@@ -1065,62 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://PHP/\Claim">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\Claim</OriginalElement>
-          <nodes>
-            <node x="" y="">\Service</node>
-            <node x="" y="">\MemberReport</node>
-            <node x="" y="">\AccountsPayableReport</node>
-            <node x="" y="">\Member</node>
-            <node x="" y="">\ClaimSubmitter</node>
-            <node x="" y="">\Database</node>
-            <node x="" y="">\Services</node>
-            <node x="" y="">\ETFReportGenerator</node>
-            <node x="" y="">\ETFReport</node>
-            <node x="" y="">\AccountsPayableReportGenerator</node>
-            <node x="" y="">\MemberMaintainer</node>
-            <node x="" y="">\Input</node>
-            <node x="" y="">\ProviderReportGenerator</node>
-            <node x="" y="">\MemberReportGenerator</node>
-            <node x="" y="">\ProviderReport</node>
-            <node x="" y="">\DateRangeReport</node>
-            <node x="" y="">\Provider</node>
-            <node x="" y="">\Persons</node>
-            <node x="" y="">\ServiceMaintainer</node>
-            <node x="" y="">\ProviderDirectory</node>
-            <node x="" y="">\IndexInterface</node>
-            <node x="" y="">\Claims</node>
-            <node x="" y="">\Report</node>
-            <node x="" y="">\Button</node>
-            <node x="" y="">\PersonMaintainer</node>
-            <node x="" y="">\ManagerInterface</node>
-            <node x="" y="">\ProviderMaintainer</node>
-            <node x="" y="">\ProviderInterface</node>
-            <node x="" y="">\Person</node>
-            <node x="" y="">\DatabaseController</node>
-            <node x="" y="">\OperatorInterface</node>
-            <node x="" y="">\ServiceReportGenerator</node>
-            <node x="" y="">\Utils</node>
-            <node x="" y="">\Members</node>
-            <node x="" y="">\Providers</node>
-            <node x="" y="">\Claim</node>
-            <node x="" y="">\UserInterface</node>
-            <node x="" y="">\ChocAnSystem</node>
-            <node x="" y="">\SchedulerInterface</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="367.0" y="616.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProviderMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1135,22 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdn/css/provider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cdn/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1158,35 +944,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/cdn/js/provider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        <state relative-caret-position="1632">
+          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
+    <entry file="file://$PROJECT_DIR$/tests/PersonTest.php" />
+    <entry file="file://$PROJECT_DIR$/tests/Test.php" />
+    <entry file="file://$PROJECT_DIR$/ManagerInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Members.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="306">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Member.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="459">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\Claim">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\Claim</OriginalElement>
+          <nodes>
+            <node x="1061.0" y="2885.0">\Claims</node>
+            <node x="2010.0" y="2237.0">\ProviderInterface</node>
+            <node x="1532.0" y="2885.0">\ServiceReportGenerator</node>
+            <node x="1920.0" y="2885.0">\AccountsPayableReportGenerator</node>
+            <node x="1242.4999999999998" y="1632.0">\DateRangeReport</node>
+            <node x="0.0" y="0.0">\DatabaseController</node>
+            <node x="1681.0" y="2237.0">\PersonMaintainer</node>
+            <node x="1118.0" y="2237.0">\Service</node>
+            <node x="2736.0" y="2237.0">\OperatorInterface</node>
+            <node x="1384.5" y="0.0">\Person</node>
+            <node x="167.0" y="3159.0">\Utils</node>
+            <node x="511.0" y="1698.0">\Providers</node>
+            <node x="574.0" y="2885.0">\ManagerInterface</node>
+            <node x="0.0" y="3159.0">\IndexInterface</node>
+            <node x="2175.0" y="2885.0">\MemberReportGenerator</node>
+            <node x="1625.0" y="2000.0">\ProviderReport</node>
+            <node x="1429.4999999999998" y="1308.0">\Report</node>
+            <node x="2592.0" y="2885.0">\ETFReportGenerator</node>
+            <node x="1875.5" y="1308.0">\Claim</node>
+            <node x="1733.0" y="2885.0">\ClaimSubmitter</node>
+            <node x="307.0" y="2885.0">\ServiceMaintainer</node>
+            <node x="2781.0" y="2885.0">\SchedulerInterface</node>
+            <node x="1763.0" y="2361.0">\MemberMaintainer</node>
+            <node x="1305.0" y="2885.0">\Button</node>
+            <node x="0.0" y="2237.0">\UserInterface</node>
+            <node x="2389.0" y="2237.0">\Database</node>
+            <node x="0.0" y="1698.0">\Members</node>
+            <node x="1247.0" y="2000.0">\MemberReport</node>
+            <node x="1541.0" y="2361.5">\ProviderMaintainer</node>
+            <node x="1461.0" y="2022.5">\ETFReport</node>
+            <node x="1711.0" y="719.5">\Member</node>
+            <node x="314.5" y="1308.0">\Persons</node>
+            <node x="801.0" y="2885.0">\ChocAnSystem</node>
+            <node x="1055.0" y="2011.5">\AccountsPayableReport</node>
+            <node x="0.0" y="2885.0">\Input</node>
+            <node x="1654.4999999999998" y="1754.5">\ProviderDirectory</node>
+            <node x="1267.0" y="719.0">\Provider</node>
+            <node x="682.0" y="2237.0">\Services</node>
+            <node x="2384.0" y="2885.0">\ProviderReportGenerator</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\ETFReport" target="\DateRangeReport">
+              <point x="0.0" y="-37.0" />
+              <point x="1533.0" y="1975.0" />
+              <point x="1487.4999999999998" y="1975.0" />
+              <point x="49.0" y="159.0" />
+            </edge>
+            <edge source="\AccountsPayableReport" target="\DateRangeReport">
+              <point x="0.0" y="-48.0" />
+              <point x="1137.0" y="1975.0" />
+              <point x="1291.4999999999998" y="1975.0" />
+              <point x="-147.0" y="159.0" />
+            </edge>
+            <edge source="\ProviderDirectory" target="\Report">
+              <point x="0.0" y="-36.5" />
+              <point x="1742.4999999999998" y="1607.0" />
+              <point x="1670.9999999999998" y="1607.0" />
+              <point x="80.5" y="137.0" />
+            </edge>
+            <edge source="\MemberReport" target="\DateRangeReport">
+              <point x="-1.1368683772161603E-13" y="-59.5" />
+              <point x="1343.9999999999998" y="1975.0" />
+              <point x="1389.4999999999998" y="1975.0" />
+              <point x="-49.0" y="159.0" />
+            </edge>
+            <edge source="\Member" target="\Person">
+              <point x="0.0" y="-169.5" />
+              <point x="1941.0" y="694.0" />
+              <point x="1872.75" y="694.0" />
+              <point x="162.75" y="334.5" />
+            </edge>
+            <edge source="\Members" target="\Persons">
+              <point x="0.0" y="-247.0" />
+              <point x="245.5" y="1673.0" />
+              <point x="407.75" y="1673.0" />
+              <point x="-93.25" y="170.0" />
+            </edge>
+            <edge source="\MemberMaintainer" target="\PersonMaintainer">
+              <point x="0.0" y="-92.5" />
+              <point x="1864.0" y="2336.0" />
+              <point x="1789.0" y="2336.0" />
+              <point x="36.0" y="37.0" />
+            </edge>
+            <edge source="\DateRangeReport" target="\Report">
+              <point x="0.0" y="-159.0" />
+              <point x="1438.4999999999998" y="1607.0" />
+              <point x="1509.9999999999998" y="1607.0" />
+              <point x="-80.5" y="137.0" />
+            </edge>
+            <edge source="\ProviderReport" target="\DateRangeReport">
+              <point x="0.0" y="-59.5" />
+              <point x="1722.0" y="1975.0" />
+              <point x="1585.4999999999998" y="1975.0" />
+              <point x="147.0" y="159.0" />
+            </edge>
+            <edge source="\Providers" target="\Persons">
+              <point x="0.0" y="-247.0" />
+              <point x="756.5" y="1673.0" />
+              <point x="594.25" y="1673.0" />
+              <point x="93.25" y="170.0" />
+            </edge>
+            <edge source="\Provider" target="\Person">
+              <point x="0.0" y="-170.0" />
+              <point x="1479.0" y="694.0" />
+              <point x="1547.25" y="694.0" />
+              <point x="-162.75" y="334.5" />
+            </edge>
+            <edge source="\ProviderMaintainer" target="\PersonMaintainer">
+              <point x="0.0" y="-92.0" />
+              <point x="1642.0" y="2336.0" />
+              <point x="1717.0" y="2336.0" />
+              <point x="-36.0" y="37.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8315068493150685" x="126.0" y="179.0" />
+          <SelectedNodes>
+            <node>\Claim</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ide-phpunit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1194,6 +1117,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdn/css/provider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="110" column="94" selection-start-line="110" selection-start-column="94" selection-end-line="110" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Members.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding>
+            <marker date="1458796550951" expanded="true" signature="3417:3722" placeholder="..." />
+            <marker date="1458796550951" expanded="true" signature="3425:3658" placeholder="..." />
+            <marker date="1458796550951" expanded="true" signature="3707:3722" placeholder="..." />
+            <marker date="1458796550951" expanded="true" signature="5782:5905" placeholder="..." />
+            <marker date="1458796550951" expanded="true" signature="5946:5971" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Provider.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1206,76 +1183,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdn/js/provider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ide-phpunit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/PersonTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Provider.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1747">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="731">
+          <caret line="120" column="65" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Test.php">
+    <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding>
-            <marker date="1458796101880" expanded="true" signature="3402:3707" placeholder="..." />
-            <marker date="1458796101880" expanded="true" signature="3410:3643" placeholder="..." />
-            <marker date="1458796101880" expanded="true" signature="3692:3707" placeholder="..." />
-            <marker date="1458796101880" expanded="true" signature="5767:5890" placeholder="..." />
-            <marker date="1458796101880" expanded="true" signature="5931:5956" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Tests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        <state relative-caret-position="438">
+          <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1458796512118" expanded="true" signature="2213:2240" placeholder="..." />
+            <marker date="1458801112074" expanded="true" signature="2366:2393" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
