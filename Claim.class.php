@@ -134,7 +134,7 @@ class Claim
      * Requires a provider that already exists.
      * @param Provider $provider
      */
-	public function setProviderNumber(Provider $provider)
+    public function setProviderNumber($provider)
     {
         // Make sure the provider field is not empty
         if (empty($provider))
@@ -143,7 +143,7 @@ class Claim
             return;
         }
 
-		$this->providerNumber = $provider->getNumber();
+        $this->providerNumber = $provider;
 	}
 
     /**
@@ -151,7 +151,7 @@ class Claim
      * Requires a member that already exists.
      * @param Member $member
      */
-	public function setMemberNumber(Member $member)
+    public function setMemberNumber($member)
     {
         // Make sure a provider is provided.
         if (empty($member))
@@ -160,7 +160,7 @@ class Claim
             return;
         }
 
-		$this->memberNumber = $member->getNumber();
+        $this->memberNumber = $member;
 	}
 
     /**
