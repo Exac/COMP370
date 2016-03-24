@@ -39,6 +39,11 @@ class Database
 	/**
 	 * Connect to the database
 	 *
+	 * If you cannot connect for running PhpUnit, get your server address and run the following:
+	 * mysql> grant all privileges on COMP370.* to  'COMP370'@'S0106c8fb267823ad.vf.shawcable.net' with grant option;
+	 * mysql> grant all privileges on COMP370 to  'COMP370'@'S0106c8fb267823ad.vf.shawcable.net' with grant option;
+	 * mysql> FLUSH PRIVILEGES;
+ *
 	 * @return bool|mysqli False on Failure, mysqli object when it works.
 	 */
 	public function connect()
@@ -115,14 +120,12 @@ class Database
 	 */
 	private function detectDeveloperMode()
 	{
-		/*
 		$localhostAddresses = array('127.0.0.1', '::1');
 
-		if (in_array($_SERVER['REMOTE_ADDR'], $localhostAddresses))
+		if (in_array(gethostbyname(gethostname()), $localhostAddresses))
 		{
-			$this->host = "COMP370.db.10405771.hostedresource.com";
+			$this->host = "127.0.0.1";
 		}
-		*/
 	}
 
 }
