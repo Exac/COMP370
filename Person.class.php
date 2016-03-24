@@ -45,7 +45,7 @@ class Person
 	/**
 	 * Adds a number for this person.
 	 * Number is an integer and a maximum length of NUMBER_LENGTH.
-	 * @param $number Person
+	 * @param $number number Person
 	 */
 	public function setNumber($number)
 	{
@@ -61,11 +61,12 @@ class Person
 		// Make sure the length is equal to NUMBER_LENGTH.
 		if (!($this->getLength($number) === self::NUMBER_LENGTH))
 		{
-			echo "ERROR: Length of number must be equal to " . self::NUMBER_LENGTH . " (getLength:" . $this->getLength($number) . ")\n(number:" . $number . ")";
-			return;
+			//ERROR: Length of number must be equal to " . self::NUMBER_LENGTH
+			$this->number = $this->pad($number);
+		} else
+		{
+			$this->number = $number;
 		}
-
-		$this->number = $number;
 	}
 
 	/**
@@ -80,7 +81,7 @@ class Person
 	/**
 	 * Adds the name of this person.
 	 * Name has a maximum length of NAME_LENGTH.
-	 * @param $name Person
+	 * @param $name string Person
 	 */
 	public function setName($name)
 	{
@@ -113,7 +114,7 @@ class Person
 	/**
 	 * Adds the street name for this person.
 	 * Street has maximum length of STREET_LENGTH.
-	 * @param $street Person
+	 * @param $street string Person
 	 */
 	public function setStreet($street)
 	{
@@ -136,7 +137,7 @@ class Person
 
 	/**
 	 * Gets the city name for this person.
-	 * @return mixed $city City name of this person.
+	 * @return mixed string $city City name of this person.
 	 */
 	public function getCity()
 	{
@@ -146,7 +147,7 @@ class Person
 	/**
 	 * Adds the city for this person.
 	 * City has a maximum length of CITY_LENGTH.
-	 * @param $city Person
+	 * @param $city string Person
 	 */
 	public function setCity($city)
 	{
@@ -180,7 +181,7 @@ class Person
 	 * Adds the province for this person.
 	 * Province has a maximum length of PROVINCE_LENGTH.
 	 * Province is added as an abbreviation.
-	 * @param $province Person
+	 * @param $province string Person
 	 */
 	public function setProvince($province)
 	{
@@ -213,7 +214,7 @@ class Person
 	/**
 	 * Adds the postal code for this person.
 	 * Postal code has a maximum length of POSTAL_CODE_LENGTH.
-	 * @param $postalCode Person
+	 * @param $postalCode string Person
 	 */
 	public function setPostalCode($postalCode)
 	{
@@ -262,5 +263,18 @@ class Person
 	private function getLength($object)
 	{
 		return strlen((string)$object);
+	}
+
+	/**
+	 * Pad a number with leading 0's. pad(5,9,0) -> 000000005
+	 *
+	 * @param $nu string
+	 * @param $width int
+	 * @param $z string
+	 * @return string
+	 */
+	public function pad($nu, $width = 9, $z = '0')
+	{
+		return str_pad($nu, $width, $z, STR_PAD_LEFT);
 	}
 }

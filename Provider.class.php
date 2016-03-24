@@ -15,11 +15,11 @@ class Provider extends Person
 	const PROVIDER_TYPE_HELP = "A provider belongs to one of the following types <br>DIETITIAN <br>INTERNIST <br>EXERCISE_EXPERT";
 
 
-	public function __construct($provider_number)
+	public function __construct($provider_number = 1)
 	{
 		$this->PROVIDER_TYPES = ['DIETITIAN', 'INTERNIST', 'EXERCISE_EXPERT'];
 		$this->setNumber($provider_number);
-		//$this->fromDatabase($this->getNumber());
+		$this->fromDatabase($this->getNumber());
 	}
 
 	/**
@@ -45,7 +45,6 @@ class Provider extends Person
 			return;
 		}*/
 
-
 		$this->type = $type;
 	}
 
@@ -64,7 +63,7 @@ class Provider extends Person
 			$this->setType($this->convertTypeLong($md["provider_type"]));
 		} else
 		{
-			die("Fatal Error: There is no provider with number " . $provider_number . "<script>setTimeout(function(){ window.location = window.location.href; }, 550);</script>");
+			UserInterface::errorMessage("Fatal Error: There is no provider with number " . $provider_number);
 		}
 	}
 

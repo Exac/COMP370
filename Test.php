@@ -1,10 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Thomas
- * Date: 3/9/16
- * Time: 18:36
- */
+echo __DIR__;
+$aaa = new mysqli("COMP370.db.10405771.hostedresource.com", "COMP370", "SoftwareEngineering370!", "COMP370");
+
+
+echo extension_loaded('mysqli') ? "LOADED" : "NOT LOADED";
+echo "<br>";
+
+if (!function_exists('mysqli_init') && !extension_loaded('mysqli'))
+{
+	echo 'We don\'t have mysqli!!!';
+} else
+{
+	echo 'Phew we have it!';
+}
 
 require_once("Database.class.php");
 require_once("DatabaseController.class.php");
@@ -53,6 +61,28 @@ if (empty($b))
 
 $m = new Member("000000001");
 echo "<br>" . $m->getNumber() . "<br>";
+
+if (is_numeric((new Database())->escape("000000001")))
+{
+	echo "numeric<br>";
+} else
+{
+	echo "non-numeric<br>";
+}
+
+#Test toString and fromString in Member and Provider
+$mt = new Member();
+echo $mt . "<br>";
+echo $mt->getNumber() . "<br>";
+$mt100 = new Member(100);
+echo $mt100 . "<br>";
+
+$mt->fromJSON($mt100);
+echo $mt . "<br>";
+echo $mt100 . "<br>";
+
+$pt = new Person();
+echo $pt->pad(100);
 
 /*function membersHtml()
 {

@@ -100,7 +100,7 @@ class Database
 	 * @param $value String to be escaped.
 	 * @return string Clean string for use in database.
 	 */
-	public function secure($value)
+	public function escape($value)
 	{
 		$connection = $this->connect();
 

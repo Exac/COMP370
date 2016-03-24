@@ -2,7 +2,7 @@
  * Created by Thomas on 3/21/16.
  */
 /**
- * Remove the provider_member_validator after the time has gone off.
+ * Remove the validator after the time has gone off.
  *
  * @param pmv_element
  */
@@ -38,12 +38,6 @@ function updateLoading(initialTime, n, loading) {
     }
 }
 /**
- * Reload the page without $_POST variables.
- */
-function reload() {
-    window.location = window.location.href;
-}
-/**
  * If we can reload to same page we will.
  */
 function emergency_reload() {
@@ -64,8 +58,8 @@ function emergency_reload() {
  * Entry point for error display.
  */
 function initProvider() {
-    //check if #provider_member_validator exists
-    var pmv = document.getElementById("provider_member_validator");
+    //check if #validator exists
+    var pmv = document.getElementById("validator");
     if (pmv === null) {
         //Does not exist
     } else {
@@ -91,6 +85,7 @@ function initProvider() {
 initProvider();
 
 /**
+ * Unsafe to use for math! Numbers longer than 9 digits will be truncated!
  *
  * @param nu number
  * @param width Number of chars to pad until.
@@ -98,23 +93,29 @@ initProvider();
  * @returns {string}
  */
 function pad(nu, width, z) {
+    console.log(nu);
     if (nu.toString().length <= width) {
         z = z || '0';
         nu = nu + '';
         return nu.length >= width ? nu : new Array(width - nu.length + 1).join(z) + nu;
     } else {
+        //if the input is longer than the width, try again without leading-zeros,
+        //then cut the number down.
+        console.log("nu internal else");
         return pad(parseInt(nu, 10).toString().substr(0, width), width, z);
     }
 }
 function personEnter(key) {
     if (key.keyCode == 13) {
+        console.log("personEnter(" + key + ") -> pad()");
         key.target.value = pad(key.target.value, 9, 0);
     }
 }
 function personBlurred(blur) {
+    console.log("personEnter(" + blur + ") -> pad()");
     blur.target.value = pad(blur.target.value, 9, 0);
 }
-function padPersonNumbers(element, index, array) {
+function personPadNumbers(element, index, array) {
     if (element) {
         element.addEventListener("blur", personBlurred);
         element.form.addEventListener("submit", personBlurred);
@@ -122,7 +123,7 @@ function padPersonNumbers(element, index, array) {
     }
 }
 
-[document.getElementById("provider_password"),
-    document.getElementById("provider_verify_member")].forEach(padPersonNumbers);
-
-
+[
+    document.getElementById("provider_password"),
+    document.getElementById("provider_verify_member")
+].forEach(personPadNumbers);

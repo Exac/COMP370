@@ -2,9 +2,9 @@
  * PROVIDER ID
  */
 /**
- * provider_member_validator
+ * validator
  */
-#provider_member_validator {
+#validator {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,8 +17,8 @@
     z-index: 100;
 }
 
-#provider_member_validator.invalid,
-#provider_member_validator.valid {
+.invalid,
+.valid {
     background-image: linear-gradient(to bottom, rgba(233, 162, 162, 1), rgba(233, 132, 132, 1));
     color: #ffffff;
     margin: 0;
@@ -26,11 +26,11 @@
     line-height: 100vh;
 }
 
-#provider_member_validator.valid {
+#validator.valid {
     background-image: linear-gradient(to bottom, rgba(162, 233, 165, 1), rgba(132, 233, 122, 1));
 }
 
-#provider_member_validator .loading,
+#validator .loading,
 .loading {
     display: block;
     position: absolute;

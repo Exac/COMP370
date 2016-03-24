@@ -144,7 +144,7 @@ class DatabaseController
 	{
 		self::initialize();
 
-		$member_number = mysql_real_escape_string($member_number);
+		$member_number = self::$db->escape($member_number);
 
 		return self::$db->select("SELECT * FROM member where member_number = ${member_number}")[0];
 	}
@@ -153,7 +153,8 @@ class DatabaseController
 	{
 		self::initialize();
 
-		$provider_number = mysql_real_escape_string($provider_number);
+		$provider_number = self::$db->escape($provider_number);
+
 		$rows = self::$db->select("SELECT * FROM provider where provider_number = ${provider_number}")[0];
 
 		return $rows;

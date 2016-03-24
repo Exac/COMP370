@@ -24,6 +24,7 @@ class UserInterface
 	public $body = "";
 	public $scripts = array("/cdn/js/scripts.js");
 	public $foot = "\n</body>\n</html>";
+	public $inlineJS = "\n";
 
 	public function  __construct()
 	{
@@ -36,10 +37,16 @@ class UserInterface
 	{
 		$this->body .= Utils::getNavigationMenu();
 	}
-	
-	public function errorMessage()
+
+	public static function errorMessage($message)
 	{
-		
+		$em_ui = new UserInterface();
+		//array_push($em_ui->scripts, "/cdn/js/provider.js");
+		$em_ui->add("<div id='errorScreen'><span class='invalid message'>${message}</span></div>");
+		$em_ui->inlineJS .= ("console.log('reload called');window.setTimeout(reload, 2500);");
+
+		echo $em_ui;
+		die();
 	}
 	
 	public function message()
@@ -96,11 +103,14 @@ class UserInterface
 
 		$o .= "\n" . str_replace("\n", "\n\t", $this->body); //add body, indent all lines once.
 
-		foreach ($this->scripts as &$script) {
-			$o .= "\n\t<script src='" . $script . "' defer></script>";
+		foreach ($this->scripts as &$script)
+		{ //have external scripts load before inline scripts.
+			$o .= "\n\t<script src='" . $script . "'></script>";
 		}
-		$o .= $this->foot;
 
+		$o .= "\n\t<script defer>" . $this->inlineJS . "</script>"; //load inline scripts last
+
+		$o .= $this->foot;
 
 		return $o;
 	}

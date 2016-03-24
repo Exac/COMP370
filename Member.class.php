@@ -17,10 +17,9 @@ class Member extends Person
 	 							  \tACTIVE\n
 	 							  \tSUSPENDED";
 
-	public function __construct($member_number)
+	public function __construct($member_number = 1)
 	{
 		$this->MEMBER_STATUS_VALUES = array("SUSPENDED", "ACTIVE");
-
 		$this->setNumber($member_number);
 		$this->fromDatabase($this->getNumber());
 	}
@@ -35,15 +34,13 @@ class Member extends Person
 	}
 
 	/**
+	 * Sets the type for this provider.
 	 * Sets the status of the member to either "ACTIVE" or "SUSPENDED".
 	 * @param string $status Member
 	 */
 	public function setStatus($status)
 	{
 		// Make sure the value of status is valid.
-		/*
-		 * Not sure what the following code is checking, it looks like at's checking for type?
-		 */
 		/*if (!in_array($status, $this->MEMBER_STATUS_VALUES))
 		{
 			echo $this->MEMBER_STATUS_HELP;
@@ -55,15 +52,21 @@ class Member extends Person
 
 	public function fromDatabase($member_number)
 	{
-		$md = DatabaseController::selectMember($member_number);
-		$this->setNumber($md["member_number"]);
-		$this->setName($md["member_name"]);
-		$this->setStreet($md["member_street_address"]);
-		$this->setCity($md["member_city"]);
-		$this->setProvince($md["member_province"]);
-		$this->setPostalCode($md["member_postal_code"]);
-		$this->setEmail($md["member_email_address"]);
-		$this->setStatus($this->convertStatusLong($md["member_status"]));
+		if (DatabaseController::providerExists($member_number))
+		{
+			$md = DatabaseController::selectMember($member_number);
+			//$this->setNumber($md["member_number"]); //mysql_real_escape_string strips leading 0's
+			$this->setName($md["member_name"]);
+			$this->setStreet($md["member_street_address"]);
+			$this->setCity($md["member_city"]);
+			$this->setProvince($md["member_province"]);
+			$this->setPostalCode($md["member_postal_code"]);
+			$this->setEmail($md["member_email_address"]);
+			$this->setStatus($this->convertStatusLong($md["member_status"]));
+		} else
+		{
+			UserInterface::errorMessage("Fatal Error: There is no member with number " . $member_number);
+		}
 	}
 
 	private function convertStatusLong($status)
