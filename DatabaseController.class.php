@@ -223,7 +223,7 @@ class DatabaseController
 			self::PROVIDER_PROVINCE .", ". self::PROVIDER_POSTAL .", ".
 			self::PROVIDER_EMAIL    .", ". self::PROVIDER_TYPE   .") ".
 
-			"VALUES ('" . $number   ."', '". $name   ."', '".
+			"VALUES ('', '" . $name . "', '" .
 			$street   ."', '". $city   ."', '".
 			$province ."', '". $postal ."', '".
 			$email    ."', '". $type   ."')  ";
