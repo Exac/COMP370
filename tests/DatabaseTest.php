@@ -71,7 +71,8 @@ class DatabaseTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @desc Stress-ests that the database can handle 100's of queries a second.
+	 * Stress-test the database.
+	 * @desc Stress-tests that the database can handle 100's of queries a second.
 	 */
 	public function testMultipleDBQueries()
 	{
@@ -96,6 +97,24 @@ class DatabaseTest extends PHPUnit_Framework_TestCase
 	{
 		//assert
 		$this->assertTrue(is_string($this->db->password), "Got a " . gettype($this->db->password) . " instead of a string");
+	}
+
+	/**
+	 * @desc Ensures password is alphanumeric
+	 */
+	public function testDatabasePasswordFirstCharacterAlphanumeric()
+	{
+		//assert
+		$this->assertTrue(is_string($this->db->password[0]), "Got a " . gettype($this->db->password) . " instead of a string");
+	}
+
+	/**
+	 * @desc Ensures the password is more than one character
+	 */
+	public function testDatabasePasswordGreaterThanZero()
+	{
+		//assert
+		$this->assertTrue((strlen($this->db->password) > 0), "Got a " . gettype($this->db->password) . " instead of a string");
 	}
 
 	/**

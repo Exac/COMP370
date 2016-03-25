@@ -71,6 +71,11 @@ class MemberTest extends PHPUnit_Framework_TestCase
 		$this->db = $db = new Database();
 	}
 
+	protected function tearDown()
+	{
+
+	}
+
 	/**
 	 * @desc Ensures members can be created.
 	 */
@@ -86,6 +91,32 @@ class MemberTest extends PHPUnit_Framework_TestCase
 
 		//assert
 		$this->assertStringStartsWith("{", $b, "Member->__toString() should return valid JSON.");
+	}
+
+	/**
+	 * @desc Create a member that already exists
+	 */
+	public function testCreateMemberThatAlreadyExists()
+	{
+		//arrange
+		$num = 1;
+		//$_SERVER['REMOTE_ADDR'] = "::1";
+		$a = new Member($num);
+		$original_name = $a->getName();
+		$test_name = $a->getName() . "TEST";
+		$this->tear_down_tcmtae = "delete from member where member_name = '${test_name}'";
+		$a->setName($test_name);
+
+		//act
+		//add member to database
+		DatabaseController::addMember($a->getNumber(), $test_name, $a->getStreet(), $a->getCity(),
+			$a->getProvince(), $a->getPostalCode(), $a->getPostalCode(), $a->getStatus());
+		//create a new member object with same number as original, they should not be the same.
+		$b = new Member($num);
+
+		//assert
+		$this->assertEquals($original_name, $b->getName());
+		//remove test data from mysql
 	}
 
 	/**
