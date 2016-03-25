@@ -1,5 +1,5 @@
 #Chocoholics Anonymous Term Project
-Farzin Dhanji, Navi Gill &amp; Thomas McLennan
+Farzin Dhanji, Karanvir Gill &amp; Thomas McLennan
 
 ###Appendix
 1. [14.16](#1416)
