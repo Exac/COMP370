@@ -25,7 +25,7 @@ class Providers extends Persons
 
 	// Displayed after use.
 	const NOT_FOUND_MESSAGE = "ERROR: No provider found<br>";
-	const ADD_SUCCESSFUL    = "Provider added<br>";
+	const ADD_SUCCESSFUL = "Provider added, number is";
 	const UPDATE_SUCCESSFUL = "Provider updated<br>";
 	const ADD_FAIL          = "Provider can not be added<br>";
 	const UPDATE_FAIL       = "Provider can not be updated<br>";
@@ -244,13 +244,12 @@ class Providers extends Persons
 
 	public function add(Provider $provider)
 	{
-		$result = DatabaseController::addProvider(
-		$provider->getNumber(),   $provider->getName(),
+		$result = DatabaseController::addProvider($provider->getName(),
 		$provider->getStreet(),   $provider->getCity(),
 		$provider->getProvince(), $provider->getPostalCode(),
 		$provider->getEmail(),    $provider->getType());
 
-		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
+		return ($result == false) ? self::ADD_FAIL : $result;
 	}
 
 	public function update(Provider $provider)

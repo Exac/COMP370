@@ -26,7 +26,7 @@ class Members extends Persons
 
 	// Displayed when a provider is not found.
 	const NOT_FOUND_MESSAGE = "ERROR: No member found<br>";
-	const ADD_SUCCESSFUL    = "Member added<br>";
+	const ADD_SUCCESSFUL = "Member added, number is ";
 	const UPDATE_SUCCESSFUL = "Member updated<br>";
 	const ADD_FAIL          = "Member can not be added<br>";
 	const UPDATE_FAIL       = "Member can not be updated<br>";
@@ -249,15 +249,12 @@ class Members extends Persons
 
 	public function add(Member $member)
 	{
-		$result = DatabaseController::addMember(
-			$member->getNumber(),   $member->getName(),
+		$result = DatabaseController::addMember($member->getName(),
 			$member->getStreet(),   $member->getCity(),
 			$member->getProvince(), $member->getPostalCode(),
 			$member->getEmail(),    $member->getStatus());
 
-		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
-
-		#TODO: Implement DatabaseController
+		return ($result == false) ? self::ADD_FAIL : $result;
 	}
 
 	public function update(Member $member)
@@ -272,8 +269,6 @@ class Members extends Persons
 			$member->getEmail(),    $member->getStatus());
 
 		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
-
-		#TODO: Implement DatabaseController
 	}
 
 	public function delete($memberNumber)
@@ -284,8 +279,6 @@ class Members extends Persons
 		$result = DatabaseController::deleteMember($memberNumber);
 
 		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
-
-		#TODO: Implement DatabaseController
 	}
 
 	/**

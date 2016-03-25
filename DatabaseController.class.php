@@ -213,40 +213,40 @@ class DatabaseController
 		return false;
 	}
 
-	public static function addProvider($number, $name, $street, $city, $province, $postal, $email, $type)
+	public static function addProvider($name, $street, $city, $province, $postal, $email, $type)
 	{
 		self::initialize();
 
 		$query = "INSERT INTO ". self::PROVIDER ." (".
-			self::PROVIDER_NUMBER   .", ". self::PROVIDER_NAME   .", ".
+			self::PROVIDER_NAME . ", " .
 			self::PROVIDER_STREET   .", ". self::PROVIDER_CITY   .", ".
 			self::PROVIDER_PROVINCE .", ". self::PROVIDER_POSTAL .", ".
 			self::PROVIDER_EMAIL    .", ". self::PROVIDER_TYPE   .") ".
 
-			"VALUES ('" . $number   ."', '". $name   ."', '".
+			"VALUES ('" . $name . "', '" .
 			$street   ."', '". $city   ."', '".
 			$province ."', '". $postal ."', '".
 			$email    ."', '". $type   ."')  ";
 
-		return self::$db->query($query);
+		return (self::$db->query($query) == true) ? self::getLastMemberNumber() : false;
 	}
 
-	public static function addMember($number, $name, $street, $city, $province, $postal, $email, $status)
+	public static function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
 		self::initialize();
 
 		$query = "INSERT INTO ". self::MEMBER ." (".
-			self::MEMBER_NUMBER   .", ". self::MEMBER_NAME   .", ".
+			self::MEMBER_NAME . ", " .
 			self::MEMBER_STREET   .", ". self::MEMBER_CITY   .", ".
 			self::MEMBER_PROVINCE .", ". self::MEMBER_POSTAL .", ".
 			self::MEMBER_EMAIL    .", ". self::MEMBER_STATUS .") ".
 
-			"VALUES ('" . $number   ."', '". $name   ."', '".
+			"VALUES ('" . $name . "', '" .
 			$street   ."', '". $city   ."', '".
 			$province ."', '". $postal ."', '".
 			$email    ."', '". $status ."')  ";
 
-		return self::$db->query($query);
+		return (self::$db->query($query) == true) ? self::getLastProviderNumber() : false;
 	}
 
 	public static function deleteMember($number)
@@ -362,4 +362,19 @@ class DatabaseController
 
 	}
 
+	private static function getLastMemberNumber()
+	{
+		$result = self::$db->select("SELECT " . self::MEMBER_NUMBER . " FROM " .
+			self::MEMBER . " ORDER BY " . self::MEMBER_NUMBER . " DESC LIMIT 1");
+
+		return $result[0][self::MEMBER_NUMBER];
+	}
+
+	private static function getLastProviderNumber()
+	{
+		$result = self::$db->select("SELECT " . self::PROVIDER_NUMBER . " FROM " .
+			self::PROVIDER . " ORDER BY " . self::PROVIDER_NUMBER . " DESC LIMIT 1");
+
+		return $result[0][self::PROVIDER_NUMBER];
+	}
 }
