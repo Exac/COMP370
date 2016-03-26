@@ -104,7 +104,7 @@ Brief Description: The Join ChocAn use case enables a potential provider to join
 :--|
 Step-by-Step Description:<br>1.The potential provider submits all required information to ChocAn.<br>2.A staff member responsible for screening providers decides, using ChocAn business rules whether the provider should be accepted as a ChocAn approved provider.<br>3.The staff member informs the potential provider of the decision. A ChocAn operator now uses the Maintain Provider use case to record the new provider’s details and allocate a provider number to him.<br>4.A staff member supplies the provider with a provider terminal and his or her provider number. The new provider may now provide services for ChocAn members and bill ChocAn for those services.|
 
-**Description of the Recieve Payment use case**
+**Description of the Receive Payment use case**
 
 Brief Description: The Receive Payment use case enables the provider to receive payment for services provided to ChocAn members|
 :--|
@@ -117,25 +117,25 @@ Part 2 of Chocoholics Anonymous use-case diagram shows those use cases in which 
 
 Brief Description: The Manage Session use case enables the provider to log on to the ChocAn system, use the various functions available to him and be able to log off again.|
 :--|
-Step-by-Step Description:<br>1. When the provider switches his provider terminal on, the system prompts him to enter his provider number.<br>2. The provider supplies his provider number.<br>3. The system searches for this provider number.<br>4. The system displays the result of the search.<br>&nbsp;&nbsp;4a. If no such provider is found, the system displays an Invalid Number message.<br>&nbsp;&nbsp;4b. If the provider is found, the system displays the options available to the provider. The provider can now use the system as in use cases Verify Member and Receive Provider Directory.<br>5. When the provider chooses the Quit option or switches the terminal off, the system ends the session.|
+Step-by-Step Description:<br>1. When the provider switches his provider terminal on, the system prompts him to enter his provider number.<br>2. The provider supplies his provider number.<br>3. The system searches for this provider number.<br>4. The system displays the result of the search.<br>&nbsp;&nbsp;&nbsp;&nbsp;4a. If no such provider is found, the system displays an Invalid Number message.<br>&nbsp;&nbsp;&nbsp;&nbsp;4b. If the provider is found, the system displays the options available to the provider. The provider can now use the system as in use cases Verify Member and Receive Provider Directory.<br>5. When the provider chooses the Quit option or switches the terminal off, the system ends the session.|
 
 **Description of the Verify Member use case**
 
 Brief Description: The Verify Member use case enables a provider to verify that a member has a valid member number and that the member is not suspended.|
 :--|
-Step-by-Step Description:<br>1.The provider swipes the member’s card through the card reader of the provider terminal, or keys in the member number (when the claim is submitted at a later date or time).<br>2. The system searches for a member with this number.<br>3.The system displays the result of the verification.<br>&nbsp;&nbsp;3a. If no such member is found, the system displays an Invalid number message.<br>&nbsp;&nbsp;3b. If the member is found, the system displays a message indicating the status of the member e.g. Suspended if the member is suspended or Validated if the member is active.|
+Step-by-Step Description:<br>1.The provider swipes the member’s card through the card reader of the provider terminal, or keys in the member number (when the claim is submitted at a later date or time).<br>2. The system searches for a member with this number.<br>3.The system displays the result of the verification.<br>&nbsp;&nbsp;&nbsp;&nbsp;3a. If no such member is found, the system displays an Invalid number message.<br>&nbsp;&nbsp;&nbsp;&nbsp;3b. If the member is found, the system displays a message indicating the status of the member e.g. Suspended if the member is suspended or Validated if the member is active.|
 
 **Description of the Submit Claim use case**
 
 Brief Description: The Submit Claim use case enables a provider to bill Chocoholics Anonymous for a service provided to a member.|
 :--|
-Step-by-Step Description: After a provider has verified a member, the message Validated appears on the provider’s terminal and the provider can continue to submit a claim.<br>1. The provider enters the date the service was provided in the format MM-DD-YYYY and the service code.<br>2. The system verifies that the service code exists. If it does, the system displays the corresponding service name.<br>3.The provider confirms that this is the correct service rendered.<br>4. The system stores the following information about the claim submitted: &nbsp;&nbsp;Current date and time (MM-DD-YYYY HH:MM:SS)<br>&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;Comments (max 100 characters)<br>The system displays the fee to be paid to the provider for the service rendered. The provider has a form on which he or she can enter the same information as that stored by the system, as well as the service fee.|
+Step-by-Step Description: After a provider has verified a member, the message Validated appears on the provider’s terminal and the provider can continue to submit a claim.<br>1. The provider enters the date the service was provided in the format MM-DD-YYYY and the service code.<br>2. The system verifies that the service code exists. If it does, the system displays the corresponding service name.<br>3.The provider confirms that this is the correct service rendered.<br>4. The system stores the following information about the claim submitted: &nbsp;&nbsp;&nbsp;&nbsp;Current date and time (MM-DD-YYYY HH:MM:SS)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Comments (max 100 characters)<br>The system displays the fee to be paid to the provider for the service rendered. The provider has a form on which he or she can enter the same information as that stored by the system, as well as the service fee.|
 
 **Description of the Receive Provider Directory  use case**
 
 Brief Description: The Receive Provider Directory use case enables a provider to request and receive a copy of the Provider Directory.|
 :--|
-Step-by-Step Description:<br>Assumption: The provider must have already switched on his or her terminal and entered his or her provider number correctly.<br>1. The provider submits a request for a Provider Directory through his or her terminal.<br>2. The system generates a list (report) of all services, ordered alphabetically according to the service name,including, for each service:<br>&nbsp;&nbsp;Service name (max 20 characters)<br>&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;Service fee (max $999.99)<br>The system sends the list as an email attachment to the provider, and displays a message to this effect on the provider’s terminal.|
+Step-by-Step Description:<br>Assumption: The provider must have already switched on his or her terminal and entered his or her provider number correctly.<br>1. The provider submits a request for a Provider Directory through his or her terminal.<br>2. The system generates a list (report) of all services, ordered alphabetically according to the service name,including, for each service:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name (max 20 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service fee (max $999.99)<br>The system sends the list as an email attachment to the provider, and displays a message to this effect on the provider’s terminal.|
 
 Part 3 of Chocoholics Anonymous use-case diagram shows those use cases in which the ChocAn operator is the primary system actor. These use cases include: Maintain Member, Maintain Provider, and Maintain Service.
 
@@ -145,19 +145,19 @@ Part 3 of Chocoholics Anonymous use-case diagram shows those use cases in which 
 
 Brief Description: The Maintain Member use case enables a ChocAn operator to add new members, update the details of existing members and delete members who have resigned.|
 :--|
-Step-by-Step Description:<br>__A. To add a new member:__ When a potential member’s application for membership has been approved and he or she has paid the first month’s fee, his or her details are forwarded to the ChocAn operator.<br>1. The ChocAn operator selects the option to add a new member, and enters the new member’s details:<br>&nbsp;&nbsp;Member name (max 25 characters)<br>&nbsp;&nbsp;Member street address (max 25 characters)<br>&nbsp;&nbsp;Member city (max 14 characters)<br>&nbsp;&nbsp;Member state (2 letters)<br>&nbsp;&nbsp;Member zip code (5 digits)<br>&nbsp;&nbsp;Member email address (max 50 characters)<br>2. The system allocates a number for the new member, records the new member’s details, and sets the new member’s status to Active.<br>3.The system displays the new member’s number and other details.<br><br>__B. To update an existing member:__<br>When a member’s details have changed, the member submits his or her new details to ChocAn.<br>1.The ChocAn operator finds the existing member details.<br>2.The ChocAn operator edits the details that must be changed. (The member number can never be changed.)<br>3.The system updates the member’s details.<br><br>__C.To delete an existing member:__<br>When a member wants to resign, he or she informs ChocAn.<br>1.The ChocAn operator finds the existing member details.<br>2. The ChocAn operator selects the option to delete the member. <br>The system records the member’s resignation and deletes the member’s details at the end of the week, after the accounting procedure has been run.|
+Step-by-Step Description:<br>__A. To add a new member:__ When a potential member’s application for membership has been approved and he or she has paid the first month’s fee, his or her details are forwarded to the ChocAn operator.<br>1. The ChocAn operator selects the option to add a new member, and enters the new member’s details:<br>&nbsp;&nbsp;&nbsp;&nbsp;Member name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member zip code (5 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member email address (max 50 characters)<br>2. The system allocates a number for the new member, records the new member’s details, and sets the new member’s status to Active.<br>3.The system displays the new member’s number and other details.<br><br>__B. To update an existing member:__<br>When a member’s details have changed, the member submits his or her new details to ChocAn.<br>1.The ChocAn operator finds the existing member details.<br>2.The ChocAn operator edits the details that must be changed. (The member number can never be changed.)<br>3.The system updates the member’s details.<br><br>__C.To delete an existing member:__<br>When a member wants to resign, he or she informs ChocAn.<br>1.The ChocAn operator finds the existing member details.<br>2. The ChocAn operator selects the option to delete the member. <br>The system records the member’s resignation and deletes the member’s details at the end of the week, after the accounting procedure has been run.|
 
 **Description of the Maintain Provider use case**
 
 Brief Description: The Maintain Provider use case enables a ChocAn operator to add new providers, update the details of existing providers and delete providers who have resigned.|
 :--|
-Step-by-Step Description:<br>__A. To add a new provider:__<br>When a new provider joins ChocAn, his or her details are forwarded to the ChocAn operator. <br>1.The ChocAn operator selects the option to add a new provider, and enters the new provider’s details:<br>&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;Provider street address (max 25 characters)<br>&nbsp;&nbsp;Provider city (max 14 characters)<br>&nbsp;&nbsp;Provider state (2 letters)<br>&nbsp;&nbsp;Provider zip code (5 digits)<br>&nbsp;&nbsp;Provider email address (max 50 characters)<br>2. The system allocates a number for the new provider, records the new provider’s details.<br>3. The system displays the new provider’s provider number and other details.<br>4. The system sends emails to all members informing them of the new provider.<br>__B. To update an existing provider:__ When a provider’s details have changed, the provider submits his or her new details to ChocAn.<br>1. The ChocAn operator finds the existing provider details.<br>2. The ChocAn operator edits the details that must be changed. (The provider number can never be changed.)<br>3.The system updates the provider’s details. The system sends emails to all members informing them of the changes.<br>__C. To delete an existing provider:__<br>When a provider wants to resign, he or she informs ChocAn.<br>1. The ChocAn operator finds the existing provider details.<br>2. The ChocAn operator selects the option to delete the provider. The system records the provider’s resignation and deletes the provider’s details at the end of the week, after the accounting procedure has been run. The system sends emails to all members informing them of the provider’s resignation.|
+Step-by-Step Description:<br>__A. To add a new provider:__<br>When a new provider joins ChocAn, his or her details are forwarded to the ChocAn operator. <br>1.The ChocAn operator selects the option to add a new provider, and enters the new provider’s details:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider zip code (5 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider email address (max 50 characters)<br>2. The system allocates a number for the new provider, records the new provider’s details.<br>3. The system displays the new provider’s provider number and other details.<br>4. The system sends emails to all members informing them of the new provider.<br>__B. To update an existing provider:__ When a provider’s details have changed, the provider submits his or her new details to ChocAn.<br>1. The ChocAn operator finds the existing provider details.<br>2. The ChocAn operator edits the details that must be changed. (The provider number can never be changed.)<br>3.The system updates the provider’s details. The system sends emails to all members informing them of the changes.<br>__C. To delete an existing provider:__<br>When a provider wants to resign, he or she informs ChocAn.<br>1. The ChocAn operator finds the existing provider details.<br>2. The ChocAn operator selects the option to delete the provider. The system records the provider’s resignation and deletes the provider’s details at the end of the week, after the accounting procedure has been run. The system sends emails to all members informing them of the provider’s resignation.|
 
 **Description of the Maintain Service use case**
 
 Brief Description: The Maintain Service use case enables a ChocAn operator to add new Service, update the details of existing Service and delete Service that are discontinued.|
 :--|
-Step-by-Step Description:<br>The details of new, changed or discontinued services are given to the ChocAn operator by the ChocAn manager.<br>__A. To add a new service:__<br>hen a new provider joins ChocAn, his or her details are forwarded to the ChocAn operator.<br>1. The ChocAn operator selects the option to add a new service, and enters the new services’ details:<br>&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;Service name (max 20 characters)<br>&nbsp;&nbsp;Service fee (max $999.99)<br>&nbsp;&nbsp;2. The system records the new service details.<br>&nbsp;&nbsp;3. The system displays the new service details.<br>&nbsp;&nbsp;4.The system sends emails to all providers informing them of the new service.<br>__B. To update an existing service:__<br>1. The ChocAn operator finds the existing service details.<br>2. The ChocAn operator edits the details that must be changed. (The servicenumber can never be changed.)<br>3.The system updates the service details. The system sends emails to all providers informing them of the changes.<br>__C. To delete an existing service:__<br>1. The ChocAn operator finds the existing servicedetails.<br>2. The ChocAn operator selects the option to delete the service. The system records the discontinuation of the service and deletes its details at the end of the week, after the accounting procedure has been run. The system sends emails to all providers informing them of the discontinuation of the service.|
+Step-by-Step Description:<br>The details of new, changed or discontinued services are given to the ChocAn operator by the ChocAn manager.<br>__A. To add a new service:__<br>hen a new provider joins ChocAn, his or her details are forwarded to the ChocAn operator.<br>1. The ChocAn operator selects the option to add a new service, and enters the new services’ details:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name (max 20 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service fee (max $999.99)<br>&nbsp;&nbsp;&nbsp;&nbsp;2. The system records the new service details.<br>&nbsp;&nbsp;&nbsp;&nbsp;3. The system displays the new service details.<br>&nbsp;&nbsp;&nbsp;&nbsp;4.The system sends emails to all providers informing them of the new service.<br>__B. To update an existing service:__<br>1. The ChocAn operator finds the existing service details.<br>2. The ChocAn operator edits the details that must be changed. (The servicenumber can never be changed.)<br>3.The system updates the service details. The system sends emails to all providers informing them of the changes.<br>__C. To delete an existing service:__<br>1. The ChocAn operator finds the existing servicedetails.<br>2. The ChocAn operator selects the option to delete the service. The system records the discontinuation of the service and deletes its details at the end of the week, after the accounting procedure has been run. The system sends emails to all providers informing them of the discontinuation of the service.|
 
 Part 4 of Chocoholics Anonymous use-case diagram shows the use case in which the ChocAn manager is the primary system actor, namely, to request a report, combined with the use case which is initiated by time, namely, the Accounting Procedure that is run at midnight each Friday.
 
@@ -165,190 +165,387 @@ Part 4 of Chocoholics Anonymous use-case diagram shows the use case in which the
 
 **Description of the Request Report  use case**
 
-Brief Description: The Request Report use case enables the ChocAn manager to request a member report, a provider
-report or an accounts payable report.|
+Brief Description: The  enables the ChocAn manager to request a member report, a provider report or an accounts payable report.|
 :--|
-Step-by-Step Description:<br>1.
-The ChocAn manager selects the report that
-he or she requires, and enters the end of date of the week he or
-she requires.
-2.
-Type of report being generated:
-a.
-For a member report, the manager enters the member number. The system generates a member report
-using the Produce a Member Report use case.
-b.
-For a
-provider report, the manager enters the provider number. The system generates a provider report
-using the Produce a Provider Report use case.
-c.
-The system generates an accounts payable report using the Produce an Accounts Payable Report use
-case.
-3.
-The
-manager can choose to print the report.
-If required, the system prints the report.|
+Step-by-Step Description:<br>1. The ChocAn manager selects the report that he or she requires, and enters the end of date of the week he or she requires.<br>2. Type of report being generated:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. For a member report, the manager enters the member number. The system generates a member report using the Produce a Member Report use case.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. For a provider report, the manager enters the provider number. The system generates a provider report using the Produce a Provider Report use case.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. The system generates an accounts payable report using the Produce an Accounts Payable Report use case. <br>&nbsp;&nbsp;&nbsp;&nbsp;3. The manager can choose to print the report. If required, the system prints the report.|
 
 **Description of the Run Accounting Procedure use case**
 
-Brief Description: The Run Accounting Procedure use case enables the Scheduler to run the accounting procedure so
-that m
-embers, providers and the ChocAn manager receive weekly reports. The use case also enables providers to
-receive the fees due to them by providing the EFT component with the EFT data.|
+Brief Description: The Run Accounting Procedure use case enables the Scheduler to run the accounting procedure so that members, providers and the ChocAn manager receive weekly reports. The use case also enables providers to receive the fees due to them by providing the EFT component with the EFT data.|
 :--|
-Step-by-Step Description:<br>This procedure is run every week at midnight o
-n Friday.
-1.
-For each provider, the system generates a report using use case Produce a Provider Report, and sends the
-report as an email attachment to the provider.
-2.
-For each member, the system generates a report using use case Produce a Member Report, and sen
-ds the
-report as an email attachment to the member.
-3.
-The system generates an accounts payable report for the ChocAn manager using the use case Produce an
-Accounts Payable Report, and sends the report to the manager as an email attachment.
-4.
-The system produce
-s the EFT data for the EFT component using the use case Produce EFT Data.|
+Step-by-Step Description:<br>This procedure is run every week at midnight on Friday.<br>1.For each provider, the system generates a report using use case Produce a Provider Report, and sends the report as an email attachment to the provider.<br>2. For each member, the system generates a report using use case Produce a Member Report, and sends the report as an email attachment to the member. <br>3. The system generates an accounts payable report for the ChocAn manager using the use case Produce an Accounts Payable Report, and sends the report to the manager as an email attachment. <br>4. The system produces the EFT data for the EFT component using the use case Produce EFT Data.|
 
 **Description of the Produce Provider Report  use case**
 
-Brief Description: The Produce Provider Report use case enables the system to generate a report of all claims submitted
-during a s
-pecific week by a particular provider.|
+Brief Description: The Produce Provider Report use case enables the system to generate a report of all claims submitted during a specific week by a particular provider.|
 :--|
-Step-by-Step Description:<br>.
-The system generates the provider report including the following information:
-Provider name (max 25 characters)
-Provider number (max 9 digits)
-Provider street address (max 25 characters)
-Pro
-vider city (max 14 characters)
-Provider state (2 letters)
-Provider zip code (5 digits)
-2.
-For each service provided, the following information, sorted according to claim submission date and time is
-included:
-Service date (MM
--
-DD
--
-YYYY)
-Claim submission date an
-d time (MM
--
-DD
--
-YYYY HH:MM:SS)
-Member name (max 25 characters)
-Member number (max 9 digits)
-Service name (max 20 characters)
-Service code (max 6 digits)
-Total number of consultations with members (3 digits)
-Service fee (max $999.99)
-Total fee for week (max
-$99,999.99)|
+Step-by-Step Description:<br>1. The system generates the provider report including the following information:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider zip code (5 digits)<br>2. For each service provided, the following information, sorted according to claim submission date and time is included:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Claim submission date and time (MM-DD-YYYY HH:MM:SS)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name (max 20 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Total number of consultations with members (3 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service fee (max$999.99)<br>&nbsp;&nbsp;&nbsp;&nbsp;Total fee for week (max$99,999.99)|
 
 **Description of the Produce EFT Data use case**
 
-Brief Description: The Produce EFT Data use case enables the system to generate a file containing the current week’s EFT
-data for the EFT component.|
+Brief Description: The Produce EFT Data use case enables the system to generate a file containing the current week’s EFT data for the EFT component.|
 :--|
-Step-by-Step Description:<br>Step
--
-by
--
-Step Description:
-The system writes to
-a file the following data for each provider who must be paid, for the week:
-Provider name (max 25 characters)
-Provider number (max 9 digits)
-Total fee for week (max $999.99).|
+Step-by-Step Description:<br>The system writes to a file the following data for each provider who must be paid, for the week:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Total fee for week (max $999.99).|
 
 **Description of the Produce Accounts Payable Report use case**
 
 Brief Description: Brief Description: The Produce Accounts Payable Report use case enables the system to generate a summary report of all services rendered by ChocAn providers and the fees due to them during a specific week.|
 :--|
-Step-by-Step Description:<br>1.
-The system
-generates the accounts payable
-report including the following information
-:
-a.
-For each provider to be paid that week:
-i.
-Provider number (max 9 digits)
-ii.
-Provider name (max 25 characters)
-iii.
-Number of consultations (max
-3
-digits)
-iv.
-Total fee for week (max $999.99)
-v.
-Total number of providers who provided services
-vi.
-Total number of consultations (max 3 digits)
-vii.
-Overall total fee
-(max $999,
-999.99).|
+Step-by-Step Description:<br>1. The system generates the accounts payable report including the following information:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. For each provider to be paid that week:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii. Number of consultations (max 3 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv. Total fee for week (max $999.99)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v. Total number of providers who provided services<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vi. Total number of consultations (max 3 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vii. Overall total fee (max $999,999.99).|
 
 **Description of the Produce Member Report use case**
 
-Brief Description: The Produce
-a
-Member Report use case enables the system t
-o generate a report of all services
-rendered
-to a particular member during a specific week.|
+Brief Description: The Produce a Member Report use case enables the system to generate a report of all services rendered to a particular member during a specific week.|
 :--|
-Step-by-Step Description:<br>1.
-The system generates the
-member
-report including the following information:
-Member name (max 25 characters)
-Member number (max 9 digits)
-Member street address (max 25 characters)
-Member city (max 14 characters)
-Member state (2 letters)
-Member zip code (5 digits)
-2.
-For each service provided, the following information sorted according to service date is included:
-Service date (MM
--
-DD
--
-YYYY)
-Prov
-ider name (max 25 characters)
-Service name (max 20 characters)|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Step-by-Step Description:<br>1. The system generates the member report including the following information:<br>&nbsp;&nbsp;&nbsp;&nbsp;Member name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member zip code (5 digits)<br>2. For each service provided, the following information sorted according to service date is included:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name (max 20 characters)|
+---
 
 12.20<a name="1220"></a>
 ===
+__Using the technique specified by your instructor, draw up a specification document for the
+Chocoholics Anonymous product described in [Appendix A](#AppendixA)__
+
+1. **Draw the data flow diagram**
+---
+To simplify the data flow diagram, it is drawn in three parts. Data stores and external agents are repeated, but there is only one instance of each process. The data flow diagrams appear in Figures 1.1, 1.2 and 1.3
+
+**Figure 1.1: Part 1 of data flow diagram for Chocoholics Anonymous**
+![](http://imgur.com/AoeZWpg.png)
+
+**Figure 1.2: Part 2 of data flow diagram for Chocoholics Anonymous**
+
+![](http://imgur.com/folOxRu.png)
+
+**Figure 1.3: Part 3 of data flow diagram for Chocoholics Anonymous**
+
+![](http://imgur.com/aNlDMPK.png)
+
+2. **Decide what sections to computerize, and how.**
+---
+All processes shown in the Data Flow Diagram ( DFD ) will be computerized. A central database is required, and will be installed on a server at the ChocAn Data Center. Client / Server architecture is required for online implementation of the processes shown in Part 1 of the DFD ( maintenance of the database by a ChocAn operator ) . The processes in Part 2 of the DFD will be implemented using provider terminals that interact with the server via a dial-up modem. The processes shown in Part 3 of the DFD will be implemented firstly as batch processes that will be run at midnight each Friday. This is indicated by the dashed lines ( control flows ) in the DFD. Secondly, a single report can be generated at any time interactively on request by the ChocAn manager from a client workstation
+
+3. **Determine the Details of the Data Flows**
+---
+
+**Provider_details:**
+
+* Provider number (max 9 digits) – Generated by system, may not be changed.
+* Provider name (max 25 characters)
+* Provider street address (max 25 characters)
+* Provider city (max 14 characters)
+* Provider state (2 letters)
+* Provider Zip Code (5 digits)
+* Provider email address (max 50 characters)
+* Provider type (1 letter) – Dietitian (D), Internist (I) or Exercise Specialist (E)
+
+**Provider_updates:**
+
+* For a new Provider:
+ * provider details excluding provider number
+* To update an existing provider:
+ * Existing provider number
+ * Update provider details excluding provider number
+* To delete an existing provider:
+ * Provider number
+* Updated_provider_details:
+ * Provider_details
+
+**Member_details:**
+
+* Member number (max 9 digits) – Generated by system, may not be changed.
+* Member name (max 25 characters)
+* Member street address (max 25 characters)
+* Member  city (max 14 characters)
+* Member state (2 letters)
+* Member Zip Code (5 digits)
+* Member email address (max 50 characters)
+* Member status (1 letter) – Active (A) or Suspended (S)
+
+**Member_updates:**
+
+* For a new member:
+ * member details excluding member number
+* To update an existing member:
+ * Existing member number
+ * Update member details excluding member number
+* To delete an existing member:
+ * member number
+* Updated_member_details:
+ * member_details
+
+**Service_Details:**
+
+* Service code (max 6 digits)
+* Service name (max 20 characters)
+* Service fee (4+2 digits)
+
+**Service_Updates:**
+
+* For a new service:
+ * service details
+* To update an existing service:
+ * Existing service code
+ * Update service details
+* To delete an existing service:
+ * Service code
+* Updated_service_details:
+ * Service_details
+
+**Claims_Details:**
+
+* Submission data and time (19 characters, format MM-DD-YYY HH:MM:SS)
+* Service date (10 characters, format MM-DD-YYYY)
+* Provider number (max 9 digits)
+* Member number (max 9 digits)
+* Service code (max 6 digits)
+
+**Claim_Updates:**
+
+* For a new claim:
+* Claim_details
+* Verified_provider_number:
+ * Provider_number
+* Verified_member_number:
+ * Member_number
+* Verified_service_details:
+ * Service_details
+* Verified_claim:
+ * Claim_details
+
+**Provider_directory:**
+
+* Provider_directory_request (1 character)
+* Provider_directory:
+ * For each service, alphabetically ordered according to service name:
+  * Service name (max 20 characters)
+  * Service code (max 6 digits)
+  * Service fee (4+2 digits)
+
+**Provider_report_request:**
+
+* Provider number (max 9 digits)
+* End date of week (10 characters, format MM-DD-YYYY)
+* Provider_report:*
+ * Provider name (max 25 characters)
+ * Provider street address (max 25 characters)
+ * Provider city (max 14 characters)
+ * Provider state (2 letters)
+ * Provider Zip Code (5 digits)
+ * For each service provided, sorted according to claim submission Date and time:
+  * Service date (10 characters, format MM-DD-YYYY)
+  * Submission date and time (19 characters, format MM-DD-YYY HH:MM:SS)
+  * Member name (max 25 characters)
+  * Member number (max 9 digits)
+  * Service code (max 6 digits)
+  * Service fee (4+2 digits)
+  * Total number of consultations (3 digits)
+  * Total fee for week (5+2 digits)
+
+**Member_report_request:**
+* Member number (max 9 digits)
+* End date of week (10 characters, format MM-DD-YYYY)
+* Member_report:
+ * Member name (max 25 characters)
+ * Member number (max 9 digits)
+ * Member street address (max 25 characters)
+ * Member  city (max 14 characters)
+ * Member state (2 letters)
+ * Member Zip Code (5 digits)
+ * For each service provided, sorted according to service date:
+  * Service date (10 characters, format MM-DD-YYYY)
+  * Provider name (max 25 characters)
+  * Service name (max 20 characters)
+
+**Accounts_payable_report:**
+* For each provider to be paid that week:
+ * Provider name (max 25 characters)
+ * Number of consultations (max 3 digits)
+ * Total fee (5+2 digits)
+ * Total number of providers
+ * Overall total fee (6+2 digits)
+ * EFT_data for each provider to be paid:
+ * Provider name (max 25 characters)
+ * Provider number (max 9 digits)
+ * Total fee for week (5+2 digits)
+
+4: Define Logic of Processes
+---
+**Maintain provider**
+ *To add a new provider:*
+  * Insert the provider details excluding provider number into the database.
+  * The database must generate a provider number for the new provider.
+ * To update an existing provider:
+  * Search for the existing provider using the provider number.
+  * Update the provider details.
+ * To delete an existing provider:
+  * Search for the existing provider using the provider number.
+ * Delete the provider details.
+
+**Maintain member**
+ * To add a new member:
+  * Insert the member details excluding member number into the database.
+  * The database must generate a member number for the new member.
+ * To update an existing member:
+  * Search for the existing member using the member number.
+  * Update the member details.
+ * To delete an existing member:
+  * Search for the existing member using the member number.
+  * Delete the member details.
+
+**Maintain Service**
+ * To add a new service:
+  * Insert the service details into the database.
+ * To update an existing service:
+  * Search for the existing service using the service code.
+  * Update the service details.
+ * To delete an existing service:
+  * Search for the existing service using the service code.
+  * Delete the service details.
+
+**Verify Provider**
+ * Search for the provider number in the database.
+
+**Verify Member**
+ * Search for the member number in the database.
+ * Determine if the member status is Active.
+
+**Process Claim**
+ * Search for the service code in the database.
+ * Insert the verified claim into the database.
+
+**Generate Provider Directory**
+ * Extract provider directory data from the database.
+
+**Generate EFT data**
+ * Extract EFT data from the database.
+
+**Generate Provider Report**
+ * Extract provider report data from the database.
+
+**Generate Member Report**
+ * Extract member report data from the database.
+
+**Generate Accounts Payable Report**
+ * Extract accounts payable report data from the database.
+
+5: Define the data stores
+---
+* PROVIDERS DATA
+  * Provider details – defined in step 3.
+
+* MEMBERS DATA
+  * Member details – defined in step 3.
+
+* SERVICES DATA
+  * Service details – defined in step 3.
+
+* CLAIMS DATA
+  * Claim details – defined in step 3.
+
+6: Define physical resources.
+---
+Use a relational database with a separate table for each of the data stores defined above.
+* PROVIDER TABLE
+ * Primary key: provider_number
+* MEMBER TABLE
+ * Primary key: member_number
+* SERVICE TABLE:
+ * Primary key: service_code
+ * Secondary index: service_name
+* CLAIM TABLE:
+ * Primary key: submission_date_and_time
+ * Foreign Key: provider_number
+ * Foreign Key: member_number
+ * Foreign Key: service_code
+ * Secondary index: service_date
+
+7: Determine input/output specifications
+---
+The content of input screens and reports and the format of fields have been determined in step 3. Input screens will be designed for the following processes:
+(ChocAn operator interface)
+ * maintain provider
+ * maintain member
+ * maintain service
+(ChocAn manager interface)
+
+ * generate provider report
+ * generate member report
+ * generate accounts payable report
+
+A web - based interface (user dialogue for the provider terminal) will be designed for the following processes:
+ * verify provider (when the terminal is switched on)
+ * verify member
+ * process claim
+ * request provider directory
+
+The layout of the following reports will be designed:
+ * provider report
+ * member report
+ * accounts payable report
+ * provider directory
+
+The exact format of the EFT data must be determined for the following process:
+ * generate EFT data
+
+8: Perform Sizing
+---
+Database:
+ * Provider table: approximately 124 to 132 bytes for each record. ChocAn has about 100 providers currently and expects a growth of 10%. Thus the provider table needs approximately 15 Kilobytes of storage.
+ * Member table: record sizes are equivalent to provider records. ChocAn has about 1000 members currently and expects a growth of 20%. Thus the member table needs approximately 160 Kilobytes of storage.
+ * Service table: approximately 32 types for each record. There are currently 50 different services available. Making provision for a growth of 25%, approximately 2 Kilobytes of storage are required.
+ * Claim table: approximately 52 bytes for each record. On average, each member visits a provider twice a week. The expected number of claims per year is thus 124800. Approximately 7 Megabytes are required for the claim table. Software:
+ * A Database Management System (DBMS) can require 10 to 500 MB, or more, of storage.
+ * The application programs that must run on the server will require approximately 2 MB of storage. Middleware is also necessary so that the server and clients can interact. This will also require a few megabytes of storage.
+ * Assuming a DBMS of approximately 75 MB, 100 MB of storage on the server should be sufficient. Client workstations need only enough storage to run the interface programs. This will be only a few megabytes. Provider terminals will need at least 10 MB of storage space because the software will include a web-based graphical user interface.
+
+9: Determine the Hardware Requirements
+---
+One server will be required for the database. At least two terminals are needed for ChocAn operator for the maintenance of data, and at least one more is needed for the manager to un reports. At least one printer will be needed for the manager to print reports. Each provider will need a provider terminal. It is assumed that each provider will use his own computer to receive email, including provider reports and the provider directory.
+
 
 13.22<a name="1322"></a>
 ===
+_Perform the analysis workflow of the Chocoholics Anonymous product described in Appendix A._
+
+Assumptions:
+* If a provider resigns, the information about him cannot be deleted from the system before all his claims have been processed.
+* Similarly, the information about a member or a service cannot be deleted until all claims concerning the member or service have been processed. Thus such deletions should be delayed until the end of the week. This requirement has been ignored in the analysis workflow since the timing of actions is not a concern of analysis.
+* A “nice to have” requirement is that members should be informed of new providers, resignation of providers and changed provider details.
+* Similarly, providers should be informed of new services, discontinuation of services and changed service details. The requirements workflow includes sending such information by email to the providers and members. This has been left out of the analysis workflow since it is not essential to the product.
+
+Functional Modeling<a name="functionalmodeling"></a>
+---
+Scenarios for the use cases of Chocoholics Anonymous depicted in Problem 11.24 Part 1 to 4 appear below the in following use cases descriptions.
+
+Figure 1.0: An extended scenario for the Manage Session use case|
+---|
+A provider wishes to initiate a session to use the ChocAn system to verify members, submit claims and receive a provider directory. The provider switches on his or her terminal.<br><br>1. The system prompts the provider for his or her provider number.<br>2. The provider supplies his or her provider number.<br>3. The system searches for a provider with this number.<br>4. The system displays a message indicating the options available to the provider.<br>5. The provider can now use the system.<br>6. When the provider has finished used the system, he or she chooses the Quit option.<br>7. The system ends the session.|
+**Possible Alternative** <br> A. In step 3, the system cannot find the provider number. The system displays the message invalid number, and step 1 is repeated.|
+
+Figure 1.1: An extended scenario for the Verify Member use case|
+--|
+A provider wishes to verify that the number on a member’s card is a valid ChocAn membership number of an active member. The provider has switched on his or her terminal and entered his or her provider number correctly.<br>1. The provider swipes the member’s card through the card reader of the provider terminal.<br>2. The system searches for a member with this number.<br>3. The system displays a message indicating the status of the member on the provider terminal’s display, namely, Validated. |
+**Possible Alternative** <br>A. In step 2, the system cannot find the member number. The system displays the message invalid number, and the use case terminates.<br>B. In step 3, the member’s status is “suspended”. The system displays the message Suspended, and the use case terminates.|
+
+Figure 1.2: An extended scenario for the Submit Claim use case|
+---|
+A provider wishes to submit a claim for a service provided to a ChocAn member. He or she has already verified the member as in the normal scenario of the Verify Member use case.<br>1. The provider enters the date the service was provided in the format MM-DD-YYYY, the service code and optionally comments about the service rendered.<br>2. The system verifies that the service code exists. The system displays the corresponding service name.<br>3. The provider confirms that this is the correct service rendered.<br>4. The system stores the following information about the claim submitted:<br>&nbsp;&nbsp;&nbsp;&nbsp;Current date and time (MM-DD-YYYY HH:MM:SS)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>5. The system displays the fee to be paid to the provider for the service rendered.<br>6. The provider has a form on which he or she can enter the same information as that stored by the system, as well as the service fee. |
+**Possible Alternative** <br>A. In step 2, the service code does not exist. The system displays the message Invalid Service code. The provider re-enters the service code and step 2 is repeated.<br>B. In step 3, the service name is not the name of the service for which the provider wishes to submit a claim. The provider re-enters the service code and step 2 is repeated.|
+
+Figure 1.3: Scenario for the Receive Provider Directory use case|
+--|
+A provider has already switched on his or her terminal and entered his or her provider number correctly.<br>1. The provider submits a request for a Provider Directory through his or her terminal.<br>2. The system generates a list (report) of all services, ordered alphabetically according to the service name, including each service:<br>Service name(max 20 characters)<br>Service code(max 6 digits)<br>Service fee (max $999.99)<br>3. The system sends the list as an email attachment to the provider, and displays a message to this effect on the provider’s terminal.|
+
+Figure 1.4: First extended scenario of the Maintain Member use case (add a new member) A ChocAn operator wishes to add a new member.|
+---|
+1. The ChocAn operator selects the option to add a new member, and enters the new member’s details:<br>Member name (max 25 characters)<br>Member street address (max 25 characters)<br>Member city (max 14 characters)<br>Member state (2 letters)<br>Member zip code (5 digits)<br>Member email address (max 50 characters)<br>2. The system allocates a number to the new member, records the new member’s details, and sets the new member’s status to Active. <br>3. The system displays the new member’s member number and other details.|
+
+Figure 1.5:Second extended scenario of the Maintain Member use case (update an existing member) |
+---|
+A ChocAn operator wishes to update an existing member’s details.<br>1. The ChocAn operator enters the existing member’s member number.<br>2. The system searches for the details for the member and displays the details.<br>3. The ChocAn operator edits the details that must be changed. (The member number can never be changed.)<br>4. The system updates the member’s details.|
+**Possible Alternative** <br>A. In step 2, the system cannot find the member number. It displays the message invalid number, and the use case terminates.|
+
+TODO: Finish Section.
 
 14.16<a name="1416"></a>
 ===
