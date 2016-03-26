@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PersonsTest.php" />
+    <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseController.class.php" afterPath="$PROJECT_DIR$/DatabaseController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Members.class.php" afterPath="$PROJECT_DIR$/Members.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers.class.php" afterPath="$PROJECT_DIR$/Providers.class.php" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
-    <manually-removed-from-ignored>
-      <directory path=".idea/" />
-    </manually-removed-from-ignored>
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,94 +40,178 @@
     <favorites_list name="COMP370" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PersonsTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/PersonsTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.807692">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-              <folding>
-                <element signature="e#6#88#0#PHP" expanded="true" />
-                <marker date="1458865573360" expanded="false" signature="109:2324" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Members.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.461538">
-              <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Providers.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Providers.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.769231">
-              <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.76923">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-              <folding>
-                <marker date="1458845767086" expanded="true" signature="3772:3791" placeholder="SELECT * FRO... claim" />
-                <marker date="1458845767086" expanded="true" signature="3984:4004" placeholder="SELECT * FRO... member" />
-                <marker date="1458845767086" expanded="true" signature="4202:4224" placeholder="SELECT * FRO... provider" />
-                <marker date="1458845767086" expanded="true" signature="4422:4443" placeholder="SELECT * FRO... service" />
-                <marker date="1458845767086" expanded="true" signature="4823:4865" placeholder="SELECT submi... claim" />
-                <marker date="1458845767086" expanded="true" signature="5251:5283" placeholder="SELECT membe... member" />
-                <marker date="1458845767086" expanded="true" signature="5662:5698" placeholder="SELECT provi... provider" />
-                <marker date="1458845767086" expanded="true" signature="6077:6109" placeholder="SELECT servi... service" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6561922">
-              <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-              <folding>
-                <marker date="1458864338034" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-                <marker date="1458864338034" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-                <marker date="1458864338034" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-                <marker date="1458864338034" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
-                <marker date="1458864338034" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
-                <marker date="1458864338034" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
-                <marker date="1458864338034" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
-                <marker date="1458864338034" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
-                <marker date="1458864338034" expanded="true" signature="6049:6456" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458864338034" expanded="true" signature="6681:7070" placeholder="INSERT INTO ${self::MEMBER}... " />
-                <marker date="1458864338034" expanded="true" signature="7249:7336" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="7465:7556" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="8944:8989" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458864338034" expanded="true" signature="9112:9205" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458864338034" expanded="true" signature="9333:9418" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="9554:9597" placeholder="SELECT * FRO... ${self::CLAIM}" />
-                <marker date="1458864338034" expanded="true" signature="9834:9968" placeholder="INSERT INTO ${self::SERVICE}... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Member.class.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Member.class.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MemberTest.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="593">
+                  <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
+                  <folding>
+                    <marker date="1458955889086" expanded="false" signature="106:2321" placeholder="..." />
+                    <marker date="1458955889086" expanded="true" signature="3424:3477" placeholder="delete from " />
+                    <marker date="1458955889086" expanded="true" signature="4386:4423" placeholder="SELECT membe... member" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/readme.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1411">
+                  <caret line="623" column="40" selection-start-line="623" selection-start-column="40" selection-end-line="623" selection-end-column="40" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="MarkdownPreviewEditor">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="MarkdownPreviewEditor">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProviderTest.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/ProviderTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+                  <folding>
+                    <marker date="1458826027147" expanded="false" signature="106:2321" placeholder="..." />
+                    <marker date="1458826027147" expanded="true" signature="2932:2973" placeholder="select provi... provider" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GeneralTest.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/GeneralTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="714">
+                  <caret line="86" column="100" selection-start-line="86" selection-start-column="100" selection-end-line="86" selection-end-column="100" />
+                  <folding>
+                    <marker date="1458826027161" expanded="false" signature="106:2321" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DatabaseTest.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2652">
+                  <caret line="223" column="5" selection-start-line="223" selection-start-column="5" selection-end-line="223" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#87#105#0#PHP" expanded="false" />
+                    <element signature="e#2381#2422#0#PHP" expanded="false" />
+                    <marker date="1458955889079" expanded="false" signature="106:2321" placeholder="..." />
+                    <marker date="1458955889079" expanded="true" signature="2740:2745" placeholder=" @desc Stress-ests that the database can handle 100's of queries a second. ..." />
+                    <marker date="1458955889079" expanded="true" signature="4325:4339" placeholder="select * fro... string" />
+                    <marker date="1458955889079" expanded="true" signature="4325:4344" placeholder="select * fro... claim" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Person.class.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Person.class.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4709">
+                  <caret line="277" column="30" selection-start-line="277" selection-start-column="15" selection-end-line="277" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="deploy.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/deploy.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="697">
+                  <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+                  <folding>
+                    <marker date="1458815528305" expanded="true" signature="545:560" placeholder="..." />
+                    <marker date="1458815528305" expanded="true" signature="587:602" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Database.class.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Database.class.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1836">
+                  <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Test.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Test.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="561">
+                  <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+                  <folding>
+                    <marker date="1458826027102" expanded="true" signature="1659:1691" placeholder="select membe... member" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="6222">
+                  <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+                  <folding>
+                    <marker date="1458955889056" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
+                    <marker date="1458955889056" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
+                    <marker date="1458955889056" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
+                    <marker date="1458955889056" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
+                    <marker date="1458955889056" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
+                    <marker date="1458955889056" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
+                    <marker date="1458955889056" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
+                    <marker date="1458955889056" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
+                    <marker date="1458955889056" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
+                    <marker date="1458955889056" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
+                    <marker date="1458955889056" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
+                    <marker date="1458955889056" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
+                    <marker date="1458955889056" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
+                    <marker date="1458955889056" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -151,16 +229,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Database.class.php" />
-        <option value="$PROJECT_DIR$/tests/MemberTest.php" />
-        <option value="$PROJECT_DIR$/Test.php" />
         <option value="$PROJECT_DIR$/tests/Tests.php" />
         <option value="$PROJECT_DIR$/Claims.class.php" />
         <option value="$PROJECT_DIR$/Claim.class.php" />
+        <option value="$PROJECT_DIR$/deploy.php" />
+        <option value="$PROJECT_DIR$/tests/index.php" />
+        <option value="$PROJECT_DIR$/tests/PHPUnit_Extensions_Database_TestCaseTest.php" />
+        <option value="$PROJECT_DIR$/Person.class.php" />
+        <option value="$PROJECT_DIR$/Member.class.php" />
+        <option value="$PROJECT_DIR$/tests/DatabaseTest.php" />
+        <option value="$PROJECT_DIR$/Database.class.php" />
         <option value="$PROJECT_DIR$/DatabaseController.class.php" />
-        <option value="$PROJECT_DIR$/Providers.class.php" />
-        <option value="$PROJECT_DIR$/tests/PersonsTest.php" />
-        <option value="$PROJECT_DIR$/Members.class.php" />
+        <option value="$PROJECT_DIR$/Test.php" />
+        <option value="$PROJECT_DIR$/tests/ProviderTest.php" />
+        <option value="$PROJECT_DIR$/tests/GeneralTest.php" />
+        <option value="$PROJECT_DIR$/tests/MemberTest.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -171,15 +255,15 @@
   </component>
   <component name="PhpServers">
     <servers>
-      <server deployment_server="69e79d52-34a8-4b4e-ac3a-b4a8885ff56a" host="localhost" id="ad5bcdaa-b528-4caf-9d57-48cd30420fc9" name="wamp" />
+      <server deployment_server="69e79d52-34a8-4b4e-ac3a-b4a8885ff56a" host="localhost" id="25ec3075-b2ac-4c6a-b275-5c070b81b8fc" name="wamp" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="WampServer" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -210,6 +294,9 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -225,6 +312,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Changed Files" />
         <subPane subId="Default" />
@@ -245,7 +333,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="COMP370" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -255,16 +343,15 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="COMP370" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,24 +362,23 @@
     <property name="recentsLimit" value="5" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="C:/wamp64/bin/php/php5.6.16/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Thomas\Dropbox\COMP370\tests" />
-      <recent name="C:\Users\Thomas\Dropbox\COMP370" />
-      <recent name="C:\Users\Thomas\Dropbox\COMP370\cdn\js\" />
-      <recent name="C:\Users\Thomas\Dropbox\COMP370\cdn\css" />
-      <recent name="C:\Users\Thomas\Dropbox\COMP370\PHP" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Thomas\Dropbox\COMP370\tests" />
       <recent name="C:\Users\Thomas\Dropbox\COMP370\test" />
       <recent name="C:\Users\Thomas\Dropbox\COMP370" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas\Dropbox\COMP370" />
+      <recent name="C:\Users\Thomas\Dropbox\COMP370\tests" />
+      <recent name="C:\Users\Thomas\Dropbox\COMP370\cdn\js\" />
+      <recent name="C:\Users\Thomas\Dropbox\COMP370\cdn\css" />
+      <recent name="C:\Users\Thomas\Dropbox\COMP370\PHP" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -310,6 +396,12 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/DatabaseController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Members.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Providers.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/readme.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/tests/DatabaseTest.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/tests/MemberTest.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -317,6 +409,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/tests/PersonsTest.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -406,10 +499,6 @@
     </UpdatedFiles>
   </component>
   <component name="RunManager" selected="PHPUnit.Run Tests">
-    <configuration default="false" name="PersonsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="PersonsTest" file="$PROJECT_DIR$/tests/PersonsTest.php" scope="Class" />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -428,6 +517,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -438,6 +528,7 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -447,7 +538,7 @@
           <env name="CDP" value="SoftwareEngineering370!" />
         </envs>
       </CommandLine>
-      <TestRunner class="MemberTest" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/Tests.php" options="--debug --verbose" />
+      <TestRunner class="MemberTest" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/Tests.php" />
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
@@ -459,18 +550,14 @@
       <ConfigurationWrapper RunnerId="PhpUnitRemoteDebugRunner" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit.Run Tests" />
       <item index="1" class="java.lang.String" itemvalue="PHPUnit by HTTP.COMP370 on WAMP" />
-      <item index="2" class="java.lang.String" itemvalue="PHPUnit.PersonsTest" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.PersonsTest" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Thomas\AppData\Roaming\Subversion</configuration>
   </component>
@@ -479,308 +566,397 @@
       <changelist id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="" />
       <created>1457304640687</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1457304640687</updated>
       <workItem from="1458793935966" duration="2584000" />
-      <workItem from="1458855378785" duration="1572000" />
-      <workItem from="1458857031327" duration="1440000" />
+      <workItem from="1458801863332" duration="20579000" />
+      <workItem from="1458954775801" duration="4075000" />
     </task>
     <task id="LOCAL-00001" summary="Folder structure and a simple class to start off.">
       <created>1457602406705</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1457602406705</updated>
     </task>
     <task id="LOCAL-00002" summary="Created Utils class for functions.">
       <created>1457603777733</created>
       <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1457603777733</updated>
     </task>
     <task id="LOCAL-00003" summary="Created Utils class for functions.">
       <created>1457605072828</created>
       <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1457605072828</updated>
     </task>
     <task id="LOCAL-00004" summary="Created Utils class for functions.">
       <created>1457605087755</created>
       <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1457605087755</updated>
     </task>
     <task id="LOCAL-00005" summary="Created Utils class for functions.">
       <created>1457605095216</created>
       <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1457605095216</updated>
     </task>
     <task id="LOCAL-00006" summary="Created Utils class for functions.">
       <created>1457605425881</created>
       <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1457605425881</updated>
     </task>
     <task id="LOCAL-00007" summary="Move passwords into environmental variables.">
       <created>1457619300884</created>
       <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1457619300884</updated>
     </task>
     <task id="LOCAL-00008" summary="Class skeletons now compile. Reformated all code. Fixed all syntax errors.">
       <created>1457689683844</created>
       <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1457689683844</updated>
     </task>
     <task id="LOCAL-00009" summary="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file.">
       <created>1457698933991</created>
       <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1457698933991</updated>
     </task>
     <task id="LOCAL-00010" summary="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file.">
       <created>1458086148015</created>
       <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1458086148015</updated>
     </task>
     <task id="LOCAL-00011" summary="Switch to Unix line-endings.">
       <created>1458086668463</created>
       <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1458086668463</updated>
     </task>
     <task id="LOCAL-00012" summary="Switch to Unix line-endings.">
       <created>1458087138096</created>
       <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
       <updated>1458087138096</updated>
     </task>
     <task id="LOCAL-00013" summary="Fix Deploy script">
       <created>1458087840434</created>
       <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
       <updated>1458087840434</updated>
     </task>
     <task id="LOCAL-00014" summary="Fix Deploy script">
       <created>1458088097794</created>
       <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
       <updated>1458088097794</updated>
     </task>
     <task id="LOCAL-00015" summary="Added Button class (in UserInterface.class.php). Its basically an inner-class.">
       <created>1458114818315</created>
       <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
       <updated>1458114818315</updated>
     </task>
     <task id="LOCAL-00016" summary="Update Readme.md. Example form in UserInterface.">
       <created>1458200360294</created>
       <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
       <updated>1458200360294</updated>
     </task>
     <task id="LOCAL-00017" summary="Update Readme.md.">
       <created>1458200557298</created>
       <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
       <updated>1458200557298</updated>
     </task>
     <task id="LOCAL-00018" summary="Make all code begin in ChocAnSystem's main()">
       <created>1458208029200</created>
       <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
       <updated>1458208029200</updated>
     </task>
     <task id="LOCAL-00019" summary="Fixed Interfaces. Added Database connectivity.">
       <created>1458216908072</created>
       <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
       <updated>1458216908072</updated>
     </task>
     <task id="LOCAL-00020" summary="Updated .gitignore to include PhpStorm files.">
       <created>1458279212225</created>
       <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
       <updated>1458279212225</updated>
     </task>
     <task id="LOCAL-00021" summary="Created Database and DatabaseController classes.">
       <created>1458284877599</created>
       <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
       <updated>1458284877599</updated>
     </task>
     <task id="LOCAL-00022" summary="Created Database and DatabaseController classes.">
       <created>1458285153772</created>
       <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
       <updated>1458285153772</updated>
     </task>
     <task id="LOCAL-00023" summary="Created Database and DatabaseController classes.">
       <created>1458285707358</created>
       <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
       <updated>1458285707358</updated>
     </task>
     <task id="LOCAL-00024" summary="Created Database and DatabaseController classes.">
       <created>1458285881069</created>
       <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
       <updated>1458285881069</updated>
     </task>
     <task id="LOCAL-00025" summary="Database and DatabaseController classes (with examples).">
       <created>1458532209884</created>
       <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
       <updated>1458532209884</updated>
     </task>
     <task id="LOCAL-00026" summary="Tested Operator Interface.">
       <created>1458545186929</created>
       <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
       <updated>1458545186929</updated>
     </task>
     <task id="LOCAL-00027" summary="OperatorInterface UI complete. Added simple load-time tests. CSS.">
       <created>1458555340966</created>
       <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
       <updated>1458555340966</updated>
     </task>
     <task id="LOCAL-00028" summary="Switch to localhost MySQL database to reduce latency.">
       <created>1458556475294</created>
       <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
       <updated>1458556475294</updated>
     </task>
     <task id="LOCAL-00029" summary="Attempt to connect to database with no password.">
       <created>1458556701236</created>
       <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
       <updated>1458556701236</updated>
     </task>
     <task id="LOCAL-00030" summary="Fix database connection to server. Use http://url?dev= to connect to MySQL">
       <created>1458556981470</created>
       <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
       <updated>1458556981470</updated>
     </task>
     <task id="LOCAL-00031" summary="Automatically connects to the development database if on localhost.">
       <created>1458557299682</created>
       <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
       <updated>1458557299682</updated>
     </task>
     <task id="LOCAL-00032" summary="Automatically connects to the development database if on localhost.">
       <created>1458557456930</created>
       <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
       <updated>1458557456930</updated>
     </task>
     <task id="LOCAL-00033" summary="Provider commits.">
       <created>1458577960508</created>
       <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
       <updated>1458577960508</updated>
     </task>
     <task id="LOCAL-00034" summary="More Provider commits.">
       <created>1458632334286</created>
       <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
       <updated>1458632334286</updated>
     </task>
     <task id="LOCAL-00035" summary="Removed extra brace in DatabaseController.">
       <created>1458633458266</created>
       <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
       <updated>1458633458266</updated>
     </task>
     <task id="LOCAL-00036" summary="Typechecking fixes.">
       <created>1458635954927</created>
       <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
       <updated>1458635954927</updated>
     </task>
     <task id="LOCAL-00037" summary="Fixed instances of provider_numbers losing zero-fill.">
       <created>1458651678864</created>
       <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
       <updated>1458651678864</updated>
     </task>
     <task id="LOCAL-00038" summary="Class Claims implemented">
       <created>1458800896402</created>
       <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
       <updated>1458800896402</updated>
     </task>
     <task id="LOCAL-00039" summary="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object.">
       <created>1458801247225</created>
       <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
       <updated>1458801247225</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Tests now working.">
+      <created>1458807587547</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1458807587547</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Allows server to run PhpUnit.">
+      <created>1458809213190</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1458809213190</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Formatted PHPUnit tests, now avaliable at index/tests/">
+      <created>1458816630803</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1458816630803</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Add some unit-tests.">
+      <created>1458826030591</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1458826030591</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Reformat Readme.md">
+      <created>1458956190610</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1458956190610</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update Readme.md">
+      <created>1458974909928</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1458974909928</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Update Readme.md">
+      <created>1458994224254</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1458994224254</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PersonsTest - 2016.03.24 at 17h 07m 00s.xml">
-      <configuration name="PersonsTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PersonsTest - 2016.03.24 at 17h 08m 09s.xml">
-      <configuration name="PersonsTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 06m 03s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 12m 28s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 08m 41s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 12m 45s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 09m 41s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 13m 59s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 13m 56s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 17m 15s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 21m 10s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 17m 24s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 25m 04s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 17m 42s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 27m 38s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 18m 07s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_Tests - 2016.03.24 at 17h 28m 14s.xml">
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 20m 10s.xml">
+      <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 20m 24s.xml">
+      <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Run_Tests - 2016.03.24 at 06h 22m 15s.xml">
       <configuration name="Run Tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5596000" />
+    <option name="totallyTimeSpent" value="27238000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24158126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10364583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08296296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11851852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15010142" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19756839" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37829614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2502533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25760648" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15618661" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -795,12 +971,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class skeletons now compile. Reformated all code. Fixed all syntax errors." />
-    <MESSAGE value="Replaced Main.class with ChocAnSystem.class. Added a ProviderInterface class and a Scheduler index file." />
-    <MESSAGE value="Switch to Unix line-endings." />
-    <MESSAGE value="Fix Deploy script" />
-    <MESSAGE value="Added Button class (in UserInterface.class.php). Its basically an inner-class." />
-    <MESSAGE value="Update Readme.md. Example form in UserInterface." />
     <MESSAGE value="Update Readme.md." />
     <MESSAGE value="Make all code begin in ChocAnSystem's main()" />
     <MESSAGE value="Fixed Interfaces. Added Database connectivity." />
@@ -820,7 +990,13 @@
     <MESSAGE value="Fixed instances of provider_numbers losing zero-fill." />
     <MESSAGE value="Class Claims implemented" />
     <MESSAGE value="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object." />
-    <option name="LAST_COMMIT_MESSAGE" value="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object." />
+    <MESSAGE value="Tests now working." />
+    <MESSAGE value="Allows server to run PhpUnit." />
+    <MESSAGE value="Formatted PHPUnit tests, now avaliable at index/tests/" />
+    <MESSAGE value="Add some unit-tests." />
+    <MESSAGE value="Reformat Readme.md" />
+    <MESSAGE value="Update Readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Readme.md" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -830,184 +1006,156 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Service.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServiceReportGenerator.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ServiceMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manager/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="61" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ManagerInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IndexInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scheduler/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cdn/css/operator.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SchedulerInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="26" column="83" selection-start-line="26" selection-start-column="83" selection-end-line="26" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AccountsPayableReport.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DateRangeReport.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClaimSubmitter.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/operator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProviderReport.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cdn/css/interface.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="348" column="3" selection-start-line="348" selection-start-column="3" selection-end-line="348" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/provider/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OperatorInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ETFReport.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MemberMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Report.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Persons.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="211" column="47" selection-start-line="211" selection-start-column="47" selection-end-line="211" selection-end-column="47" />
         </state>
       </provider>
@@ -1068,64 +1216,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProviderMaintainer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cdn/css/provider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProviderInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="119" column="14" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cdn/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Members.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cdn/js/provider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChocAnSystem.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0273752">
+        <state relative-caret-position="0">
           <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0273752">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1187,146 +1328,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Claim.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.916264">
-          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Claims.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5748792">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.192308">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Provider.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0273752">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Person.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9436393">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ProviderTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1458845767127" expanded="true" signature="2932:2973" placeholder="SELECT provi... provider" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.37037036">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1458845767090" expanded="true" signature="3536:3573" placeholder="SELECT membe... member" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Member.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27387387">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.76923">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-          <folding>
-            <marker date="1458845767086" expanded="true" signature="3772:3791" placeholder="SELECT * FRO... claim" />
-            <marker date="1458845767086" expanded="true" signature="3984:4004" placeholder="SELECT * FRO... member" />
-            <marker date="1458845767086" expanded="true" signature="4202:4224" placeholder="SELECT * FRO... provider" />
-            <marker date="1458845767086" expanded="true" signature="4422:4443" placeholder="SELECT * FRO... service" />
-            <marker date="1458845767086" expanded="true" signature="4823:4865" placeholder="SELECT submi... claim" />
-            <marker date="1458845767086" expanded="true" signature="5251:5283" placeholder="SELECT membe... member" />
-            <marker date="1458845767086" expanded="true" signature="5662:5698" placeholder="SELECT provi... provider" />
-            <marker date="1458845767086" expanded="true" signature="6077:6109" placeholder="SELECT servi... service" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Providers.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231">
-          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/PersonsTest.php">
+    <entry file="file://$PROJECT_DIR$/Claim.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.807692">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="17">
+          <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Claims.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
           <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <marker date="1458865573360" expanded="false" signature="109:2324" placeholder="..." />
+            <marker date="1458815528305" expanded="true" signature="545:560" placeholder="..." />
+            <marker date="1458815528305" expanded="true" signature="587:602" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Members.class.php">
+    <entry file="file://$PROJECT_DIR$/tests/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.461538">
-          <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
+        <state relative-caret-position="356">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Member.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6561922">
-          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+        <state relative-caret-position="6222">
+          <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
           <folding>
-            <marker date="1458864338034" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-            <marker date="1458864338034" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-            <marker date="1458864338034" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-            <marker date="1458864338034" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
-            <marker date="1458864338034" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
-            <marker date="1458864338034" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
-            <marker date="1458864338034" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
-            <marker date="1458864338034" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
-            <marker date="1458864338034" expanded="true" signature="6049:6456" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458864338034" expanded="true" signature="6681:7070" placeholder="INSERT INTO ${self::MEMBER}... " />
-            <marker date="1458864338034" expanded="true" signature="7249:7336" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="7465:7556" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="8944:8989" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458864338034" expanded="true" signature="9112:9205" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458864338034" expanded="true" signature="9333:9418" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="9554:9597" placeholder="SELECT * FRO... ${self::CLAIM}" />
-            <marker date="1458864338034" expanded="true" signature="9834:9968" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1458955889056" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
+            <marker date="1458955889056" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
+            <marker date="1458955889056" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
+            <marker date="1458955889056" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
+            <marker date="1458955889056" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
+            <marker date="1458955889056" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
+            <marker date="1458955889056" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
+            <marker date="1458955889056" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
+            <marker date="1458955889056" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
+            <marker date="1458955889056" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
+            <marker date="1458955889056" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
+            <marker date="1458955889056" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
+            <marker date="1458955889056" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
+            <marker date="1458955889056" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Person.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4709">
+          <caret line="277" column="30" selection-start-line="277" selection-start-column="15" selection-end-line="277" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+          <folding>
+            <marker date="1458826027102" expanded="true" signature="1659:1691" placeholder="select membe... member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <marker date="1458826027147" expanded="false" signature="106:2321" placeholder="..." />
+            <marker date="1458826027147" expanded="true" signature="2932:2973" placeholder="select provi... provider" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GeneralTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="86" column="100" selection-start-line="86" selection-start-column="100" selection-end-line="86" selection-end-column="100" />
+          <folding>
+            <marker date="1458826027161" expanded="false" signature="106:2321" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="223" column="5" selection-start-line="223" selection-start-column="5" selection-end-line="223" selection-end-column="5" />
+          <folding>
+            <element signature="e#87#105#0#PHP" expanded="false" />
+            <element signature="e#2381#2422#0#PHP" expanded="false" />
+            <marker date="1458955889079" expanded="false" signature="106:2321" placeholder="..." />
+            <marker date="1458955889079" expanded="true" signature="2740:2745" placeholder=" @desc Stress-ests that the database can handle 100's of queries a second. ..." />
+            <marker date="1458955889079" expanded="true" signature="4325:4339" placeholder="select * fro... string" />
+            <marker date="1458955889079" expanded="true" signature="4325:4344" placeholder="select * fro... claim" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
+          <folding>
+            <marker date="1458955889086" expanded="false" signature="106:2321" placeholder="..." />
+            <marker date="1458955889086" expanded="true" signature="3424:3477" placeholder="delete from " />
+            <marker date="1458955889086" expanded="true" signature="4386:4423" placeholder="SELECT membe... member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="623" column="40" selection-start-line="623" selection-start-column="40" selection-end-line="623" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
