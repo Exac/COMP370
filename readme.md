@@ -3,8 +3,8 @@ Farzin Dhanji, Karanvir Gill &amp; Thomas McLennan
 
 ###Appendix
 1. [14.16](#1416)
-..* [Design Decisions](#DesignDecisions)
-..* [Mapping of Analysis Classes to Design Classes](#Mapping)
+  * [Design Decisions](#DesignDecisions)
+  * [Mapping of Analysis Classes to Design Classes](#Mapping)
 2. [15.33](#1416)
 3. [15.34](#1416)
 
@@ -55,7 +55,7 @@ Password's first character is alphanumeric | true
 Password < 1 character | true
 
 member_number
--- | --
+--- | ---
 member_number is created | true
 
 
