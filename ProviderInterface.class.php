@@ -51,14 +51,14 @@ class ProviderInterface
 		{
 			//Invalid Number
 			$this->ui->add("<span id='validator' class='invalid'>Invalid Member Number</span>");
-			$this->ui->add('<form id="provider_invalid" method="post" action="">' . '<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden"></form>');
+			$this->ui->add('<form id="provider_invalid" method="post" action="" autocomplete="off">' . '<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden"></form>');
 		} else
 		{
 			$member = new Member($memberID);
 			if ($member->getStatus() === "SUSPENDED")
 			{
 				//Suspended Member
-				$this->ui->add("<span id='validator' class='invalid'>Member Suspended. <small>Did you pay your fees this month?</small></span>");
+				$this->ui->add("<span id='validator' class='invalid'>Member Suspended. <small>" . "Did you pay your fees this month?</small></span>");
 				$this->ui->add('<form id="provider_invalid" method="post" action="">' . '<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden"></form>');
 			} else
 			{
@@ -66,9 +66,16 @@ class ProviderInterface
 				$this->ui->add($this->providerBar($_POST["provider_theProvider"]));
 				$this->ui->add("<span id='validator' class='valid'>Valid Member Number</span>");
 				$this->ui->add("<p><strong>`Bill ChocAn for a Service` dataflow:</strong></p>");
-				$this->ui->add("<p>Enter date[MM-DD-YYY] of service.-> <br>" . "Use the Provider Directory to find the 6-digit service code, entered or selected... [SERVICE CODE] <br>->" . " display name of service and code [VERIFY] | 'Error:bad code' <br>->" . " Enter information about the service provided: " . "[comments] (other informatino displayed on screen)" . "<br>-> display fee && display verification form pre-filled-out</p>");
-				$this->ui->add("<p><strong>`Lookup Provider Directory` dataflow:</strong></p>");
-				$this->ui->add("<p>[Lookup Provider Directory] on each page, accessable at any time" . "alphabetically ordered list of service names &amp; codes &amp; fees; (display on screen, but ChocAn sends directory as email attachment...)</p>");
+				$this->ui->add("<p>Enter date[MM-DD-YYY] of service.-> <br>" . "Use the Provider Directory to find the 6-digit service code, entered or " . "selected... [SERVICE CODE] <br>->" . " display name of service and code " . "[VERIFY] | 'Error:bad code' <br>->" . " Enter information about the service " . "provided: " . "[comments] (other informatino displayed on screen)" . "<br>-> display fee && display verification form pre-filled-out<strong>In JS, as soon as the service code is filled in, fill out teh verification data on this screen below the form.</strong></p>");
+
+				$this->ui->add("<form id=\"provider_billing\" method=\"post\" action=\"\" " . "autocomplete=\"off\">'");
+				$this->ui->add('<form id="providerinterface" action="" method="post">');
+				$this->ui->add('<fieldset>');
+				$this->ui->add('<legend>Provider Login</legend>');
+				$this->ui->body .= (new Input("text", "provider_billing_code", array("6-Digit Service #", " autofocus ")));
+				$this->ui->body .= (new Input("text", "provider_billing_comments", "Comments"));
+				$this->ui->add('<button id="provider_billing_submit" name="provider_billing_submit"  type="submit"/>Bill Customer</button>');
+				$this->ui->add("</fieldset></form>");
 				$this->ui->add('<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
 				$this->ui->add('<input name="provider_theMember" id="provider_theMember" value="' . $member->getNumber() . '" type="hidden">');
 			}
