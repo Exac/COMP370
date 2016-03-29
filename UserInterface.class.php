@@ -86,8 +86,11 @@ class UserInterface
 
 	public function __toString()
 	{
-		$o = "<!doctype html>\n\n<html lang='en'>\n\n<head>\n\t<meta charset='utf-8'>\n" .
+		$o = "<!doctype html>\n\n<html lang='en'>\n\n<head>" .
 			"\t<title>" . $this->title . "</title>";
+		$o .= "\n\t<meta charset='utf-8'>\n";
+		//$o .= "<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"iso-8859-1\">";
+
 		if (isset($this->description)) {
 			$o .= "\n\t<meta name='description' content='" . $this->description . "'>";
 		}

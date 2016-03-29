@@ -1,0 +1,120 @@
+/**
+ * BACK BUTTON
+ */
+
+.button[href="/manager/"] {
+    position: fixed;
+    right: 0.25em;
+    bottom: 0.75em;
+    transition: all 1s ease-in-out;
+}
+
+@media print {
+    .button[href="/manager/"] {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .button[href="/manager/"] {
+        min-width: 125px !important;
+        padding: 15px 0.25em 15px 1.5em !important;
+    }
+}
+
+/**
+ * TABULAR REPORTS
+ */
+body {
+    height: 100%;
+}
+
+table.report {
+    border-collapse: collapse;
+    border: 2px solid #cbcbcb;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    position: fixed;
+    top: 4em;
+    bottom: 0;
+    overflow-y: auto;
+    display: block;
+}
+
+table.report th {
+    background: #cbcbcb;
+    color: #1d2a2a;
+    padding: 0 6px;
+    font-weight: 400;
+    font-size: 0.875em;
+    text-transform: uppercase;
+}
+
+table.report th:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+table.report th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+table.report tr:nth-child(2n) {
+    background-color: rgba(230, 230, 230, 0.05);
+}
+
+table.report tr:nth-child(2n + 1) {
+    background-color: rgba(48, 48, 48, 0.05);
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 7em;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 6em;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    table.report td:nth-of-type(1):before {
+        content: "Number";
+    }
+
+    table.report td:nth-of-type(2):before {
+        content: "Name";
+    }
+
+    table.report td:nth-of-type(3):before {
+        content: "Address";
+    }
+
+    table.report td:nth-of-type(4):before {
+        content: "Email";
+    }
+
+    table.report td:nth-of-type(5):before {
+        content: "Status";
+    }
+}

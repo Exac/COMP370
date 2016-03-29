@@ -1,6 +1,6 @@
-<!doctype html>
+<!--!doctype html>
 
-<html lang="en">
+<html-- lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -9,7 +9,7 @@
 	<meta name="description" content="Chocoholics Anonymous">
 	<meta name="author" content="Chocoholics Anonymous Manager's interface.">
 	<link rel="stylesheet"
-		  href="/cdn/css/interface.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+		  href="/cdn/css/interface.css">
 </head>
 
 <body id="manager" class="interface">
@@ -48,7 +48,7 @@
 
 <script src="/cdn/js/scripts.js" defer></script>
 </body>
-</html>
+</html-->
 <?php
 /**
  * Created by PhpStorm.

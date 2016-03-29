@@ -64,6 +64,8 @@ class MemberTest extends PHPUnit_Framework_TestCase
 	/**@var Member */
 	protected $member;
 
+	private $tear_down_tcmtae;//run this query on tear down
+
 	protected function setUp()
 	{
 		$_SERVER['REMOTE_ADDR'] = '::1';#'COMP370.db.10405771.hostedresource.com';
@@ -109,14 +111,16 @@ class MemberTest extends PHPUnit_Framework_TestCase
 
 		//act
 		//add member to database
-		DatabaseController::addMember($a->getNumber(), $test_name, $a->getStreet(), $a->getCity(),
-			$a->getProvince(), $a->getPostalCode(), $a->getPostalCode(), $a->getStatus());
+		DatabaseController::addMember($test_name, $a->getStreet(), $a->getCity(), $a->getProvince(), $a->getPostalCode(), $a->getEmail(), $a->getStatus());
 		//create a new member object with same number as original, they should not be the same.
 		$b = new Member($num);
 
+		//remove test data from mysql
+		echo $this->tear_down_tcmtae . "\n";
+		$this->db->query($this->tear_down_tcmtae);
+
 		//assert
 		$this->assertEquals($original_name, $b->getName());
-		//remove test data from mysql
 	}
 
 	/**

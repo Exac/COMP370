@@ -355,11 +355,31 @@ class DatabaseController
 			. $comments    . "')");*/
 	}
 
+	public static function getAllMembers()
+	{
+		self::initialize();
+
+		return self::$db->query("SELECT * FROM member ORDER BY member_name");
+	}
+
+	public static function getAllProviders()
+	{
+		self::initialize();
+
+		return self::$db->query("SELECT * FROM provider ORDER BY provider_name");
+	}
+
 	public static function deleteClaim($submissionDate, $member, $provider)
 	{
 		self::initialize();
 
+	}
 
+	public static function getAllAccountsPayables()
+	{
+		self::initialize();
+
+		return null; //ACME will implement this.
 	}
 
 	private static function getLastMemberNumber()

@@ -9,8 +9,10 @@ Contents
 * [12.20: Classical Analysis - Specification Documents](#1220)
 * [12.21: Classical Analysis - Software Project Management Plan](#1221)
 * [13.22: Object-Oriented Analysis](#1322)
+ * [Functional Modeling](#functionalmodeling)
+ * [Entity Class Modeling](#entityclassmodeling)
 * [14.16: Design](#1416)
-  * [Design Decisions](#DesignDecisions)
+ * [Design Decisions](#DesignDecisions)
   * [Mapping of Analysis Classes to Design Classes](#Mapping)
 * [15.33: Black-Box Testing](#1416)
 * [15.34: Implementation](#1416)
@@ -39,15 +41,12 @@ Contents
 _Perform the requirements workflow for the Chocoholics Anonymous project in Appendix A_
 
 The overview of the Requirements Workflow includes:
-1.
-Gain an understanding of the
-application domain or domain.
-2.
-Build a business model.
-3.
-Use the business model to determine the client’s requirements.
-4.
-Iterate the above steps.
+
+1. Gain an understanding of the application domain or domain.
+2. Build a business model.
+3. Use the business model to determine the client’s requirements.
+4. Iterate the above steps.
+
 The initial glossary for Chocoholics Anonymous:
 
 Business Terms|Descriptions
@@ -545,7 +544,142 @@ Figure 1.5:Second extended scenario of the Maintain Member use case (update an e
 A ChocAn operator wishes to update an existing member’s details.<br>1. The ChocAn operator enters the existing member’s member number.<br>2. The system searches for the details for the member and displays the details.<br>3. The ChocAn operator edits the details that must be changed. (The member number can never be changed.)<br>4. The system updates the member’s details.|
 **Possible Alternative** <br>A. In step 2, the system cannot find the member number. It displays the message invalid number, and the use case terminates.|
 
-TODO: Finish Section.
+
+
+Figure 1.6: Third extended scenario of the Maintain Member use case (delete an existing member)|
+---|
+A ChocAn operator wishes to delete an existing member.<br>1. The ChocAn operator enters the existing member’s member number.<br>2. The system searches for the details for the member and displays the details.<br>3. The ChocAn operator selects the option to delete the member.<br>4. The system deletes the member’s details.|
+**Possible Alternative**<br>&nbsp;&nbsp;&nbsp;&nbsp;A. In step 2, the system cannot find the member number. It displays the message invalid number, and the use case terminates.|
+
+Figure 1.7: First extended scenario for the Maintain Provider use case (add a new provider)|
+---|
+A ChocAn operator wishes to add a new provider.<br>&nbsp;&nbsp;&nbsp;&nbsp;1. The ChocAn operator selects the option to add a new provider, and enters the new provider’s details:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider zip code (5 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider email address (max 50 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider type (Dietitian, Internist, or Exercise Specialist)<br>2. The system allocates a number to the new provider and records the new provider<br>’s details.<br>3. The system displays the new provider’s number and other details.|
+
+Figure 1.8: Second scenario for the Maintain Provider use case (update an existing provider)|
+---|
+A ChocAn operator wishes to update an existing provider’s details. <br>1. The ChocAn operator enters the existing provider’s provider number.<br>2. The system searches for the details for the provider and displays the details.<br>3. The ChocAn operator edits the details that must be changed. (The provider number can never be changed.)<br>4. The system updates the provider’s details.|
+**Possible Alternative**<br>&nbsp;&nbsp;&nbsp;&nbsp;A. In step 2, the system cannot find the provider number. It displays an error message, and the use case terminates.|
+
+Figure 1.9: Third extended scenario of the Maintain Provider use case (delete an existing provider)|
+---|
+A ChocAn operator wishes to delete an existing provider.<br>1. The ChocAn operator enters the existing provider’s provider number.<br>2. The system searches for the details for the provider and displays the details.<br>3. The ChocAn operator selects the option to delete the provider.<br>4. The system deletes the provider’s details.|
+**Possible Alternative**<br>&nbsp;&nbsp;&nbsp;&nbsp;A. In step 2, the system cannot find the member number. It displays an error message, and the use case terminated.|
+
+Figure 1.10: First extended scenario for the Maintain Service use case (add a service)|
+---|
+A ChocAn operator wishes to add a new service. <br>1.The ChocAn operator selects the option to add a new service, and enters the new service’s details:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name  (max 20 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service fee (max $999.99)<br>&nbsp;&nbsp;&nbsp;&nbsp;2. The system records the new service details.<br>3. The system displays the new service details.|
+
+Figure 1.11: Second extended scenario for the Maintain Service use case (update a service)|
+---|
+A ChocAn operator wishes to update an existing service.<br>1. The ChocAn operator enters the existing service code.<br>2. The system searches for the details for the service and displays the details.<br>3. The ChocAn operator edits the details that must be changed.<br>4. The system updates the service details.|
+**Possible Alternative**<br>A. In step 2, the system cannot find the service code. It displays an error message, and the use case is terminated.|
+
+Figure 1.12: Third extended scenario for the Maintain Service use case (delete a service)|
+---|
+A ChocAn operator wishes to delete an existing service. <br>1. The ChocAn operator enters the existing service code.<br>2. The system searches for the details for the service and displays the details.<br>3. The ChocAn operator selects the option to delete the service.<br>4. The system deletes the service details.|
+**Possible Alternative**<br>A. In step 2, the system cannot find the service code. It displays an error message, and the use case is terminated.|
+
+Figure 1.13:|
+---|
+First extended scenario for the Request Report use case (provider report) The ChocAn manager wishes to print provider report.<br>1. The ChocAn manager selects the provider report, and enters the end date of the week he or she requires and the provider number.<br>2. The system generates a provider report including the following information:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider province (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider zip code (5 digits)<br>&nbsp;&nbsp;&nbsp;For each service provided, the following information, sorted according to claim submission date and time, is included:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Claim submission date and time (MM-DD-YYYY HH:MM:SS)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member name(max 25 characters) <br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service code (max 6 digits)&nbsp;&nbsp;&nbsp;&nbsp;Service fee (max $999.99)<br>&nbsp;&nbsp;&nbsp;&nbsp;Total number of consultations with members (3 digits) <br>&nbsp;&nbsp;&nbsp;&nbsp;Total fee for week (max $99,999.99)<br>3. The manager chooses to print the report.<br>4. The system prints the report.|
+**Possible Alternatives** A. In step 1, the ChocAn manager enters an invalid provider number. The system displays an error message and the use case terminates.<br>B. In step 3, the ChocAn manager chooses not to print the report. The use case terminates.|
+
+Figure 1.14: Second extended scenario for the Request Report use case (member report)|
+--|
+A ChocAn manager wishes to print a member report.<br>1. The ChocAn manager selects the member report, and enters the end date of the week he or she requires and the member number.<br>2. The system generates a member report including the following information:<br>&nbsp;&nbsp;&nbsp;&nbsp;Member name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member street address (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member city (max 14 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member state (2 letters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Member zip code (5 digits)<br>&nbsp;&nbsp;&nbsp;For each service provided, the following information, sorted according to service date, is included:<br>&nbsp;&nbsp;&nbsp;&nbsp;Service date (MM-DD-YYYY)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Service name  (max 20 characters)<br>3. The manager chooses to print the report.<br>4. The system prints the report. |
+**Possible Alternatives**<br>A. In step 1, the ChocAn manager enters an invalid member number. The system displays an error message and the use case terminates.<br>B. In step 3, the ChocAn manager chooses not to print the report. The use case terminates.|
+
+Figure 1.15: Third extended scenario for the Request Report use case (accounts payable report)|
+---|
+The ChocAn manager wishes to print an accounts payable report.<br>1. The ChocAn manager selects the accounts payable report, and enters the end date of the week he or she requires.<br>2. The system generates an accounts payable report including the following information:<br>&nbsp;&nbsp;&nbsp;For each provider to be paid that week:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provider name (25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of consultations (max 6 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total fee (max $99,999.99)<br>&nbsp;&nbsp;&nbsp;Total number of providers who provided services (max 6 digits)<br>&nbsp;&nbsp;&nbsp;Total number of consultations (max 9 digits)<br>&nbsp;&nbsp;&nbsp;Overall total fee (max $99,999.99)<br>3. The manager chooses to print the report.|
+**Possible Alternative**<br>A. In step 3, the ChocAn manager chooses not to print the report. The use case terminates.|
+
+Figure 1.16: Scenario for the Run Accounting Procedure use case|
+--|
+The accounting procedure is run every week at midnight on Friday.<br>1. For each provider, the system generates a provider report (First extended scenario for the Request a Report use case–provider report) and sends the report as an email attachment to the provider.<br>2. For each member, the system generates a member report (Second extended scenario for the Request a Report use case–member report), and sends the report as an email attachment to the member.<br>3. The system generates an accounts payable report for the ChocAn manager (Third extended scenario for the Request a Report use case–accounts payable report), and sends the report to the manager as an email attachment.<br>4. The system generates the following EFT data for each provider who must be paid for the week:<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider name (max 25 characters)<br>&nbsp;&nbsp;&nbsp;&nbsp;Provider number (max 9 digits)<br>&nbsp;&nbsp;&nbsp;&nbsp;Total fee for week (max $99,999.99)|
+
+Entity Class Modeling<a name="entityclassmodeling"></a>
+---
+
+Candidate entity classes are determined using noun extraction.
+
+
+__Description of software product in a single paragraph__:
+The ChocAn system allows providers to verify a person’s ChocAn
+membership status, and to submit a claim for a service provided to an active member. The data required by the system can be
+maintained by a ChocAn operator. The ChocAn manager can request various reports.
+Identify the nouns/noun phrases:
+The ChocAn system
+allows providers to verify a person’s ChocAn membership status, and to
+submit a claim for a service provided to an active member. The data required by the system can be maintained by a ChocAn
+operator. The ChocAn manager can request various reports.
+With
+regard to the nouns in the previous paragraph:
+* ChocAn System: the software product itself
+* Provider: possible entity class
+* Person: can be a provider, member, operator or manager.
+* Membership status: possible attribute of member
+* Claim: possible entity class
+* Service: possible entity class
+* Data: describes all attributes of entity classes
+* ChocAn operator: actor, no information needs to be stored about this actor
+* ChocAn manager: actor, no information needs to be stored about this actor
+
+**Figure 1.17: The entity class diagram of the Chocoholics Anonymous product**
+
+![]()
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        **Control Classes**
+        <ul>
+          <li>ChocAn System</li>
+          <li>Claim Submitter</li>
+          <li>Member Maintainer</li>
+          <li>Provider Maintainer</li>
+          <li>Service Maintainer</li>
+          <li>Provider Directory Generator</li>
+          <li>Provider Report Generator</li>
+          <li>Member Report</li>
+          <li>Generator</li>
+          <li>Accounts Payable Report Generator</li>
+          <li>EFT Report Generator</li>
+        </ul>
+      </td>
+      <td>
+        **Boundary Classes:**
+        <ul>
+          <li>Provider Interface
+          <li>Manager Interface</li>
+          <li>Operator Interface</li>
+          <li>Scheduler Interface</li>
+          <li>Provider Directory</li>
+          <li>Provider Report</li>
+          <li>Member Report</li>
+          <li>Accounts Payable Report</li>
+          <li>EFT Data Report</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Dynamic Modeling<a name="dynamicmodeling"></a>
+---
+Statecharts for the ChocAn product are shown in Parts I, II, III and IV.
+
+**Figure
+1.18: The statechart for the Chocoholics Anonymous product**
+
+![]()
+
+**Figure 1.19: The Provider subsystem statechart**
+
+![]()
+
+
 
 14.16<a name="1416"></a>
 ===
