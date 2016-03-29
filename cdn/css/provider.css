@@ -180,3 +180,60 @@ body.interface #providerID {
     background-color: rgba(103, 103, 103, 0.6);
     color: black;
 }
+
+#provider_report {
+    display: block;
+    width: 30%;
+    max-width: 720px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    right: 0;
+    top: 4em;
+    background: rgb(111, 173, 203);
+    color: white;
+}
+
+.report {
+    background: rgb(111, 173, 203);
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+th {
+    display: none;
+}
+
+tr {
+    border: 1px solid #ccc;
+}
+
+td {
+    border: none;
+    position: relative;
+    padding-left: 7em;
+}
+
+td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 6em;
+    padding-right: 10px;
+    white-space: nowrap;
+    color: white;
+}
+
+#provider_report table td:nth-of-type(1):before {
+    content: "Service Code";
+}
+
+#provider_report table td:nth-of-type(2):before {
+    content: "Name";
+}
+
+#provider_report table td:nth-of-type(3):before {
+    content: "Fee";
+}

@@ -21,6 +21,7 @@ class ProviderInterface
 		$this->ui->bodyId = "provider";
 		array_push($this->ui->stylesheets, "cdn/css/provider.css");
 		$this->ui->add('<script src="/cdn/js/provider.js" defer="defer"></script>');
+		$this->receiveDirectory();
 
 		if (sizeof($_POST) === 0)
 		{
@@ -107,7 +108,44 @@ class ProviderInterface
 
 	public function receiveDirectory()
 	{
+		array_push($this->ui->stylesheets, "cdn/css/manager.css");
+		/*$this->ui->add("<div id='provider_report' style='display: none;'>");
+		$this->ui->add((new ProviderReport())->__toString());
+		$this->ui->add("</div>");*/
+		/**
+		 * Service table
+		 */
+		$this->ui->add("<div id='provider_report' style='display: none;'>");
+		$this->ui->add("<table><tr><th>Service Code</th><th>Service</th><th>Fee</th></tr>");
+		$services = DatabaseController::getAllServices();
+		foreach ($services as &$s)
+		{
+			$this->ui->add("<tr><td>${s['service_code']}</td><td>${s['service_name']}</td><td class='fee'>${s['service_fee']}</td></tr>");
+		}
+		$this->ui->add("</table>");
+		$this->ui->add("</div>");
+	}
 
+	private function providersJS()
+	{
+		$j = "var provider_data = new Array();\n";
+
+		$providers = DatabaseController::selectProviders();
+		foreach ($providers as &$p)
+		{
+			$ltpn = ltrim($p["provider_number"], '0');
+			$j .= " provider_data[${ltpn}] = {};";
+			$j .= " provider_data[${ltpn}]['provider_number'] = '${p['provider_number']}';";
+			$j .= " provider_data[${ltpn}]['provider_name'] = '${p['provider_name']}';";
+			$j .= " provider_data[${ltpn}]['provider_street_address'] = '${p['provider_street_address']}';";
+			$j .= " provider_data[${ltpn}]['provider_city'] = '${p['provider_city']}';";
+			$j .= " provider_data[${ltpn}]['provider_province'] = '${p['provider_province']}';";
+			$j .= " provider_data[${ltpn}]['provider_postal_code'] = '${p['provider_postal_code']}';";
+			$j .= " provider_data[${ltpn}]['provider_email_address'] = '${p['provider_email_address']}';";
+			$j .= " provider_data[${ltpn}]['provider_type'] = '${p['provider_type']}';";
+		}
+
+		return $j;
 	}
 
 	private function error($message)

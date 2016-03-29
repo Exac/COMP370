@@ -127,3 +127,16 @@ function personPadNumbers(element, index, array) {
     document.getElementById("provider_password"),
     document.getElementById("provider_verify_member")
 ].forEach(personPadNumbers);
+
+var provider_report = document.getElementById("provider_report");
+var lookup_provider_report = document.getElementById("lookup_provider_directory");
+lookup_provider_report.addEventListener("click", function () {
+    provider_report.style.display = provider_report.style.display === "block" ? "none" : "block";
+});
+
+var fees = document.getElementsByClassName("fee");
+[].forEach.call(document.getElementsByClassName("fee"), function (v, i, a) {
+    var cents = v.innerHTML;
+    var dollars = (cents / 100).toFixed(2).toString();
+    v.innerHTML = "$" + dollars;
+});
