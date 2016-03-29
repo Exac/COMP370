@@ -9,6 +9,8 @@
 /**
  * Class DatabaseController
  *
+ * Database Controller class communicates with the database. It runs all the queries necessary
+ * for the application.
  * There is no __construct() method for this static class.
  * Every method must begin with a call to self::$initialize().
  */
@@ -55,6 +57,9 @@ class DatabaseController
 	const SERVICE_DATE         = "service_date";
 	const COMMENTS             = "comments";
 
+	/**
+	 * Used so that database stays connected for the session.
+	 */
 	private static function initialize()
 	{
 		if (self::$initialized)
@@ -108,6 +113,10 @@ class DatabaseController
 		return self::$db->select("select * from member where member_province = '${member_province}'");
 	}
 
+	/**
+	 * Selects member names from the database.
+	 * @return mixed array of member names
+	 */
 	public static function selectMemberNames()
 	{
 		self::initialize();
@@ -115,6 +124,10 @@ class DatabaseController
 		return self::$db->select("SELECT member_name, member_number FROM member");
 	}
 
+	/**
+	 * Selects all the members from the members database.
+	 * @return mixed Array of members with all their attributes.
+	 */
 	public static function selectMembers()
 	{
 		self::initialize();
@@ -122,6 +135,10 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM member ORDER BY member_number");
 	}
 
+	/**
+	 * Selects all the provider names from the database.
+	 * @return mixed Array of provider names.
+	 */
 	public static function selectProviderNames()
 	{
 		self::initialize();
@@ -129,6 +146,10 @@ class DatabaseController
 		return self::$db->select("SELECT provider_name, provider_number FROM provider");
 	}
 
+	/**
+	 * Selects all the providers from the provider database.
+	 * @return mixed Array of providers with all their attributes.
+	 */
 	public static function selectProviders()
 	{
 		self::initialize();
@@ -137,6 +158,7 @@ class DatabaseController
 	}
 
 	/**
+	 * Finds a member with a particular number.
 	 * @param $member_number int member_number
 	 * @return mixed Array
 	 */
@@ -149,6 +171,11 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM member where member_number = ${member_number}")[0];
 	}
 
+	/**
+	 * Finds a provider with a particular number.
+	 * @param $provider_number
+	 * @return mixed
+	 */
 	public static function selectProvider($provider_number)
 	{
 		self::initialize();
@@ -160,6 +187,11 @@ class DatabaseController
 		return $rows;
 	}
 
+	/**
+	 * Finds all providers with a term. Where term could be part of any attribute for a provider.
+	 * @param $term
+	 * @return mixed
+	 */
 	public static function findProvider($term)
 	{
 		self::initialize();
@@ -167,6 +199,11 @@ class DatabaseController
 		return self::$db->select("Select * from provider where `provider_number` LIKE '%${term}%' OR `provider_name` LIKE '%${term}%' OR `provider_street_address` LIKE '%${term}%' OR `provider_city` LIKE '%${term}%' OR `provider_province` LIKE '%${term}%' OR `provider_postal_code` LIKE '%${term}%' OR `provider_email_address` LIKE '%${term}%' OR `provider_type` LIKE '%${term}%'");
 	}
 
+	/**
+	 * Finds all members with a term. Where term could be part of any attributes for a member.
+	 * @param $term
+	 * @return mixed
+	 */
 	public static function findMember($term)
 	{
 		self::initialize();
@@ -174,6 +211,10 @@ class DatabaseController
 		return self::$db->select("Select * from member where `member_number` LIKE '%${term}%' OR `member_name` LIKE '%${term}%' OR `member_street_address` LIKE '%${term}%' OR `member_city` LIKE '%${term}%' OR `member_province` LIKE '%${term}%' OR `member_postal_code` LIKE '%${term}%' OR `member_email_address` LIKE '%${term}%' OR `member_status` LIKE '%${term}%'");
 	}
 
+	/**
+	 * @param $table
+	 * @return mixed
+	 */
 	public static function getNextIndex($table)
 	{
 		self::initialize();
@@ -181,6 +222,11 @@ class DatabaseController
 		return self::$db->select("select Auto_increment FROM information_schema.tables where table_name='${table}'")[0]["Auto_increment"];
 	}
 
+	/**
+	 * Returns true if a member exists with a particular number and false if not.
+	 * @param $member_number
+	 * @return bool
+	 */
 	public static function memberExists($member_number)
 	{
 		self::initialize();
@@ -197,6 +243,11 @@ class DatabaseController
 		return false;
 	}
 
+	/**
+	 * Returns true if a provider exists with a particular number and false otherwise.
+	 * @param $provider_number
+	 * @return bool
+	 */
 	public static function providerExists($provider_number)
 	{
 		self::initialize();
@@ -213,6 +264,11 @@ class DatabaseController
 		return false;
 	}
 
+	/**
+	 * Adds a new provider with the values passed in.
+	 * @param $name , $street, $city, $province, $postal, $email, $type
+	 * @return bool
+	 */
 	public static function addProvider($name, $street, $city, $province, $postal, $email, $type)
 	{
 		self::initialize();
@@ -231,6 +287,11 @@ class DatabaseController
 		return (self::$db->query($query) == true) ? self::getLastMemberNumber() : false;
 	}
 
+	/**
+	 * Adds a new member with the values passed in.
+	 * @param $name , $street, $city, $province, $postal, $email, $type
+	 * @return bool
+	 */
 	public static function addMember($name, $street, $city, $province, $postal, $email, $status)
 	{
 		self::initialize();
@@ -249,6 +310,11 @@ class DatabaseController
 		return (self::$db->query($query) == true) ? self::getLastProviderNumber() : false;
 	}
 
+	/**
+	 * Deletes a member with passed in member number
+	 * @param $number
+	 * @return mixed
+	 */
 	public static function deleteMember($number)
 	{
 		self::initialize();
@@ -259,6 +325,11 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Deletes a provider with a particular number.
+	 * @param $number
+	 * @return mixed
+	 */
 	public static function deleteProvider($number)
 	{
 		self::initialize();
@@ -269,6 +340,11 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Updates a provider with a particular provider number.
+	 * @param $number , $name , $street, $city, $province, $postal, $email, $type
+	 * @return mixed
+	 */
 	public static function updateProvider($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
 		self::initialize();
@@ -286,6 +362,11 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Updates a member with a particular provider number.
+	 * @param $number , $name , $street, $city, $province, $postal, $email, $type
+	 * @return mixed
+	 */
 	public static function updateMember($number, $name, $street, $city, $province, $postal, $email, $type)
 	{
 		self::initialize();
@@ -303,6 +384,10 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Returns an array of all the services in the database.
+	 * @return mixed
+	 */
 	public static function getAllServices()
 	{
 		self::initialize();
@@ -310,6 +395,13 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM " . self::SERVICE . " ORDER BY " . self::SERVICE_CODE);
 	}
 
+	/**
+	 * Adds a new service.
+	 * @param $code
+	 * @param $name
+	 * @param $fee
+	 * @return mixed
+	 */
 	public static function addService($code, $name, $fee)
 	{
 		self::initialize();
@@ -322,6 +414,11 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Deletes a service with a particular service code.
+	 * @param $code
+	 * @return mixed
+	 */
 	public static function deleteService($code)
 	{
 		self::initialize();
@@ -332,6 +429,10 @@ class DatabaseController
 		return self::$db->query($query);
 	}
 
+	/**
+	 * Gets all the claims from the database.
+	 * @return mixed
+	 */
 	public static function getAllClaims()
 	{
 		self::initialize();
@@ -339,6 +440,11 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
+	/**
+	 * Adds a new claim with the passed in values.
+	 * @param $subDate , $servCode, $memberNum, $providerNum, $servDate, $comments
+	 * @return mixed
+	 */
 	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
 	{
 		self::initialize();
@@ -355,6 +461,12 @@ class DatabaseController
 			. $comments    . "')");*/
 	}
 
+	/**
+	 * Deletes a claim in databse.
+	 * @param $submissionDate
+	 * @param $member
+	 * @param $provider
+	 */
 	public static function deleteClaim($submissionDate, $member, $provider)
 	{
 		self::initialize();
@@ -362,6 +474,10 @@ class DatabaseController
 
 	}
 
+	/**
+	 * Private function used to get the number of a last member added.
+	 * @return mixed
+	 */
 	private static function getLastMemberNumber()
 	{
 		$result = self::$db->select("SELECT " . self::MEMBER_NUMBER . " FROM " .
@@ -370,6 +486,10 @@ class DatabaseController
 		return $result[0][self::MEMBER_NUMBER];
 	}
 
+	/**
+	 * Private function used to get the number of a last provider added.
+	 * @return mixed
+	 */
 	private static function getLastProviderNumber()
 	{
 		$result = self::$db->select("SELECT " . self::PROVIDER_NUMBER . " FROM " .

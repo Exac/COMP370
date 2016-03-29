@@ -1,7 +1,5 @@
 <?php
 /**
- *  ************************  USE THIS CLASS TO GET TO DATABASE ************************
- *
  * Class Providers
  * @date 10-3-2016
  *
@@ -21,7 +19,6 @@
 class Providers extends Persons
 {
 	private $providers;	// Array of providers.
-	private $size = 0;	// Size of providers array.
 
 	// Displayed after use.
 	const NOT_FOUND_MESSAGE = "ERROR: No provider found<br>";
@@ -30,39 +27,29 @@ class Providers extends Persons
 	const ADD_FAIL          = "Provider can not be added<br>";
 	const UPDATE_FAIL       = "Provider can not be updated<br>";
 
+	/**
+	 * Providers constructor.
+	 * Creates a new SplObjectStorage().
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->providers = new SplObjectStorage();
 	}
 
-
+	/**
+	 * Finds a member by a particular number.
+	 * @param $number
+	 * @return Provider|string
+	 */
 	public function findByNumber($number)
 	{
-		//$this->providers = null;
-		$this->getAll();
-		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
+		$databaseProvider = DatabaseController::selectProvider($number);
+		if (count($databaseProvider) == 0) return self::NOT_FOUND_MESSAGE;
 
-		$this->size = 0;
-
-		$temp = new SplObjectStorage();
-
-		$this->providers->rewind();
-		while ($this->providers->valid())
-		{
-			$provider = $this->providers->current();
-
-			if ($provider->getNumber() == $number)
-			{
-				$temp->attach($provider);
-				$this->size++;
-			}
-
-			$this->providers->next();
-		}
-		$this->providers = $temp;
-
-		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
+		$provider = $this->newProvider($databaseProvider[0]);
+		$this->providers->attach($provider);
+		return $provider;
 	}
 
 	/**
@@ -73,11 +60,8 @@ class Providers extends Persons
 	 */
 	public function findByName($name)
 	{
-		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
-
-		$this->size = 0;
 
 		$temp = new SplObjectStorage();
 
@@ -85,13 +69,7 @@ class Providers extends Persons
 		while ($this->providers->valid())
 		{
 			$provider = $this->providers->current();
-
-			if ($provider->getName() == $name)
-			{
-				$temp->attach($provider);
-				$this->size++;
-			}
-
+			if ($provider->getName() == $name) $temp->attach($provider);
 			$this->providers->next();
 		}
 		$this->providers = $temp;
@@ -106,11 +84,8 @@ class Providers extends Persons
 	 */
 	public function findByCity($city)
 	{
-		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
-
-		$this->size = 0;
 
 		$temp = new SplObjectStorage();
 
@@ -118,13 +93,7 @@ class Providers extends Persons
 		while ($this->providers->valid())
 		{
 			$provider = $this->providers->current();
-
-			if ($provider->getCity() == $city)
-			{
-				$temp->attach($provider);
-				$this->size++;
-			}
-
+			if ($provider->getCity() == $city) $temp->attach($provider);
 			$this->providers->next();
 		}
 		$this->providers = $temp;
@@ -139,11 +108,8 @@ class Providers extends Persons
 	 */
 	public function findByType($type)
 	{
-		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
-
-		$this->size = 0;
 
 		$temp = new SplObjectStorage();
 
@@ -151,13 +117,7 @@ class Providers extends Persons
 		while ($this->providers->valid())
 		{
 			$provider = $this->providers->current();
-
-			if ($provider->getType() == $type)
-			{
-				$temp->attach($provider);
-				$this->size++;
-			}
-
+			if ($provider->getType() == $type) $temp->attach($provider);
 			$this->providers->next();
 		}
 		$this->providers = $temp;
@@ -172,25 +132,15 @@ class Providers extends Persons
 	 */
 	public function findByProvince($province)
 	{
-		//$this->providers = null;
 		$this->getAll();
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;
-
-		$this->size = 0;
-
 		$temp = new SplObjectStorage();
 
 		$this->providers->rewind();
 		while ($this->providers->valid())
 		{
 			$provider = $this->providers->current();
-
-			if ($provider->getProvince() == $province)
-			{
-				$temp->attach($provider);
-				$this->size++;
-			}
-
+			if ($provider->getProvince() == $province) $temp->attach($provider);
 			$this->providers->next();
 		}
 		$this->providers = $temp;
@@ -215,33 +165,20 @@ class Providers extends Persons
 	public function getAll()
 	{
 		$this->providers = new SplObjectStorage();
-
 		$databaseProviders = DatabaseController::selectProviders();
 
-		$size = count($databaseProviders);
-
-		for ($i = 0; $i < $size; $i++)
+		foreach ($databaseProviders as $databaseProvider)
 		{
-			$databaseProvider = $databaseProviders[$i];
-
-			$provider = new Provider($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
-
-			$provider->setName($databaseProvider[DatabaseController::PROVIDER_NAME]);
-			$provider->setStreet($databaseProvider[DatabaseController::PROVIDER_STREET]);
-			$provider->setCity($databaseProvider[DatabaseController::PROVIDER_CITY]);
-			$provider->setProvince($databaseProvider[DatabaseController::PROVIDER_PROVINCE]);
-			$provider->setPostalCode($databaseProvider[DatabaseController::PROVIDER_POSTAL]);
-			$provider->setEmail($databaseProvider[DatabaseController::PROVIDER_EMAIL]);
-			$provider->setType($databaseProvider[DatabaseController::PROVIDER_TYPE]);
-
-			$this->providers->attach($provider);
-
-			$this->size++;
+			$this->providers->attach($this->newProvider($databaseProvider));
 		}
-
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->providers;
 	}
 
+	/**
+	 * Adds a new provider to the database. Uses addProvider method of DatabaseController
+	 * @param Provider $provider
+	 * @return bool|string
+	 */
 	public function add(Provider $provider)
 	{
 		$result = DatabaseController::addProvider($provider->getName(),
@@ -252,6 +189,11 @@ class Providers extends Persons
 		return ($result == false) ? self::ADD_FAIL : $result;
 	}
 
+	/**
+	 * Updates existing provider in the database. Uses updateProvider method of DatabaseController.
+	 * @param Provider $provider with new values.
+	 * @return string
+	 */
 	public function update(Provider $provider)
 	{
 		// Check if the provider exists in the database first.
@@ -266,6 +208,11 @@ class Providers extends Persons
 		return ($result == true) ? self::UPDATE_SUCCESSFUL : self::UPDATE_FAIL;
 	}
 
+	/**
+	 * Deletes a provider with a particular number
+	 * @param $providerNumber
+	 * @return string
+	 */
 	public function delete($providerNumber)
 	{
 		// Check if the provider exists in the database first.
@@ -277,26 +224,41 @@ class Providers extends Persons
 	}
 
 	/**
-	 * Size of members array.
-	 * @return int
-	 */
-	public function getSize()
-	{
-		return $this->size;
-	}
-
-	/**
 	 * Check if providers array is empty.
 	 * @return bool
 	 */
 	public function isEmpty()
 	{
-		return ($this->size == 0) ? true : false;
+		return (count($this->providers) == 0) ? true : false;
 	}
 
+	/**
+	 * Return true if a provider exists, false otherwise.
+	 * @param $providerNumber
+	 * @return bool
+	 */
 	public function providerExists($providerNumber)
 	{
 		return DatabaseController::providerExists($providerNumber);
+	}
+
+	/**
+	 * Builds a new provider object from the passed in array.
+	 * @param $databaseProvider
+	 * @return Provider
+	 */
+	private function newProvider($databaseProvider)
+	{
+		$provider = new Provider();
+		$provider->setNumber($databaseProvider[DatabaseController::PROVIDER_NUMBER]);
+		$provider->setName($databaseProvider[DatabaseController::PROVIDER_NAME]);
+		$provider->setStreet($databaseProvider[DatabaseController::PROVIDER_STREET]);
+		$provider->setCity($databaseProvider[DatabaseController::PROVIDER_CITY]);
+		$provider->setProvince($databaseProvider[DatabaseController::PROVIDER_PROVINCE]);
+		$provider->setPostalCode($databaseProvider[DatabaseController::PROVIDER_POSTAL]);
+		$provider->setEmail($databaseProvider[DatabaseController::PROVIDER_EMAIL]);
+		$provider->setType($databaseProvider[DatabaseController::PROVIDER_TYPE]);
+		return $provider;
 	}
 
 	/**

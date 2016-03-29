@@ -1,13 +1,24 @@
 <?php
 
 /**
- * Claims
+ * Claims Class
  *
  * @date 10-3-2016
+ *
+ * Claims are associated with a provider and a member. Claims class handles database operations.
+ * It stores information being accessed into an array. And adds a new claim, deletes an existing claim.
+ * Following operations are possible:
+ *    findByProvider()    finds a claim by provider
+ *    findByMember()        finds a claim by member.
+ *    add()                adds a new claim.
+ *    getAll()            gets all the claims in the database.
+ *    getSize()            gets the size of the claims array.
+ *    isEmpty()            checks if the claims array is empty.
  *
  */
 class Claims
 {
+	// Claims attributes.
 	private $claims;
 	private $size;
 
@@ -15,12 +26,21 @@ class Claims
 	const ADD_SUCCESSFUL = "Claim added<br>";
 	const ADD_FAIL = "Claim can not be added<br>";
 
+	/**
+	 * Claims constructor.
+	 * Creates a new SplObjectStorage.
+	 */
 	private function __construct()
 	{
 		$this->claims = new SplObjectStorage();
 		$this->size = 0;
 	}
 
+	/**
+	 * Finds all the claims of a particular provider.
+	 * @param $providerNumber
+	 * @return SplObjectStorage|string
+	 */
 	public function findByProvider($providerNumber)
 	{
 		$this->getAll();
@@ -46,6 +66,11 @@ class Claims
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->claims;
 	}
 
+	/**
+	 * Finds all the claims of a particular member.
+	 * @param $memberNumber
+	 * @return SplObjectStorage|string
+	 */
 	public function findByMember($memberNumber)
 	{
 		$this->getAll();
@@ -71,6 +96,11 @@ class Claims
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->claims;
 	}
 
+	/**
+	 * Adds a new claim to the database.
+	 * @param Claim $claim
+	 * @return string
+	 */
 	public function add(Claim $claim)
 	{
 		$result = DatabaseController::addClaim(
@@ -84,11 +114,19 @@ class Claims
 		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
 	}
 
+	/**
+	 * Returns the size of the claims array.
+	 * @return int
+	 */
 	public function getSize()
 	{
 		return $this->size;
 	}
 
+	/**
+	 * Gets all the claims in the database.
+	 * @return SplObjectStorage|string
+	 */
 	public function getAll()
 	{
 		$this->claims = new SplObjectStorage();
@@ -113,11 +151,19 @@ class Claims
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->claims;
 	}
 
+	/**
+	 * Checks if the claims array is empty.
+	 * @return bool
+	 */
 	public function isEmpty()
 	{
 		return ($this->size == 0) ? true : false;
 	}
 
+	/**
+	 * Builds a table string off all the claims.
+	 * @return string
+	 */
 	public function __toString()
 	{
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;

@@ -1,15 +1,23 @@
 <?php
 
-/**************************  ********************************* *************************
- **************************  USE THIS CLASS TO GET TO DATABASE *************************
- **************************  ********************************* *************************
- * Services
+/**
+ * Services Class
  *
  * @date 10-3-2016
+ *
+ * A service is provided by the provider. This class maintains all the services.
+ * It can do the following:
+ *    findByCode()    Finds the service by service code.
+ *    findByName()    Finds a service by name.
+ *    add()            Adds a new service.
+ *    delete()        Deletes an existing service.
+ *    getAll()        Gets all the services in the database.
+ *    isEmpty()        Checks if the services array is empty.
  *
  */
 class Services
 {
+	// Service attributes.
 	private $services;
 	private $size;
 
@@ -25,6 +33,11 @@ class Services
 		$this->size= 0;
 	}
 
+	/**
+	 * Finds a service by service code.
+	 * @param $serviceCode
+	 * @return SplObjectStorage|string
+	 */
 	public function findByCode($serviceCode)
 	{
 		$this->getAll();
@@ -50,6 +63,11 @@ class Services
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->services;
 	}
 
+	/**
+	 * Finds a service by its name.
+	 * @param $serviceName
+	 * @return SplObjectStorage|string
+	 */
 	public function findByName($serviceName)
 	{
 		$this->getAll();
@@ -74,7 +92,12 @@ class Services
 
 		return ($this->isEmpty()) ? self::NOT_FOUND_MESSAGE : $this->services;
 	}
-	
+
+	/**
+	 * Adds a new service.
+	 * @param Service $service
+	 * @return string
+	 */
 	public function add(Service $service)
 	{
 		$result = DatabaseController::addService($service->getCode(),
@@ -82,13 +105,21 @@ class Services
 
 		return ($result == true) ? self::ADD_SUCCESSFUL : self::ADD_FAIL;
 	}
-	
+
+	/**
+	 * Deletes an existing service.
+	 * @param $serviceCode
+	 * @return string
+	 */
 	public function delete($serviceCode)
 	{
 		$result = DatabaseController::deleteService($serviceCode);
 		return ($result == true) ? self::DELETE_SUCCESSFUL : self::DELETE_FAIL;
 	}
-	
+
+	/**
+	 * Gets all the services in the database.
+	 */
 	public function getAll()
 	{
 		$this->services = new SplObjectStorage();
@@ -107,16 +138,28 @@ class Services
 		}
 	}
 
+	/**
+	 * Checks if the services array is empty.
+	 * @return bool
+	 */
 	public function isEmpty()
 	{
 		return ($this->size == 0) ? true : false;
 	}
 
+	/**
+	 * Gets the size of the services array.
+	 * @return mixed
+	 */
 	public function getSize()
 	{
 		return $this->getSize();
 	}
 
+	/**
+	 * Builds a table string for the services in the services array.
+	 * @return string
+	 */
 	public function __toString()
 	{
 		if ($this->isEmpty()) return self::NOT_FOUND_MESSAGE;

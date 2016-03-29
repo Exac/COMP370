@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8b09f8e-2d52-4b39-89da-496f60d8112f" name="Default" comment="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PersonsTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Claims.class.php" afterPath="$PROJECT_DIR$/Claims.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseController.class.php" afterPath="$PROJECT_DIR$/DatabaseController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Members.class.php" afterPath="$PROJECT_DIR$/Members.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers.class.php" afterPath="$PROJECT_DIR$/Providers.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Services.class.php" afterPath="$PROJECT_DIR$/Services.class.php" />
     </list>
     <ignored path="COMP370.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,89 +47,23 @@
     <favorites_list name="COMP370" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PersonsTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/PersonsTest.php">
+    <leaf>
+      <file leaf-file-name="Claim.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Claim.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.807692">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-              <folding>
-                <element signature="e#6#88#0#PHP" expanded="true" />
-                <marker date="1458865573360" expanded="false" signature="109:2324" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Members.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Members.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.461538">
-              <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
+            <state vertical-scroll-proportion="-25.307692">
+              <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Providers.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Providers.class.php">
+      <file leaf-file-name="Services.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Services.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.769231">
-              <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.35735735">
+              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.76923">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-              <folding>
-                <marker date="1458845767086" expanded="true" signature="3772:3791" placeholder="SELECT * FRO... claim" />
-                <marker date="1458845767086" expanded="true" signature="3984:4004" placeholder="SELECT * FRO... member" />
-                <marker date="1458845767086" expanded="true" signature="4202:4224" placeholder="SELECT * FRO... provider" />
-                <marker date="1458845767086" expanded="true" signature="4422:4443" placeholder="SELECT * FRO... service" />
-                <marker date="1458845767086" expanded="true" signature="4823:4865" placeholder="SELECT submi... claim" />
-                <marker date="1458845767086" expanded="true" signature="5251:5283" placeholder="SELECT membe... member" />
-                <marker date="1458845767086" expanded="true" signature="5662:5698" placeholder="SELECT provi... provider" />
-                <marker date="1458845767086" expanded="true" signature="6077:6109" placeholder="SELECT servi... service" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6561922">
-              <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-              <folding>
-                <marker date="1458864338034" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-                <marker date="1458864338034" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-                <marker date="1458864338034" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-                <marker date="1458864338034" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
-                <marker date="1458864338034" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
-                <marker date="1458864338034" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
-                <marker date="1458864338034" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
-                <marker date="1458864338034" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
-                <marker date="1458864338034" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
-                <marker date="1458864338034" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
-                <marker date="1458864338034" expanded="true" signature="6049:6456" placeholder="INSERT INTO ${self::PROVIDER}... " />
-                <marker date="1458864338034" expanded="true" signature="6681:7070" placeholder="INSERT INTO ${self::MEMBER}... " />
-                <marker date="1458864338034" expanded="true" signature="7249:7336" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="7465:7556" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="8944:8989" placeholder="SELECT * FRO... ${self::SERVICE}" />
-                <marker date="1458864338034" expanded="true" signature="9112:9205" placeholder="INSERT INTO ${self::SERVICE}... " />
-                <marker date="1458864338034" expanded="true" signature="9333:9418" placeholder="DELETE FROM " />
-                <marker date="1458864338034" expanded="true" signature="9554:9597" placeholder="SELECT * FRO... ${self::CLAIM}" />
-                <marker date="1458864338034" expanded="true" signature="9834:9968" placeholder="INSERT INTO ${self::SERVICE}... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,12 +90,13 @@
         <option value="$PROJECT_DIR$/tests/MemberTest.php" />
         <option value="$PROJECT_DIR$/Test.php" />
         <option value="$PROJECT_DIR$/tests/Tests.php" />
-        <option value="$PROJECT_DIR$/Claims.class.php" />
         <option value="$PROJECT_DIR$/Claim.class.php" />
-        <option value="$PROJECT_DIR$/DatabaseController.class.php" />
-        <option value="$PROJECT_DIR$/Providers.class.php" />
         <option value="$PROJECT_DIR$/tests/PersonsTest.php" />
+        <option value="$PROJECT_DIR$/DatabaseController.class.php" />
         <option value="$PROJECT_DIR$/Members.class.php" />
+        <option value="$PROJECT_DIR$/Providers.class.php" />
+        <option value="$PROJECT_DIR$/Claims.class.php" />
+        <option value="$PROJECT_DIR$/Services.class.php" />
       </list>
     </option>
   </component>
@@ -176,10 +112,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="WampServer" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -225,11 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Changed Files" />
-        <subPane subId="Default" />
-        <subPane subId="Project Files" />
-      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,23 +178,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="COMP370" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="COMP370" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Changed Files" />
+        <subPane subId="Default" />
+        <subPane subId="Project Files" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,116 +214,6 @@
       <recent name="C:\Users\Thomas\Dropbox\COMP370\test" />
       <recent name="C:\Users\Thomas\Dropbox\COMP370" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="PHPUnit.Run Tests">
     <configuration default="false" name="PersonsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -718,7 +528,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458801247225</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="setProviderNumber() and setMemberNumber() accept a number as an object now rather than a Person object.">
+      <created>1458865882303</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1458865882303</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -757,19 +573,17 @@
     <option name="totallyTimeSpent" value="5596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24158126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28038067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08296296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11851852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -777,10 +591,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19756839" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11851852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2502533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -830,13 +646,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UserInterface.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Service.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1187,25 +996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Claim.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.916264">
-          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Claims.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5748792">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.192308">
           <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0273752">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9436393">
           <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,9 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1458845767127" expanded="true" signature="2932:2973" placeholder="SELECT provi... provider" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,9 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.37037036">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1458845767090" expanded="true" signature="3536:3573" placeholder="SELECT membe... member" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,83 +1035,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27387387">
           <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/DatabaseTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.76923">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        <state vertical-scroll-proportion="-0.18196458">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PersonsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60225445">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8168168">
+          <caret line="489" column="73" selection-start-line="489" selection-start-column="73" selection-end-line="489" selection-end-column="73" />
           <folding>
-            <marker date="1458845767086" expanded="true" signature="3772:3791" placeholder="SELECT * FRO... claim" />
-            <marker date="1458845767086" expanded="true" signature="3984:4004" placeholder="SELECT * FRO... member" />
-            <marker date="1458845767086" expanded="true" signature="4202:4224" placeholder="SELECT * FRO... provider" />
-            <marker date="1458845767086" expanded="true" signature="4422:4443" placeholder="SELECT * FRO... service" />
-            <marker date="1458845767086" expanded="true" signature="4823:4865" placeholder="SELECT submi... claim" />
-            <marker date="1458845767086" expanded="true" signature="5251:5283" placeholder="SELECT membe... member" />
-            <marker date="1458845767086" expanded="true" signature="5662:5698" placeholder="SELECT provi... provider" />
-            <marker date="1458845767086" expanded="true" signature="6077:6109" placeholder="SELECT servi... service" />
+            <marker date="1459231335877" expanded="true" signature="2273:2327" placeholder="SELECT membe... member" />
+            <marker date="1459231335877" expanded="true" signature="2644:2687" placeholder="select * fro... member" />
+            <marker date="1459231335877" expanded="true" signature="3138:3203" placeholder="select * fro... member" />
+            <marker date="1459231335877" expanded="true" signature="3403:3448" placeholder="SELECT membe... member" />
+            <marker date="1459231335877" expanded="true" signature="3677:3720" placeholder="SELECT * FRO... member" />
+            <marker date="1459231335877" expanded="true" signature="3935:3986" placeholder="SELECT provi... provider" />
+            <marker date="1459231335877" expanded="true" signature="4222:4269" placeholder="SELECT * FRO... provider" />
+            <marker date="1459231335877" expanded="true" signature="4562:4605" placeholder="SELECT * FRO... member" />
+            <marker date="1459231335877" expanded="true" signature="4906:4953" placeholder="SELECT * FRO... provider" />
+            <marker date="1459231335877" expanded="true" signature="5237:5582" placeholder="Select * fro... provider" />
+            <marker date="1459231335877" expanded="true" signature="5823:6152" placeholder="Select * fro... member" />
+            <marker date="1459231335877" expanded="true" signature="6305:6385" placeholder="select Auto_... tables" />
+            <marker date="1459231335877" expanded="true" signature="6654:6709" placeholder="SELECT membe... member" />
+            <marker date="1459231335877" expanded="true" signature="7101:7162" placeholder="SELECT provi... provider" />
+            <marker date="1459231335877" expanded="true" signature="7586:7991" placeholder="INSERT INTO ${self::PROVIDER}... " />
+            <marker date="1459231335877" expanded="true" signature="8361:8750" placeholder="INSERT INTO ${self::MEMBER}... " />
+            <marker date="1459231335877" expanded="true" signature="9026:9113" placeholder="DELETE FROM " />
+            <marker date="1459231335877" expanded="true" signature="9338:9429" placeholder="DELETE FROM " />
+            <marker date="1459231335877" expanded="true" signature="11229:11274" placeholder="SELECT * FRO... ${self::SERVICE}" />
+            <marker date="1459231335877" expanded="true" signature="11499:11592" placeholder="INSERT INTO ${self::SERVICE}... " />
+            <marker date="1459231335877" expanded="true" signature="11819:11904" placeholder="DELETE FROM " />
+            <marker date="1459231335877" expanded="true" signature="12111:12154" placeholder="SELECT * FRO... ${self::CLAIM}" />
+            <marker date="1459231335877" expanded="true" signature="12546:12680" placeholder="INSERT INTO ${self::SERVICE}... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Providers.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231">
-          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+        <state vertical-scroll-proportion="6.2537537">
+          <caret line="245" column="61" selection-start-line="245" selection-start-column="61" selection-end-line="245" selection-end-column="61" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/PersonsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.807692">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <marker date="1458865573360" expanded="false" signature="109:2324" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Members.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.461538">
-          <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.05105105">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DatabaseController.class.php">
+    <entry file="file://$PROJECT_DIR$/Claims.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6561922">
-          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-          <folding>
-            <marker date="1458864338034" expanded="true" signature="2085:2139" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="2456:2499" placeholder="select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="2950:3015" placeholder="select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="3121:3166" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="3268:3311" placeholder="SELECT * FRO... member" />
-            <marker date="1458864338034" expanded="true" signature="3419:3470" placeholder="SELECT provi... provider" />
-            <marker date="1458864338034" expanded="true" signature="3574:3621" placeholder="SELECT * FRO... provider" />
-            <marker date="1458864338034" expanded="true" signature="3869:3912" placeholder="SELECT * FRO... member" />
-            <marker date="1458864338034" expanded="true" signature="4110:4157" placeholder="SELECT * FRO... provider" />
-            <marker date="1458864338034" expanded="true" signature="4301:4646" placeholder="Select * fro... provider" />
-            <marker date="1458864338034" expanded="true" signature="4750:5079" placeholder="Select * fro... member" />
-            <marker date="1458864338034" expanded="true" signature="5186:5266" placeholder="select Auto_... tables" />
-            <marker date="1458864338034" expanded="true" signature="5403:5458" placeholder="SELECT membe... member" />
-            <marker date="1458864338034" expanded="true" signature="5711:5772" placeholder="SELECT provi... provider" />
-            <marker date="1458864338034" expanded="true" signature="6049:6456" placeholder="INSERT INTO ${self::PROVIDER}... " />
-            <marker date="1458864338034" expanded="true" signature="6681:7070" placeholder="INSERT INTO ${self::MEMBER}... " />
-            <marker date="1458864338034" expanded="true" signature="7249:7336" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="7465:7556" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="8944:8989" placeholder="SELECT * FRO... ${self::SERVICE}" />
-            <marker date="1458864338034" expanded="true" signature="9112:9205" placeholder="INSERT INTO ${self::SERVICE}... " />
-            <marker date="1458864338034" expanded="true" signature="9333:9418" placeholder="DELETE FROM " />
-            <marker date="1458864338034" expanded="true" signature="9554:9597" placeholder="SELECT * FRO... ${self::CLAIM}" />
-            <marker date="1458864338034" expanded="true" signature="9834:9968" placeholder="INSERT INTO ${self::SERVICE}... " />
-          </folding>
+        <state vertical-scroll-proportion="0.3828829">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Claim.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.307692">
+          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35735735">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
