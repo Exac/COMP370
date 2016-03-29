@@ -69,7 +69,7 @@ function initProvider() {
         pmv.appendChild(loading);
 
         //remove pmv after n milliseconds
-        var n = 3500;
+        var n = 1500;
         setTimeout(function () {
             removePMV(pmv);
         }, n);

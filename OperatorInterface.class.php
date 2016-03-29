@@ -9,12 +9,14 @@
 class OperatorInterface
 {
 	private $ui;
+	private $mm;
+	private $pm;
 
 	function __construct()
 	{
-		//process input on members
 		$this->ui = new UserInterface();
-
+		$this->mm = new MemberMaintainer();
+		$this->pm = new ProviderMaintainer();
 	}
 	
 	public function main ()
@@ -23,7 +25,18 @@ class OperatorInterface
 		array_push($this->ui->stylesheets, "cdn/css/operator.css");
 
 		$this->ui->add("<h1>ChocAn Data Center Interactive Mode</h1>");
-		$this->ui->add("<form method='get' action=''>");
+		$this->ui->description = "During the day, the software at the ChocAn Data Center is run" . " in interactive mode to allow operators to add new members to ChocAn, to delete " . "members who have resigned, and to update member records. Similarly, provider records" . " are added, deleted, and updated.";
+		if ($this->mm->message)
+		{
+			$this->ui->message($this->mm->message);
+		}
+		if ($this->pm->message)
+		{
+			$this->ui->message($this->pm->message);
+		}
+
+
+		$this->ui->add("<form method='post' action=''>");
 
 		//MEMBER's fieldset
 		$this->ui->add('<fieldset id="member">');
@@ -64,12 +77,12 @@ class OperatorInterface
 		$this->ui->body .= (new Input("submit", "New Provider", array("New Provider", 'style="filter:hue-rotate(250deg)"'))) . "<br>\n";
 		$this->ui->body .= (new Input("submit", "Delete Provider", array("Delete Provider", 'style="filter:hue-rotate(150deg)"'))) . "<br>\n";
 		$this->ui->body .= (new Input("submit", "Update Provider", "Update Provider"));
-		$this->ui->add("</fieldset>");
+		/*$this->ui->add("</fieldset>");
 		$this->ui->add('<fieldset id="operator">');
 		$this->ui->add('<legend>Operator</legend>');
 		$this->ui->add("<p>The operator interface is not yet implemented. Question: Did we mix-up Provider and
 			Operator (Service and Provider)?</p>");
-		$this->ui->add("</fieldset>");
+		$this->ui->add("</fieldset>");*/
 		$this->ui->add("\n</form>");
 		$this->ui->body .= $this->membersAutoFillScript();
 		$this->ui->body .= $this->providersAutoFillScript();
@@ -95,16 +108,22 @@ class OperatorInterface
 
 	private function membersJS()
 	{
-		$j = "var member_data = [";
+		$j = "var member_data = new Array();\n";
 
 		$members = DatabaseController::selectMembers();
-		foreach ($members as &$m)
+		foreach ($members as &$p)
 		{
-			$j .= "{'member_number':${m['member_number']}, " . "'member_name':'${m['member_name']}', " . "'member_street_address':'${m['member_street_address']}', " . "'member_city':'${m['member_city']}', " . "'member_province':'${m['member_province']}', " . "'member_postal_code':'${m['member_postal_code']}', " . "'member_email_address':'${m['member_email_address']}', " . "'member_status':'${m['member_status']}', ";
-			$j .= "}, ";
+			$ltpn = ltrim($p["member_number"], '0');
+			$j .= " member_data[${ltpn}] = {};";
+			$j .= " member_data[${ltpn}]['member_number'] = '${p['member_number']}';";
+			$j .= " member_data[${ltpn}]['member_name'] = '${p['member_name']}';";
+			$j .= " member_data[${ltpn}]['member_street_address'] = '${p['member_street_address']}';";
+			$j .= " member_data[${ltpn}]['member_city'] = '${p['member_city']}';";
+			$j .= " member_data[${ltpn}]['member_province'] = '${p['member_province']}';";
+			$j .= " member_data[${ltpn}]['member_postal_code'] = '${p['member_postal_code']}';";
+			$j .= " member_data[${ltpn}]['member_email_address'] = '${p['member_email_address']}';";
+			$j .= " member_data[${ltpn}]['member_status'] = '${p['member_status']}';";
 		}
-
-		$j .= "];";
 
 		return $j;
 	}
@@ -124,16 +143,22 @@ class OperatorInterface
 
 	private function providersJS()
 	{
-		$j = "var provider_data = [";
+		$j = "var provider_data = new Array();\n";
 
 		$providers = DatabaseController::selectProviders();
 		foreach ($providers as &$p)
 		{
-			$j .= "{'provider_number':${p['provider_number']}, " . "'provider_name':'${p['provider_name']}', " . "'provider_street_address':'${p['provider_street_address']}', " . "'provider_city':'${p['provider_city']}', " . "'provider_province':'${p['provider_province']}', " . "'provider_postal_code':'${p['provider_postal_code']}', " . "'provider_email_address':'${p['provider_email_address']}', " . "'provider_type':'${p['provider_type']}', ";
-			$j .= "}, ";
+			$ltpn = ltrim($p["provider_number"], '0');
+			$j .= " provider_data[${ltpn}] = {};";
+			$j .= " provider_data[${ltpn}]['provider_number'] = '${p['provider_number']}';";
+			$j .= " provider_data[${ltpn}]['provider_name'] = '${p['provider_name']}';";
+			$j .= " provider_data[${ltpn}]['provider_street_address'] = '${p['provider_street_address']}';";
+			$j .= " provider_data[${ltpn}]['provider_city'] = '${p['provider_city']}';";
+			$j .= " provider_data[${ltpn}]['provider_province'] = '${p['provider_province']}';";
+			$j .= " provider_data[${ltpn}]['provider_postal_code'] = '${p['provider_postal_code']}';";
+			$j .= " provider_data[${ltpn}]['provider_email_address'] = '${p['provider_email_address']}';";
+			$j .= " provider_data[${ltpn}]['provider_type'] = '${p['provider_type']}';";
 		}
-
-		$j .= "];";
 
 		return $j;
 	}
@@ -145,14 +170,15 @@ class OperatorInterface
 	var member_select = document.getElementById("member_select");
 	console.log(member_data);
 	member_select.onchange = function () {
-		document.getElementById("member_number").value = member_data[member_select.value - 1]["member_number"];
-		document.getElementById("member_name").value = member_data[member_select.value - 1]["member_name"];
-		document.getElementById("member_street_address").value = member_data[member_select.value - 1]["member_street_address"];
-		document.getElementById("member_city").value = member_data[member_select.value - 1]["member_city"];
-		document.getElementById("member_province").value = member_data[member_select.value - 1]["member_province"];
-		document.getElementById("member_postal_code").value = member_data[member_select.value - 1]["member_postal_code"];
-		document.getElementById("member_email_address").value = member_data[member_select.value - 1]["member_email_address"];
-		document.getElementById("member_status").value = member_data[member_select.value - 1]["member_status"];
+		var unpad_num = parseInt(member_select.value, 10);
+		document.getElementById("member_number").value = member_data[unpad_num]["member_number"];
+		document.getElementById("member_name").value = member_data[unpad_num]["member_name"];
+		document.getElementById("member_street_address").value = member_data[unpad_num]["member_street_address"];
+		document.getElementById("member_city").value = member_data[unpad_num]["member_city"];
+		document.getElementById("member_province").value = member_data[unpad_num]["member_province"];
+		document.getElementById("member_postal_code").value = member_data[unpad_num]["member_postal_code"];
+		document.getElementById("member_email_address").value = member_data[unpad_num]["member_email_address"];
+		document.getElementById("member_status").value = member_data[unpad_num]["member_status"];
 	};
 	document.onload = function () {
 		member_select.onchange();
@@ -170,14 +196,15 @@ EOT;
 	var provider_select = document.getElementById("provider_select");
 	console.log(provider_data);
 	provider_select.onchange = function () {
-		document.getElementById("provider_number").value = provider_data[provider_select.value - 1]["provider_number"];
-		document.getElementById("provider_name").value = provider_data[provider_select.value - 1]["provider_name"];
-		document.getElementById("provider_street_address").value = provider_data[provider_select.value - 1]["provider_street_address"];
-		document.getElementById("provider_city").value = provider_data[provider_select.value - 1]["provider_city"];
-		document.getElementById("provider_province").value = provider_data[provider_select.value - 1]["provider_province"];
-		document.getElementById("provider_postal_code").value = provider_data[provider_select.value - 1]["provider_postal_code"];
-		document.getElementById("provider_email_address").value = provider_data[provider_select.value - 1]["provider_email_address"];
-		document.getElementById("provider_type").value = provider_data[provider_select.value - 1]["provider_type"];
+		var unpad_num = parseInt(provider_select.value, 10);
+		document.getElementById("provider_number").value = provider_data[unpad_num]["provider_number"];
+		document.getElementById("provider_name").value = provider_data[unpad_num]["provider_name"];
+		document.getElementById("provider_street_address").value = provider_data[unpad_num]["provider_street_address"];
+		document.getElementById("provider_city").value = provider_data[unpad_num]["provider_city"];
+		document.getElementById("provider_province").value = provider_data[unpad_num]["provider_province"];
+		document.getElementById("provider_postal_code").value = provider_data[unpad_num]["provider_postal_code"];
+		document.getElementById("provider_email_address").value = provider_data[unpad_num]["provider_email_address"];
+		document.getElementById("provider_type").value = provider_data[unpad_num]["provider_type"];
 	};
 	document.onload = function () {
 		provider_select.onchange();

@@ -119,7 +119,7 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->select("SELECT * FROM member ORDER BY member_number");
+		return self::$db->select("SELECT * FROM member ORDER BY member_number ASC");
 	}
 
 	public static function selectProviderNames()
@@ -133,7 +133,7 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->select("SELECT * FROM provider ORDER BY provider_number");
+		return self::$db->select("SELECT * FROM provider ORDER BY provider_number ASC");
 	}
 
 	/**

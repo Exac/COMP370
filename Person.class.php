@@ -175,7 +175,7 @@ class Person
 		if ($this->getLength($city) > self::CITY_LENGTH)
 		{
 			echo "Length of city name must not be greater than " . self::CITY_LENGTH . "\n";
-			return;
+			//return;
 		}
 
 		$this->city = $city;
@@ -208,8 +208,63 @@ class Person
 		// Make sure the length of the province is less than PROVINCE_LENGTH.
 		if ($this->getLength($province) > self::PROVINCE_LENGTH)
 		{
-			echo "Length of province must not be greater than " . self::PROVINCE_LENGTH . "\n";
-			return;
+			$province = strtoupper($province);
+
+			if ($province[0] === "A")
+			{
+				$province = "AB";
+			}
+			if ($province[0] === "B")
+			{
+				$province = "BC";
+			}
+			if ($province[0] === "C")
+			{
+				$province = "BC";
+			}
+			if ($province[0] === "M")
+			{
+				$province = "MB";
+			}
+			if ($province[0] === "N" && strpos($province, 'B' !== false))
+			{
+				$province = "NB";
+			}
+			if ($province[0] === "N" && strpos($province, 'L' !== false))
+			{
+				$province = "NL";
+			}
+			if ($province[0] === "N" && strpos($province, 'U') !== false)
+			{
+				$province = "NU";
+			}
+			if ($province[0] === "N" && $this->getLength($province) > self::PROVINCE_LENGTH)
+			{
+				$province = "NS";
+			}
+			if ($province[0] === "N" && strpos($province, 'T' !== false))
+			{
+				$province = "NT";
+			}
+			if ($province[0] === "O")
+			{
+				$province = "ON";
+			}
+			if ($province[0] === "C")
+			{
+				$province = "QC";
+			}
+			if ($province[0] === "S")
+			{
+				$province = "SK";
+			}
+			if ($province[0] === "Y")
+			{
+				$province = "YT";
+			}
+
+			//echo "Length of province must not be greater than " . self::PROVINCE_LENGTH . "\n";
+			//return;
 		}
 
 		$this->province = $province;
@@ -242,7 +297,7 @@ class Person
 		// Make sure the length of the postal code is not greater than POSTAL_CODE_LENGTH.
 		if ($this->getLength($postalCode) > self::POSTAL_CODE_LENGTH)
 		{
-			echo "Length of postal code must not be greater than " . self::POSTAL_CODE_LENGTH . "\n";
+			echo "Length of postal code must not be greater than " . self::POSTAL_CODE_LENGTH . "(" . $postalCode . ")";
 			return;
 		}
 

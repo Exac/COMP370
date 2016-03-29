@@ -114,7 +114,7 @@ class ProviderInterface
 	{
 		$em_ui = new UserInterface();
 		$em_ui->add("<div id='invalid errorScreen'><span class='message'>${message}</span></div>");
-		$em_ui->inlineJS .= "function relo () {location.reload();};window.setTimeout(relo, 2500);";
+		$em_ui->inlineJS .= "function relo () {location.reload();};window.setTimeout(relo, 1500);";
 
 		echo($em_ui);
 		die();

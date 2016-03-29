@@ -1,5 +1,21 @@
 <?php
 
+$p = "Alberta";
+function setProvince($province)
+{
+	if (strlen((string)$province) > 2)
+	{
+		if ($province[0] === "A")
+		{
+			$province = "AB";
+		}
+		echo "wew";
+	}
+	echo "lad";
+}
+
+setProvince($p);
+
 
 
 echo extension_loaded('mysqli') ? "LOADED" : "NOT LOADED";

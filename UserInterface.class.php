@@ -43,15 +43,24 @@ class UserInterface
 		$em_ui = new UserInterface();
 		//array_push($em_ui->scripts, "/cdn/js/provider.js");
 		$em_ui->add("<div id='errorScreen'><span class='invalid message'>${message}</span></div>");
-		$em_ui->inlineJS .= ("console.log('reload called');window.setTimeout(reload, 2500);");
+		$em_ui->inlineJS .= ("console.log('UserInterface->errorMessage()');window.setTimeout(reload, 2500);");
 
 		echo $em_ui;
 		die();
 	}
-	
-	public function message()
+
+	//non-fatal message
+	public function message($message)
 	{
-		
+		$ec = ""; //error-code to be prepended to body.
+
+		if ($message)
+		{
+			$ec .= "<div id='message'><span class='valid message'>${message}</span></div>";
+			//$this->inlineJS .= "<script defer>console.log('UserInterface->message()');window.setTimeout(reload, 1500);</script>";
+		}
+
+		$this->body = $ec . $this->body;//prepend
 	}
 	
 	public function promptForString()
