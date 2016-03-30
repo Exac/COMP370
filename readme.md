@@ -14,8 +14,8 @@ Contents
 * [14.16: Design](#1416)
  * [Design Decisions](#DesignDecisions)
   * [Mapping of Analysis Classes to Design Classes](#Mapping)
-* [15.33: Black-Box Testing](#1416)
-* [15.34: Implementation](#1416)
+* [15.33: Black-Box Testing](#1533)
+* [15.34: Implementation](#1534)
 
 **Commented Code**
 * [GitHub](http://github.com/exac/COMP370)
@@ -881,8 +881,23 @@ mysql> select * from service order by service_code limit 10;
 |       000010 | Therapy Session      |          80 |
 +--------------+----------------------+-------------+
 10 rows in set (0.02 sec)
-
 ```
+
+MySQL Claim Table<a name="claimtable"></a>
+```sql
+mysql> mysql> select * from claim order by submission_date_and_time limit 10;
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+| submission_date_and_time | service_date | provider_number | member_number | service_code | Comments                   |
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+| 2016-03-24 15:02:33      | 2016-03-24   |               1 |             1 | 000000       | Member was grateful.       |
+| 2016-03-30 00:36:39      | 2016-03-30   |               1 |             4 | 000014       | Willow was relieved.       |
+| 2016-03-30 00:37:30      | 2016-03-30   |               1 |            50 | 000020       | Over real quick.           |
+| 2016-03-30 00:38:15      | 2016-03-30   |               1 |             1 | 000003       | Worked well.               |
+| 2016-03-30 01:55:29      | 2016-03-30   |               4 |            76 | 000010       | Very good Therapy session. |
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+5 rows in set (0.01 sec)
+```
+
 ---
 Appendix A<a name="AppendixA"></a>
 ===

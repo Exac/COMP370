@@ -76,10 +76,10 @@ class ProviderInterface
 
 				$this->ui->add('<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
 				$this->ui->add('<input name="provider_theMember" id="provider_theMember" value="' . $member->getNumber() . '" type="hidden">');
-				$this->ui->add('<input name="preview_provider_number" type="hidden">');
-				$this->ui->add('<input name="preview_member_number" type="hidden">');
-				$this->ui->add('<input name="preview_service_code" type="hidden">');
-				$this->ui->add('<input name="preview_service_comments" type="hidden">');
+				$this->ui->add('<input name="preview_provider_number" id="preview_provider_number" type="hidden">');
+				$this->ui->add('<input name="preview_member_number"  id="preview_member_number" type="hidden">');
+				$this->ui->add('<input name="preview_service_code" id="preview_service_code" type="hidden">');
+				$this->ui->add('<input name="preview_service_comments" id="preview_service_comments" type="hidden">');
 				$this->ui->add('<input name="provider_password" id="provider_password" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
 				$this->ui->add("</fieldset></form>");
 			}
@@ -89,14 +89,17 @@ class ProviderInterface
 
 	private function updateClaim()
 	{
-		$submissiong_date_and_time = "";
+		$submission_date_and_time = "";
 		$service_date = date("Y-m-d");
 		$provider_number = $_POST["preview_provider_number"];
 		$member_number = $_POST["preview_member_number"];
 		$service_code = $_POST["preview_service_code"];
 		$Comments = $_POST["preview_service_comments"];
 
-		DatabaseController::addClaim($submissiong_date_and_time, $service_date, $provider_number, $member_number, $service_code, $Comments);
+		//$c = new Claim(new Provider($provider_number, new Member($member_number)));
+
+
+		DatabaseController::addClaim($submission_date_and_time, $service_date, $provider_number, $member_number, $service_code, $Comments);
 	}
 
 	public function logon()

@@ -1,6 +1,6 @@
 <?php
 
-//include_once('PersonMaintainer.class.php');
+include_once('PersonMaintainer.class.php');
 
 class MemberMaintainer extends PersonMaintainer
 {

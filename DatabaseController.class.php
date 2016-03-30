@@ -9,8 +9,6 @@
 /**
  * Class DatabaseController
  *
- * Database Controller class communicates with the database. It runs all the queries necessary
- * for the application.
  * There is no __construct() method for this static class.
  * Every method must begin with a call to self::$initialize().
  */
@@ -435,21 +433,20 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
-	public static function addClaim($subDate, $servDate, $servCode, $providerNum, $memberNum, $comments)
+	public static function addClaim($subDate, $serviceDate, $providerNum, $memberNum, $serviceCode, $comments)
 	{
 		self::initialize();
 
 		$comments = self::$db->escape($comments);
-		$query = "INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')";
-		echo "<input type='hidden' name='query' value='${query}'>";
+		$query = "INSERT INTO " . self::CLAIM . "( `service_date`, `provider_number`, `member_number`, `service_code`, `Comments`) VALUES ('${serviceDate}', '${providerNum}', '${memberNum}', '${serviceCode}', ${comments})";
 
 		return self::$db->query($query);
 		/*return self::$db->query("INSERT INTO " . self::SERVICE .
 			" VALUES ('" . $subDate     . "', '"
-			. $servCode    . "', '"
+			. $serviceCode    . "', '"
 			. $providerNum . "', '"
 			. $memberNum   . "', '"
-			. $servDate    . "', '"
+			. $serviceDate    . "', '"
 			. $comments    . "')");*/
 	}
 
@@ -471,11 +468,11 @@ class DatabaseController
 	{
 		self::initialize();
 
+		$query = "DELETE FROM " . self::CLAIM . " WHERE " . self::SUBMISSION_DATE_TIME . "='${submissionDate}'," . self::MEMBER_NUMBER . "='" . $member . "'," . self::PROVIDER_NUMBER . "='" . $provider . "'";
+
+		self::$db->query($query);
 	}
-		$query = "DELETE FROM " . self::CLAIM .
-			" WHERE " . self::SUBMISSION_DATE_TIME . "='" . $submissionDate . "'," .
-			self::MEMBER_NUMBER . "='" . $member . "'," .
-			self::PROVIDER_NUMBER . "='" . $provider . "';";
+
 
 	public static function getServiceName($service_code)
 	{
