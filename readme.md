@@ -776,15 +776,16 @@ code._
 Code is runnable on [COMP370.thomasmclennan.ca](http://caxe.thomasmclennan.ca).
 Source code is on [GitHub](http://github.com/exac/COMP370).
 
----
+
 Manager Input &amp; Output<a name="ManagerIO"></a>
 ---
 
 Input | Output
 --- | ---
-Click "Generate Member Report" button. | ![](http://imgur.com/MXvc2r3.png)
-Click "Generate Accounts Payable Report" button. | ![](http://imgur.com/MXvc2r3.png)
-Click "Generate Provider Report" button. | ![](http://imgur.com/MXvc2r3.png)
+Click "Member Report" button. | ![](cdn/manager/1.png)
+Click "Back" button. | ![](cdn/manager/2.png)
+Click "Provider Report" button. | ![](cdn/manager/3.png)
+Done. | ![](cdn/manager/4.png)
 **TODO** |![]()
 
 Operator Input &amp; Output<a name="OperatorIO"></a>
@@ -792,23 +793,54 @@ Operator Input &amp; Output<a name="OperatorIO"></a>
 
 Input | Output
 --- | ---
-Change "Name" to "TestName". |![]()
-Change "Address" to "TestAddress". |![]()
-Change "Status" to "A". | ![]()
-Click "Update Member". | ![]()
+Select "Name" field. |![](cdn/operator/1.png)
+Change text. |![](cdn/operator/2.png)
+Click "Update Member" | ![](cdn/operator/3.png)
+Observe the updated member. | ![](cdn/operator/4.png)
+Change all fields to create a new member. |![](cdn/operator/5.png)
+Click "New Member". |![](cdn/operator/6.png)
+Observe addition of new member. |![](cdn/operator/7.png)
+Click "Delete Member". |![](cdn/operator/8.png)
+Receive confirmation member is deleted. |![](cdn/operator/9.png)
+Select a new member from the provider drop-down. |![](cdn/operator/10.png)
+Change "City" field's text. |![](cdn/operator/11.png)
+Click "Update Provider". |![](cdn/operator/12.png)
+Receive confirmation member is updated. |![](cdn/operator/13.png)
+Observe the updated provider.  |![](cdn/operator/14.png)
+
+
 
 
 Provider Input &amp; Output<a name="ProviderIO"></a>
 ---
 Input | Output
 --- | ---
-**TODO** |![]()
+Select field labeled "Enter your Provider #". |![](cdn/provider/1.png)
+Enter a valid login (1), Click "Login". |![](cdn/provider/2.png)
+Select field labeled "Member #". |![](cdn/provider/3.png)
+Enter a valid login (1). |![](cdn/provider/4.png)
+Click "Verify Member". |![](cdn/provider/5.png)
+Receive confirmation member *VALIDATED*. If we had selected a nonexistent member, or a suspended member, we would see an error here. |![](cdn/provider/6.png)
+Click "Provider Directory", select a Service Code from the list (000005) and enter it into the field labeled "6-Digit Service #". Click "Provider Directory" again to dismiss the slide-out. |![](cdn/provider/7.png)
+Observe an invoice pop-up and verify all the information is correct. |![](cdn/provider/8.png)
+Change "Comments" and observe comments being added in to the invoice. Click "Bill Customer".|![](cdn/provider/9.png)
+Observe that the member is un-selected, but the provider remains logged-in. |![](cdn/provider/10.png)
+Observe that the database has been updated to reflect the new claim. |![](cdn/provider/11.png)
 
 Scheduler Input &amp; Output<a name="SchedulerIO"></a>
 ---
 Input | Output
 --- | ---
-**TODO** |![]()
+Click "Generate Forms". Forms are generated on the server. This is done automatically every Friday night. |![](cdn/scheduler/1.png)
+Observe that the scheduler is run every Saturday at 2AM via _cron_. |![](cdn/scheduler/2.png)
+
+Test Output<a name="TestIO"></a>
+---
+Input | Output
+--- | ---
+Running tests in the IDE is successful. |![](cdn/tests/1.png)
+Visit the [tests](http://COMP370.thomasmclennan.ca/tests/) page to run tests live on the server.<br>All 414 assertions are good.  |![](cdn/tests/2.png)
+
 
 MySQL Claim Table<a name="claimtable"></a>
 ---
