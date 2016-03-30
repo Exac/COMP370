@@ -891,6 +891,7 @@ In addition to these direct tests, it is necessary to perform the following addi
 2.	Attempt to create a Member that already exists.
 
 **All tests pass.**
+Tests may be run at [/tests/](http://COMP370.thomasmclennan.ca/tests/).
 
 ---
 
