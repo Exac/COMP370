@@ -452,13 +452,6 @@ class DatabaseController
 		$comments = self::$db->escape($comments);
 
 		return self::$db->query("INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')");
-		/*return self::$db->query("INSERT INTO " . self::SERVICE .
-			" VALUES ('" . $subDate     . "', '"
-			. $servCode    . "', '"
-			. $providerNum . "', '"
-			. $memberNum   . "', '"
-			. $servDate    . "', '"
-			. $comments    . "')");*/
 	}
 
 	/**
@@ -471,7 +464,12 @@ class DatabaseController
 	{
 		self::initialize();
 
+		$query = "DELETE FROM " . self::CLAIM .
+			" WHERE " . self::SUBMISSION_DATE_TIME . "='" . $submissionDate . "'," .
+			self::MEMBER_NUMBER . "='" . $member . "'," .
+			self::PROVIDER_NUMBER . "='" . $provider . "';";
 
+		return self::$db->query($query);
 	}
 
 	/**
