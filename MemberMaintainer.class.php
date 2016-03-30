@@ -1,6 +1,9 @@
 <?php
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
 
-//include_once('PersonMaintainer.class.php');
+include_once('PersonMaintainer.class.php');
 
 class MemberMaintainer extends PersonMaintainer
 {

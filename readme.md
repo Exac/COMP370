@@ -14,8 +14,8 @@ Contents
 * [14.16: Design](#1416)
  * [Design Decisions](#DesignDecisions)
   * [Mapping of Analysis Classes to Design Classes](#Mapping)
-* [15.33: Black-Box Testing](#1416)
-* [15.34: Implementation](#1416)
+* [15.33: Black-Box Testing](#1533)
+* [15.34: Implementation](#1534)
 
 **Commented Code**
 * [GitHub](http://github.com/exac/COMP370)
@@ -25,6 +25,7 @@ Contents
 * [Operator](#OperatorIO)
 * [Provider](#ProviderIO)
 * [Scheduler](#SchedulerIO)
+* [Tests](#TestsIO)
 
 **Contents of Files in which Data is Stored**
 * [MySQL Claim Table](#claimtable)
@@ -738,8 +739,131 @@ Password < 1 character | true
 Database.member_number | Result|
 --- | ---
 member_number is created | true
+member_number cannot be set as "0" | acceptable
+member_number can be "1" | true
+member_number can be "999999999" | true
+member_number cannot be "1000000000" | acceptable
+member_number cannot be "a" | acceptable
+member_number cannot be "" | acceptable
 
-**TODO**
+Database.member_name | Result|
+--- | ---
+member_name is created | true
+member_name can be "m" | true
+member_name can be "1" | true
+member_name can be "xxxx xxxx xxxx xxxx xxxx" | true
+member_name cannot be "xxxx xxxx xxxx xxxx xxxx xxxx" | true
+member_name cannot be "" | acceptable
+
+... Repeated for member_street_address, member_city, member_postal_code, member_email_address.
+
+Database.member_province | Result|
+--- | ---
+member_name is created | true
+member_name can be "BC" | true
+member_name cannot be "British Columbia" | acceptable
+member_name cannot be "CB" | acceptable
+member_name cannot be "C-B" | acceptable
+member_name cannot be "B.C." | acceptable
+member_name cannot be "NWT" | acceptable
+member_name cannot be "CB" | acceptable
+
+We are testing the following:
+
+```php
+if ($this->getLength($province) > self::PROVINCE_LENGTH) //p<2
+{
+	$province = strtoupper($province);
+
+	if ($province[0] === "A") $province = "AB";
+	if ($province[0] === "B") $province = "BC";
+	if ($province[0] === "C") $province = "BC";
+	if ($province[0] === "M") $province = "MB";
+	if ($province[0] === "N" && strpos($province, 'B' !== false)) $province = "NB";
+	if ($province[0] === "N" && strpos($province, 'L' !== false)) $province = "NL";
+	if ($province[0] === "N" && strpos($province, 'U') !== false) $province = "NU";
+	if ($province[0] === "N" && $this->getLength($province) > self::PROVINCE_LENGTH) $province = "NS";
+	if ($province[0] === "N" && strpos($province, 'T' !== false)) $province = "NT";
+	if ($province[0] === "O") $province = "ON";
+	if ($province[0] === "C") $province = "QC";
+	if ($province[0] === "S") $province = "SK";
+	if ($province[0] === "Y") $province = "YT";
+}
+```
+
+Database.member_status | Result|
+--- | ---
+member_name is created | true
+member_name can be "A" | true
+member_name can be "S" | true
+member_name cannot be "Suspended" | acceptable
+member_name cannot be "Active" | acceptable
+member_name cannot be "a" | acceptable
+member_name cannot be "s" | acceptable
+member_name cannot be "0" | true
+member_name cannot be "null" | true
+
+This is repeated for Provider, except provider_status is tested as follows:
+
+Database.provider_type | Result|
+--- | ---
+provider_type is created | true
+provider_type can be "I" | true
+provider_type can be "E" | true
+provider_type can be "D" | true
+provider_type cannot be "Dietitian" | acceptable
+provider_type cannot be "Internist" | acceptable
+provider_type cannot be "Exercise Expert" | acceptable
+provider_type cannot be "" | true
+provider_type cannot be "0" | true
+provider_type cannot be "null" | true
+
+In both cases above, if the first letter of the string matches an acceptable value, it is chosen.
+
+**Other Database Tests**
+
+Test | Result|
+--- | ---
+Test if database accepts login | true
+Test if 'claim' database is working | acceptable
+Asserts the member database table is working. | true
+Asserts the provider database table is working. | true
+Asserts the service database table is working. | true
+Test unique keys (run on claim timestamp key) | acceptable
+Test unique keys (run on member key) | acceptable
+Test unique keys (run on provider key) | acceptable
+Test unique keys (run on service key) | acceptable
+
+**General tests**
+
+Test | Result|
+--- | ---
+Asserts SERVER[REMOTE_ADDR] is set,<br> it's needed for testing and Database connectivity. | true
+Test PHP's MySQLi plugin loads. | true
+Checks if mysqli exists (but potentially hasn't been started) | true
+Test that the calculation in private function Person()->getLength() is correct | true
+
+**Member Tests**
+
+Member Test | Result|
+--- | ---
+Create a member that already exists | acceptable
+Asserts members can be found in the database. | true
+Asserts postal codes are in correct Canadian format. | true
+
+**Provider Tests**
+
+Provider Test | Result|
+--- | ---
+Asserts postal codes are in correct Canadian format. | true
+
+**Person Tests**
+
+Person Test | Result|
+--- | ---
+Checks if getting all members works.<br>Also stress-tests mysql with a lot of queries at once. | acceptable
+Checks if getting all providers works.<br>Also stress-tests mysql with a lot of queries at once. | acceptable
+Asserts that a database entry will be created for dummy example member. | true
 
 Functional Analysis Test Cases
 ---
@@ -766,6 +890,11 @@ In addition to these direct tests, it is necessary to perform the following addi
 1.	Attempt to create a Member
 2.	Attempt to create a Member that already exists.
 
+**All tests pass.**
+Tests may be run at [/tests/](http://COMP370.thomasmclennan.ca/tests/).
+
+---
+
 15.34<a name="1534"></a>
 ===
 _Implement and integrate the Chocoholics Anonymous product (Appendix A). Use the programming language specified by your
@@ -776,15 +905,16 @@ code._
 Code is runnable on [COMP370.thomasmclennan.ca](http://caxe.thomasmclennan.ca).
 Source code is on [GitHub](http://github.com/exac/COMP370).
 
----
+
 Manager Input &amp; Output<a name="ManagerIO"></a>
 ---
 
 Input | Output
 --- | ---
-Click "Generate Member Report" button. | ![](http://imgur.com/MXvc2r3.png)
-Click "Generate Accounts Payable Report" button. | ![](http://imgur.com/MXvc2r3.png)
-Click "Generate Provider Report" button. | ![](http://imgur.com/MXvc2r3.png)
+Click "Member Report" button. | ![](cdn/manager/1.png)
+Click "Back" button. | ![](cdn/manager/2.png)
+Click "Provider Report" button. | ![](cdn/manager/3.png)
+Done. | ![](cdn/manager/4.png)
 **TODO** |![]()
 
 Operator Input &amp; Output<a name="OperatorIO"></a>
@@ -792,23 +922,54 @@ Operator Input &amp; Output<a name="OperatorIO"></a>
 
 Input | Output
 --- | ---
-Change "Name" to "TestName". |![]()
-Change "Address" to "TestAddress". |![]()
-Change "Status" to "A". | ![]()
-Click "Update Member". | ![]()
+Select "Name" field. |![](cdn/operator/1.png)
+Change text. |![](cdn/operator/2.png)
+Click "Update Member" | ![](cdn/operator/3.png)
+Observe the updated member. | ![](cdn/operator/4.png)
+Change all fields to create a new member. |![](cdn/operator/5.png)
+Click "New Member". |![](cdn/operator/6.png)
+Observe addition of new member. |![](cdn/operator/7.png)
+Click "Delete Member". |![](cdn/operator/8.png)
+Receive confirmation member is deleted. |![](cdn/operator/9.png)
+Select a new member from the provider drop-down. |![](cdn/operator/10.png)
+Change "City" field's text. |![](cdn/operator/11.png)
+Click "Update Provider". |![](cdn/operator/12.png)
+Receive confirmation member is updated. |![](cdn/operator/13.png)
+Observe the updated provider.  |![](cdn/operator/14.png)
+
+
 
 
 Provider Input &amp; Output<a name="ProviderIO"></a>
 ---
 Input | Output
 --- | ---
-**TODO** |![]()
+Select field labeled "Enter your Provider #". |![](cdn/provider/1.png)
+Enter a valid login (1), Click "Login". |![](cdn/provider/2.png)
+Select field labeled "Member #". |![](cdn/provider/3.png)
+Enter a valid login (1). |![](cdn/provider/4.png)
+Click "Verify Member". |![](cdn/provider/5.png)
+Receive confirmation member *VALIDATED*. If we had selected a nonexistent member, or a suspended member, we would see an error here. |![](cdn/provider/6.png)
+Click "Provider Directory", select a Service Code from the list (000005) and enter it into the field labeled "6-Digit Service #". Click "Provider Directory" again to dismiss the slide-out. |![](cdn/provider/7.png)
+Observe an invoice pop-up and verify all the information is correct. |![](cdn/provider/8.png)
+Change "Comments" and observe comments being added in to the invoice. Click "Bill Customer".|![](cdn/provider/9.png)
+Observe that the member is un-selected, but the provider remains logged-in. |![](cdn/provider/10.png)
+Observe that the database has been updated to reflect the new claim. |![](cdn/provider/11.png)
 
 Scheduler Input &amp; Output<a name="SchedulerIO"></a>
 ---
 Input | Output
 --- | ---
-**TODO** |![]()
+Click "Generate Forms". Forms are generated on the server. This is done automatically every Friday night. |![](cdn/scheduler/1.png)
+Observe that the scheduler is run every Saturday at 2AM via _cron_. |![](cdn/scheduler/2.png)
+
+Test Output<a name="TestIO"></a>
+---
+Input | Output
+--- | ---
+Running tests in the IDE is successful. |![](cdn/tests/1.png)
+Visit the [tests](http://COMP370.thomasmclennan.ca/tests/) page to run tests live on the server.<br>All 414 assertions are good.  |![](cdn/tests/2.png)
+
 
 MySQL Claim Table<a name="claimtable"></a>
 ---
@@ -881,8 +1042,23 @@ mysql> select * from service order by service_code limit 10;
 |       000010 | Therapy Session      |          80 |
 +--------------+----------------------+-------------+
 10 rows in set (0.02 sec)
-
 ```
+
+MySQL Claim Table<a name="claimtable"></a>
+```sql
+mysql> mysql> select * from claim order by submission_date_and_time limit 10;
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+| submission_date_and_time | service_date | provider_number | member_number | service_code | Comments                   |
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+| 2016-03-24 15:02:33      | 2016-03-24   |               1 |             1 | 000000       | Member was grateful.       |
+| 2016-03-30 00:36:39      | 2016-03-30   |               1 |             4 | 000014       | Willow was relieved.       |
+| 2016-03-30 00:37:30      | 2016-03-30   |               1 |            50 | 000020       | Over real quick.           |
+| 2016-03-30 00:38:15      | 2016-03-30   |               1 |             1 | 000003       | Worked well.               |
+| 2016-03-30 01:55:29      | 2016-03-30   |               4 |            76 | 000010       | Very good Therapy session. |
++--------------------------+--------------+-----------------+---------------+--------------+----------------------------+
+5 rows in set (0.01 sec)
+```
+
 ---
 Appendix A<a name="AppendixA"></a>
 ===

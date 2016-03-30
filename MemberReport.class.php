@@ -1,5 +1,9 @@
 <?php
 /**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
+/**
  * MemberReport
  * 
  * @date 10-3-2016

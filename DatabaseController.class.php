@@ -1,5 +1,9 @@
 <?php
 /**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
+/**
  * Created by PhpStorm.
  * User: Thomas
  * Date: 3/17/16
@@ -9,8 +13,6 @@
 /**
  * Class DatabaseController
  *
- * Database Controller class communicates with the database. It runs all the queries necessary
- * for the application.
  * There is no __construct() method for this static class.
  * Every method must begin with a call to self::$initialize().
  */
@@ -132,7 +134,7 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->select("SELECT * FROM member ORDER BY member_number");
+		return self::$db->select("SELECT * FROM member ORDER BY member_number ASC");
 	}
 
 	/**
@@ -154,7 +156,7 @@ class DatabaseController
 	{
 		self::initialize();
 
-		return self::$db->select("SELECT * FROM provider ORDER BY provider_number");
+		return self::$db->select("SELECT * FROM provider ORDER BY provider_number ASC");
 	}
 
 	/**
@@ -171,11 +173,6 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM member where member_number = ${member_number}")[0];
 	}
 
-	/**
-	 * Finds a provider with a particular number.
-	 * @param $provider_number
-	 * @return mixed
-	 */
 	public static function selectProvider($provider_number)
 	{
 		self::initialize();
@@ -440,42 +437,80 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
-	/**
-	 * Adds a new claim with the passed in values.
-	 * @param $subDate , $servCode, $memberNum, $providerNum, $servDate, $comments
-	 * @return mixed
-	 */
-	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
+	public static function addClaim($subDate, $serviceDate, $providerNum, $memberNum, $serviceCode, $comments)
 	{
 		self::initialize();
 
 		$comments = self::$db->escape($comments);
+		$query = "INSERT INTO " . self::CLAIM . "( `service_date`, `provider_number`, `member_number`, `service_code`, `Comments`) VALUES ('${serviceDate}', '${providerNum}', '${memberNum}', '${serviceCode}', ${comments})";
 
-		return self::$db->query("INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')");
+		return self::$db->query($query);
+		/*return self::$db->query("INSERT INTO " . self::SERVICE .
+			" VALUES ('" . $subDate     . "', '"
+			. $serviceCode    . "', '"
+			. $providerNum . "', '"
+			. $memberNum   . "', '"
+			. $serviceDate    . "', '"
+			. $comments    . "')");*/
 	}
 
-	/**
-	 * Deletes a claim in databse.
-	 * @param $submissionDate
-	 * @param $member
-	 * @param $provider
-	 */
+	public static function getAllMembers()
+	{
+		self::initialize();
+
+		return self::$db->query("SELECT * FROM member ORDER BY member_name");
+	}
+
+	public static function getAllProviders()
+	{
+		self::initialize();
+
+		return self::$db->query("SELECT * FROM provider ORDER BY provider_name");
+	}
+
 	public static function deleteClaim($submissionDate, $member, $provider)
 	{
 		self::initialize();
 
-		$query = "DELETE FROM " . self::CLAIM .
-			" WHERE " . self::SUBMISSION_DATE_TIME . "='" . $submissionDate . "'," .
-			self::MEMBER_NUMBER . "='" . $member . "'," .
-			self::PROVIDER_NUMBER . "='" . $provider . "';";
+		$query = "DELETE FROM " . self::CLAIM . " WHERE " . self::SUBMISSION_DATE_TIME . "='${submissionDate}'," . self::MEMBER_NUMBER . "='" . $member . "'," . self::PROVIDER_NUMBER . "='" . $provider . "'";
 
-		return self::$db->query($query);
+		self::$db->query($query);
 	}
 
-	/**
-	 * Private function used to get the number of a last member added.
-	 * @return mixed
-	 */
+
+	public static function getServiceName($service_code)
+	{
+		self::initialize();
+		$rows = self::$db->select("SELECT service_name FROM service WHERE service_code=" . $service_code);
+		foreach ($rows as $r)
+		{
+			return $r["service_name"];
+		}
+	}
+
+	public static function getServiceFee($service_code)
+	{
+		self::initialize();
+
+		$rows = self::$db->select("SELECT service_fee FROM service WHERE service_code=" . $service_code);
+		foreach ($rows as $r)
+		{
+			if (array_key_exists("service_fee", $r))
+			{
+				return $r["service_fee"];
+			}
+		}
+
+	}
+
+
+	public static function getAllAccountsPayables()
+	{
+		self::initialize();
+
+		return null; //ACME will implement this.
+	}
+
 	private static function getLastMemberNumber()
 	{
 		$result = self::$db->select("SELECT " . self::MEMBER_NUMBER . " FROM " .
@@ -494,5 +529,14 @@ class DatabaseController
 			self::PROVIDER . " ORDER BY " . self::PROVIDER_NUMBER . " DESC LIMIT 1");
 
 		return $result[0][self::PROVIDER_NUMBER];
+	}
+
+	public static function escape($string)
+	{
+		self::initialize();
+
+		$escaped = self::$db->escape($string);
+
+		return $escaped;
 	}
 }

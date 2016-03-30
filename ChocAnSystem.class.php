@@ -1,5 +1,9 @@
 <?php
 /**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
+/**
  * Created by PhpStorm.
  * User: Thomas
  * Date: 3/10/16

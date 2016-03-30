@@ -133,7 +133,10 @@ function personPadNumbers(element, index, array) {
  */
 var x;//xhttp request.
 function updateHiddenVars() {
-
+    document.getElementById("preview_provider_number").value = document.getElementById("provider_theProvider").value;
+    document.getElementById("preview_member_number").value = document.getElementById("provider_theMember").value;
+    document.getElementById("preview_service_code").value = document.getElementById("provider_service_code").value;
+    document.getElementById("preview_service_comments").value = document.getElementById("provider_service_comments").value;
 }
 function showPreview() {
     if (x.readyState === XMLHttpRequest.DONE) {

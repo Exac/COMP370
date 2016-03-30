@@ -71,26 +71,6 @@ class DatabaseTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * Stress-test the database.
-	 * @desc Stress-tests that the database can handle 100's of queries a second.
-	 */
-	public function testMultipleDBQueries()
-	{
-		//arrange
-		$members = array();
-		for ($x = 1; $x <= 99; $x++)
-		{
-			$members[ $x ] = new Member($x);
-		}
-
-		//assert
-		for ($y = 1; $y <= 99; $y++)
-		{
-			$this->assertEquals(str_pad($y, 9, '0', STR_PAD_LEFT), $members[ $y ]->getNumber() + "", str_pad($y, 9, '0', STR_PAD_LEFT) . " != " . $members[ $y ]->getNumber() + "\n");
-		}
-	}
-
-	/**
 	 * @desc Ensures the environmental variable for the database password is set up.
 	 */
 	public function testDatabasePasswordIsString()

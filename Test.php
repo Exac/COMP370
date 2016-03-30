@@ -1,10 +1,6 @@
-<table id="provider_bill_preview">
-	<tr>
-		<td></td>
-	</tr>
-</table>
-
 <?php
+echo date("Y-m-d");
+echo "<br>";
 
 $p = "Alberta";
 function setProvince($province)

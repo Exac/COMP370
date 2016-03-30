@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
 include_once('DateRangeReport.class.php');
 
 /**
