@@ -25,6 +25,7 @@ Contents
 * [Operator](#OperatorIO)
 * [Provider](#ProviderIO)
 * [Scheduler](#SchedulerIO)
+* [Tests](#TestsIO)
 
 **Contents of Files in which Data is Stored**
 * [MySQL Claim Table](#claimtable)
@@ -738,8 +739,131 @@ Password < 1 character | true
 Database.member_number | Result|
 --- | ---
 member_number is created | true
+member_number cannot be set as "0" | acceptable
+member_number can be "1" | true
+member_number can be "999999999" | true
+member_number cannot be "1000000000" | acceptable
+member_number cannot be "a" | acceptable
+member_number cannot be "" | acceptable
 
-**TODO**
+Database.member_name | Result|
+--- | ---
+member_name is created | true
+member_name can be "m" | true
+member_name can be "1" | true
+member_name can be "xxxx xxxx xxxx xxxx xxxx" | true
+member_name cannot be "xxxx xxxx xxxx xxxx xxxx xxxx" | true
+member_name cannot be "" | acceptable
+
+... Repeated for member_street_address, member_city, member_postal_code, member_email_address.
+
+Database.member_province | Result|
+--- | ---
+member_name is created | true
+member_name can be "BC" | true
+member_name cannot be "British Columbia" | acceptable
+member_name cannot be "CB" | acceptable
+member_name cannot be "C-B" | acceptable
+member_name cannot be "B.C." | acceptable
+member_name cannot be "NWT" | acceptable
+member_name cannot be "CB" | acceptable
+
+We are testing the following:
+
+```php
+if ($this->getLength($province) > self::PROVINCE_LENGTH) //p<2
+{
+	$province = strtoupper($province);
+
+	if ($province[0] === "A") $province = "AB";
+	if ($province[0] === "B") $province = "BC";
+	if ($province[0] === "C") $province = "BC";
+	if ($province[0] === "M") $province = "MB";
+	if ($province[0] === "N" && strpos($province, 'B' !== false)) $province = "NB";
+	if ($province[0] === "N" && strpos($province, 'L' !== false)) $province = "NL";
+	if ($province[0] === "N" && strpos($province, 'U') !== false) $province = "NU";
+	if ($province[0] === "N" && $this->getLength($province) > self::PROVINCE_LENGTH) $province = "NS";
+	if ($province[0] === "N" && strpos($province, 'T' !== false)) $province = "NT";
+	if ($province[0] === "O") $province = "ON";
+	if ($province[0] === "C") $province = "QC";
+	if ($province[0] === "S") $province = "SK";
+	if ($province[0] === "Y") $province = "YT";
+}
+```
+
+Database.member_status | Result|
+--- | ---
+member_name is created | true
+member_name can be "A" | true
+member_name can be "S" | true
+member_name cannot be "Suspended" | acceptable
+member_name cannot be "Active" | acceptable
+member_name cannot be "a" | acceptable
+member_name cannot be "s" | acceptable
+member_name cannot be "0" | true
+member_name cannot be "null" | true
+
+This is repeated for Provider, except provider_status is tested as follows:
+
+Database.provider_type | Result|
+--- | ---
+provider_type is created | true
+provider_type can be "I" | true
+provider_type can be "E" | true
+provider_type can be "D" | true
+provider_type cannot be "Dietitian" | acceptable
+provider_type cannot be "Internist" | acceptable
+provider_type cannot be "Exercise Expert" | acceptable
+provider_type cannot be "" | true
+provider_type cannot be "0" | true
+provider_type cannot be "null" | true
+
+In both cases above, if the first letter of the string matches an acceptable value, it is chosen.
+
+**Other Database Tests**
+
+Test | Result|
+--- | ---
+Test if database accepts login | true
+Test if 'claim' database is working | acceptable
+Asserts the member database table is working. | true
+Asserts the provider database table is working. | true
+Asserts the service database table is working. | true
+Test unique keys (run on claim timestamp key) | acceptable
+Test unique keys (run on member key) | acceptable
+Test unique keys (run on provider key) | acceptable
+Test unique keys (run on service key) | acceptable
+
+**General tests**
+
+Test | Result|
+--- | ---
+Asserts SERVER[REMOTE_ADDR] is set,<br> it's needed for testing and Database connectivity. | true
+Test PHP's MySQLi plugin loads. | true
+Checks if mysqli exists (but potentially hasn't been started) | true
+Test that the calculation in private function Person()->getLength() is correct | true
+
+**Member Tests**
+
+Member Test | Result|
+--- | ---
+Create a member that already exists | acceptable
+Asserts members can be found in the database. | true
+Asserts postal codes are in correct Canadian format. | true
+
+**Provider Tests**
+
+Provider Test | Result|
+--- | ---
+Asserts postal codes are in correct Canadian format. | true
+
+**Person Tests**
+
+Person Test | Result|
+--- | ---
+Checks if getting all members works.<br>Also stress-tests mysql with a lot of queries at once. | acceptable
+Checks if getting all providers works.<br>Also stress-tests mysql with a lot of queries at once. | acceptable
+Asserts that a database entry will be created for dummy example member. | true
 
 Functional Analysis Test Cases
 ---
@@ -765,6 +889,10 @@ In addition to these direct tests, it is necessary to perform the following addi
 
 1.	Attempt to create a Member
 2.	Attempt to create a Member that already exists.
+
+**All tests pass.**
+
+---
 
 15.34<a name="1534"></a>
 ===
