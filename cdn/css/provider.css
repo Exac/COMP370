@@ -185,6 +185,7 @@ body.interface #providerID {
     display: block;
     width: 30%;
     max-width: 720px;
+    max-height: 100%;
     position: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -192,6 +193,7 @@ body.interface #providerID {
     top: 4em;
     background: rgb(111, 173, 203);
     color: white;
+    z-index: 5;
 }
 
 .report {
@@ -236,4 +238,11 @@ td:before {
 
 #provider_report table td:nth-of-type(3):before {
     content: "Fee";
+}
+
+#preview {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 568px;
+    border: none;
 }

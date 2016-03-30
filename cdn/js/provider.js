@@ -128,15 +128,78 @@ function personPadNumbers(element, index, array) {
     document.getElementById("provider_verify_member")
 ].forEach(personPadNumbers);
 
+/**
+ * Display Preview while 6-digits
+ */
+var x;//xhttp request.
+function updateHiddenVars() {
+
+}
+function showPreview() {
+    if (x.readyState === XMLHttpRequest.DONE) {
+        if (x.status === 200) {
+            var preview = document.getElementById("preview");
+            preview.parentElement.style.maxWidth = "none";
+            preview.srcdoc = x.responseText;
+        }
+    }
+}
+function preview() {
+    x = new XMLHttpRequest();
+    x.onreadystatechange = showPreview; //what to do when data received.
+    x.open('POST', '', true);
+    x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    var post = "ajax=true";
+    post += "&preview_provider_number=" + document.getElementById("provider_theProvider").value;
+    post += "&preview_member_number=" + document.getElementById("provider_theMember").value;
+    post += "&preview_service_code=" + document.getElementById("provider_service_code").value;
+    post += "&preview_service_comments=" + document.getElementById("provider_service_comments").value;
+    x.setRequestHeader("Content-length", post.length);
+    x.send(post);
+    updateHiddenVars();
+}
+document.addEventListener('keyup', function () {
+    console.log(document.getElementById("provider_service_code").value);
+    preview();
+});
+
+/**
+ * Pad numbers for 6-digit service #
+ */
+function claimEnter(key) {
+    if (key.keyCode == 13) {
+        console.log("personEnter(" + key + ") -> pad()");
+        key.target.value = pad(key.target.value, 6, 0);
+    }
+}
+function claimBlurred(blur) {
+    console.log("claimEnter(" + blur + ") -> pad()");
+    blur.target.value = pad(blur.target.value, 6, 0);
+}
+function claimPadNumbers(element, index, array) {
+    if (element) {
+        element.addEventListener("blur", claimBlurred);
+        element.form.addEventListener("submit", claimBlurred);
+        element.addEventListener("keydown", claimEnter);
+    }
+}
+[document.getElementById("provider_service_code")].forEach(claimPadNumbers);
+
+/**
+ * Provider Directory button toggles the provider directory.
+ */
 var provider_report = document.getElementById("provider_report");
 var lookup_provider_report = document.getElementById("lookup_provider_directory");
 lookup_provider_report.addEventListener("click", function () {
     provider_report.style.display = provider_report.style.display === "block" ? "none" : "block";
 });
-
+/**
+ * Formats money in the provider directory (C -> $C-(C%100).(C%100)).
+ */
 var fees = document.getElementsByClassName("fee");
 [].forEach.call(document.getElementsByClassName("fee"), function (v, i, a) {
     var cents = v.innerHTML;
     var dollars = (cents / 100).toFixed(2).toString();
     v.innerHTML = "$" + dollars;
 });
+

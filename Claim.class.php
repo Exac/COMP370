@@ -240,5 +240,6 @@ class Claim
     {
         return strlen((string) $object);
     }
+
 }
 

@@ -375,6 +375,32 @@ class DatabaseController
 
 	}
 
+	public static function getServiceName($service_code)
+	{
+		self::initialize();
+		$rows = self::$db->select("SELECT service_name FROM service WHERE service_code=" . $service_code);
+		foreach ($rows as $r)
+		{
+			return $r["service_name"];
+		}
+	}
+
+	public static function getServiceFee($service_code)
+	{
+		self::initialize();
+
+		$rows = self::$db->select("SELECT service_fee FROM service WHERE service_code=" . $service_code);
+		foreach ($rows as $r)
+		{
+			if (array_key_exists("service_fee", $r))
+			{
+				return $r["service_fee"];
+			}
+		}
+
+	}
+
+
 	public static function getAllAccountsPayables()
 	{
 		self::initialize();
@@ -396,5 +422,14 @@ class DatabaseController
 			self::PROVIDER . " ORDER BY " . self::PROVIDER_NUMBER . " DESC LIMIT 1");
 
 		return $result[0][self::PROVIDER_NUMBER];
+	}
+
+	public static function escape($string)
+	{
+		self::initialize();
+
+		$escaped = self::$db->escape($string);
+
+		return $escaped;
 	}
 }

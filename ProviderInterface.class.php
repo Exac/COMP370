@@ -28,7 +28,7 @@ class ProviderInterface
 			//display login screen
 			$this->logon();
 		}
-		if (isset($_POST["provider_password"]))
+		if (isset($_POST["provider_password"]) || isset($_POST["preview_provider_number"]))
 		{
 			//provider has logged in, time to verify the user
 			$this->verifyMember();
@@ -65,22 +65,31 @@ class ProviderInterface
 				//Validated
 				$this->ui->add($this->providerBar($_POST["provider_theProvider"]));
 				$this->ui->add("<span id='validator' class='valid'>Valid Member Number</span>");
-				$this->ui->add("<p><strong>`Bill ChocAn for a Service` dataflow:</strong></p>");
-				$this->ui->add("<p>Enter date[MM-DD-YYY] of service.-> <br>" . "Use the Provider Directory to find the 6-digit service code, entered or " . "selected... [SERVICE CODE] <br>->" . " display name of service and code " . "[VERIFY] | 'Error:bad code' <br>->" . " Enter information about the service " . "provided: " . "[comments] (other informatino displayed on screen)" . "<br>-> display fee && display verification form pre-filled-out<strong>In JS, as soon as the service code is filled in, fill out teh verification data on this screen below the form.</strong></p>");
-
 				$this->ui->add("<form id=\"provider_billing\" method=\"post\" action=\"\" " . "autocomplete=\"off\">'");
 				$this->ui->add('<form id="providerinterface" action="" method="post">');
 				$this->ui->add('<fieldset>');
-				$this->ui->add('<legend>Provider Login</legend>');
-				$this->ui->body .= (new Input("text", "provider_billing_code", array("6-Digit Service #", " autofocus ")));
-				$this->ui->body .= (new Input("text", "provider_billing_comments", "Comments"));
-				$this->ui->add('<button id="provider_billing_submit" name="provider_billing_submit"  type="submit"/>Bill Customer</button>');
-				$this->ui->add("</fieldset></form>");
+				$this->ui->add('<legend>Bill ChocAn for a Service</legend>');
+				$this->ui->body .= (new Input("text", "provider_service_code", array("6-Digit Service #", " autofocus maxlength=\"6\" ")));
+				$this->ui->body .= (new Input("text", "provider_service_comments", "Comments"));
+				$this->ui->add('<button id="provider_service_submit" name="provider_service_submit"  type="submit"/>Bill Customer</button>');
+				$this->ui->add("<br><iframe srcdoc='' id='preview'></iframe>");
+
 				$this->ui->add('<input name="provider_theProvider" id="provider_theProvider" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
 				$this->ui->add('<input name="provider_theMember" id="provider_theMember" value="' . $member->getNumber() . '" type="hidden">');
+				$this->ui->add('<input name="preview_provider_number" type="hidden">');
+				$this->ui->add('<input name="preview_member_number" type="hidden">');
+				$this->ui->add('<input name="preview_service_code" type="hidden">');
+				$this->ui->add('<input name="preview_service_comments" type="hidden">');
+				$this->ui->add("</fieldset></form>");
 			}
 		}
 
+	}
+
+	private function updateClaim()
+	{
+		$submissiong_date_and_time = "";
+		$service_date = 
 	}
 
 	public function logon()
@@ -97,9 +106,12 @@ class ProviderInterface
 
 	public function verifyMember()
 	{
-//		$p = new Provider("000000000");
-//		echo $p->getNumber();
-//		echo $p->getName();
+		//update claim if data has been submitted.
+		if (isset($_POST["preview_provider_number"]))
+		{
+			$this->updateClaim();
+		}
+
 		$provider = new Provider($_POST["provider_password"]);
 		$this->ui->add($this->providerBar($_POST["provider_password"]));
 		$this->ui->add('<form id="providerinterface" action="" method="post">');

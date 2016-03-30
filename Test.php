@@ -1,3 +1,9 @@
+<table id="provider_bill_preview">
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
 <?php
 
 $p = "Alberta";
