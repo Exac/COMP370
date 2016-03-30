@@ -28,7 +28,7 @@ class ProviderInterface
 			//display login screen
 			$this->logon();
 		}
-		if (isset($_POST["provider_password"]) || isset($_POST["preview_provider_number"]))
+		if (isset($_POST["provider_password"]) || isset($_POST["provider_service_code"]))
 		{
 			//provider has logged in, time to verify the user
 			$this->verifyMember();
@@ -80,6 +80,7 @@ class ProviderInterface
 				$this->ui->add('<input name="preview_member_number" type="hidden">');
 				$this->ui->add('<input name="preview_service_code" type="hidden">');
 				$this->ui->add('<input name="preview_service_comments" type="hidden">');
+				$this->ui->add('<input name="provider_password" id="provider_password" value="' . $_POST["provider_theProvider"] . '" type="hidden">');
 				$this->ui->add("</fieldset></form>");
 			}
 		}
@@ -89,7 +90,13 @@ class ProviderInterface
 	private function updateClaim()
 	{
 		$submissiong_date_and_time = "";
-		$service_date = 
+		$service_date = date("Y-m-d");
+		$provider_number = $_POST["preview_provider_number"];
+		$member_number = $_POST["preview_member_number"];
+		$service_code = $_POST["preview_service_code"];
+		$Comments = $_POST["preview_service_comments"];
+
+		DatabaseController::addClaim($submissiong_date_and_time, $service_date, $provider_number, $member_number, $service_code, $Comments);
 	}
 
 	public function logon()

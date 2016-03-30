@@ -339,13 +339,15 @@ class DatabaseController
 		return self::$db->select("SELECT * FROM " . self::CLAIM . " ORDER BY " . self::SUBMISSION_DATE_TIME);
 	}
 
-	public static function addClaim($subDate, $servCode, $memberNum, $providerNum, $servDate, $comments)
+	public static function addClaim($subDate, $servDate, $servCode, $providerNum, $memberNum, $comments)
 	{
 		self::initialize();
 
 		$comments = self::$db->escape($comments);
+		$query = "INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')";
+		echo "<input type='hidden' name='query' value='${query}'>";
 
-		return self::$db->query("INSERT INTO " . self::SERVICE . " VALUES ('${subDate}', '${servCode}', '${providerNum}', '${memberNum}', '${servDate}', '${comments}')");
+		return self::$db->query($query);
 		/*return self::$db->query("INSERT INTO " . self::SERVICE .
 			" VALUES ('" . $subDate     . "', '"
 			. $servCode    . "', '"
