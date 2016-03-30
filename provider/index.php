@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
 require_once(dirname(dirname(__FILE__)) . '/ChocAnSystem.class.php');
 if (!isset($_POST['ajax']))
 {

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
 include_once('Persons.class.php');
 /**
  ************************  USE THIS CLASS TO GET TO DATABASE ************************

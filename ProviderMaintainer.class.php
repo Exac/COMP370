@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
 class ProviderMaintainer extends PersonMaintainer
 {
 	private $ui;

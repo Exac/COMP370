@@ -1,5 +1,9 @@
 <?php
 /**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
+
+/**
  * Class Claim
  * 
  * @date 18-03-2016

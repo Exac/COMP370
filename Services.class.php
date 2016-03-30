@@ -1,4 +1,7 @@
 <?php
+/**
+ * Copyright (c) 2016. Farzin Dhanji, Karanvir Gill, Thomas Mclennan.
+ */
 
 /**************************  ********************************* *************************
  **************************  USE THIS CLASS TO GET TO DATABASE *************************
