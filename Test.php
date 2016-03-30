@@ -1,4 +1,26 @@
+<table id="provider_bill_preview">
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
 <?php
+
+$p = "Alberta";
+function setProvince($province)
+{
+	if (strlen((string)$province) > 2)
+	{
+		if ($province[0] === "A")
+		{
+			$province = "AB";
+		}
+		echo "wew";
+	}
+	echo "lad";
+}
+
+setProvince($p);
 
 
 

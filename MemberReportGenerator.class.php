@@ -16,6 +16,11 @@ class MemberReportGenerator
 	
 	public function getReport ()
 	{
-		return $this->report;
+		return $this->report->$this->__toString();
+	}
+
+	public function __toString()
+	{
+		return $this->getReport();
 	}
 }

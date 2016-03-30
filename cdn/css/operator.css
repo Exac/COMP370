@@ -21,3 +21,54 @@ fieldset {
         max-width: 31%;
     }
 }
+
+#message {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    text-shadow: rgba(255, 255, 255, 0.50) 0 0 30px;
+    z-index: 100;
+}
+
+#message .message {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.invalid,
+.valid {
+    background-image: linear-gradient(to bottom, rgba(233, 162, 162, 1), rgba(233, 132, 132, 1));
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    line-height: 100vh;
+}
+
+#message .valid {
+    background-image: linear-gradient(to bottom, rgba(162, 233, 165, 1), rgba(132, 233, 122, 1));
+}
+
+.loading {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 0.5em;
+    left: 0;
+    width: 1%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.75));
+    content: "";
+    color: black;
+    line-height: 1em;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 2px;
+    transition: linear all 100ms;
+}

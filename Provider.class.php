@@ -67,6 +67,14 @@ class Provider extends Person
 		}
 	}
 
+	/**
+	 * Add this provider to the database.
+	 */
+	public function toDatabase()
+	{
+		DatabaseController::addProvider($this->getName(), $this->getStreet(), $this->getCity(), $this->getProvince(), $this->getPostalCode(), $this->getEmail(), $this->getType());
+	}
+
 	private function convertTypeLong($type)
 	{
 		if (strtolower($type[0]) === "d")

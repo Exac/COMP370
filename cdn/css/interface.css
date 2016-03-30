@@ -12,6 +12,12 @@ body {
     line-height: 1.666em;
 }
 
+@media print {
+    body {
+        background: #ffffff !important;
+    }
+}
+
 label {
     margin: 2em 0 !important;
 }
@@ -114,9 +120,12 @@ input[type="radio"] + label::before {
 
 input[type="checkbox"]:disabled + label,
 input[type="radio"]:disabled + label,
+input:disabled,
+.button:disabled,
+button:disabled,
 .disabled {
     opacity: 0.5;
-    cursor: default; /* or cursor: no-drop */
+    cursor: default !important; /* or cursor: no-drop */
 }
 
 /* hover unchecked checkbox */
@@ -406,6 +415,7 @@ body.interface button {
     font-size: 20px;
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.45) 1px -0.5px 1px;
+    text-decoration: none;
     line-height: 25px;
     margin: 1em 3px;
     padding: 30px 60px;
@@ -466,7 +476,10 @@ body.interface fieldset {
     background-color: rgba(223, 223, 223, 0.666);
     border-radius: 8px;
     display: inline-block;
-    margin: inherit auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 body.interface legend {

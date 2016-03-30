@@ -69,6 +69,14 @@ class Member extends Person
 		}
 	}
 
+	/**
+	 * Add this member to the database.
+	 */
+	public function toDatabase()
+	{
+		DatabaseController::addMember($this->getName(), $this->getStreet(), $this->getCity(), $this->getProvince(), $this->getPostalCode(), $this->getEmail(), $this->getStatus());
+	}
+
 	private function convertStatusLong($status)
 	{
 		if (strtolower($status[0]) === "a")
