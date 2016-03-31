@@ -628,7 +628,7 @@ regard to the nouns in the previous paragraph:
 
 **Figure 1.17: The entity class diagram of the Chocoholics Anonymous product**
 
-![]()
+![](https://raw.githubusercontent.com/Exac/COMP370/master/cdn/documentation/1322_17.png)
 
 <table>
   <tbody>
@@ -674,11 +674,112 @@ Statecharts for the ChocAn product are shown in Parts I, II, III and IV.
 **Figure
 1.18: The statechart for the Chocoholics Anonymous product**
 
-![]()
+![](https://raw.githubusercontent.com/Exac/COMP370/master/cdn/documentation/1322_18.png)
 
 **Figure 1.19: The Provider subsystem statechart**
 
-![]()
+![](https://raw.githubusercontent.com/Exac/COMP370/master/cdn/documentation/1322_19.png)
+
+**Figure 1.20: Maintenance subsystem statechart**
+
+**Figure 1.21: Reporting subsystem statechart**
+
+We now realize the use cases.
+
+***Use case Manage Session:***
+
+**Figure 1.22: Class diagram showing the classes that realize the Manage Session use case of the ChocAn software product**
+
+
+
+**Figure 1.23: Collaboration diagram of the realization of the scenario of the Manage Session use case of the ChocAn software product**
+
+
+
+**Figure 1.24: The flow of events of the realization of the scenario of the Manage Session use case of the ChocAn software product**
+
+
+
+**Figure 1.25: A Sequence diagram equivalent to the collaboration diagram from Part VI of the Manage Session use case scenario**
+
+
+
+***Use Case Verify Member***
+
+**Figure 1.26: Class diagram showing the classes that realize the Verify Member use case of the ChocAn software product**
+
+
+
+**Figure 1.27: Collaboration diagram of the realization of the scenario of the Verify Member use case of the ChocAn software product**
+
+
+
+**Figure 1.28: The flow of events of the realization of the scenario of the Manage Session use case of the ChocAn software product**
+
+
+
+**Figure 1.29: Sequence diagram equivalent to the collaboration diagram for Verify Member use case**
+
+
+
+***Use case Submit Claim:***
+**Figure 1.30: Collaboration diagram showing the classes that realize the Submit Claim use case (Figure 1.20) of the ChocAn software product**
+
+
+
+**Figure 1.31: Collaboration diagram of the realization of the scenario of Figure 1.2 for Submit Claim use case of the ChocAn software product.**
+
+
+
+**Figure 1.32: The flow of events of the realization of the scenario of Figure 1.2 for Submit Claim use case of the ChocAn software product.**
+
+
+
+**Figure 1.33: A Sequence diagram equivalent to the collaboration diagram of Figure 1.31. The flow of events of the realization of the scenario of Figure 1.32 for Submit Claim use case of the ChocAn software product.**
+
+
+
+**Figure 1.34: Class diagram showing the classes that realize the Receive Provider Directory use case (Figure 1.3)**
+
+
+
+**Figure 1.35: Communication diagram of the realization of the scenario of Figure 1.3 of the Receive Provider Directory use case of the ChocAn software product.**
+
+
+
+**Figure 1.36: The flow of events of the realization of the scenario of Figure 1.3 of the Receive Provider Directory use case of the ChocAn software product.**
+
+
+
+**Figure 1.37: Sequence diagram equivalent to the Collaboration diagram of Figure 1.35. The flow of events is shown in Figure 1.36.**
+
+
+
+***Use case Maintain Member:***
+Consider the add new member scenario of Figure 1.4. The Collaboration diagram is shown in Figure 1.39, the flow of events diagram in Figure 1.40 and the corresponding sequence diagram in Figure 1.41.
+**Figure 1.38: Class diagram showing the classes that realize the Maintain Member use case – add new member (Figure 1.4) of the ChocAn software product**
+
+
+
+**Figure 1.39: Collaboration diagram of the realization of the Add a Member scenario of Figure 1.4 of the Maintain Member use case of the ChocAn software product.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
